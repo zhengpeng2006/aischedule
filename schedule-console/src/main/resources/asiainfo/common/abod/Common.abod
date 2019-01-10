@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<abo-design attr-display="Common" code="Common" columns="">
+  <abo fullname="com.asiainfo.common.abo.ABGMonBusiErrorLog" name="ABGMonBusiErrorLog" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>12,189,160,80</uiinfo>
+    <url>/config/com/asiainfo/common/abo/ABGMonBusiErrorLog.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.common.abo.AIMonBusiErrLog" name="AIMonBusiErrLog" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>204,98,160,80</uiinfo>
+    <url>/config/com/asiainfo/common/abo/AIMonBusiErrLog.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.common.abo.AIMonBusiLog" name="AIMonBusiLog" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>212,187,160,80</uiinfo>
+    <url>/config/com/asiainfo/common/abo/AIMonBusiLog.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.common.abo.ABGMonLRecord" name="ABGMonLRecord" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>238,288,160,80</uiinfo>
+    <url>/config/com/asiainfo/common/abo/ABGMonLRecord.abo</url>
+  </abo>
+  <abo fullname="com.ailk.common.abo.DefaultAttr" name="DefaultAttr" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>7,12,160,80</uiinfo>
+    <url>/config/com/asiainfo/common/abo/DefaultAttr.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.common.abo.ABGMonBusiLog" name="ABGMonBusiLog" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>10,96,160,80</uiinfo>
+    <url>/config/com/asiainfo/common/abo/ABGMonBusiLog.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.common.abo.ABGMonWTrigger" name="ABGMonWTrigger" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>25,294,160,80</uiinfo>
+    <url>/config/com/asiainfo/common/abo/ABGMonWTrigger.abo</url>
+  </abo>
+  <joins/>
+</abo-design>

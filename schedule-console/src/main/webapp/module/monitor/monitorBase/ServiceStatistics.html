@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+
+			<div class="c_title">
+				<div class="text" uitype="title" editable="true">ServiceStatistics</div>
+			</div>
+
+
+			<div class="c_form c_form-col-4 c_form-label-4 c_form-inline"
+				uiid="query" id="query" type="condForm" objName="query"
+				uitype="condform" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">appId</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="appId"
+									value="ognl:query.appId" desc="appId" uiid="query_appId" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">className</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="className"
+									value="ognl:query.className" desc="className"
+									uiid="query_className" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">functionName</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="functionName"
+									value="ognl:query.functionName" desc="functionName"
+									uiid="query_functionName" /></span>
+						</span></span></li>
+				</ul>
+				<div class="submitPlace"></div>
+				<div class="submit">
+					<button onclick="" template_type="operate" type="button"
+						name="queryButton" class="e_button-form" formId="query">
+						<span>查询</span>
+					</button>
+					<button onclick="" template_type="operate" type="button"
+						name="statistics" class="e_button-form" formId="query">
+						<span>统计</span>
+					</button>
+					<button onclick="" template_type="operate" type="button"
+						name="copy" class="e_button-form" formId="query">
+						
+						<span>拷贝</span>
+					</button>
+				</div>
+			</div>
+			<div jwcid="serviceList@Part" uiid="serviceList" id="serviceList"
+							element="div" type="table"
+							objName="serviceListItems,serviceListCount"
+							uitype="table" editable="true">
+							<div class="c_scroll" style="height: 242px">
+								<div class="c_table c_table-row-10">
+									<table jwcid="@Table" name="serviceListTable" scroll="true">
+										<thead>
+											<tr>
+												<th col="serviceListRowIndex" style="display: none">RowIndex</th>
+												<th col="className" colcss="e_left" class="wrap">类名</th>
+												<th col="functionName" colcss="e_left" class="wrap">方法名</th>
+												<th col="minTimeConsuming" colcss="e_left" class="wrap">最小耗时（ms）</th>
+												<th col="maxTimeConsuming" colcss="e_left" class="wrap">最大耗时（ms）</th>
+												<th col="totalTimeConsuming" colcss="e_left" class="wrap">总耗时（ms）</th>
+												<th col="averageTimeConsuming" colcss="e_left" class="wrap">平均耗时（ms）</th>
+												<th col="allTimes" colcss="e_left" class="wrap">全部次数</th>
+												<th col="successTimes" colcss="e_left" class="wrap">成功次数</th>
+												<th col="failureTimes" colcss="e_left" class="wrap">失败次数</th>
+												<th col="theLastTimeConsuming" colcss="e_left" class="wrap">最后一次耗时</th>
+												<th col="lastCallTime" colcss="e_left" class="wrap">最后一次调用时间</th>
+											</tr>
+										</thead>
+										<tbody>
+											<span jwcid="@Foreach" source="ognl:serviceListItems"
+												value="ognl:serviceListItem"
+												index="ognl:serviceListRowIndex">
+												<tr>
+													<td style="display: none"><span jwcid="@Insert"
+														value="ognl:serviceListRowIndex+1"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.className" name="className"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.functionName" name="functionName"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.minTimeConsuming" name="minTimeConsuming"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.maxTimeConsuming" name="maxTimeConsuming"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.totalTimeConsuming" name="totalTimeConsuming"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.averageTimeConsuming" name="averageTimeConsuming"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.allTimes" name="allTimes"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.successTimes" name="successTimes"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.failureTimes" name="failureTimes"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.theLastTimeConsuming" name="theLastTimeConsuming"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:serviceListItem.lastCallTime" name="lastCallTime"></span></td>
+
+												</tr>
+											</span>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div jwcid="@NavBar" name="serviceListNavBar" cond=""
+								part="serviceList" listener="" count="ognl:serviceListCount"></div>
+						</div>
+			
+		</div>
+	</div>
+</body>
+</html>

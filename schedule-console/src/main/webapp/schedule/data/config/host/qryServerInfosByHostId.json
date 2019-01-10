@@ -1,0 +1,41 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "serverInfos": [
+      {
+        "serverCode": "monitor01",
+        "serverName": "monitor01"
+      },
+      {
+        "serverCode": "manager01",
+        "serverName": "manager01"
+      },
+      {
+        "serverCode": "abc",
+        "serverName": "monitor01"
+      },
+      {
+        "serverCode": "testServerLocal9",
+        "serverName": "testServerLocal9"
+      },
+      {
+        "serverCode": "coreSchedule01code",
+        "serverName": "coreSchedule01name"
+      },
+      {
+        "serverCode": "testServerLocal1",
+        "serverName": "testServerLocal1"
+      }
+    ],
+    "total": 6
+  }
+}

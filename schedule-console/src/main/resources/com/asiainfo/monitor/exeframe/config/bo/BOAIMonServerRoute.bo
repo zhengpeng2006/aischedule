@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonServerRoute" mainattr="ROUTE_ID">
+    <mapingenty type="table">AI_MON_SERVER_ROUTE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ROUTE_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">ROUTE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="S_SERV_ID" maxlength="12" datatype="Long" type="COL" remark="web应用标识">
+        <mapingcol datatype="NUMBER">S_SERV_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="S_SERV_CODE" maxlength="50" datatype="String" type="COL" remark="web应用码">
+        <mapingcol datatype="VARCHAR2">S_SERV_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="S_NODE_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">S_NODE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="S_NODE_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">S_NODE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="D_SERV_ID" maxlength="12" datatype="Long" type="COL" remark="app应用标识">
+        <mapingcol datatype="NUMBER">D_SERV_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="D_SERV_CODE" maxlength="50" datatype="String" type="COL" remark="app应用码">
+        <mapingcol datatype="VARCHAR2">D_SERV_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="D_NODE_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">D_NODE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="D_NODE_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">D_NODE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

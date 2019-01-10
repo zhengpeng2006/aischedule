@@ -1,0 +1,40 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "triggerTabItems": [
+            {
+                "appServerName": "DEFAULT_APPFRAME_SERVER_NAME1470896096882",
+                "content": "BOSS普通告警信息:主机Schedule01(10.1.243.23),cpu使用率已经大于90%,发生时间:14:15:01,请尽快处理!",
+                "createDate": "2016-08-11",
+                "createTime": "2016-08-11 14:15:01",
+                "doneDate": "",
+                "expiryDate": "",
+                "infoId": 620,
+                "infoName": "cpu",
+                "ip": "10.1.243.23",
+                "layer": "BASE",
+                "phonenum": "",
+                "recordId": null,
+                "remarks": "null",
+                "setName": "",
+                "state": "C",
+                "subsystemDomain": "AMS",
+                "systemDomain": "CRM",
+                "triggerId": 6,
+                "type": null,
+                "typeName": "com.asiainfo.common.abo.bo.BOABGMonWTrigger",
+                "warnLevel": "2"
+            }
+        ],
+        "total": 12
+    }
+}

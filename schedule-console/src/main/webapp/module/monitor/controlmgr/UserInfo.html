@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script type="text/javascript" src="module/monitor/controlmgr/js/UserInfo.js"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!--area start -->
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">用户管理</div>
+				</div>
+				<div class="c_form c_form-col-3 c_form-label-4 c_form-inline" uiid="qryform" id="qryform" type="condForm" objName="qryform" uitype="condform"
+					editable="true">
+					<ul class="ul">
+						<li class="li">
+							<span class="label">登录姓名：</span>
+							<span class="e_elements">
+								<span class="e_input">
+									<span>
+										<input jwcid="@TextField" type="text" name="userName" value="ognl:qryform.userName" desc="登录姓名" uiid="qryform_userName" />
+									</span>
+								</span>
+							</span>
+						</li>
+						<li class="li">
+							<span class="label">登录账号：</span>
+							<span class="e_elements">
+								<span class="e_input">
+									<span>
+										<input jwcid="@TextField" type="text" name="userCode" value="ognl:qryform.userCode" desc="登录账号" uiid="qryform_userCode" />
+									</span>
+								</span>
+							</span>
+						</li>
+					</ul>
+					<div class="submit">
+						<button onclick="return UserInfoJSObj.btn_qryOnclick($(this));" template_type="operate" type="button" name="btn_qry" class="e_button-form"
+							formId="qryform">
+							<span>
+								<i class="e_ico-search"></i>查询
+							</span>
+						</button>
+					</div>
+				</div>
+
+
+				<div class="c_table" jwcid="userInfoTab@Part" uiid="userInfoTab" id="userInfoTab" element="div" type="table"
+					objName="userInfoTabItems,userInfoTabCount" bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonUser" uitype="table" editable="true">
+					<div class="c_scroll" style="height: 242px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="userInfoTabTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="userInfoTabRowIndex" style="display: none">RowIndex</th>
+										<th col="userName" colcss="e_left" class="wrap">姓名</th>
+										<th col="userCode" colcss="e_left" class="wrap">账号</th>
+										<th col="effectDate" colcss="e_left" class="wrap">生效日期</th>
+										<th col="expireDate" colcss="e_left" class="wrap">失效日期</th>
+										<th col="allowChgPass" colcss="e_left" class="wrap">修改密码</th>
+										<th col="multiLoginFlag" colcss="e_left" class="wrap">同时登录</th>
+										<th col="tryTimes" colcss="e_left" class="wrap">失败尝试次数</th>
+										<th col="lockFlag" colcss="e_left" class="wrap">锁定状态</th>
+										<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+										<th col="doneDate" colcss="e_left" class="wrap">操作日期</th>
+										<th col="state" colcss="e_left" class="wrap">状态</th>
+										<th col="notes" colcss="e_left" class="wrap">备注</th>
+										<th col="userId" style="display: none">唯一标识。来源于系统序列号</th>
+									</tr>
+								</thead>
+								<tbody>
+									<span jwcid="@Foreach" source="ognl:userInfoTabItems" value="ognl:userInfoTabItem" index="ognl:userInfoTabRowIndex">
+										<tr jwcid="@Conditional" condition="ognl:userInfoTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+											<td style="display: none"><span jwcid="@Insert" value="ognl:userInfoTabRowIndex+1"></span></td>
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.userName" name="userName"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.userCode" name="userCode"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.effectDate" name="effectDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.expireDate" name="expireDate"></span></td>
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('CONST_ALLOW_NO',userInfoTabItem.allowChgPass)"
+													name="allowChgPass"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('CONST_ALLOW_NO',userInfoTabItem.multiLoginFlag)"
+													name="multiLoginFlag"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.tryTimes" name="tryTimes"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('CONST_LOCK_STATE',userInfoTabItem.lockFlag)" name="lockFlag"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.createDate" name="createDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.doneDate" name="doneDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userInfoTabItem.state)" name="state"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.notes" name="notes"></span></td>
+
+											<td style="display: none"><span jwcid="@Insert" value="ognl:userInfoTabItem.userId" name="userId"></span></td>
+
+										</tr>
+										<tr jwcid="@Conditional" condition="ognl:userInfoTabRowIndex % 2 == 1" element="tr">
+											<td style="display: none"><span jwcid="@Insert" value="ognl:userInfoTabRowIndex+1"></span></td>
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.userName" name="userName"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.userCode" name="userCode"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.effectDate" name="effectDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.expireDate" name="expireDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('CONST_ALLOW_NO',userInfoTabItem.allowChgPass)"
+													name="allowChgPass"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('CONST_ALLOW_NO',userInfoTabItem.multiLoginFlag)"
+													name="multiLoginFlag"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.tryTimes" name="tryTimes"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('CONST_LOCK_STATE',userInfoTabItem.lockFlag)" name="lockFlag"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.createDate" name="createDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.doneDate" name="doneDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userInfoTabItem.state)" name="state"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userInfoTabItem.notes" name="notes"></span></td>
+
+											<td style="display: none"><span jwcid="@Insert" value="ognl:userInfoTabItem.userId" name="userId"></span></td>
+
+										</tr>
+									</span>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div jwcid="@NavBar" name="NavBar" cond="qryform" part="userInfoTab"  listener="loadUserData" count="ognl:userInfoTabCount"></div>
+				</div>
+
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button name="btn_add" class="e_button-form" onclick="UserInfoJSObj.buttonAddOnClick();">
+						<span>
+							<i class="e_ico-add"></i>新增
+						</span>
+					</button>
+
+					<button onclick="return UserInfoJSObj.btn_editOnclick($(this));" name="btn_edit" class="e_button-form">
+						<span>
+							<i class="e_ico-edit"></i>修改
+						</span>
+					</button>
+					<button onclick="UserInfoJSObj.btn_delOnclick();" name="btn_del" class="e_button-form">
+						<span>
+							<i class="e_ico-delete"></i>删除
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="userDetailForm" style="display: none;">
+		<!--组件开始-->
+
+		<div class="c_form c_form-col-2 c_form-label-5" jwcid="userDetail@Part" uiid="userDetail" id="userDetail" type="form" objName="userDetail"
+			bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUser" uitype="form" editable="true">
+			<ul class="ul" style="letter-spacing: -4px">
+				<li class="li">
+					<span class="label">
+						<span class="e_required">姓名 ：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="userName" value="ognl:userDetail.userName" nullable="no" desc="姓名" uiid="userDetail_userName" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">账号：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" nullable="no" type="text" name="userCode" value="ognl:userDetail.userCode" desc="账号" uiid="userDetail_userCode" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">密码：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@Password" nullable="no" minsize="6" type="password" name="userPass" value="ognl:userDetail.userPass" desc="密码"
+									uiid="userDetail_userPass" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">确认密码：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@Password" nullable="no" minsize="6" type="password" name="reUserPass" value="ognl:userDetail.userPass" desc="确认密码"
+									uiid="userDetail_userPass" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">生效日期：</span>
+					</span>
+					<input type="text" name="effectDate" jwcid="@DateField" format="yyyy-MM-dd HH:mm:ss" nullable="no" value="ognl:userDetail.effectDate" desc="生效日期"
+						time="true" datatype="date" afterAction="" uiid="userDetail_effectDate" />
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">失效日期：</span>
+					</span>
+					<input type="text" name="expireDate" jwcid="@DateField" nullable="no" format="yyyy-MM-dd HH:mm:ss" time="true" value="ognl:userDetail.expireDate"
+						desc="失效日期" datatype="date" afterAction="" uiid="userDetail_expireDate" />
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">修改密码：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_select">
+							<span>
+								<span>
+									<select jwcid="@Select" name="allowChgPass" value="ognl:userDetail.allowChgPass" desc="修改密码"
+										source="ognl:auto_getUserPrivConstByCode('CONST_ALLOW_NO')" disabled="false" changeValue="true" addDefault="false" defaultText="root"
+										uiid="userDetail_allowChgPass"></select>
+								</span>
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">同时登录：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_select">
+							<span>
+								<span>
+									<select jwcid="@Select" name="multiLoginFlag" value="ognl:userDetail.multiLoginFlag" desc="同时登录"
+										source="ognl:auto_getUserPrivConstByCode('CONST_ALLOW_NO')" disabled="false" changeValue="true" addDefault="false" defaultText="root"
+										uiid="userDetail_multiLoginFlag"></select>
+								</span>
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">失败尝试次数：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" nullable="no" type="text" name="tryTimes" value="ognl:userDetail.tryTimes" desc="失败尝试次数" uiid="userDetail_tryTimes" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">锁定状态：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_select">
+							<span>
+								<span>
+									<select jwcid="@Select" name="lockFlag" value="ognl:userDetail.lockFlag" desc="锁定状态"
+										source="ognl:auto_getUserPrivConstByCode('CONST_LOCK_STATE')" disabled="false" changeValue="true" addDefault="false" defaultText="root"
+										uiid="userDetail_lockFlag"></select>
+								</span>
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">备注：</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="notes" value="ognl:userDetail.notes" desc="备注" uiid="userDetail_notes" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li" style="display: none">
+					<span class="label">创建日期</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="createDate" value="ognl:userDetail.createDate" desc="创建日期" uiid="userDetail_createDate" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li" style="display: none">
+					<span class="label">当前业务受理日期</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="doneDate" value="ognl:userDetail.doneDate" desc="当前业务受理日期" uiid="userDetail_doneDate" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li" style="display: none">
+					<span class="label">操作标识</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="opId" value="ognl:userDetail.opId" desc="操作标识" uiid="userDetail_opId" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li" style="display: none">
+					<span class="label">用户状态 U-正常 E- 删除状态</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="state" value="ognl:userDetail.state" desc="用户状态 U-正常 E- 删除状态" uiid="userDetail_state" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li" style="display: none">
+					<span class="label">唯一标识。来源于系统序列号</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="userId" value="ognl:userDetail.userId" desc="唯一标识。来源于系统序列号" uiid="userDetail_userId" />
+							</span>
+						</span>
+					</span>
+				</li>
+			</ul>
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="return UserInfoJSObj.btn_saveOnclick($(this));" id="btn_save" name="btn_save" class="e_button-form">
+					<span>
+						<i class="e_ico-save"></i>保存
+					</span>
+				</button>
+				<button onclick="" id="btn_cancel" name="btn_cancel" class="e_button-form">
+					<span>
+						<i class="e_ico-cancel"></i>取消
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

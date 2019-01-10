@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOABGMonLRecord" mainattr="RECORD_ID">
+    <mapingenty type="table">{ABG_MON_L_RECORD}</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="RECORD_ID" maxlength="20" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol datatype="NUMBER">RECORD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_ID" maxlength="20" datatype="Long" type="COL" order="1" notNull="N">
+        <mapingcol datatype="NUMBER">INFO_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_CODE" maxlength="32" datatype="String" type="COL" order="2" notNull="N">
+        <mapingcol datatype="VARCHAR2">INFO_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST_NAME" maxlength="128" datatype="String" type="COL" order="3" notNull="N">
+        <mapingcol datatype="VARCHAR2">HOST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ip" maxlength="128" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol datatype="VARCHAR2">ip</mapingcol>
+      </attr>
+      <attr floatlength="0" name="mon_type" maxlength="8" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol datatype="VARCHAR2">mon_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="info_name" maxlength="128" datatype="String" type="COL" order="6" notNull="N">
+        <mapingcol datatype="VARCHAR2">info_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="layer" maxlength="256" datatype="String" type="COL" order="7" notNull="N">
+        <mapingcol datatype="VARCHAR2">layer</mapingcol>
+      </attr>
+      <attr floatlength="0" name="from_type" maxlength="128" datatype="String" type="COL" order="8" notNull="N">
+        <mapingcol datatype="VARCHAR2">from_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="256" datatype="String" type="COL" order="9" notNull="N">
+        <mapingcol datatype="VARCHAR2">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="is_trigger_warn" maxlength="1" datatype="String" type="COL" order="10" notNull="N">
+        <mapingcol datatype="CHAR">is_trigger_warn</mapingcol>
+      </attr>
+      <attr floatlength="0" name="warn_level" maxlength="256" datatype="String" type="COL" order="11" notNull="N">
+        <mapingcol datatype="VARCHAR2">warn_level</mapingcol>
+      </attr>
+      <attr floatlength="0" name="info_value" maxlength="256" datatype="String" type="COL" order="12" notNull="N">
+        <mapingcol datatype="VARCHAR2">info_value</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="0" datatype="DateTime" type="COL" order="13" notNull="N">
+        <mapingcol datatype="DATE">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="20" datatype="Long" type="COL" order="14" notNull="N">
+        <mapingcol datatype="NUMBER">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="batch_id" maxlength="20" datatype="Long" type="COL" order="15" notNull="N">
+        <mapingcol datatype="NUMBER">batch_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALID_DATE" maxlength="0" datatype="DateTime" type="COL" order="16" notNull="N">
+        <mapingcol datatype="DATE">VALID_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="0" datatype="DateTime" type="COL" order="17" notNull="N">
+        <mapingcol datatype="DATE">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="20" datatype="Long" type="COL" order="18" notNull="N">
+        <mapingcol datatype="NUMBER">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="20" datatype="Long" type="COL" order="19" notNull="N">
+        <mapingcol datatype="NUMBER">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="system_domain" maxlength="256" datatype="String" type="COL" order="20" notNull="N">
+        <mapingcol datatype="VARCHAR2">system_domain</mapingcol>
+      </attr>
+      <attr floatlength="0" name="subsystem_domain" maxlength="256" datatype="String" type="COL" order="21" notNull="N">
+        <mapingcol datatype="VARCHAR2">subsystem_domain</mapingcol>
+      </attr>
+      <attr floatlength="0" name="app_server_name" maxlength="128" datatype="String" type="COL" order="22" notNull="N">
+        <mapingcol datatype="VARCHAR2">app_server_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="256" datatype="String" type="COL" order="23" notNull="N">
+        <mapingcol datatype="VARCHAR2">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_time" maxlength="0" datatype="DateTime" type="COL" order="24" notNull="N">
+        <mapingcol datatype="DATE">create_time</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="512" datatype="String" type="COL" order="25" notNull="N">
+        <mapingcol datatype="VARCHAR2">remarks</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="UsersInfo" desc="" dna-code="73b8fe12-4a01-0010-ab53-c147c9b0984d" full-name="module.monitor.configmgr.UsersInfo" kind="0" name="UsersInfo">
+  <uientity-version branch="" code="" desc="" name="UsersInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.UsersInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="qryForm_userCode"/>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonUsers" type="form" uiid="usersForm"/>
+      <area bo="java.lang.String" type="textfield" uiid="usersForm_userId"/>
+      <area bo="java.lang.String" type="textfield" uiid="usersForm_userName"/>
+      <area bo="java.lang.String" type="textfield" uiid="usersForm_userCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="usersForm_userPwd"/>
+      <area bo="java.lang.String" type="textfield" uiid="usersForm_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="usersForm_modifyDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="usersForm_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="usersForm_remark"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="UsersInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="UsersInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="UsersInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="UsersInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="qryUserBtn" type="button"/>
+      <ui-event id="" name="savaBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

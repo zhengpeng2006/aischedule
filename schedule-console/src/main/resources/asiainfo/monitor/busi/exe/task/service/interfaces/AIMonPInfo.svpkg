@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="AIMonPInfo" desc="" dna-code="e3c817e8-4701-0010-aee8-871882685953" implementation-class="com.asiainfo.monitor.busi.exe.task.service.impl.AIMonPInfoSVImpl" interface-class="com.asiainfo.monitor.busi.exe.task.service.interfaces.IAIMonPInfoSV" name="AIMonPInfo" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="IAIMonPInfoSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/impl" name="AIMonPInfoSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="AIMonPInfo.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonPInfoSV_getAllTaskInfo" desc="" dna-code="b8e417e8-4701-0010-aee8-871882685953" name="getAllTaskInfo" opt-flag="Y" serv-func="getAllTaskInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="taskMethod" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoSV_getMonPInfoValuesBySplitAndMod" desc="" dna-code="bde417e8-4701-0010-aee8-871882685953" name="getMonPInfoValuesBySplitAndMod" opt-flag="Y" serv-func="getMonPInfoValuesBySplitAndMod" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="split" param-kind="java"/>
+          <param datatype="long" name="mod" param-kind="java"/>
+          <param datatype="long" name="value" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoSV_getTaskInfoByName" desc="" dna-code="bee417e8-4701-0010-aee8-871882685953" name="getTaskInfoByName" opt-flag="Y" serv-func="getTaskInfoByName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="taskName" param-kind="java"/>
+          <param datatype="java.lang.String" name="state" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="startNum" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="endNum" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoSV_getTaskInfoCount" desc="" dna-code="cbe417e8-4701-0010-aee8-871882685953" name="getTaskInfoCount" opt-flag="Y" serv-func="getTaskInfoCount" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="taskName" param-kind="java"/>
+          <param datatype="java.lang.String" name="state" param-kind="java"/>
+        </param-list>
+        <return-param datatype="int" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_getTaskInfoCountByResolveId" desc="" dna-code="d0e417e8-4701-0010-aee8-871882685953" name="getTaskInfoCountByResolveId" opt-flag="Y" serv-func="getTaskInfoCountByResolveId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="resolveId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="int" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_getMonPInfoValue" desc="" dna-code="d1e417e8-4701-0010-aee8-871882685953" name="getMonPInfoValue" opt-flag="Y" serv-func="getMonPInfoValue" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="infoId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoSV_getMonPInfoValueByParams" desc="" dna-code="d2e417e8-4701-0010-aee8-871882685953" name="getMonPInfoValueByParams" opt-flag="Y" serv-func="getMonPInfoValueByParams" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="groupId" param-kind="java"/>
+          <param datatype="long" name="timeId" param-kind="java"/>
+          <param datatype="long" name="thresholdId" param-kind="java"/>
+          <param datatype="long" name="typeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoSV_saveOrUpdate" desc="" dna-code="d3e417e8-4701-0010-aee8-871882685953" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_saveOrUpdate" desc="" dna-code="d4e417e8-4701-0010-aee8-871882685953" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_saveOrUpdate" desc="" dna-code="d5e417e8-4701-0010-aee8-871882685953" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo" name="infoValue" param-kind="bo"/>
+          <param datatype="com.ai.appframe2.bo.DataContainer[]" name="paramDcs" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_delete" desc="" dna-code="d6e417e8-4701-0010-aee8-871882685953" name="delete" opt-flag="Y" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="infoId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_getTaskInfoByResolveId" desc="" dna-code="d7e417e8-4701-0010-aee8-871882685953" name="getTaskInfoByResolveId" opt-flag="Y" serv-func="getTaskInfoByResolveId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="resolveId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoSV_getTaskInfoByGroupId" desc="" dna-code="d8e417e8-4701-0010-aee8-871882685953" name="getTaskInfoByGroupId" opt-flag="Y" serv-func="getTaskInfoByGroupId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.appframe2.common.DataContainerInterface[]" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_queryTaskInfoByCond" desc="" dna-code="d9e417e8-4701-0010-aee8-871882685953" name="queryTaskInfoByCond" opt-flag="Y" serv-func="queryTaskInfoByCond" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupId" param-kind="java"/>
+          <param datatype="int" name="startIndex" param-kind="java"/>
+          <param datatype="int" name="endIndex" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.appframe2.common.DataContainerInterface[]" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_getTaskInfoCountByCond" desc="" dna-code="dae417e8-4701-0010-aee8-871882685953" name="getTaskInfoCountByCond" opt-flag="Y" serv-func="getTaskInfoCountByCond" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="int" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_queryTaskInfoByGrpAndInfoName" desc="" dna-code="dbe417e8-4701-0010-aee8-871882685953" name="queryTaskInfoByGrpAndInfoName" opt-flag="Y" serv-func="queryTaskInfoByGrpAndInfoName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupId" param-kind="java"/>
+          <param datatype="java.lang.String" name="taskName" param-kind="java"/>
+          <param datatype="int" name="startIndex" param-kind="java"/>
+          <param datatype="int" name="endIndex" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.appframe2.common.DataContainerInterface[]" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_getTaskInfoCountByGrpAndInfoName" desc="" dna-code="e9e417e8-4701-0010-aee8-871882685953" name="getTaskInfoCountByGrpAndInfoName" opt-flag="Y" serv-func="getTaskInfoCountByGrpAndInfoName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupId" param-kind="java"/>
+          <param datatype="java.lang.String" name="taskName" param-kind="java"/>
+        </param-list>
+        <return-param datatype="int" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_updateLayer" desc="" dna-code="eee417e8-4701-0010-aee8-871882685953" name="updateLayer" opt-flag="Y" serv-func="updateLayer" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="groupId" param-kind="java"/>
+          <param datatype="java.lang.String" name="layer" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_updateState" desc="" dna-code="f0e417e8-4701-0010-aee8-871882685953" name="updateState" opt-flag="Y" serv-func="updateState" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="infoId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_getTaskByType" desc="" dna-code="f1e417e8-4701-0010-aee8-871882685953" name="getTaskByType" opt-flag="Y" serv-func="getTaskByType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="mType" param-kind="java"/>
+          <param datatype="long" name="typeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoSV_shieldInfoByInfoIds" desc="" dna-code="f2e417e8-4701-0010-aee8-871882685953" name="shieldInfoByInfoIds" opt-flag="Y" serv-func="shieldInfoByInfoIds" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="infoIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoSV_getInfosByNameAndCode" desc="" dna-code="f4e417e8-4701-0010-aee8-871882685953" name="getInfosByNameAndCode" opt-flag="Y" serv-func="getInfosByNameAndCode" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="name" param-kind="java"/>
+          <param datatype="java.lang.String" name="code" param-kind="java"/>
+          <param datatype="int" name="startIndex" param-kind="java"/>
+          <param datatype="int" name="endIndex" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo[]" param-kind="bo"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

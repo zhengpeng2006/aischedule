@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="appframe" name="BOAIMonUserGroupRoleRel" mainattr="RELAT_ID">
+    <mapingenty type="table">AI_MON_USER_GROUP_ROLE_REL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RELAT_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">RELAT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_GROUP_ID" maxlength="12" datatype="Long" type="COL" remark="唯一标识。来源于系统序列号">
+        <mapingcol datatype="NUMBER">USER_GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ROLE_ID" maxlength="12" datatype="Long" type="COL" remark="唯一标识。来源于系统序列号">
+        <mapingcol datatype="NUMBER">USER_ROLE_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

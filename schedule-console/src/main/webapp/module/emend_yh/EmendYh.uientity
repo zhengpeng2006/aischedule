@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/emend_yh/Emend_Yh.cmpt" code="EmendYh" desc="" dna-code="592b396e-4f01-0010-8590-d5fb1efbc3a0" full-name="module.emend_yh.EmendYh" kind="0" name="EmendYh">
+  <uientity-version branch="" code="" desc="" name="EmendYh" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.emend_yh.view.EmendYh</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/emend_yh" name="EmendYh.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/emend_yh" name="EmendYh.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/emend_yh" name="EmendYh.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/emend_yh/view" name="EmendYh.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,37 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "deployAppParamTabItems": [
+      {
+        "applicationId": 788,
+        "applicationParamId": 321,
+        "key": "key1",
+        "paramType": "C",
+        "setName": "",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployAppParams",
+        "value": "value1"
+      },
+      {
+        "applicationId": 788,
+        "applicationParamId": 324,
+        "key": "key2",
+        "paramType": "C",
+        "setName": "",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployAppParams",
+        "value": "value2"
+      }
+    ],
+    "total": 2
+  }
+}

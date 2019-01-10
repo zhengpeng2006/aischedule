@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonSet" mainattr="SET_ID">
+    <mapingenty type="table">AI_MON_SET</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SET_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">SET_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SET_CODE" maxlength="40" datatype="String" type="COL" remark="标识码">
+        <mapingcol datatype="VARCHAR2">SET_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST_ID" maxlength="12" datatype="Long" type="COL" remark="主机标识">
+        <mapingcol datatype="NUMBER">HOST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVER_ID" maxlength="12" datatype="Long" type="COL" remark="应用标识">
+        <mapingcol datatype="NUMBER">SERVER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APP_NAME" maxlength="255" datatype="String" type="COL" remark="应用名">
+        <mapingcol datatype="VARCHAR2">APP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SET_VCODE" maxlength="40" datatype="String" type="COL" remark="设置码">
+        <mapingcol datatype="VARCHAR2">SET_VCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SET_VALUE" maxlength="255" datatype="String" type="COL" remark="值">
+        <mapingcol datatype="VARCHAR2">SET_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SET_DESC" maxlength="255" datatype="String" type="COL" remark="描述">
+        <mapingcol datatype="VARCHAR2">SET_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建时间">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATER" maxlength="40" datatype="String" type="COL" remark="操作人">
+        <mapingcol datatype="VARCHAR2">OPERATER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

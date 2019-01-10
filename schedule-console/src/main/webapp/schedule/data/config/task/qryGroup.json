@@ -1,0 +1,41 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "groupInfosItems": [
+      {
+        "groupName": "test01",
+        "groupCode": "test01",
+        "groupDesc": "",
+        "createTime": "2016-08-11 02:50:08"
+      },
+      {
+        "groupName": "1",
+        "groupCode": "1",
+        "groupDesc": "",
+        "createTime": "2016-08-30 05:03:07"
+      },
+      {
+        "groupName": "test02",
+        "groupCode": "test02",
+        "groupDesc": "",
+        "createTime": "2016-08-11 02:50:08"
+      },
+      {
+        "groupName": "test03",
+        "groupCode": "test03",
+        "groupDesc": "",
+        "createTime": "2016-08-11 02:50:08"
+      }
+    ],
+    "total": 2
+  }
+}

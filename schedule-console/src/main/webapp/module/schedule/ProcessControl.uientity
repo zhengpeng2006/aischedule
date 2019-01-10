@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="ProcessControl" desc="" dna-code="47001da1-4801-0010-aca3-936952cf1d9c" full-name="module.schedule.ProcessControl" kind="0" name="ProcessControl">
+  <uientity-version branch="" code="" desc="" name="ProcessControl" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.ProcessControl</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="select" uiid="BusiQueryForm_taskGroup"/>
+      <area bo="java.lang.String" type="select" uiid="BusiQueryForm_taskCode"/>
+      <area bo="java.lang.String" type="select" uiid="hostQueryForm_hostGroup"/>
+      <area bo="java.lang.String" type="select" uiid="hostQueryForm_hostName"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostQueryForm_taskCode"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/schedule" name="ProcessControl.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="ProcessControl.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="ProcessControl.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="ProcessControl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="busiQry" type="button"/>
+      <ui-event id="" name="hostQry" type="button"/>
+      <ui-event id="" name="detail" type="button"/>
+      <ui-event id="" name="startProcess" type="button"/>
+      <ui-event id="" name="stopProcess" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

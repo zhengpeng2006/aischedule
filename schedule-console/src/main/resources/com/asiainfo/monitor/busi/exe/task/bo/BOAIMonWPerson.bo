@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonWPerson" mainattr="PERSON_ID">
+    <mapingenty type="table">AI_MON_W_PERSON</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PERSON_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">PERSON_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NAME" maxlength="255" datatype="String" type="COL" remark="姓名">
+        <mapingcol datatype="VARCHAR2">NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHONENUM" maxlength="255" datatype="String" type="COL" remark="号码">
+        <mapingcol datatype="VARCHAR2">PHONENUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="12" datatype="Long" type="COL" remark="组织标识">
+        <mapingcol datatype="NUMBER">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION" maxlength="255" datatype="String" type="COL" remark="组织">
+        <mapingcol datatype="VARCHAR2">REGION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

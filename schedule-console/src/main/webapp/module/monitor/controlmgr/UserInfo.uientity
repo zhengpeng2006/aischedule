@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/ailk/monitor/exeframe/controlmgr/ControlMgr.cmpt" code="UserInfo" desc="用户信息" dna-code="d1a3ae40-4601-0010-a3bb-717475e39cb4" full-name="monitor.controlmgr.UserInfo" kind="0" name="UserInfo">
+  <uientity-version branch="" code="" desc="" name="UserInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.controlmgr.view.UserInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="qryform_userName"/>
+      <area bo="java.lang.String" type="textfield" uiid="qryform_userCode"/>
+      <area bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonUser" type="form" uiid="userDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_userName"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_userCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_userPass"/>
+      <area bo="java.lang.String" type="password" uiid="userDetail_userPass"/>
+      <area bo="java.lang.String" type="datefield" uiid="userDetail_effectDate"/>
+      <area bo="java.lang.String" type="datefield" uiid="userDetail_expireDate"/>
+      <area bo="java.lang.String" type="select" uiid="userDetail_allowChgPass"/>
+      <area bo="java.lang.String" type="select" uiid="userDetail_multiLoginFlag"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_tryTimes"/>
+      <area bo="java.lang.String" type="select" uiid="userDetail_lockFlag"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_notes"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_doneDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_opId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_userId"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/controlmgr" name="UserInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/controlmgr" name="UserInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/controlmgr" name="UserInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/controlmgr/view" name="UserInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="btn_qry" type="button"/>
+      <ui-event id="" name="btn_add" type="button"/>
+      <ui-event id="" name="btn_edit" type="button"/>
+      <ui-event id="" name="btn_del" type="button"/>
+      <ui-event id="" name="btn_save" type="button"/>
+      <ui-event id="" name="btn_cancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onclick" element-id="btn_qry">{descRow:'btn_qryOnclick',nameRow:'btn_qryOnclick'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="btn_save">{descRow:'btn_saveOnclick',nameRow:'btn_saveOnclick'}</jsfunction>
+      <jsfunction element-event="source" element-id="multiLoginFlag">{descRow:'multiLoginFlagSource',nameRow:'multiLoginFlagSource'}</jsfunction>
+      <jsfunction element-event="source" element-id="lockFlag">{descRow:'lockFlagSource',nameRow:'lockFlagSource'}</jsfunction>
+      <jsfunction element-event="source" element-id="allowChgPass">{descRow:'allowChgPassSource',nameRow:'allowChgPassSource'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="btn_edit">{descRow:'btn_editOnclick',nameRow:'btn_editOnclick',funcTemplate:{selectedIndex:'$rowClick',fragmentList:[{descRow:'GetKeyID',selectedIndex:'table$getRowId',type:'API',parameList:[{type:'Constant',value:'userInfoTabTable'},{type:'Constant',value:'userId'}]},{descRow:'QryByID',type:'Operate'}]}}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAIMonUserSV_getUserInfoByCond" data-uiid="qryform" desc="" dna-code="79d0cdf8-4501-0010-a38f-9f4840270cd8" element-event="onclick" element-id="btn_qry" is-template="false" method="getUserInfoByCond" name="" on-fail="" on-success="" refresh-uiid="userInfoTab" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/ailk/monitor/service/interfaces/AIMonUser.svpkg" type="condform">
+        <ui-parameter code="userCode" param-kind="java" scope="qryform" type="java.lang.String" uiparam-type="FormEle" uiparam-value="userCode"/>
+        <ui-parameter code="userName" param-kind="java" scope="qryform" type="java.lang.String" uiparam-type="FormEle" uiparam-value="userName"/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="getUserPrivConstByCode" data-uiid="" desc="" dna-code="7449e641-4601-0010-809c-b332abf327a1" element-event="source" element-id="multiLoginFlag" is-template="false" method="getUserPrivConstByCode" name="" on-fail="" on-success="" refresh-uiid="" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/ailk/monitor/exeframe/controlmgr/servpkg/UserPriConstData.svpkg" type="select">
+        <ui-parameter code="constCode" param-kind="java" scope="" type="java.lang.String" uiparam-type="Constant" uiparam-value="CONST_ALLOW_NO"/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="getUserPrivConstByCode" data-uiid="" desc="" dna-code="7449e641-4601-0010-809c-b332abf327a1" element-event="source" element-id="lockFlag" is-template="false" method="getUserPrivConstByCode" name="" on-fail="" on-success="" refresh-uiid="" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/ailk/monitor/exeframe/controlmgr/servpkg/UserPriConstData.svpkg" type="select">
+        <ui-parameter code="constCode" param-kind="java" scope="" type="java.lang.String" uiparam-type="Constant" uiparam-value="CONST_LOCK_STATE"/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="getUserPrivConstByCode" data-uiid="" desc="" dna-code="7449e641-4601-0010-809c-b332abf327a1" element-event="source" element-id="allowChgPass" is-template="false" method="getUserPrivConstByCode" name="" on-fail="" on-success="" refresh-uiid="" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/ailk/monitor/exeframe/controlmgr/servpkg/UserPriConstData.svpkg" type="select">
+        <ui-parameter code="constCode" param-kind="java" scope="" type="java.lang.String" uiparam-type="Constant" uiparam-value="CONST_ALLOW_NO"/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="IAIMonUserSV_saveOrUpdate" data-uiid="userDetail" desc="" dna-code="c1d0cdf8-4501-0010-a38f-9f4840270cd8" element-event="onclick" element-id="btn_save" is-template="false" method="saveOrUpdate" name="" on-fail="" on-success="show result" refresh-uiid="userInfoTab" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/ailk/monitor/service/interfaces/AIMonUser.svpkg" type="btngroup">
+        <ui-parameter code="value" param-kind="bo" scope="userInfoDetail" type="com.asiainfo.appframe.ext.exeframe.config.ivalues.IBOAIMonUserValue" uiparam-type="BOObject" uiparam-value=""/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="IAIMonUserSV_getBeanById" data-uiid="" desc="" dna-code="66d0cdf8-4501-0010-a38f-9f4840270cd8" element-event="onclick" element-id="btn_edit" is-template="true" method="getBeanById" name="" on-fail="" on-success="" refresh-uiid="userDetail" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/ailk/monitor/service/interfaces/AIMonUser.svpkg" type="btngroup">
+        <ui-parameter code="userId" param-kind="java" scope="" type="long" uiparam-type="ContextVar" uiparam-value="id"/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,50 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "execInfosItems": [
+      {
+        "EType": "SHELL",
+        "execId": 900,
+        "expr": "#!/bin/shCPU_IDLE_PERCENT=`vmstat 1 2| tail -n 1...",
+        "name": "IBMAIX系统CPU使用率",
+        "remarks": "IBMAIX系统CPU使用率",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec"
+      },
+      {
+        "EType": "JAVACOMMAND",
+        "execId": 901,
+        "expr": "#!/bin/shCPU_IDLE_PERCENT=`vmstat 1 2| tail -n 1...",
+        "name": "LINUX的文件系统使用率",
+        "remarks": "LINUX的文件系统使用率",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec"
+      },
+       {
+        "EType": "JAVACOMMAND",
+        "execId": 902,
+        "expr": "#!/bin/sh TMP_FREE=`vmstat | tail -n 1 | awk '{print$5}'`...",
+        "name": "HPUX系统内存使用率",
+        "remarks": "HPUX系统内存使用率",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec"
+      }
+    ],
+    "total": 3
+  }
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="ConfigMgr" desc="" dna-code="30e5803b-4601-0010-a968-1bf5c2ec4aac" name="ConfigMgr">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="ConfigMgr" label="ConfigMgr">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/monitor/exeframe/configmgr/abod/ConfigMgr.abod</url>
+      </abod>
+      <sv-package dna-code="3599823b-4601-0010-a968-1bf5c2ec4aac" label="AIMonPhysicHost">
+        <uiinfo>9,212,160,300</uiinfo>
+        <url>/config/com/asiainfo/monitor/service/interfaces/AIMonPhysicHost.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="66948b3c-4601-0010-8909-65032ead7cb7" label="AIMonStaticData">
+        <uiinfo>7,4,160,200</uiinfo>
+        <url>/config/com/asiainfo/monitor/service/interfaces/AIMonStaticData.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="0153e79f-4701-0010-9cc3-4d1c4eed14b3" label="AIMonPInfoGroup">
+        <uiinfo>203,642,160,300</uiinfo>
+        <url>/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPInfoGroup.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="18e646a9-4701-0010-aaa9-197f2770c7ec" label="AIMonPTime">
+        <uiinfo>391,252,160,200</uiinfo>
+        <url>/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPTime.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="91728bae-4701-0010-b59a-49dc1221d37a" label="AIMonPThreshold">
+        <uiinfo>393,15,160,220</uiinfo>
+        <url>/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPThreshold.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="6acf44b4-4701-0010-a186-83ee90379a18" label="AIMonPExec">
+        <uiinfo>21,560,160,260</uiinfo>
+        <url>/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPExec.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="e3c817e8-4701-0010-aee8-871882685953" label="AIMonPInfo">
+        <uiinfo>402,504,160,500</uiinfo>
+        <url>/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPInfo.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="a8aa5df2-4701-0010-91d2-d5d7a2b381f6" label="AIMonParamValues">
+        <uiinfo>611,624,160,100</uiinfo>
+        <url>/config/com/asiainfo/monitor/busi/service/interfaces/AIMonParamValues.svpkg</url>
+      </sv-package>
+      <ui-entity dna-code="04e6893b-4601-0010-a968-1bf5c2ec4aac" label="ConfigMgr">
+        <uiinfo>205,124,160,21</uiinfo>
+        <url>/html/module/monitor/configmgr/ConfigMgr.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="bfefa23b-4601-0010-a968-1bf5c2ec4aac" label="SysStructureConfig">
+        <uiinfo>200,21,160,25</uiinfo>
+        <url>/html/module/monitor/configmgr/SysStructureConfig.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="f238a43b-4601-0010-a968-1bf5c2ec4aac" label="AuthorityConfig">
+        <uiinfo>204,91,160,23</uiinfo>
+        <url>/html/module/monitor/configmgr/AuthorityConfig.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="7cbda43b-4601-0010-a968-1bf5c2ec4aac" label="HostPerformanceConfig">
+        <uiinfo>203,58,160,22</uiinfo>
+        <url>/html/module/monitor/configmgr/HostPerformanceConfig.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="63f24847-4701-0010-949d-49fc2cedb28a" label="BaseConfigPortal">
+        <uiinfo>208,193,160,22</uiinfo>
+        <url>/html/module/monitor/configmgr/BaseConfigPortal.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="b4a69a58-4701-0010-b566-bf801ef1dffc" label="GroupInfo">
+        <uiinfo>204,233,160,23</uiinfo>
+        <url>/html/module/monitor/configmgr/GroupInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="825d8366-4701-0010-b062-9bd8dd428ef0" label="HostInfo">
+        <uiinfo>203,273,160,26</uiinfo>
+        <url>/html/module/monitor/configmgr/HostInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="0a07be7f-4701-0010-b254-a74a44328a96" label="NodeInfo">
+        <uiinfo>204,308,160,27</uiinfo>
+        <url>/html/module/monitor/configmgr/NodeInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="da19fd80-4701-0010-b254-a74a44328a96" label="ServerInfo">
+        <uiinfo>207,345,160,24</uiinfo>
+        <url>/html/module/monitor/configmgr/ServerInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="549947a9-4701-0010-aaa9-197f2770c7ec" label="PTimeConfig">
+        <uiinfo>569,251,160,40</uiinfo>
+        <url>/html/module/monitor/configmgr/PTimeConfig.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="c3815dae-4701-0010-b59a-49dc1221d37a" label="PThresholdConfig">
+        <uiinfo>578,16,160,40</uiinfo>
+        <url>/html/module/monitor/controlmgr/PThresholdConfig.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="8f1a3aaf-4701-0010-b793-fd158f3593e4" label="ConModeInfo">
+        <uiinfo>209,417,160,24</uiinfo>
+        <url>/html/module/monitor/configmgr/ConModeInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="e28a45b4-4701-0010-a186-83ee90379a18" label="PExecConfig">
+        <uiinfo>197,573,160,40</uiinfo>
+        <url>/html/module/monitor/configmgr/PExecConfig.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="d090afc2-4701-0010-a006-f5602f57081e" label="HostUserInfo">
+        <uiinfo>209,461,160,25</uiinfo>
+        <url>/html/module/monitor/configmgr/HostUserInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="a0b4d5c7-4701-0010-a497-a78f818222e3" label="MasterSlaveInfo">
+        <uiinfo>212,499,160,27</uiinfo>
+        <url>/html/module/monitor/configmgr/MasterSlaveInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="f39377ed-4701-0010-ba93-4bcfc0170e70" label="HostAllInfo">
+        <uiinfo>212,378,160,25</uiinfo>
+        <url>/html/module/monitor/configmgr/HostAllInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="061f40e8-4701-0010-9228-39690e2e7bdf" label="PInfoConfig">
+        <uiinfo>613,527,160,40</uiinfo>
+        <url>/html/module/monitor/configmgr/PInfoConfig.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="a3d261f2-4701-0010-91d2-d5d7a2b381f6" label="ParamValueCfg">
+        <uiinfo>612,859,160,40</uiinfo>
+        <url>/html/module/monitor/configmgr/ParamValueCfg.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="ff19abee-4801-0010-b4d4-5749cc5a7985" label="DeployAppParamInfo">
+        <uiinfo>209,154,160,31</uiinfo>
+        <url>/html/module/monitor/configmgr/DeployAppParamInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="73b8fe12-4a01-0010-ab53-c147c9b0984d" label="UsersInfo">
+        <uiinfo>572,321,160,34</uiinfo>
+        <url>/html/module/monitor/configmgr/UsersInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="03776a19-4a01-0010-8cef-79849d0b09e2" label="NodeUserInfo">
+        <uiinfo>578,385,160,40</uiinfo>
+        <url>/html/module/monitor/configmgr/NodeUserInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="1e8d4605-4b01-0010-b0d4-bb7b3f12a43d" label="NodeTreeInfo">
+        <uiinfo>582,449,160,40</uiinfo>
+        <url>/html/module/monitor/configmgr/NodeTreeInfo.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/monitor/exeframe/configmgr" name="ConfigMgr.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abod" name="ConfigMgr.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

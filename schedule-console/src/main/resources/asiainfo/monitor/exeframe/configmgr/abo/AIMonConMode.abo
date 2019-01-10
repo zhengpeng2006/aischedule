@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo abo-type="0" boname="BOAIMonConMode" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonConMode.cmpt" code="AIMonConMode" desc="" dna-code="f3af28af-4701-0010-af53-a9c66758dc8d" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonConMode" name="AIMonConMode">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="25ec28af-4701-0010-af53-a9c66758dc8d" datatype="long" name="con_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">CON_ID</mapingcol>
+        </attr>
+        <attr code="4bf528af-4701-0010-af53-a9c66758dc8d" datatype="String" name="con_type" order="1" type="N" vdatatype="CODE">
+          <mapingcol length="32">CON_TYPE</mapingcol>
+        </attr>
+        <attr code="dbf628af-4701-0010-af53-a9c66758dc8d" datatype="short" name="con_port" order="2" type="N" vdatatype="ID(short)">
+          <mapingcol length="12">CON_PORT</mapingcol>
+        </attr>
+        <attr code="84f828af-4701-0010-af53-a9c66758dc8d" datatype="String" name="state" order="3" type="N" vdatatype="STATE">
+          <mapingcol length="8">STATE</mapingcol>
+        </attr>
+        <attr code="fbf928af-4701-0010-af53-a9c66758dc8d" datatype="DateTime" name="create_date" order="4" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="538d2aaf-4701-0010-af53-a9c66758dc8d" datatype="String" name="remark" order="5" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">REMARK</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonConMode.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/impl" name="AIMonConMode.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/impl" name="AIMonConModeValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonConModeBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonConMode.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/interfaces" name="IAIMonConModeValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo" name="BOAIMonConMode.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/interfaces" name="IAIMonConModeDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/impl" name="AIMonConModeDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

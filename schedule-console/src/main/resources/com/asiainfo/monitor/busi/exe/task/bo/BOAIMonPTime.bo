@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonPTime" mainattr="TIME_ID">
+    <mapingenty type="table">AI_MON_P_TIME</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="TIME_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">TIME_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="T_TYPE" maxlength="255" datatype="String" type="COL" remark="类型">
+        <mapingcol datatype="VARCHAR2">T_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPR" maxlength="255" datatype="String" type="COL" remark="表达式">
+        <mapingcol datatype="VARCHAR2">EXPR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

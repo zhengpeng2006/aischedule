@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.monitorItem.view.WarningInfo">
+  <property-specification name="warningTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="warningTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="warningTabCount" type="long"/>
+  <property-specification name="warningTabRowIndex" type="int"/>
+  <property-specification name="taskTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskTabCount" type="long"/>
+  <property-specification name="taskTabRowIndex" type="int"/>
+</page-specification>

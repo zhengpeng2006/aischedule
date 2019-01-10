@@ -1,0 +1,28 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "busiDetailItems": [
+      {
+        "appCode": "coreSchedule01code",
+        "groupCode": "test01",
+        "groupName": "test01",
+        "taskCode": "task01",
+        "taskName": "任务1",
+        "version": 3,
+        "state": "可用",
+        "runState": "stop",
+        "splitRegion": "否"
+      }
+    ],
+    "total": 1
+  }
+}

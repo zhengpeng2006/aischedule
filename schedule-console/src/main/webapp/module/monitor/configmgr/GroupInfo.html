@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/GroupInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+
+			<div class="c_form c_form-col-2 c_form-label-5" jwcid="groupDetail@Part" uiid="groupDetail" id="groupDetail" type="form" objName="groupDetail"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup" uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">
+							<span class="e_required">分组编码:</span>
+						</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="groupCode" value="ognl:groupDetail.groupCode" nullable="no" desc="分组编码"
+										uiid="groupDetail_groupCode" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">
+							<span class="e_required">分组名称:</span>
+						</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="groupName" value="ognl:groupDetail.groupName" nullable="no" desc="分组名称"
+										uiid="groupDetail_groupName" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">描述:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="groupDesc" value="ognl:groupDetail.groupDesc" desc="描述" uiid="groupDetail_groupDesc" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">创建日期:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="createDate" value="ognl:groupDetail.createDate" desc="创建日期" uiid="groupDetail_createDate" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">分组标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="groupId" value="ognl:groupDetail.groupId" desc="分组标识" uiid="groupDetail_groupId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">状态:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="state" value="ognl:groupDetail.state" desc="状态" uiid="groupDetail_state" />
+								</span>
+							</span>
+						</span></li>
+				</ul>
+				<div style="width: 800px; height: 100px"></div>
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button onclick="GroupInfoJs.save();" name="btnSave" class="e_button-form">
+						<span>
+							<i class="e_ico-save"></i>保存
+						</span>
+					</button>
+					<button onclick="GroupInfoJs.close();" name="btnCancel" class="e_button-form">
+						<span>
+							<i class="e_ico-cancel"></i>取消
+						</span>
+					</button>
+			</div>
+
+		</div>
+	</div>
+	</div>
+</body>
+</html>

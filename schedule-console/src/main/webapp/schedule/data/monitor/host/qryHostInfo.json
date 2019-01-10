@@ -1,0 +1,19 @@
+{
+    "context": {
+        "provinceId": "", 
+        "contextRoot": "", 
+        "productMode": "false", 
+        "x_resultinfo": "ok", 
+        "subSysCode": "", 
+        "x_resultcode": "0", 
+        "contextName": "", 
+        "version": "0"
+    }, 
+    "data": {
+        "hostInfo": {
+            "hostCode": "testCenter01", 
+            "hostName": "测试主机01", 
+            "hostIp": "10.1.243.23"
+        }
+    }
+}

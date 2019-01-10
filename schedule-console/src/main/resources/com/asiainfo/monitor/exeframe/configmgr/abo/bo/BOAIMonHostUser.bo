@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonHostUser" mainattr="HOST_USER_ID">
+    <mapingenty type="table">AI_Mon_Host_User</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="HOST_USER_ID" maxlength="20" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol datatype="NUMBER">HOST_USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_NAME" maxlength="256" datatype="String" type="COL" order="2" notNull="N">
+        <mapingcol datatype="VARCHAR2">USER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_PWD" maxlength="256" datatype="String" type="COL" order="3" notNull="N">
+        <mapingcol datatype="VARCHAR2">USER_PWD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="8" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="0" datatype="DateTime" type="COL" order="6" notNull="N">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="512" datatype="String" type="COL" order="7" notNull="N">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST_ID" maxlength="20" datatype="Long" type="COL" order="1" notNull="N">
+        <mapingcol datatype="NUMBER">HOST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_TYPE" maxlength="32" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol datatype="VARCHAR2">USER_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

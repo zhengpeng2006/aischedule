@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.schedule.view.ProcessControl">
+  <property-specification name="detailTableItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="detailTableItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="detailTableCount" type="long"/>
+  <property-specification name="detailTableRowIndex" type="int"/>
+  <property-specification name="busiDetail" type="net.sf.json.JSONObject"/>
+  <property-specification name="BusiQueryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="hostQueryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="processTableItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="processTableItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="processTableCount" type="long"/>
+  <property-specification name="processTableRowIndex" type="int"/>
+  <property-specification name="busiDetailItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="busiDetailItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="busiDetailCount" type="long"/>
+  <property-specification name="busiDetailRowIndex" type="int"/>
+</page-specification>

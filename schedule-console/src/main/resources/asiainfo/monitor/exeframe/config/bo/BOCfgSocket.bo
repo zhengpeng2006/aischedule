@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgSocket" mainattr="CFG_SOCKET_CODE">
+    <mapingenty type="table">CFG_SOCKET</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CFG_SOCKET_CODE" maxlength="255" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">CFG_SOCKET_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SOCKET_GRP" maxlength="255" datatype="String" type="COL" remark="socket组号">
+        <mapingcol datatype="VARCHAR2">SOCKET_GRP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SOCKET_DESC" maxlength="1000" datatype="String" type="COL" remark="socket的描述信息">
+        <mapingcol datatype="VARCHAR2">SOCKET_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SOCKET_BUSINESS_CLASS" maxlength="255" datatype="String" type="COL" remark="socket的业务类">
+        <mapingcol datatype="VARCHAR2">SOCKET_BUSINESS_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态(U,为正常;E,为删除)">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

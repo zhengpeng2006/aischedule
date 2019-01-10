@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="Emend_Yh" desc="" dna-code="58ba016e-4f01-0010-8590-d5fb1efbc3a0" name="Emend_Yh">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="Emend_Yh" label="Emend_Yh">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/emend_yh/abod/Emend_Yh.abod</url>
+      </abod>
+      <ui-entity dna-code="592b396e-4f01-0010-8590-d5fb1efbc3a0" label="EmendYh">
+        <uiinfo>39,34,160,40</uiinfo>
+        <url>/html/module/emend_yh/EmendYh.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="dfc99181-4f01-0010-958a-693088233b2a" label="EmendInfo">
+        <uiinfo>40,96,160,40</uiinfo>
+        <url>/html/module/emend_yh/EmendInfo.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/emend_yh" name="Emend_Yh.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/emend_yh/abod" name="Emend_Yh.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

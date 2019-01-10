@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgTf" mainattr="CFG_TF_CODE">
+    <mapingenty type="table">CFG_TF</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CFG_TF_CODE" maxlength="255" datatype="String" type="PK" remark="转移配置CODE">
+        <mapingcol datatype="VARCHAR2">CFG_TF_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SRC_DB_ACCT_CODE" maxlength="255" datatype="String" type="COL" remark="原表数据库连接CODE">
+        <mapingcol datatype="VARCHAR2">SRC_DB_ACCT_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SRC_TABLE_NAME" maxlength="255" datatype="String" type="COL" remark="源表名">
+        <mapingcol datatype="VARCHAR2">SRC_TABLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCAN_INTERVAL_TIME" maxlength="12" datatype="Long" type="COL" remark="扫描间隔时间(单位:毫秒)">
+        <mapingcol datatype="NUMBER">SCAN_INTERVAL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCAN_ROWNUM" maxlength="12" datatype="Long" type="COL" remark="一次扫描数据条数">
+        <mapingcol datatype="NUMBER">SCAN_ROWNUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMPLATE" maxlength="255" datatype="String" type="COL" remark="模板">
+        <mapingcol datatype="VARCHAR2">TEMPLATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRANSFORM_CLASSNAME" maxlength="255" datatype="String" type="COL" remark="转移数据的扩展实现类">
+        <mapingcol datatype="VARCHAR2">TRANSFORM_CLASSNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QUERY_SQL" maxlength="1000" datatype="String" type="COL" remark="查询SQL (如果执行方式是线程的方式，这边的sql必须要排除处理中的数据，也可以采用时间戳的方式)">
+        <mapingcol datatype="VARCHAR2">QUERY_SQL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINISH_SQL" maxlength="255" datatype="String" type="COL" remark="完成SQL">
+        <mapingcol datatype="VARCHAR2">FINISH_SQL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态(U,为正常;E,为删除)">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="1000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXECUTE_METHOD" maxlength="20" datatype="String" type="COL" remark="执行方式( PROCESS  进程方式, THREAD 线程方式  如果为空,就采用进程方式)">
+        <mapingcol datatype="VARCHAR2">EXECUTE_METHOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="METHOD_ID" maxlength="12" datatype="Long" type="COL" remark="如果为线程方式，那么取cfg_tf_thread的配置信息;如果为进程方式，此字段为空">
+        <mapingcol datatype="NUMBER">METHOD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROCESSING_SQL" maxlength="255" datatype="String" type="COL" remark="如果配置的是线程方式，那么必须配置预占sql，否则一条数据会处理多遍(可以采用时间戳的方式)">
+        <mapingcol datatype="VARCHAR2">PROCESSING_SQL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ERROR_SQL" maxlength="1000" datatype="String" type="COL" remark="如果数据错误了，那么执行的sql (可以有多条sql，以;分开)，避免对错误的数据重复处理，占用系统资源">
+        <mapingcol datatype="VARCHAR2">ERROR_SQL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="START_TIME" maxlength="8" datatype="String" type="COL" remark="任务开始时间  21:21:21  21点21分21秒  03:03:03 凌晨3点3分3秒">
+        <mapingcol datatype="VARCHAR2">START_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DURATION" maxlength="6" datatype="Integer" type="COL" remark="持续时间，单位为秒  从21点21分21秒到第二天的凌晨3点3分3秒为 16863 秒">
+        <mapingcol datatype="NUMBER">DURATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WHEN_IDLE_SLEEP_TIME" maxlength="5" datatype="Integer" type="COL" remark="当不在工作时间范围内的时候的睡眠时间以秒为单位(如果为空,那么默认为5分钟)">
+        <mapingcol datatype="NUMBER">WHEN_IDLE_SLEEP_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PK_COLUMNS" maxlength="255" datatype="String" type="COL" remark="主键列表(首先取源表中的主键，如果没有，那么根据此列中的配置获得一个指定的主键，一定要谨慎配置此数据，如果多个主键，使用;分开，可以配置rowid，例如:    rowid,varchar2)">
+        <mapingcol datatype="VARCHAR2">PK_COLUMNS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATA_COUNT" maxlength="12" datatype="Long" type="COL" remark="将多少条数组合成一组(默认的是按照条件查询到的数据作为一组)">
+        <mapingcol datatype="NUMBER">DATA_COUNT</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

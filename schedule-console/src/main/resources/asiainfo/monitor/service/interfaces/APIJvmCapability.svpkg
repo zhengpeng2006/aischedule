@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="APIJvmCapability" desc="" dna-code="532853f9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.APIJvmCapabilitySVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAPIJvmCapabilitySV" name="APIJvmCapability" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAPIJvmCapabilitySV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="APIJvmCapabilitySVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="APIJvmCapability.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAPIJvmCapabilitySV_getJVM5MemoryInfo" desc="" dna-code="ab4653f9-4501-0010-9646-9bbd8b625d8b" name="getJVM5MemoryInfo" opt-flag="Y" serv-func="getJVM5MemoryInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.config.AIMemoryInfo" param-kind="java"/>
+      </service>
+      <service code="IAPIJvmCapabilitySV_getJVM5MemoryInfos" desc="" dna-code="b54653f9-4501-0010-9646-9bbd8b625d8b" name="getJVM5MemoryInfos" opt-flag="Y" serv-func="getJVM5MemoryInfos" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIJvmCapabilitySV_getThreadInfo" desc="" dna-code="bd4653f9-4501-0010-9646-9bbd8b625d8b" name="getThreadInfo" opt-flag="Y" serv-func="getThreadInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="name" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.config.AIThreadInfo[]" param-kind="java"/>
+      </service>
+      <service code="IAPIJvmCapabilitySV_getSystemInfo" desc="" dna-code="cf4653f9-4501-0010-9646-9bbd8b625d8b" name="getSystemInfo" opt-flag="Y" serv-func="getSystemInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="findKey" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.common.KeyName[]" param-kind="java"/>
+      </service>
+      <service code="IAPIJvmCapabilitySV_getSystemInfoForAppFrame" desc="" dna-code="e14653f9-4501-0010-9646-9bbd8b625d8b" name="getSystemInfoForAppFrame" opt-flag="Y" serv-func="getSystemInfoForAppFrame" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="findKey" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.appframe2.common.DataContainerInterface[]" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BOABGMonBusiErrorLog" catalog="" cmpt-url="config/com/asiainfo/common/ABGMonBusiErrorLog.cmpt" code="ABGMonBusiErrorLog" desc="" dna-code="3b2e2e5e-4801-0010-8cdb-9fe7c81d37bd" fullname="com.asiainfo.common.abo.ABGMonBusiErrorLog" name="ABGMonBusiErrorLog">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="e670b23e-4801-0010-88e0-275a5b53c212" datatype="long" desc="错单量标识" name="err_order_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">ERR_ORDER_ID</mapingcol>
+        </attr>
+        <attr code="f773b23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="应用编码" name="server_code" order="1" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SERVER_CODE</mapingcol>
+        </attr>
+        <attr code="9276b23e-4801-0010-88e0-275a5b53c212" datatype="long" desc="运行批次流水号" name="serial_no" order="2" type="N" vdatatype="AMOUNT">
+          <mapingcol length="20">SERIAL_NO</mapingcol>
+        </attr>
+        <attr code="f678b23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="任务标识" name="task_id" order="3" type="N" vdatatype="CODE">
+          <mapingcol length="32">TASK_ID</mapingcol>
+        </attr>
+        <attr code="587bb23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="任务分片标识" name="task_split_id" order="4" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">TASK_SPLIT_ID</mapingcol>
+        </attr>
+        <attr code="267eb23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="区域编码" name="region_code" order="5" type="N" vdatatype="STATE">
+          <mapingcol length="8">REGION_CODE</mapingcol>
+        </attr>
+        <attr code="5380b23e-4801-0010-88e0-275a5b53c212" datatype="long" desc="错单量" name="err_cnt" order="6" type="N" vdatatype="AMOUNT">
+          <mapingcol length="20">ERR_CNT</mapingcol>
+        </attr>
+        <attr code="4684b23e-4801-0010-88e0-275a5b53c212" datatype="long" desc="处理耗时" name="handle_time" order="7" type="N" vdatatype="AMOUNT">
+          <mapingcol length="20">HANDLE_TIME</mapingcol>
+        </attr>
+        <attr code="7587b23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="系统编码" name="system_domain" order="8" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SYSTEM_DOMAIN</mapingcol>
+        </attr>
+        <attr code="ff89b23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="子系统编码" name="subsystem_domain" order="9" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SUBSYSTEM_DOMAIN</mapingcol>
+        </attr>
+        <attr code="b68cb23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="服务实例" isPrivate="N" name="app_server_name" order="10" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">APP_SERVER_NAME</mapingcol>
+        </attr>
+        <attr code="698fb23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="创建时间" name="create_date" order="11" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="ec92b23e-4801-0010-88e0-275a5b53c212" datatype="DateTime" desc="采集时间" isPrivate="N" name="acq_date" order="12" type="N" vdatatype="DATE">
+          <mapingcol length="8">ACQ_DATE</mapingcol>
+        </attr>
+        <attr code="329ab23e-4801-0010-88e0-275a5b53c212" datatype="String" desc="监控标记" name="mon_flag" order="13" type="N" vdatatype="TYPE_CHAR">
+          <mapingcol length="1">MON_FLAG</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/common/abo" name="ABGMonBusiErrLog.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/impl" name="ABGMonBusiErrLog.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/vo/impl" name="ABGMonBusiErrLogValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/interfaces" name="IABGMonBusiErrLogBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/interfaces" name="IABGMonBusiErrLog.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/vo/interfaces" name="IABGMonBusiErrLogValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/common/abo/bo" name="BOABGMonBusiErrLog.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/dao/interfaces" name="IABGMonBusiErrLogDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/dao/impl" name="ABGMonBusiErrLogDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/common/abo" name="ABGMonBusiErrorLog.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="ams1" name="BOBsBatchWfFlowMon" mainattr="WF_FLOW_ID">
+    <mapingenty type="table">BS_BATCH_WF_FLOW_MON</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="WF_FLOW_ID" maxlength="8" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">WF_FLOW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILLING_CYCLE_ID" maxlength="6" datatype="Integer" type="PK">
+        <mapingcol datatype="NUMBER">BILLING_CYCLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_DAY" maxlength="6" datatype="Integer" type="PK">
+        <mapingcol datatype="NUMBER">BILL_DAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="START_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">START_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINISH_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">FINISH_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">STATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="AIMonUserPriEntity" desc="" dna-code="8ff9cff8-4501-0010-a38f-9f4840270cd8" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.AIMonUserPriEntitySVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAIMonUserPriEntitySV" name="AIMonUserPriEntity" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAIMonUserPriEntitySV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="AIMonUserPriEntitySVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="AIMonUserPriEntity.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/dao/interfaces" name="IAIMonUserPriEntityDAO.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/dao/impl" name="AIMonUserPriEntityDAOImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonUserPriEntitySV_getEntityByEntityId" desc="" dna-code="7020d0f8-4501-0010-a38f-9f4840270cd8" name="getEntityByEntityId" opt-flag="Y" serv-func="getEntityByEntityId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="entityId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.PriEntity" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getEntityByEntityIdNocache" desc="" dna-code="7820d0f8-4501-0010-a38f-9f4840270cd8" name="getEntityByEntityIdNocache" opt-flag="Y" serv-func="getEntityByEntityIdNocache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="entityId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.PriEntity" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getAllEntityBean" desc="" dna-code="7f20d0f8-4501-0010-a38f-9f4840270cd8" name="getAllEntityBean" opt-flag="Y" serv-func="getAllEntityBean" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntity[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getAllEntity" desc="" dna-code="8020d0f8-4501-0010-a38f-9f4840270cd8" name="getAllEntity" opt-flag="Y" serv-func="getAllEntity" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getEntityByLoadType" desc="" dna-code="8120d0f8-4501-0010-a38f-9f4840270cd8" name="getEntityByLoadType" opt-flag="Y" serv-func="getEntityByLoadType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="loadType" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getExtendEntitysByEntityId" desc="" dna-code="8720d0f8-4501-0010-a38f-9f4840270cd8" name="getExtendEntitysByEntityId" opt-flag="Y" serv-func="getExtendEntitysByEntityId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="entityId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getEntityByParentId" desc="" dna-code="8e20d0f8-4501-0010-a38f-9f4840270cd8" name="getEntityByParentId" opt-flag="Y" serv-func="getEntityByParentId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="parentId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getEntityByParentIdNocache" desc="" dna-code="9520d0f8-4501-0010-a38f-9f4840270cd8" name="getEntityByParentIdNocache" opt-flag="Y" serv-func="getEntityByParentIdNocache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="parentId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_queryEntityByPermission" desc="" dna-code="9c20d0f8-4501-0010-a38f-9f4840270cd8" name="queryEntityByPermission" opt-flag="Y" serv-func="queryEntityByPermission" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="userId" param-kind="java"/>
+          <param datatype="java.lang.String" name="parentId" param-kind="java"/>
+          <param datatype="java.lang.String" name="type" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getUserEntityByCond" desc="" dna-code="b220d0f8-4501-0010-a38f-9f4840270cd8" name="getUserEntityByCond" opt-flag="Y" serv-func="getUserEntityByCond" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="entityName" param-kind="java"/>
+          <param datatype="java.lang.String" name="entityType" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntity[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_getPriEntiryByIdFromDb" desc="" dna-code="c120d0f8-4501-0010-a38f-9f4840270cd8" name="getPriEntiryByIdFromDb" opt-flag="Y" serv-func="getPriEntiryByIdFromDb" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.PriEntity" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_wrapperPriEntityByBean" desc="" dna-code="c820d0f8-4501-0010-a38f-9f4840270cd8" name="wrapperPriEntityByBean" opt-flag="Y" serv-func="wrapperPriEntityByBean" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntity" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.PriEntity" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_saveOrUpdate" desc="" dna-code="c920d0f8-4501-0010-a38f-9f4840270cd8" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntity" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_saveOrUpdate" desc="" dna-code="ca20d0f8-4501-0010-a38f-9f4840270cd8" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntity[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserPriEntitySV_delete" desc="" dna-code="cb20d0f8-4501-0010-a38f-9f4840270cd8" name="delete" opt-flag="Y" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="entityId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="getPrivEntityPrior" desc="oracle的层次查询" dna-code="51abd960-4601-0010-9128-f56b9a8ca379" name="getPrivEntityPrior" opt-flag="Y" serv-func="getPrivEntityPrior" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntityBean[]" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

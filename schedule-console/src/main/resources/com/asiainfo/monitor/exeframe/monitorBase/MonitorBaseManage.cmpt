@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="MonitorBaseManage" desc="" dna-code="fe72c9f8-4501-0010-a38f-9f4840270cd8" name="MonitorBaseManage">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="MonitorBaseManage" label="MonitorBaseManage">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/exeframe/monitorBase/abod/MonitorBaseManage.abod</url>
+      </abod>
+      <sv-package dna-code="31aacdf8-4501-0010-a38f-9f4840270cd8" label="AIMonUser">
+        <uiinfo>175,6,160,340</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUser.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="8ff9cff8-4501-0010-a38f-9f4840270cd8" label="AIMonUserPriEntity">
+        <uiinfo>344,8,160,360</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserPriEntity.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="796050f9-4501-0010-9646-9bbd8b625d8b" label="AIMonUserGroup">
+        <uiinfo>508,9,160,240</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserGroup.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="da1a51f9-4501-0010-9646-9bbd8b625d8b" label="AIMonUserRole">
+        <uiinfo>671,9,160,260</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserRole.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="fd6c51f9-4501-0010-9646-9bbd8b625d8b" label="AIMonUserGroupRel">
+        <uiinfo>339,386,160,220</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserGroupRel.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="c4bc51f9-4501-0010-9646-9bbd8b625d8b" label="AIMonUserGroupRole">
+        <uiinfo>834,9,160,180</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserGroupRole.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="621f52f9-4501-0010-9646-9bbd8b625d8b" label="AIMonUserRoleEntityRel">
+        <uiinfo>675,385,160,200</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserRoleEntityRel.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="532853f9-4501-0010-9646-9bbd8b625d8b" label="APIJvmCapability">
+        <uiinfo>508,386,160,160</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIJvmCapability.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="e6d255f9-4501-0010-9646-9bbd8b625d8b" label="AIMonServer">
+        <uiinfo>12,7,160,640</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonServer.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="05eb56f9-4501-0010-9646-9bbd8b625d8b" label="APIShowCache">
+        <uiinfo>860,415,160,200</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIShowCache.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="04e957f9-4501-0010-9646-9bbd8b625d8b" label="APIShowDsTs">
+        <uiinfo>851,224,160,180</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIShowDsTs.svpkg</url>
+      </sv-package>
+      <sv-package dna-code="88055bf9-4501-0010-9646-9bbd8b625d8b" label="APIShowStat">
+        <uiinfo>174,388,160,380</uiinfo>
+        <url>/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIShowStat.svpkg</url>
+      </sv-package>
+      <ui-entity dna-code="55c565f9-4501-0010-9646-9bbd8b625d8b" label="PlatformInfo">
+        <uiinfo>905,725,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/PlatformInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="a1e59df9-4501-0010-9646-9bbd8b625d8b" label="SystemAttrInfo">
+        <uiinfo>738,725,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/SystemAttrInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="93e502fa-4501-0010-9646-9bbd8b625d8b" label="JVMCapabilityInfo">
+        <uiinfo>565,728,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/JVMCapabilityInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="08b99efe-4501-0010-a4a7-cd238c6a64a0" label="CacheInfo">
+        <uiinfo>373,659,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/CacheInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="d508a4fe-4501-0010-a4a7-cd238c6a64a0" label="BusinessCacheInfo">
+        <uiinfo>377,731,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/BusinessCacheInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="97e67f17-4601-0010-9ed3-5d4ae9dce1c4" label="FrameCacheInfo">
+        <uiinfo>564,597,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/FrameCacheInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="e4ec9817-4601-0010-9ed3-5d4ae9dce1c4" label="DataSource">
+        <uiinfo>914,654,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/DataSource.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="a0b3f618-4601-0010-9b80-95f73a671264" label="ServiceStatistics">
+        <uiinfo>568,665,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/ServiceStatistics.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="175d711c-4601-0010-9d7f-a17509127e93" label="SQLStatistics">
+        <uiinfo>743,656,160,60</uiinfo>
+        <url>/html/monitor/monitorBase/SQLStatistics.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/appframe/ext/exeframe/monitorBase" name="MonitorBaseManage.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/abod" name="MonitorBaseManage.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

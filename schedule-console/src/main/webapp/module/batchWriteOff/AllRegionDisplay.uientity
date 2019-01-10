@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/batchwriteoff/BatchWriteOff.cmpt" code="AllRegionDisplay" desc="" dna-code="01906a29-4b01-0010-8942-bf123b42b777" full-name="module.batchWriteOff.AllRegionDisplay" kind="0" name="AllRegionDisplay">
+  <uientity-version branch="" code="" desc="" name="AllRegionDisplay" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.batchwriteoff.view.AllRegionDisplay</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/batchWriteOff" name="AllRegionDisplay.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/batchWriteOff" name="AllRegionDisplay.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/batchWriteOff" name="AllRegionDisplay.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/batchwriteoff/view" name="AllRegionDisplay.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bo-design attr-display="name" code="" columns="all">
+  <bo fullname="com.asiainfo.common.abo.bo.BOABGMonWTrigger" name="BOABGMonWTrigger" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>0,100,150,410</uiinfo>
+    <url>/config/com/asiainfo/common/abo/bo/BOABGMonWTrigger.bo</url>
+  </bo>
+  <bo fullname="com.asiainfo.common.abo.bo.BOABGMonLRecord" name="BOABGMonLRecord" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>10,100,150,570</uiinfo>
+    <url>/config/com/asiainfo/common/abo/bo/BOABGMonLRecord.bo</url>
+  </bo>
+  <joins/>
+</bo-design>

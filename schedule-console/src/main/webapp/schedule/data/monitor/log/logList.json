@@ -1,0 +1,36 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "operateLogsItems": [
+            {
+                "appServerName": "DEFAULT_APPFRAME_SERVER_NAME1472526518428",
+                "createDate": "2016-08-30 11:12:17",
+                "operationClientIp": "10.21.38.116",
+                "operationId": 250,
+                "operationModel": "配置",
+                "operationObjectContent": "配置名称1:544",
+                "operationObjectType": "告警任务相关配置数据",
+                "operationSource": "前端",
+                "operationType": "修改",
+                "operator": "admin",
+                "remarks": "修改告警阀值",
+                "setName": "",
+                "subsystemDomain": "AMS",
+                "systemDomain": "CRM",
+                "type": null,
+                "typeName": "com.asiainfo.common.abo.bo.BOSchedulerOperations",
+                "operationObjectContentShort": "配置名称1:544"
+            }
+        ],
+        "total": 1
+    }
+}

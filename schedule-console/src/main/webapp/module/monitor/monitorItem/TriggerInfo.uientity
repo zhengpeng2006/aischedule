@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/monitorItem/MonitorItem.cmpt" code="TriggerInfo" desc="" dna-code="fcc7f7f8-4801-0010-a247-ef223b86565f" full-name="module.monitor.monitorItem.TriggerInfo" kind="0" name="TriggerInfo">
+  <uientity-version branch="" code="" desc="" name="TriggerInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.monitorItem.view.TriggerInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="qryForm_ip"/>
+      <area bo="java.lang.String" type="textfield" uiid="qryForm_infoName"/>
+      <area bo="java.lang.String" type="textfield" uiid="qryForm_hostName"/>
+      <area bo="java.lang.String" type="datefield" uiid="qryForm_beginDate"/>
+      <area bo="java.lang.String" type="datefield" uiid="qryForm_endDate"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/monitorItem" name="TriggerInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/monitorItem" name="TriggerInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/monitorItem" name="TriggerInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/monitorItem/view" name="TriggerInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="search_btn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

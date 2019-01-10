@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BOAIMonMasterSlaveRel" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonMasterSlaveRel.cmpt" code="AIMonMasterSlaveRel" desc="主备机关系" dna-code="3dc27443-4701-0010-9312-99dd0de23280" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonMasterSlaveRel" name="AIMonMasterSlaveRel">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="e8e87443-4701-0010-9312-99dd0de23280" datatype="long" name="relation_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">RELATION_ID</mapingcol>
+        </attr>
+        <attr code="16eb7443-4701-0010-9312-99dd0de23280" datatype="long" name="master_host_id" order="1" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">MASTER_HOST_ID</mapingcol>
+        </attr>
+        <attr code="76ed7443-4701-0010-9312-99dd0de23280" datatype="long" name="slave_host_id" order="2" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">SLAVE_HOST_ID</mapingcol>
+        </attr>
+        <attr code="ffef7443-4701-0010-9312-99dd0de23280" datatype="String" name="state" order="3" type="N" vdatatype="STATE">
+          <mapingcol length="8">STATE</mapingcol>
+        </attr>
+        <attr code="3ff27443-4701-0010-9312-99dd0de23280" datatype="DateTime" name="create_date" order="4" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="90f47443-4701-0010-9312-99dd0de23280" datatype="String" name="remark" order="5" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">REMARK</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonMasterSlaveRel.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/impl" name="AIMonMasterSlaveRel.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/impl" name="AIMonMasterSlaveRelValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonMasterSlaveRelBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonMasterSlaveRel.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/interfaces" name="IAIMonMasterSlaveRelValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo" name="BOAIMonMasterSlaveRel.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/interfaces" name="IAIMonMasterSlaveRelDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/impl" name="AIMonMasterSlaveRelDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

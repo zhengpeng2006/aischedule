@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="local" name="BOAIMonPImgDataResolve" mainattr="RESOLVE_ID">
+    <mapingenty type="table">AI_MON_P_IMGDATA_RESOLVE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RESOLVE_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">RESOLVE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NAME" maxlength="255" datatype="String" type="COL" remark="名称">
+        <mapingcol datatype="VARCHAR2">NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_ID" maxlength="12" datatype="Long" type="COL" remark="上级标识">
+        <mapingcol datatype="NUMBER">PARENT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRANSFORM_CLASS" maxlength="255" datatype="String" type="COL" remark="处理类">
+        <mapingcol datatype="VARCHAR2">TRANSFORM_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORT_BY" maxlength="255" datatype="String" type="COL" remark="排序">
+        <mapingcol datatype="VARCHAR2">SORT_BY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SHOW_TYPE" maxlength="255" datatype="String" type="COL" remark="展现类型:AREACHART,区域图;BARCHART,横向柱状图;COLUMNCHART,柱状图;LINECHART,线图;PIECHART,饼图;3DCOLUMNCHART;3DPIECHART;3DBARCHART;RINGCHART,环状图;3DRINGCHART;SCALER,仪表盘">
+        <mapingcol datatype="VARCHAR2">SHOW_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SHOW_NAME_POS" maxlength="3" datatype="Integer" type="COL" remark="展示名称的取值位置">
+        <mapingcol datatype="NUMBER">SHOW_NAME_POS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SHOW_VALUE_POS" maxlength="3" datatype="Integer" type="COL" remark="展示值的取值位置">
+        <mapingcol datatype="NUMBER">SHOW_VALUE_POS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/mainFrame/baseFrame.cmpt" code="BaseFrame" desc="" dna-code="a9662016-4801-0010-926a-e18ad9af6b55" full-name="module.baseFrame.mainFrame.BaseFrame" kind="0" name="BaseFrame">
+  <uientity-version branch="" code="" desc="" name="BaseFrame" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.mainFrame.view.BaseFrame</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/baseFrame/mainFrame" name="BaseFrame.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/baseFrame/mainFrame" name="BaseFrame.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/baseFrame/mainFrame" name="BaseFrame.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/mainFrame/view" name="BaseFrame.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

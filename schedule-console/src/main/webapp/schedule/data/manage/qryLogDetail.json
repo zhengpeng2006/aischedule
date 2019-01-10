@@ -1,0 +1,93 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "detailsItems": [
+      {
+        "appServerName": "manager01",
+        "createDate": "2016-09-13 10:34:18",
+        "exMsg": "",
+        "jobId": "task01$1473734040063",
+        "logDate": "2016-09-13 10:34:21",
+        "logType": "manager",
+        "opInfo": "任务处理完成",
+        "operator": "manager01",
+        "setName": "",
+        "subsystemDomain": "AMS",
+        "systemDomain": "CRM",
+        "taskCode": "task01",
+        "taskItem": "",
+        "taskVersion": "3",
+        "type": null,
+        "typeName": "com.asiainfo.schedule.bo.BOAISchedTaskLogDTL",
+        "exMsgShort": ""
+      },
+      {
+        "appServerName": "coreSchedule01code",
+        "createDate": "2016-09-13 10:34:08",
+        "exMsg": "",
+        "jobId": "task01$1473734040063",
+        "logDate": "2016-09-13 10:34:09",
+        "logType": "processor",
+        "opInfo": "任务开始执行",
+        "operator": "coreSchedule01code",
+        "setName": "",
+        "subsystemDomain": "AMS",
+        "systemDomain": "CRM",
+        "taskCode": "task01",
+        "taskItem": "0",
+        "taskVersion": "3",
+        "type": null,
+        "typeName": "com.asiainfo.schedule.bo.BOAISchedTaskLogDTL",
+        "exMsgShort": ""
+      },
+      {
+        "appServerName": "coreSchedule01code",
+        "createDate": "2016-09-13 10:34:08",
+        "exMsg": "",
+        "jobId": "task01$1473734040063",
+        "logDate": "2016-09-13 10:34:09",
+        "logType": "processor",
+        "opInfo": "任务执行结束",
+        "operator": "coreSchedule01code",
+        "setName": "",
+        "subsystemDomain": "AMS",
+        "systemDomain": "CRM",
+        "taskCode": "task01",
+        "taskItem": "0",
+        "taskVersion": "3",
+        "type": null,
+        "typeName": "com.asiainfo.schedule.bo.BOAISchedTaskLogDTL",
+        "exMsgShort": ""
+      },
+      {
+        "appServerName": "manager01",
+        "createDate": "2016-09-13 10:34:00",
+        "exMsg": "",
+        "jobId": "task01$1473734040063",
+        "logDate": "2016-09-13 10:33:51",
+        "logType": "manager",
+        "opInfo": "到达执行时间新建",
+        "operator": "10.1.243.23$aif.server.com$21092@host-10-1-243-23$0000000007",
+        "setName": "",
+        "subsystemDomain": "AMS",
+        "systemDomain": "CRM",
+        "taskCode": "task01",
+        "taskItem": "",
+        "taskVersion": "3",
+        "type": null,
+        "typeName": "com.asiainfo.schedule.bo.BOAISchedTaskLogDTL",
+        "exMsgShort": ""
+      }
+    ],
+    "total": 4
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "groupInfosItems": [
+      {
+        "groupCode": "aaa",
+        "groupDesc": "",
+        "groupId": 600,
+        "groupName": "ta1",
+        "groupStyle": "",
+        "layer": "BASE",
+        "parentId": null,
+        "remark": "",
+        "setName": "",
+        "sortId": 0,
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup"
+      },
+       {
+        "groupCode": "bbb",
+        "groupDesc": "",
+        "groupId": 601,
+        "groupName": "ta2",
+        "groupStyle": "",
+        "layer": "BASE",
+        "parentId": null,
+        "remark": "",
+        "setName": "",
+        "sortId": 1,
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup"
+      }
+    ],
+    "total": 2
+  }
+}

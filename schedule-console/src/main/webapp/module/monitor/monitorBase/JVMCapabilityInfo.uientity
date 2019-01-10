@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="JVMCapabilityInfo" desc="" dna-code="93e502fa-4501-0010-9646-9bbd8b625d8b" full-name="monitor.monitorBase.JVMCapabilityInfo" kind="0" name="JVMCapabilityInfo">
+  <uientity-version branch="" code="" desc="" name="JVMCapabilityInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.monitorBase.view.JVMCapabilityInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="jvmQuery_jvmName"/>
+      <area bo="java.lang.String" type="textfield" uiid="jvmQuery_appID"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/monitorBase" name="JVMCapabilityInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="JVMCapabilityInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="JVMCapabilityInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/monitorBase/view" name="JVMCapabilityInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="query" type="button"/>
+      <ui-event id="" name="copy" type="button"/>
+      <ui-event id="" name="savaBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onclick" element-id="">{descRow:'Onclick',nameRow:'Onclick'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="query">{descRow:'queryOnclick',nameRow:'queryOnclick'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAPIJvmCapabilitySV_getThreadInfo" data-uiid="jvmQuery" desc="" dna-code="bd4653f9-4501-0010-9646-9bbd8b625d8b" element-event="onclick" element-id="query" is-template="false" method="getThreadInfo" name="" on-fail="show result" on-success="no operation" refresh-uiid="jvmInfo" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIJvmCapability.svpkg" type="condform">
+        <ui-parameter code="appId" param-kind="java" scope="jvmQuery" type="java.lang.String" uiparam-type="FormEle" uiparam-value="appID"/>
+        <ui-parameter code="name" param-kind="java" scope="jvmQuery" type="java.lang.String" uiparam-type="FormEle" uiparam-value="jvmName"/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

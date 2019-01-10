@@ -1,0 +1,36 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+       "array": {
+            "693": [
+                "monitor01",
+                "manager01",
+                "coreSchedule01code"
+            ]
+        },
+        "splitInfosItems": [
+            {
+                "taskCode": "task01",
+                "taskItem": "0",
+                "assignServer": "coreSchedule01",
+                "host": 693
+            },
+             {
+                "taskCode": "task01",
+                "taskItem": "1",
+                "assignServer": "manager01",
+                "host": 732
+            }
+        ],
+        "splitInfosTotal": 2
+    }
+}

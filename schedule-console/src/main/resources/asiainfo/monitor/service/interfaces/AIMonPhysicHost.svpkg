@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/configmgr/ConfigMgr.cmpt" code="AIMonPhysicHost" desc="" dna-code="3599823b-4601-0010-a968-1bf5c2ec4aac" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.AIMonPhysicHostSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAIMonPhysicHostSV" name="AIMonPhysicHost" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAIMonPhysicHostSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="AIMonPhysicHostSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="AIMonPhysicHost.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/dao/interfaces" name="IAIMonPhysicHostDAO.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/dao/impl" name="AIMonPhysicHostDAOImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonPhysicHostSV_getPhysicHostById" desc="" dna-code="e6b8823b-4601-0010-a968-1bf5c2ec4aac" name="getPhysicHostById" opt-flag="N" serv-func="getPhysicHostById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="hostId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonPhysicHost" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_getPhysicHostByName" desc="" dna-code="f3b8823b-4601-0010-a968-1bf5c2ec4aac" name="getPhysicHostByName" opt-flag="N" serv-func="getPhysicHostByName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="name" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonPhysicHost[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_getPhysicHostByNameAndIp" desc="" dna-code="fdb8823b-4601-0010-a968-1bf5c2ec4aac" name="getPhysicHostByNameAndIp" opt-flag="N" serv-func="getPhysicHostByNameAndIp" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="name" param-kind="java"/>
+          <param datatype="java.lang.String" name="ip" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonPhysicHost[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_getAllPhostBean" desc="" dna-code="0cb9823b-4601-0010-a968-1bf5c2ec4aac" name="getAllPhostBean" opt-flag="N" serv-func="getAllPhostBean" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonPhysicHost[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_getAllPhost" desc="" dna-code="0db9823b-4601-0010-a968-1bf5c2ec4aac" name="getAllPhost" opt-flag="N" serv-func="getAllPhost" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_getPhostByPhostId" desc="" dna-code="0eb9823b-4601-0010-a968-1bf5c2ec4aac" name="getPhostByPhostId" opt-flag="N" serv-func="getPhostByPhostId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="phostId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.PhysicHost" param-kind="java"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_getPhostByIdFromDb" desc="" dna-code="15b9823b-4601-0010-a968-1bf5c2ec4aac" name="getPhostByIdFromDb" opt-flag="N" serv-func="getPhostByIdFromDb" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.PhysicHost" param-kind="java"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_wrapperPhysicHostByBean" desc="" dna-code="1db9823b-4601-0010-a968-1bf5c2ec4aac" name="wrapperPhysicHostByBean" opt-flag="N" serv-func="wrapperPhysicHostByBean" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonPhysicHost" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.PhysicHost" param-kind="java"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_getHostTopuXmlByGroupIdAndUserId" desc="" dna-code="24b9823b-4601-0010-a968-1bf5c2ec4aac" name="getHostTopuXmlByGroupIdAndUserId" opt-flag="N" serv-func="getHostTopuXmlByGroupIdAndUserId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupId" param-kind="java"/>
+          <param datatype="java.lang.String" name="userId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.lang.String" param-kind="java"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_saveOrUpdate" desc="" dna-code="33b9823b-4601-0010-a968-1bf5c2ec4aac" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonPhysicHost[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_saveOrUpdate" desc="" dna-code="34b9823b-4601-0010-a968-1bf5c2ec4aac" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonPhysicHost" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPhysicHostSV_deletePhysicHost" desc="" dna-code="35b9823b-4601-0010-a968-1bf5c2ec4aac" name="deletePhysicHost" opt-flag="N" serv-func="deletePhysicHost" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="hostId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

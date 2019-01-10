@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+    <sysbo datasource="Monitor" name="BOAIMonRule" mainattr="RULE_ID">
+        <mapingenty type="table">AI_MON_RULE</mapingenty>
+        <datafilter />
+        <attrlist>
+            <attr floatlength="0" name="RULE_ID" maxlength="12" datatype="Long" type="PK">
+                <mapingcol datatype="NUMBER">RULE_ID</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULE_CODE" maxlength="40" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULE_CODE</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULE_TYPE" maxlength="20" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULE_TYPE</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULE_KIND" maxlength="20" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULE_KIND</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULE_KEY" maxlength="20" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULE_KEY</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULE_VALUE" maxlength="255" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULE_VALUE</mapingcol>
+            </attr>
+            <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL">
+                <mapingcol datatype="CHAR">STATE</mapingcol>
+            </attr>
+            <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+            </attr>
+        </attrlist>
+        <relationlist />
+        <oplist />
+    </sysbo>
+</sysbolist>

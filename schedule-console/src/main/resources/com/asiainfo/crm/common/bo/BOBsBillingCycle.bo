@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOBsBillingCycle" mainattr="BILLING_CYCLE_ID">
+    <mapingenty type="table">BS_BILLING_CYCLE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="BILLING_CYCLE_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">BILLING_CYCLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILLING_CYCLE_TYPE_ID" maxlength="3" datatype="Integer" type="PK">
+        <mapingcol datatype="NUMBER">BILLING_CYCLE_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="1：未来帐期 2：计费帐期 3：缴费帐期 4：历史帐期
+">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">STATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRL_FLAG" maxlength="1" datatype="String" type="COL" remark="0：正常
+1：出帐中
+">
+        <mapingcol datatype="CHAR">CTRL_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CTRL_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CTRL_DATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

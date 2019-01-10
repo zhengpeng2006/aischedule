@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="PInfoGroupConfig" desc="" dna-code="75bfeb9f-4701-0010-9cc3-4d1c4eed14b3" full-name="module.monitor.configmgr.PInfoGroupConfig" kind="0" name="PInfoGroupConfig">
+  <uientity-version branch="" code="" desc="" name="PInfoGroupConfig" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.PInfoGroupConfig</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_name"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_code"/>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup" type="form" uiid="pGroupInfo"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_groupCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_groupDesc"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_groupId"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_groupName"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_groupStyle"/>
+      <area bo="java.lang.String" type="select" uiid="pGroupInfo_layer"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_parentId"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_remark"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_sortId"/>
+      <area bo="java.lang.String" type="textfield" uiid="pGroupInfo_state"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="PInfoGroupConfig.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="PInfoGroupConfig.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="PInfoGroupConfig.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="PInfoGroupConfig.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="query" type="button"/>
+      <ui-event id="" name="cancle" type="button"/>
+      <ui-event id="" name="add" type="button"/>
+      <ui-event id="" name="update" type="button"/>
+      <ui-event id="" name="delete" type="button"/>
+      <ui-event id="" name="save" type="button"/>
+      <ui-event id="" name="cancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onclick" element-id="query">{descRow:'queryOnclick',nameRow:'queryOnclick'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="删除">{descRow:'删除Onclick',nameRow:'删除Onclick'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="delete">{descRow:'deleteOnclick',nameRow:'deleteOnclick'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="save">{descRow:'saveOnclick',nameRow:'saveOnclick'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="update">{descRow:'updateOnclick',nameRow:'updateOnclick'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAIMonPInfoGroupSV_getPInfoGroupByCodeAndName" data-uiid="queryForm" desc="" dna-code="ca6be79f-4701-0010-9cc3-4d1c4eed14b3" element-event="onclick" element-id="query" is-template="false" method="getPInfoGroupByCodeAndName" name="" on-fail="" on-success="" refresh-uiid="goupInfos" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPInfoGroup.svpkg" type="condform">
+        <ui-parameter code="groupCode" param-kind="java" scope="queryForm" type="java.lang.String" uiparam-type="FormEle" uiparam-value="code"/>
+        <ui-parameter code="groupName" param-kind="java" scope="queryForm" type="java.lang.String" uiparam-type="FormEle" uiparam-value="name"/>
+        <ui-parameter code="layer" param-kind="java" scope="" type="java.lang.String" uiparam-type="Constant" uiparam-value="  "/>
+        <ui-parameter code="startNum" param-kind="java" scope="queryForm" type="java.lang.Integer" uiparam-type="innerArg" uiparam-value="PAGINSTART"/>
+        <ui-parameter code="endNum" param-kind="java" scope="queryForm" type="java.lang.Integer" uiparam-type="innerArg" uiparam-value="PAGINEND"/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="IAIMonPInfoGroupSV_delete" data-uiid="" desc="" dna-code="c76be79f-4701-0010-9cc3-4d1c4eed14b3" element-event="onclick" element-id="删除" is-template="false" method="delete" name="" on-fail="" on-success="" refresh-uiid="" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPInfoGroup.svpkg" type="button">
+        <ui-parameter code="areaId" param-kind="java" scope="" type="long" uiparam-type="" uiparam-value=""/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="IAIMonPInfoGroupSV_delete" data-uiid="" desc="" dna-code="c76be79f-4701-0010-9cc3-4d1c4eed14b3" element-event="onclick" element-id="delete" is-template="false" method="delete" name="" on-fail="show result" on-success="show result" refresh-uiid="queryForm" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPInfoGroup.svpkg" type="button">
+        <ui-parameter code="areaId" param-kind="java" scope="" type="long" uiparam-type="" uiparam-value=""/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="IAIMonPInfoGroupSV_saveOrUpdate" data-uiid="pGroupInfo" desc="" dna-code="c56be79f-4701-0010-9cc3-4d1c4eed14b3" element-event="onclick" element-id="save" is-template="false" method="saveOrUpdate" name="" on-fail="" on-success="" refresh-uiid="" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPInfoGroup.svpkg" type="button">
+        <ui-parameter code="value" param-kind="bo" scope="pGroupInfo" type="com.asiainfo.monitor.busi.exe.task.ivalues.IBOAIMonPInfoGroupValue" uiparam-type="BOObject" uiparam-value=""/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="IAIMonPInfoGroupSV_getMonPInfoGroupById" data-uiid="" desc="" dna-code="bf6be79f-4701-0010-9cc3-4d1c4eed14b3" element-event="onclick" element-id="update" is-template="false" method="getMonPInfoGroupById" name="" on-fail="" on-success="" refresh-uiid="pGroupInfo" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPInfoGroup.svpkg" type="button">
+        <ui-parameter code="itemId" param-kind="java" scope="" type="long" uiparam-type="" uiparam-value=""/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

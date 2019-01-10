@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.controlmgr.view.UserGroup">
+  <property-specification name="qryfrom" type="net.sf.json.JSONObject"/>
+  <property-specification name="userGroupTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="userGroupTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="userGroupTabCount" type="long"/>
+  <property-specification name="userGroupTabRowIndex" type="int"/>
+  <property-specification name="userGroupDetail" type="net.sf.json.JSONObject"/>
+</page-specification>

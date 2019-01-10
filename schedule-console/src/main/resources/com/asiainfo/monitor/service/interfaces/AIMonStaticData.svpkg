@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/configmgr/ConfigMgr.cmpt" code="AIMonStaticData" desc="" dna-code="66948b3c-4601-0010-8909-65032ead7cb7" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.AIMonStaticDataSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAIMonStaticDataSV" name="AIMonStaticData" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAIMonStaticDataSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="AIMonStaticDataSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="AIMonStaticData.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/dao/interfaces" name="IAIMonStaticDataDAO.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/dao/impl" name="AIMonStaticDataDAOImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonStaticDataSV_getAllStaticDataBean" desc="" dna-code="62d78b3c-4601-0010-8909-65032ead7cb7" name="getAllStaticDataBean" opt-flag="Y" serv-func="getAllStaticDataBean" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonStaticData[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonStaticDataSV_queryByCodeType" desc="" dna-code="63d78b3c-4601-0010-8909-65032ead7cb7" name="queryByCodeType" opt-flag="Y" serv-func="queryByCodeType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="codeType" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonStaticData[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonStaticDataSV_queryByEct" desc="" dna-code="65d78b3c-4601-0010-8909-65032ead7cb7" name="queryByEct" opt-flag="Y" serv-func="queryByEct" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="externCodeType" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonStaticData[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonStaticDataSV_queryByCodeTypeAndValue" desc="" dna-code="67d78b3c-4601-0010-8909-65032ead7cb7" name="queryByCodeTypeAndValue" opt-flag="Y" serv-func="queryByCodeTypeAndValue" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="codeType" param-kind="java"/>
+          <param datatype="java.lang.String" name="codeValue" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonStaticData" param-kind="bo"/>
+      </service>
+      <service code="IAIMonStaticDataSV_queryByCodeType" desc="" dna-code="6bd78b3c-4601-0010-8909-65032ead7cb7" name="queryByCodeType" opt-flag="Y" serv-func="queryByCodeType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String[]" name="codeTypes" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonStaticData[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonStaticDataSV_saveOrUpdate" desc="" dna-code="6ed78b3c-4601-0010-8909-65032ead7cb7" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonStaticData" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonStaticDataSV_saveOrUpdate" desc="" dna-code="6fd78b3c-4601-0010-8909-65032ead7cb7" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonStaticData[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

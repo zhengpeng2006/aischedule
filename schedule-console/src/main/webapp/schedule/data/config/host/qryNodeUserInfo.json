@@ -1,0 +1,29 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "nodeUserTabItems": [
+      {
+        "createDate": "2016-08-11",
+        "modifyDate": "",
+        "nodeId": 790,
+        "nodeUserId": 845,
+        "remark": "测试节点用户",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNodeUser",
+        "userId": 700,
+        "userName": "aische"
+      }
+    ]
+  }
+}

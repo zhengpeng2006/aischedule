@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/handlepage/HandlePage.cmpt" code="Page403" desc="" dna-code="c520629d-4d01-0010-bf04-af1db7e9d33c" full-name="module.handlepage.Page403" kind="0" name="Page403">
+  <uientity-version branch="" code="" desc="" name="Page403" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.handlepage.view.Page403</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/handlepage" name="Page403.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/handlepage" name="Page403.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/handlepage" name="Page403.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/handlepage/view" name="Page403.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

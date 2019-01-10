@@ -1,0 +1,25 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "taskBaseLogsItems": [
+            {
+                "itemJobId": "task01$1472783460031$0",
+                "taskJobId": "task01$1472783460031",
+                "taskCode": "task01",
+                "taskItemId": "0",
+                "serverId": "coreSchedule01code",
+                "priority": 0
+            }
+        ],
+        "total": 1
+    }
+}

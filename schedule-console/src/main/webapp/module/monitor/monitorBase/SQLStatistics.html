@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+
+			<div class="c_title">
+				<div class="text" uitype="title" editable="true">SQLStatistics</div>
+			</div>
+
+
+			<div class="c_form c_form-col-2 c_form-label-4 c_form-inline"
+				uiid="queryForm" id="queryForm" type="condForm" objName="queryForm"
+				uitype="condform" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">appId</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="appId"
+									value="ognl:queryForm.appId" desc="appId"
+									uiid="queryForm_appId" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">SQL</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="SQL"
+									value="ognl:queryForm.SQL" desc="SQL" uiid="queryForm_SQL" /></span>
+						</span></span></li>
+				</ul>
+				<div class="submitPlace"></div>
+				<div class="submit">
+					<button onclick="" template_type="operate" type="button"
+						name="queryButton" class="e_button-form" formId="queryForm">
+						<span>查询</span>
+					</button>
+					<button onclick="" template_type="operate" type="button"
+						name="staticsButton" class="e_button-form" formId="queryForm">
+						<span>统计</span>
+					</button>
+					<button onclick="" template_type="operate" type="button"
+						name="copyButton" class="e_button-form" formId="queryForm">
+						<span>拷贝</span>
+					</button>
+				</div>
+			</div>
+
+
+
+			<div jwcid="SQLStatisticsList@Part" uiid="SQLStatisticsList"
+				id="SQLStatisticsList" element="div" type="table"
+				objName="SQLStatisticsListItems,SQLStatisticsListCount"
+				uitype="table" editable="true">
+				<div class="c_scroll" style="height: 242px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="SQLStatisticsListTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="SQLStatisticsListRowIndex" style="display: none">RowIndex</th>
+									<th col="SQL" colcss="e_left" class="wrap">SQL</th>
+									<th col="minTimeConsuming" colcss="e_left" class="wrap">最小耗时（ms）</th>
+									<th col="maxTimeConsuming" colcss="e_left" class="wrap">最大耗时（ms）</th>
+									<th col="totalTimeConsuming" colcss="e_left" class="wrap">总耗时（ms）</th>
+									<th col="averageTimeConsuming" colcss="e_left" class="wrap">平均耗时（ms）</th>
+									<th col="allTimes" colcss="e_left" class="wrap">全部次数</th>
+									<th col="theLastTimeConsuming" colcss="e_left" class="wrap">最后一次耗时</th>
+									<th col="lastCallTime" colcss="e_left" class="wrap">最后一次调用时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:SQLStatisticsListItems"
+									value="ognl:SQLStatisticsListItem"
+									index="ognl:SQLStatisticsListRowIndex">
+									<tr>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:SQLStatisticsListRowIndex+1"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:SQLStatisticsListItem.state" name="state"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceListItem.minTimeConsuming" name="minTimeConsuming"/></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceListItem.maxTimeConsuming" name="maxTimeConsuming"/></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceListItem.totalTimeConsuming" name="totalTimeConsuming"/></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceListItem.averageTimeConsuming" name="averageTimeConsuming"/></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceListItem.allTimes" name="allTimes"/></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceListItem.theLastTimeConsuming" name="theLastTimeConsuming"/></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceListItem.lastCallTime" name="lastCallTime"/></td>
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div jwcid="@NavBar" name="SQLStatisticsListNavBar" cond=""
+					part="SQLStatisticsList" listener=""
+					count="ognl:SQLStatisticsListCount"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.configmgr.view.BaseConfigPortal">
+  <property-specification name="hostTabDivItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="hostTabDivItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="hostTabDivCount" type="long"/>
+  <property-specification name="hostTabDivRowIndex" type="int"/>
+  <property-specification name="groupTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="groupTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="groupTabCount" type="long"/>
+  <property-specification name="groupTabRowIndex" type="int"/>
+  <property-specification name="hostTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="hostTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="hostTabCount" type="long"/>
+  <property-specification name="hostTabRowIndex" type="int"/>
+  <property-specification name="nodeTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="nodeTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="nodeTabCount" type="long"/>
+  <property-specification name="nodeTabRowIndex" type="int"/>
+  <property-specification name="serverTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="serverTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="serverTabCount" type="long"/>
+  <property-specification name="serverTabRowIndex" type="int"/>
+</page-specification>

@@ -1,0 +1,88 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "taskNames": [
+            {
+                "taskCode": "FP_SQL_1",
+                "taskName": "STORE_INFO"
+            },
+            {
+                "taskCode": "FP_SQL_2",
+                "taskName": "CHANNEL_STORE_IN_DETAIL"
+            },
+            {
+                "taskCode": "FP_SQL_3",
+                "taskName": "CHANNEL_SALE_SIM_2"
+            },
+            {
+                "taskCode": "FP_SQL_4",
+                "taskName": "RP_SSM_LOGS_N"
+            },
+            {
+                "taskCode": "FP_SQL_5",
+                "taskName": "CS_SR_VGOP"
+            },
+            {
+                "taskCode": "TASK",
+                "taskName": "BatchGetDestoryUserTask"
+            },
+            {
+                "taskCode": "TF_DEFAULT_2",
+                "taskName": "SO_TF_SO_ALL_100"
+            },
+            {
+                "taskCode": "TF_DEFAULT_1",
+                "taskName": "DEAL_DESTORY_USER_101"
+            },
+            {
+                "taskCode": "VM1",
+                "taskName": "启动BBOSS工作流"
+            },
+            {
+                "taskCode": "FP_JAVA_1",
+                "taskName": "SO_JYK_YCHSJ_KT"
+            },
+            {
+                "taskCode": "TASK_1",
+                "taskName": "ResSimCardTask"
+            },
+            {
+                "taskCode": "TASK_3",
+                "taskName": "HelloOfferApplyStopTask"
+            },
+            {
+                "taskCode": "TASK_2",
+                "taskName": "OrdxGrpTrmnlRecTask"
+            },
+            {
+                "taskCode": "TASK_5",
+                "taskName": "ResInstanceTask"
+            },
+            {
+                "taskCode": "TASK_4",
+                "taskName": "SendAddMemberSmsTask"
+            },
+            {
+                "taskCode": "BP_FTP",
+                "taskName": "BPFTP"
+            },
+            {
+                "taskCode": "TF_RELOAD_2",
+                "taskName": "AISR_SEC_OPERATOR"
+            },
+            {
+                "taskCode": "TF_RELOAD_1",
+                "taskName": "CM_SEC_ORGANIZE"
+            }
+        ]
+    }
+}

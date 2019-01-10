@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/batchwriteoff/BatchWriteOff.cmpt" code="QueryDetail" desc="" dna-code="021ae700-4b01-0010-afc2-dd4efb9ae0b4" full-name="module.batchWriteOff.QueryDetail" kind="0" name="QueryDetail">
+  <uientity-version branch="" code="" desc="" name="QueryDetail" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.batchwriteoff.view.QueryDetail</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/batchWriteOff" name="QueryDetail.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/batchWriteOff" name="QueryDetail.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/batchWriteOff" name="QueryDetail.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/batchwriteoff/view" name="QueryDetail.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

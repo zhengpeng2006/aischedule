@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="QBOAmBatchWfAllRegionInfo" mainattr="BILLING_CYCLE_ID">
+    <mapingenty type="query">SELECT t.billing_cycle_id AS BILLING_CYCLE_ID,t.region_id AS REGION_ID,
+MAX(decode(t.wf_flow_id,'100000',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "START",
+MAX(decode(t.wf_flow_id,'100100',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "INIT",
+MAX(decode(t.wf_flow_id,'100200',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "SET_CTRLFLAG_BEGIN",
+MAX(decode(t.wf_flow_id,'100300',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "KILL_REAL_WF",
+MAX(decode(t.wf_flow_id,'100500',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "BATCH_WRITEOFF",
+MAX(decode(t.wf_flow_id,'100600',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "SQLLOAD_DATA",
+MAX(decode(t.wf_flow_id,'100700',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "AUDIT",
+MAX(decode(t.wf_flow_id,'100800',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "RENAME_TABLE",
+MAX(decode(t.wf_flow_id,'100900',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "INSERT_DATA",
+MAX(decode(t.wf_flow_id,'101000',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "SET_CTRLFLAG_FINISH",
+MAX(decode(t.wf_flow_id,'101100',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "RUN_REAL_WF",
+MAX(decode(t.wf_flow_id,'101200',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "TABLE_ANALYSE",
+MAX(decode(t.wf_flow_id,'101300',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "BATCH_WRITEOFF_FINISH",
+MAX(decode(t.wf_flow_id,'200000',decode(T.STATE,'C','执行中','Y','完成','H','手动确认','X','出错','N','出错','执行中')||'；'||'START：'||to_char(t.start_date,'hh24:mi:ss')||'；'||CHR(10)||'FINISH：'||to_char(t.finish_date,' 
+
+hh24:mi:ss'),NULL)) AS "END"
+from base.bs_batch_wf_flow_mon t
+GROUP BY t.billing_cycle_id,t.region_id</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="BILLING_CYCLE_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BILLING_CYCLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="START" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">START</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INIT" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SET_CTRLFLAG_BEGIN" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SET_CTRLFLAG_BEGIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KILL_REAL_WF" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">KILL_REAL_WF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BATCH_WRITEOFF" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BATCH_WRITEOFF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SQLLOAD_DATA" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SQLLOAD_DATA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AUDIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RENAME_TABLE" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">RENAME_TABLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INSERT_DATA" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INSERT_DATA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RUN_REAL_WF" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">RUN_REAL_WF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SET_CTRLFLAG_FINISH" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SET_CTRLFLAG_FINISH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TABLE_ANALYSE" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TABLE_ANALYSE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BATCH_WRITEOFF_FINISH" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BATCH_WRITEOFF_FINISH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="END" maxlength="63" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">END</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

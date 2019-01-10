@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="ParamValueCfg" desc="" dna-code="a3d261f2-4701-0010-91d2-d5d7a2b381f6" full-name="module.monitor.configmgr.ParamValueCfg" kind="0" name="ParamValueCfg">
+  <uientity-version branch="" code="" desc="" name="ParamValueCfg" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.ParamValueCfg</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues" type="form" uiid="paramInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_VId"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_paramCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_paramValue"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_paramDesc"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_sortId"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_remarks"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_paramId"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_registeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_registeType"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="ParamValueCfg.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="ParamValueCfg.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="ParamValueCfg.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="ParamValueCfg.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="add" type="button"/>
+      <ui-event id="" name="update" type="button"/>
+      <ui-event id="" name="delete" type="button"/>
+      <ui-event id="" name="paramSave" type="button"/>
+      <ui-event id="" name="cancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onload" element-id="">{descRow:'Onload',nameRow:'Onload'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+
+<script type="text/javascript" src="component/widget/hightchart/highcharts.src.js"></script>
+<script type="text/javascript" src="component/widget/hightchart/modules/exporting.js"></script>
+<script type="text/javascript" src="module/monitor/monitorItem/js/MemoryInfo.js"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="l_fixed ">
+		<div class="l_fixedBox">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">系统组织结构</div>
+					<div class="fn">
+						<span id="runbtndiv">
+							<button onclick="MemoryInfoJSObj.runBtnClick()" id="btn_run" name="btn_run" class="e_button-form">
+								<span>
+									<i class="e_ico-play"></i>启动
+								</span>
+							</button>
+						</span>
+						<span id="stopbtndiv">
+							<button onclick="MemoryInfoJSObj.pauseBtnClick()" id="btn_stop" name="btn_stop" class="e_button-form">
+								<span>
+									<i class="e_ico-pause"></i>停止
+								</span>
+							</button>
+						</span>
+					</div>
+				</div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 380px" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true"
+						id="sysOrgTree" parentNodeId="parentId" 
+						initAfterAction="MemoryInfoJSObj.treeInitAfterAction()"
+						nodeId="id" nodeText="name" textAction="MemoryInfoJSObj.treeNodeClick(nodedata)" bo=""
+						showCheckBox="false" expandPath="-1" async="false"></div>
+				</div>
+			</div>
+		</div>
+		<div class="l_fixedContent">
+			<div class="l_fixedWrapper">
+				<div class="c_box">
+					<div class="c_title">
+						<div class="text">内存监控信息</div>
+					</div>
+					<div id="container" style="min-width: 310px; height: 400px; max-width: 100%; margin: 0 auto"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="refreshInfoPopDiv" style="display: none;">
+		<div class="c_form c_form-col-2 c_form-label-5"  uiid="refreshTimeConfig" uitype="form" id="refreshTimeConfig" >
+			<ul class="ul" style="letter-spacing: -4px">
+				<li class="li">
+					<span class="label">
+						<span class="e_required">运行时间段: </span>
+					</span>
+					<span class="e_elements" >
+						<span class="e_input">
+							<span>
+								<input type="text" id="timeSpan" name="timeSpan" value="60" nullable="no" />
+							</span>
+						</span>
+						
+					</span>
+					
+				</li>
+				<li class="li"><font color='red'>注:</font>输入0表示不设上限！	</li>
+				
+				<li class="li">
+					<span class="label">
+						<span class="e_required">刷新间隔：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input nullable="no" type="text" id="timeInterval" name="timeInterval" value="1" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li"><font color='red'>注: </font>默认刷新间隔为1秒</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">显示数量上限：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input nullable="no" minsize="6" type="text" id="showPointCnt" name="showPointCnt" value="30" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li"><font color='red'>注: </font>默认显示数量上限为30，输入0表示不限数量</li>
+			</ul>
+			</div>
+		<div class="c_submit" uitype="btngroup">
+			<button onclick="MemoryInfoJSObj.runClickCommit()" template_type="operate" type="button" name="btn_save" class="e_button-form">
+				<span>
+					<i class='e_ico-save'></i>确认
+				</span>
+			</button>
+			<button onclick="MemoryInfoJSObj.runClickCancel()" template_type="operate" type="button" name="btn_save" class="e_button-form">
+				<span>
+					<i class='e_ico-cancel'></i>取消
+				</span>
+			</button>
+		</div>
+	</div>
+</body>
+</html>

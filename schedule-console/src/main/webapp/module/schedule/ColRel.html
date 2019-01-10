@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/schedule/js/ColRel.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+
+
+
+			<div class="c_form c_form-col-3 c_form-label-5" jwcid="colInput@Part"
+				uiid="colInput" id="colInput" type="form" objName="colInput"
+				bo="" uitype="form"
+				editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label"><span
+							class="e_required">源表字段:</span></span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="srcColumnName"
+									value="ognl:colInput.srcColumnName" desc="源表字段"
+									uiid="colInput_srcColumnName" nullable="no"/></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">目标表字段:</span></span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="tfColumnName"
+									value="ognl:colInput.tfColumnName" desc="服务目标表字段"
+									uiid="colInput_tfColumnName" nullable="no"/></span>
+						</span></span></li>
+					<li class="li"><span class="label">备注:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="remark"
+									value="ognl:colInput.remark" desc="备注" uiid="colInput_remark" /></span>
+						</span></span></li>
+				</ul>
+				
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="ColRelJS.addCol()" name="add" class="e_button-form">
+					<span>新增</span>
+				</button>
+				<button onclick="ColRelJS.deleteCol()" name="delete" class="e_button-form">
+					<span>删除</span>
+				</button>
+				<button onclick="ColRelJS.quitPage()" name="QuitPage" class="e_button-form">
+					<span>退出映射配置</span>
+				</button>
+			</div>
+			</div>
+
+			
+
+
+
+			<div jwcid="colRels@Part" uiid="colRels" id="colRels" element="div"
+				type="table" objName="colRelsItems,colRelsCount"
+				bo="" uitype="table"
+				editable="true">
+				<div class="c_scroll" style="height: 242px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="colRelsTable" scroll="true">
+							<thead>
+								<tr>
+									<th></th>
+									<th col="colRelsRowIndex" style="display: none">RowIndex</th>
+									<th col="mappingId" style="display: none">映射标识</th>
+									<th col="srcColumnName" colcss="e_left" class="wrap">源表字段</th>
+									<th col="tfColumnName" colcss="e_left" class="wrap">目标表字段</th>
+									<th col="remark" colcss="e_left" class="wrap">备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:colRelsItems"
+									value="ognl:colRelsItem" index="ognl:colRelsRowIndex">
+									<tr>
+										<td><input jwcid="@Checkbox" type="checkbox"
+											name="colRelsCheckbox" /></td>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:colRelsRowIndex+1"></span></td>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:colRelsItem.mappingId" name="mappingId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:colRelsItem.srcColumnName" name="srcColumnName"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:colRelsItem.tfColumnName" name="tfColumnName"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:colRelsItem.remark" name="remark"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

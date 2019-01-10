@@ -1,0 +1,71 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "thresholdInfosItems": [
+      {
+        "expiryDays": 0,
+        "expr1": "import com.asiainfo.monitor.tools.exe.task.model.T...",
+        "expr2": "",
+        "expr3": "",
+        "expr4": "",
+        "expr5": "",
+        "expr6": "",
+        "expr7": "",
+        "expr8": "",
+        "remarks": "",
+        "setName": "",
+        "state": "U",
+        "thresholdId": 900,
+        "thresholdName": "APP应用进程数检查警告",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold"
+      },
+      {
+        "expiryDays": 0,
+        "expr1": "import com.asiainfo.monitor.tools.exe.task.model.T...",
+        "expr2": "",
+        "expr3": "",
+        "expr4": "",
+        "expr5": "",
+        "expr6": "",
+        "expr7": "",
+        "expr8": "",
+        "remarks": "",
+        "setName": "",
+        "state": "U",
+        "thresholdId": 901,
+        "thresholdName": "进程检查警告",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold"
+      },
+      {
+        "expiryDays": 0,
+        "expr1": "import com.asiainfo.monitor.tools.exe.task.model.T...",
+        "expr2": "",
+        "expr3": "",
+        "expr4": "",
+        "expr5": "",
+        "expr6": "",
+        "expr7": "",
+        "expr8": "",
+        "remarks": "",
+        "setName": "",
+        "state": "U",
+        "thresholdId": 902,
+        "thresholdName": "接口的端口数不等于1警告",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold"
+      }
+    ],
+    "total": 3
+  }
+}

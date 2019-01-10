@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/HostUserInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div jwcid="userTab@Part" uiid="userTab" id="userTab" element="div" type="table" objName="userTabItems,userTabCount"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonHostUser" uitype="table" editable="true" onclick="HostUserInfoJs.showDetail();"
+			>
+				<div class="c_scroll" style="height: 242px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="userTabTable" scroll="true" >
+							<thead>
+								<tr>
+									<th col="userTabRowIndex"></th>
+									<th col="hostUserId" colcss="e_left" class="wrap" style="display: none">用户标识</th>
+									<th col="hostId" colcss="e_left" class="wrap" style="display: none">主机标识</th>
+									<th col="userName" colcss="e_left" class="wrap">用户名称</th>
+									<th col="userPwd" colcss="e_left" class="wrap" style="display: none">用户密码</th>
+									<th col="userType" colcss="e_left" class="wrap">用户类型</th>
+									<th col="state" colcss="e_left" class="wrap">状态</th>
+									<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+									<th col="remark" colcss="e_left" class="wrap">备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:userTabItems" value="ognl:userTabItem" index="ognl:userTabRowIndex">
+									<tr  jwcid="@Conditional" condition="ognl:userTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+										<td><span jwcid="@Insert" value="ognl:userTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:userTabItem.hostUserId" name="hostUserId"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:userTabItem.hostId" name="hostId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.userName" name="userName"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:userTabItem.userPwd" name="userPwd"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_TYPE',userTabItem.userType)" name="userType"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userTabItem.state)" name="state"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.remark" name="remark"></span></td>
+
+									</tr>
+									<tr  jwcid="@Conditional" condition="ognl:userTabRowIndex % 2 == 1" element="tr">
+										<td><span jwcid="@Insert" value="ognl:userTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:userTabItem.hostUserId" name="hostUserId"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:userTabItem.hostId" name="hostId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.userName" name="userName"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:userTabItem.userPwd" name="userPwd"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_TYPE',userTabItem.userType)" name="userType"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userTabItem.state)" name="state"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.remark" name="remark"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+
+			<div class="c_form c_form-col-2 c_form-label-5" jwcid="userDetail@Part" uiid="userDetail" id="userDetail" type="form" objName="userDetail"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonHostUser" uitype="form" editable="false" >
+				<ul class="ul">
+					<li class="li" style="display: none"><span class="label">用户标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="hostUserId" value="ognl:userDetail.hostUserId" desc="用户标识" uiid="userDetail_hostUserId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">主机标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="hostId" value="ognl:userDetail.hostId" desc="主机标识" uiid="userDetail_hostId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">
+							<span class="e_required">用户名称:</span>
+						</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" nullable="no" type="text" name="userName" value="ognl:userDetail.userName" desc="用户名称" uiid="userDetail_userName" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">
+							<span class="e_required">用户密码:</span>
+						</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@Password" nullable="no" type="password" name="userPwd" value="ognl:userDetail.userPwd" desc="用户密码"
+										uiid="userDetail_userPwd" />
+								</span>
+							</span>
+						</span></li>				
+					<li class="li"><span class="label">
+							<span class="e_required">用户类型:</span>
+						</span> <span class="e_elements">
+							<span class="e_select">
+								<span>
+									<span>
+										<select jwcid="@Select" nullable="no" name="userType" value="ognl:userDetail.userType" desc="用户类型" source="ognl:getSelectList('USER_TYPE')"
+											disabled="false" changeValue="true" addDefault="true" defaultText="请选择用户类型" uiid="userDetail_userType"></select>
+									</span>
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">
+							<span class="e_required">确认密码:</span>
+						</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@Password" nullable="no"  type="password" name="reUserPwd" value="ognl:userDetail.userPwd" desc="确认密码"
+										uiid="userDetail_userPwd" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">状态:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="state" value="ognl:userDetail.state" desc="状态" uiid="userDetail_state" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">创建日期:</span> <input type="text" name="createDate" jwcid="@DateField"
+						value="ognl:userDetail.createDate" desc="创建日期" datatype="date" afterAction="" uiid="userDetail_createDate" /></li>
+					<li class="li"><span class="label">备注:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="remark" value="ognl:userDetail.remark" desc="备注" uiid="userDetail_remark" />
+								</span>
+							</span>
+						</span></li>
+				</ul>
+				<div class="submitPlace"></div>
+		</div>
+			<div id="btnGroupDiv1">
+				<div class="c_submit" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter" name="updateAfter" type="hidden"
+					textName="returnInput" value="" afterAction="" />
+					<button  onclick="HostUserInfoJs.newClick();" name="newBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-add"></i>新增
+						</span>
+					</button>
+					<button  onclick="HostUserInfoJs.editClick();" name="editBtn" id="editBtn" class="e_button-form" disabled="disabled">
+						<span>
+							<i class="e_ico-edit"></i>编辑
+						</span>
+					</button>
+					<button onclick="HostUserInfoJs.delClick();" name="delBtn" id="delBtn" class="e_button-form" disabled="disabled">
+						<span>
+							<i class="e_ico-delete"></i>删除
+						</span>
+					</button></div>
+		</div>
+			<div id="btnGroupDiv2" style="display: none">
+				<div class="c_submit" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter" name="updateAfter" type="hidden"
+					textName="returnInput" value="" afterAction="" />
+					<button  onclick="HostUserInfoJs.saveClick();" name="saveBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-save"></i>保存
+						</span>
+					</button>
+					<button  onclick="HostUserInfoJs.cancelClick();" name="cancelBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-cancel"></i>取消
+						</span>
+					</button></div>
+
+		</div>
+	</div>
+	</div>
+</body>
+</html>

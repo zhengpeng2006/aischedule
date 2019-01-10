@@ -1,0 +1,50 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "processTabItems": [
+            {
+                "STATE": "JK",
+                "SERVER_ID": 772,
+                "USER_NAME": "schedule",
+                "PID": "60071",
+                "SERVER_CODE": "coreSchedule01code",
+                "SERVER_NAME": "coreSchedule01name",
+                "KPI_CPU": "0.0%",
+                "KPI_MEM": "0.7%(230m)",
+                "TASK_COUNT": 1
+            }, 
+            {
+                "STATE": "JK",
+                "SERVER_ID": 772,
+                "USER_NAME": "schedule",
+                "PID": "60072",
+                "SERVER_CODE": "coreSchedule01code",
+                "SERVER_NAME": "coreSchedule01name",
+                "KPI_CPU": "0.0%",
+                "KPI_MEM": "0.7%(230m)",
+                "TASK_COUNT": 1
+            },
+            {
+                "STATE": "JK",
+                "SERVER_ID": 772,
+                "USER_NAME": "schedule",
+                "PID": "60073",
+                "SERVER_CODE": "coreSchedule01code",
+                "SERVER_NAME": "coreSchedule01name",
+                "KPI_CPU": "0.0%",
+                "KPI_MEM": "0.7%(230m)",
+                "TASK_COUNT": 1
+            }
+        ],
+        "total": 111
+    }
+}

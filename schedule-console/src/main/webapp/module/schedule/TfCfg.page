@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.schedule.view.TfCfg">
+  <property-specification name="tfInfo" type="net.sf.json.JSONObject"/>
+  <property-specification name="tfDetailItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="tfDetailItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="tfDetailCount" type="long"/>
+  <property-specification name="tfDetailRowIndex" type="int"/>
+  <property-specification name="colInfo" type="net.sf.json.JSONObject"/>
+</page-specification>

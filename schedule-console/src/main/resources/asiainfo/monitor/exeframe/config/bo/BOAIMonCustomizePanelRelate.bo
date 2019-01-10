@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonCustomizePanelRelate" mainattr="RELATE_ID">
+    <mapingenty type="table">AI_MON_CUSTOMIZE_PANEL_RELATE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RELATE_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">RELATE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CPANEL_ID" maxlength="12" datatype="Long" type="COL" remark="面板标识">
+        <mapingcol datatype="NUMBER">CPANEL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PANEL_ID" maxlength="12" datatype="Long" type="COL" remark="公共面板标识">
+        <mapingcol datatype="NUMBER">PANEL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RELATE_NAME" maxlength="255" datatype="String" type="COL" remark="描述">
+        <mapingcol datatype="VARCHAR2">RELATE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RUN_TYPE" maxlength="10" datatype="String" type="COL" remark="运行方式">
+        <mapingcol datatype="VARCHAR2">RUN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THRESHOLD_ID" maxlength="12" datatype="Long" type="COL" remark="阀值标识">
+        <mapingcol datatype="NUMBER">THRESHOLD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TIME_ID" maxlength="12" datatype="Long" type="COL" remark="时间标识">
+        <mapingcol datatype="NUMBER">TIME_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TYPE" maxlength="20" datatype="String" type="COL" remark="图形">
+        <mapingcol datatype="VARCHAR2">VIEW_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_STRATEGY" maxlength="255" datatype="String" type="COL" remark="显示策略">
+        <mapingcol datatype="VARCHAR2">VIEW_STRATEGY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TRANSFORM" maxlength="255" datatype="String" type="COL" remark="显示转换">
+        <mapingcol datatype="VARCHAR2">VIEW_TRANSFORM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

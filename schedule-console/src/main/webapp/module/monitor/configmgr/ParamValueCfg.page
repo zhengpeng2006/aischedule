@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.configmgr.view.ParamValueCfg">
+  <property-specification name="paramsItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="paramsItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="paramsCount" type="long"/>
+  <property-specification name="paramsRowIndex" type="int"/>
+  <property-specification name="paramValuesItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="paramValuesItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="paramValuesCount" type="long"/>
+  <property-specification name="paramValuesRowIndex" type="int"/>
+  <property-specification name="paramInput" type="net.sf.json.JSONObject"/>
+</page-specification>

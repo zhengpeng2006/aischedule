@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOABGMonWTrigger" mainattr="TRIGGER_ID">
+    <mapingenty type="table">ABG_MON_W_TRIGGER</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="TRIGGER_ID" maxlength="20" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol datatype="NUMBER">TRIGGER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RECORD_ID" maxlength="20" datatype="Long" type="COL" order="1" notNull="N">
+        <mapingcol datatype="NUMBER">RECORD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IP" maxlength="128" datatype="String" type="COL" order="2" notNull="N">
+        <mapingcol datatype="VARCHAR2">IP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_ID" maxlength="20" datatype="Long" type="COL" order="3" notNull="N">
+        <mapingcol datatype="NUMBER">INFO_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_NAME" maxlength="128" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol datatype="VARCHAR2">INFO_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAYER" maxlength="128" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol datatype="VARCHAR2">LAYER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHONENUM" maxlength="128" datatype="String" type="COL" order="6" notNull="N">
+        <mapingcol datatype="VARCHAR2">PHONENUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTENT" maxlength="256" datatype="String" type="COL" order="7" notNull="N">
+        <mapingcol datatype="VARCHAR2">CONTENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WARN_LEVEL" maxlength="256" datatype="String" type="COL" order="8" notNull="N">
+        <mapingcol datatype="VARCHAR2">WARN_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRY_DATE" maxlength="0" datatype="DateTime" type="COL" order="9" notNull="N">
+        <mapingcol datatype="DATE">EXPIRY_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SYSTEM_DOMAIN" maxlength="256" datatype="String" type="COL" order="10" notNull="N">
+        <mapingcol datatype="VARCHAR2">SYSTEM_DOMAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUBSYSTEM_DOMAIN" maxlength="256" datatype="String" type="COL" order="11" notNull="N">
+        <mapingcol datatype="VARCHAR2">SUBSYSTEM_DOMAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APP_SERVER_NAME" maxlength="128" datatype="String" type="COL" order="12" notNull="N">
+        <mapingcol datatype="VARCHAR2">APP_SERVER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="256" datatype="String" type="COL" order="13" notNull="N">
+        <mapingcol datatype="VARCHAR2">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_TIME" maxlength="0" datatype="DateTime" type="COL" order="14" notNull="N">
+        <mapingcol datatype="DATE">CREATE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="0" datatype="DateTime" type="COL" order="15" notNull="N">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" order="16" notNull="N">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="512" datatype="String" type="COL" order="17" notNull="N">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

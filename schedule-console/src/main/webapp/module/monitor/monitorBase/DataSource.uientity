@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="DataSource" desc="" dna-code="e4ec9817-4601-0010-9ed3-5d4ae9dce1c4" full-name="monitor.monitorBase.DataSource" kind="0" name="DataSource">
+  <uientity-version branch="" code="" desc="" name="DataSource" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.monitorBase.view.DataSource</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/monitorBase" name="DataSource.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="DataSource.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="DataSource.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/monitorBase/view" name="DataSource.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="Refresh" type="button"/>
+      <ui-event id="" name="Copy" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onclick" element-id="Refresh">{descRow:'RefreshOnclick',nameRow:'RefreshOnclick'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAPIShowDsTsSV_getDataSourceConfig" data-uiid="" desc="" dna-code="a10758f9-4501-0010-9646-9bbd8b625d8b" element-event="onclick" element-id="Refresh" is-template="false" method="getDataSourceConfig" name="" on-fail="show result" on-success="no operation" refresh-uiid="DataSourceList" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIShowDsTs.svpkg" type="body">
+        <ui-parameter code="appId" param-kind="java" scope="" type="java.lang.String" uiparam-type="" uiparam-value=""/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

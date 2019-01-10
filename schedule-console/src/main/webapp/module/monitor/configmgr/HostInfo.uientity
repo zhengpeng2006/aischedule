@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="HostInfo" desc="" dna-code="825d8366-4701-0010-b062-9bd8dd428ef0" full-name="module.monitor.configmgr.HostInfo" kind="0" name="HostInfo">
+  <uientity-version branch="" code="" desc="" name="HostInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.HostInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost" type="form" uiid="hostDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostDetail_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostDetail_hostCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostDetail_hostName"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostDetail_hostIp"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostDetail_hostDesc"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostDetail_remarks"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="HostInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="HostInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="HostInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="HostInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="btnSave" type="button"/>
+      <ui-event id="" name="btnCancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.deploy.common.bo.view.TaskStatus">
+  <property-specification name="taskDetail" type="net.sf.json.JSONObject"/>
+  <property-specification name="qryCondition" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskInfosTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskInfosTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskInfosTabCount" type="long"/>
+  <property-specification name="taskInfosTabRowIndex" type="int"/>
+</page-specification>

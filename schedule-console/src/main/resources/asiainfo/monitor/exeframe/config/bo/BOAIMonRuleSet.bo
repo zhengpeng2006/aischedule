@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+    <sysbo datasource="Monitor" name="BOAIMonRuleSet" mainattr="RULESET_ID">
+        <mapingenty type="table">AI_MON_RULESET</mapingenty>
+        <datafilter />
+        <attrlist>
+            <attr floatlength="0" name="RULESET_ID" maxlength="12" datatype="Long" type="PK">
+                <mapingcol datatype="NUMBER">RULESET_ID</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULESET_CODE" maxlength="40" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULESET_CODE</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULESET_NAME" maxlength="255" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULESET_NAME</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULESET_TYPE" maxlength="20" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULESET_TYPE</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULESET_KIND" maxlength="20" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">RULESET_KIND</mapingcol>
+            </attr>
+            <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL">
+                <mapingcol datatype="CHAR">STATE</mapingcol>
+            </attr>
+            <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+            </attr>
+        </attrlist>
+        <relationlist />
+        <oplist />
+    </sysbo>
+</sysbolist>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgTfThread" mainattr="CFG_TF_THREAD_ID">
+    <mapingenty type="table">CFG_TF_THREAD</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CFG_TF_THREAD_ID" maxlength="12" datatype="Long" type="PK" remark="配置数据转移线程ID">
+        <mapingcol datatype="NUMBER">CFG_TF_THREAD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INIT_THREADS" maxlength="3" datatype="Integer" type="COL" remark="初始线程数量">
+        <mapingcol datatype="NUMBER">INIT_THREADS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIN_THREADS" maxlength="3" datatype="Integer" type="COL" remark="最小线程数量">
+        <mapingcol datatype="NUMBER">MIN_THREADS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAX_THREADS" maxlength="3" datatype="Integer" type="COL" remark="最大线程数量">
+        <mapingcol datatype="NUMBER">MAX_THREADS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KEEP_ALIVE_TIME" maxlength="3" datatype="Integer" type="COL" remark="线程空闲时间,单位为秒 (超过这个时间,将kill掉线程,节约系统资源)">
+        <mapingcol datatype="NUMBER">KEEP_ALIVE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUFFER_SIZE" maxlength="5" datatype="Integer" type="COL" remark="buffer的大小,按照需要设置,不能太大">
+        <mapingcol datatype="NUMBER">BUFFER_SIZE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态( U为正常 E为删除)">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="描述">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OVERLOAD_PROTECT_PERCENT" maxlength="2" datatype="Integer" type="COL" remark="过载保护的百分比">
+        <mapingcol datatype="NUMBER">OVERLOAD_PROTECT_PERCENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATA_COUNT" maxlength="5" datatype="Integer" type="COL" remark="每次将多少任务组合成一个任务,可以加快处理.(默认为1，如果为空就是1)">
+        <mapingcol datatype="NUMBER">DATA_COUNT</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

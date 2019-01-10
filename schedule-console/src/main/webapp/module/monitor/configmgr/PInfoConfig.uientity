@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="PInfoConfig" desc="" dna-code="061f40e8-4701-0010-9228-39690e2e7bdf" full-name="module.monitor.configmgr.PInfoConfig" kind="0" name="PInfoConfig">
+  <uientity-version branch="" code="" desc="" name="PInfoConfig" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.PInfoConfig</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="part" uiid="treeOutPart"/>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo" type="form" uiid="infoDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_infoId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_name"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_infoCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_groupId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_layer"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_MType"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_taskMethod"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_thresholdId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_timeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_typeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_remarks"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_resolveId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_splitRuleId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDetail_filterId"/>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup" type="form" uiid="groupInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_groupId"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_groupName"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_groupCode"/>
+      <area bo="java.lang.String" type="select" uiid="groupInput_layer"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_groupDesc"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_sortId"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_remark"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_groupStyle"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_parentId"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInput_state"/>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo" type="form" uiid="infoDataInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_infoId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_name"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_infoCode"/>
+      <area bo="java.lang.String" type="select" uiid="infoDataInput_layer"/>
+      <area bo="java.lang.String" type="select" uiid="infoDataInput_MType"/>
+      <area bo="java.lang.String" type="select" uiid="infoDataInput_taskMethod"/>
+      <area bo="java.lang.String" type="select" uiid="infoDataInput_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_remarks"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_groupId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_filterId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_thresholdId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_timeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_resolveId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_typeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="infoDataInput_splitRuleId"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="PInfoConfig.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="PInfoConfig.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="PInfoConfig.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="PInfoConfig.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="groupAdd" type="button"/>
+      <ui-event id="" name="groupUpdate" type="button"/>
+      <ui-event id="" name="groupDelete" type="button"/>
+      <ui-event id="" name="paramConfig" type="button"/>
+      <ui-event id="" name="typeConfig" type="button"/>
+      <ui-event id="" name="thresholdConfig" type="button"/>
+      <ui-event id="" name="timeConfig" type="button"/>
+      <ui-event id="" name="infoAdd" type="button"/>
+      <ui-event id="" name="infoUpdate" type="button"/>
+      <ui-event id="" name="infoDelete" type="button"/>
+      <ui-event id="" name="groupDataSave" type="button"/>
+      <ui-event id="" name="groupDataQuit" type="button"/>
+      <ui-event id="" name="infoDataSave" type="button"/>
+      <ui-event id="" name="infoDateQuit" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

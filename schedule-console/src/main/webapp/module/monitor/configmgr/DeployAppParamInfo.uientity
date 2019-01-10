@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="DeployAppParamInfo" desc="" dna-code="ff19abee-4801-0010-b4d4-5749cc5a7985" full-name="module.monitor.configmgr.DeployAppParamInfo" kind="0" name="DeployAppParamInfo">
+  <uientity-version branch="" code="" desc="" name="DeployAppParamInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.DeployAppParamInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.deploy.common.bo.BODeployAppParams" type="form" uiid="deployAppParamDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="deployAppParamDetail_applicationId"/>
+      <area bo="java.lang.String" type="textfield" uiid="deployAppParamDetail_applicationParamId"/>
+      <area bo="java.lang.String" type="textfield" uiid="deployAppParamDetail_key"/>
+      <area bo="java.lang.String" type="textfield" uiid="deployAppParamDetail_paramType"/>
+      <area bo="java.lang.String" type="textfield" uiid="deployAppParamDetail_value"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="DeployAppParamInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="DeployAppParamInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="DeployAppParamInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="DeployAppParamInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="newBtn" type="button"/>
+      <ui-event id="" name="editBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+      <ui-event id="" name="saveBtn" type="button"/>
+      <ui-event id="" name="cancelBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

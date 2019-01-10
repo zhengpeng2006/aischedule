@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonDBURL" mainattr="NAME">
+    <mapingenty type="table">AI_MON_DB_URL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="NAME" maxlength="255" datatype="String" type="PK" remark="名称">
+        <mapingcol datatype="VARCHAR2">NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="URL" maxlength="4000" datatype="String" type="COL" remark="URL">
+        <mapingcol datatype="VARCHAR2">URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

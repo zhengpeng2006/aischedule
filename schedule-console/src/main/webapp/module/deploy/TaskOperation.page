@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.schedule.view.TaskOperation">
+  <property-specification name="taskProcessesRowIndex" type="int"/>
+  <property-specification name="taskServersItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskServersItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskServersCount" type="long"/>
+  <property-specification name="pageForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskLogsItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskLogsItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskLogsCount" type="long"/>
+  <property-specification name="taskLogsRowIndex" type="int"/>
+  <property-specification name="logForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskDtlView" type="net.sf.json.JSONObject"/>
+  <property-specification name="splitViewItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="splitViewItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="splitViewCount" type="long"/>
+  <property-specification name="splitViewRowIndex" type="int"/>
+  <property-specification name="itemInfosRowIndex" type="int"/>
+  <property-specification name="itemInfosItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="itemInfosItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="itemInfosCount" type="long"/>
+  <property-specification name="taskQuery" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskInfosItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskInfosItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskInfosCount" type="long"/>
+  <property-specification name="taskInfosRowIndex" type="int"/>
+  <property-specification name="queryFORM" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskProcessesItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskProcessesItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskProcessesCount" type="long"/>
+  <property-specification name="taskServersRowIndex" type="int"/>
+  <property-specification name="taskBaseLogsItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskBaseLogsItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskBaseLogsCount" type="long"/>
+  <property-specification name="taskBaseLogsRowIndex" type="int"/>
+  <property-specification name="taskParamsItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskParamsItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskParamsCount" type="long"/>
+  <property-specification name="taskParamsRowIndex" type="int"/>
+  <property-specification name="serverDetail" type="net.sf.json.JSONObject"/>
+</page-specification>

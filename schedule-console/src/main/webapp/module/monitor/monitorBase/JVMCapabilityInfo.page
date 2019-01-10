@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.appframe.ext.exeframe.monitorBase.view.JVMCapabilityInfo">
+  <property-specification name="JVMInfoItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="JVMInfoItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="JVMInfoCount" type="long"/>
+  <property-specification name="JVMInfoRowIndex" type="int"/>
+  <property-specification name="test" type="net.sf.json.JSONObject"/>
+  <property-specification name="jvmQuery" type="net.sf.json.JSONObject"/>
+  <property-specification name="jvmInfoItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="jvmInfoItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="jvmInfoCount" type="long"/>
+  <property-specification name="jvmInfoRowIndex" type="int"/>
+</page-specification>

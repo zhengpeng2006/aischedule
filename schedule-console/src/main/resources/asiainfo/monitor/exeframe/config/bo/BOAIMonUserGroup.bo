@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="appframe" name="BOAIMonUserGroup" mainattr="USER_GROUP_ID">
+    <mapingenty type="table">AI_MON_USER_GROUP</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="USER_GROUP_ID" maxlength="12" datatype="Long" type="PK" remark="唯一标识。来源于系统序列号">
+        <mapingcol datatype="NUMBER">USER_GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CODE" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="对记录修改的操作日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="对记录修改的人员id">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="用户状态
+U-正常
+E- 删除状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

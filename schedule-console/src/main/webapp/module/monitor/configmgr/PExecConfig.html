@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/PExecConfig.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+			<!-- query form start -->
+			<div class="c_title">
+				<div class="text">监控配置</div>
+				<button onclick="PExecConfigJS.dataSelect();" name="dataSave"
+					class="e_button-form" id="configbuttons" style="display: none;float:right">
+					<span>选择</span>
+				</button>
+			</div>
+			<div class="c_form c_form-col-2 c_form-label-4 c_form-inline"
+				uiid="queryForm" id="queryForm" type="condForm" objName="queryForm"
+				uitype="condform" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">名称:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="name"
+									value="ognl:queryForm.name" desc="名称" uiid="queryForm_name" /></span>
+						</span></span></li>
+
+					<li style="display: none"><span class="label">表达式:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expr"
+									value="ognl:queryForm.expr" desc="表达式" uiid="queryForm_expr" /></span>
+						</span></span></li>
+				</ul>
+				<button template_type="operate" type="button" id="queryButton"
+					name="query" class="e_button-form" formId="queryForm"
+					onclick="PExecConfigJS.queryOnclick($(this));">
+					<span>查询</span>
+				</button>
+				
+				<div class="submitPlace"></div>
+			</div>
+			<!-- table start -->
+
+			<div jwcid="execInfos@Part" uiid="execInfos" id="execInfos"
+				element="div" type="table" objName="execInfosItems,execInfosCount"
+				bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec"
+				uitype="table" editable="true">
+				<div class="c_scroll" style="height: 240px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="execInfosTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="execInfosRowIndex" style="display: none">RowIndex</th>
+									<th col="execId" style="display: none">标识</th>
+									<th col="name" colcss="e_left" class="wrap">名称</th>
+									<th col="expr" colcss="e_left" class="wrap" colspan="2">表达式</th>
+									<th col="EType" colcss="e_left" class="wrap">类型</th>
+									<th col="remarks" colcss="e_left" class="wrap">备注</th>
+									<th col="state" style="display: none">状态</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:execInfosItems"
+									value="ognl:execInfosItem" index="ognl:execInfosRowIndex">
+									<tr onclick="PExecConfigJS.updateInfo($(this));">
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:execInfosRowIndex+1"></span></td>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:execInfosItem.execId" name="execId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:execInfosItem.name" name="name"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:execInfosItem.expr" name="expr"></span>
+											</td>
+											<td>
+											<button onclick="PExecConfigJS.showDetail($(this));"
+												name="detail" class="e_button-form" style="float:right">
+												<span>详情</span>
+											</button></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:doTranslate(execInfosItem.EType)" name="EType"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:execInfosItem.remarks" name="remarks"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:execInfosItem.state" name="state"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- button start -->
+
+
+			<!-- data input start -->
+
+			<div class="c_form c_form-col-3 c_form-label-5"
+				jwcid="dataInput@Part" uiid="dataInput" id="dataInput" type="form"
+				objName="dataInput"
+				bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec"
+				uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li" style="display: none"><span class="label">标识:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="execId"
+									value="ognl:dataInput.execId" desc="标识" uiid="dataInput_execId" /></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">名称:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="name" value="ognl:dataInput.name" desc="名称"
+									uiid="dataInput_name" id="nameInput" nullable="no"/></span>
+						</span></span></li>
+						
+					<li class="li"><span class="label"><span
+							class="e_required">类型:</span></span> <span class="e_elements"><span
+							class="e_select"> <span><span><select
+										jwcid="@Select" name="EType" value="ognl:dataInput.EType"
+										desc="类型" source="ognl:getSelectList()" disabled="false"
+										changeValue="true" addDefault="false" defaultText="root"
+										uiid="dataInput_EType" id="typeInput" nullable="no"></select></span></span>
+						</span></span></li>
+					<li class="li"><span class="label">备注:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="remarks"
+									value="ognl:dataInput.remarks" desc="备注"
+									uiid="dataInput_remarks" /></span>
+						</span></span></li>
+						<li class="li col-3"><span class="label"><span
+							class="e_required">表达式:</span></span> <span class="e_textarea"> <span
+							class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+										type="text" name="expr" jwcid="@TextArea"
+										value="ognl:dataInput.expr" style="height: 100px;"
+										uiid="dataInput_expr" id="exprInput" nullable="no"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+					<li class="li" style="display: none"><span class="label">状态:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="state"
+									value="ognl:dataInput.state" desc="状态" uiid="dataInput_state" /></span>
+						</span></span></li>
+				</ul>
+			</div>
+			<div class="c_submit" uitype="btngroup" editable="true" id="editDiv" > 
+					<button onclick="PExecConfigJS.addInfo('add');" name="add"
+						class="e_button-form">
+						<span>新增</span>
+					</button>
+					<button name="update" class="e_button-form"
+						onclick="PExecConfigJS.addInfo('update');">
+						<span>修改</span>
+					</button>
+					<button onclick="PExecConfigJS.deleteOnclick();" name="delete"
+						class="e_button-form">
+						<span>删除</span>
+					</button>
+				</div>
+				
+				<div class="c_submit" uitype="btngroup" editable="true" style="display:none" id="saveDiv">
+					<button name="save" class="e_button-form"
+						onclick="PExecConfigJS.infoSave();">
+						<span>保存</span>
+					</button>
+					<button onclick="PExecConfigJS.cancel();" name="cancel"
+						class="e_button-form">
+						<span>取消</span>
+					</button>
+				</div>
+			<!-- 表达式详情 -->
+
+			<div class="c_form c_form-col-1 c_form-label-5"
+				jwcid="erprDetail@Part" uiid="erprDetail" id="erprDetail"
+				type="form" objName="erprDetail" style="display:none"
+				bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec"
+				uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">表达式:</span> <span
+						class="e_textarea"> <span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+										type="text" name="expr" jwcid="@TextArea"
+										value="ognl:erprDetail.expr" style="height: 400px;" readonly="true"
+										uiid="erprDetail_expr"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+					
+				</ul>
+				<div class="submitPlace"></div>
+			</div>
+</body>
+</html>

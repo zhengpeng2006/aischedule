@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo abo-type="0" boname="BOABGMonLRecord" catalog="" cmpt-url="config/com/asiainfo/common/Common.cmpt" code="ABGMonLRecord" desc="" dna-code="53a643f4-4801-0010-9e1a-4750965ff553" fullname="com.asiainfo.common.abo.ABGMonLRecord" name="ABGMonLRecord">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="5bba43f4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="record_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">RECORD_ID</mapingcol>
+        </attr>
+        <attr code="f8ba43f4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="info_id" order="1" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">INFO_ID</mapingcol>
+        </attr>
+        <attr code="98bb43f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="info_code" order="2" type="N" vdatatype="CODE">
+          <mapingcol length="32">INFO_CODE</mapingcol>
+        </attr>
+        <attr code="48bc43f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="host_name" order="3" type="N" vdatatype="NAME">
+          <mapingcol length="128">HOST_NAME</mapingcol>
+        </attr>
+        <attr code="18bd43f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="ip" order="4" type="N" vdatatype="NAME">
+          <mapingcol length="128">ip</mapingcol>
+        </attr>
+        <attr code="c1bd43f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="mon_type" order="5" type="N" vdatatype="TYPE">
+          <mapingcol length="8">mon_type</mapingcol>
+        </attr>
+        <attr code="91be43f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="info_name" order="6" type="N" vdatatype="NAME">
+          <mapingcol length="128">info_name</mapingcol>
+        </attr>
+        <attr code="61bf43f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="layer" order="7" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">layer</mapingcol>
+        </attr>
+        <attr code="29c043f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="from_type" order="8" type="N" vdatatype="NAME">
+          <mapingcol length="128">from_type</mapingcol>
+        </attr>
+        <attr code="09c143f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="group_id" order="9" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">GROUP_ID</mapingcol>
+        </attr>
+        <attr code="d1c143f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="is_trigger_warn" order="10" type="N" vdatatype="TYPE_CHAR">
+          <mapingcol length="1">is_trigger_warn</mapingcol>
+        </attr>
+        <attr code="a1c243f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="warn_level" order="11" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">warn_level</mapingcol>
+        </attr>
+        <attr code="99c343f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="info_value" order="12" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">info_value</mapingcol>
+        </attr>
+        <attr code="81c443f4-4801-0010-9e1a-4750965ff553" datatype="DateTime" isPrivate="N" name="done_date" order="13" type="N" vdatatype="DATE">
+          <mapingcol length="8">done_date</mapingcol>
+        </attr>
+        <attr code="69c543f4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="done_code" order="14" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">done_code</mapingcol>
+        </attr>
+        <attr code="79c643f4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="batch_id" order="15" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">batch_id</mapingcol>
+        </attr>
+        <attr code="91c743f4-4801-0010-9e1a-4750965ff553" datatype="DateTime" isPrivate="N" name="valid_date" order="16" type="N" vdatatype="DATE">
+          <mapingcol length="8">VALID_DATE</mapingcol>
+        </attr>
+        <attr code="a9c843f4-4801-0010-9e1a-4750965ff553" datatype="DateTime" isPrivate="N" name="expire_date" order="17" type="N" vdatatype="DATE">
+          <mapingcol length="8">expire_date</mapingcol>
+        </attr>
+        <attr code="99c943f4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="op_id" order="18" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">op_id</mapingcol>
+        </attr>
+        <attr code="90ca43f4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="org_id" order="19" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">org_id</mapingcol>
+        </attr>
+        <attr code="61cb43f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="system_domain" order="20" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">system_domain</mapingcol>
+        </attr>
+        <attr code="41cc43f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="subsystem_domain" order="21" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">subsystem_domain</mapingcol>
+        </attr>
+        <attr code="e89d4af4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="app_server_name" order="22" type="N" vdatatype="NAME">
+          <mapingcol length="128">app_server_name</mapingcol>
+        </attr>
+        <attr code="809e4af4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="create_date" order="23" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">create_date</mapingcol>
+        </attr>
+        <attr code="309f4af4-4801-0010-9e1a-4750965ff553" datatype="DateTime" isPrivate="N" name="create_time" order="24" type="N" vdatatype="DATE">
+          <mapingcol length="8">create_time</mapingcol>
+        </attr>
+        <attr code="e89f4af4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="remarks" order="25" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">remarks</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/common/abo" name="ABGMonLRecord.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/impl" name="ABGMonLRecord.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/vo/impl" name="ABGMonLRecordValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/interfaces" name="IABGMonLRecordBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/interfaces" name="IABGMonLRecord.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/vo/interfaces" name="IABGMonLRecordValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/common/abo/bo" name="BOABGMonLRecord.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/dao/interfaces" name="IABGMonLRecordDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/common/abo/dao/impl" name="ABGMonLRecordDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

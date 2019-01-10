@@ -1,0 +1,47 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "timeInfosItems": [
+      {
+        "TType": "CRON",
+        "expr": "0 0/1 * * * ? *",
+        "remarks": "每隔5分钟触发一次",
+        "setName": "",
+        "state": "U",
+        "timeId": 1,
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPTime"
+      },
+      {
+        "TType": "I",
+        "expr": "0 0/10 * * * ? *",
+        "remarks": "每隔10分钟触发一次",
+        "setName": "",
+        "state": "U",
+        "timeId": 2,
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPTime"
+      },
+      {
+        "TType": "F",
+        "expr": "0 0/5 0,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 * * ? *",
+        "remarks": "每天在1点到6点时间段之外每5分钟触发一次",
+        "setName": "",
+        "state": "U",
+        "timeId": 3,
+        "type": null,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPTime"
+      }
+    ],
+    "total": 3
+  }
+}

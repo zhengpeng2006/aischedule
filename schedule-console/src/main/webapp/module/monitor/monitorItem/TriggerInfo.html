@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script type="text/javascript" src="module/monitor/monitorItem/js/TriggerInfo.js"></script>
+
+<script src="stl/component/datefield/st_datefield.js" type="text/javascript" sign="st_datefield"></script></head>
+
+<body jwcid="@Body">
+	<div id="layout" class="l_col" uitype="layout" editable="true">
+		<!--area start -->
+		<div class="c_box">
+			<div class="c_title">
+				<div class="text">告警信息</div>
+		</div>
+			<div class="c_form c_form-col-3 c_form-label-4 c_form-inline" uiid="qryForm" id="qryForm" type="condForm" objName="qryForm" uitype="condform"
+			editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">IP:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="ip" id="ip" value="ognl:qryForm.ip" desc="IP" uiid="qryForm_ip" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">信息名称:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="infoName" id="infoName" value="ognl:qryForm.infoName" desc="信息名称" uiid="qryForm_infoName" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">主机名称:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="hostName" id="hostName" value="ognl:qryForm.hostName" desc="信息名称" uiid="qryForm_hostName" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">开始时间:</span> <input type="text" name="beginDate" id="beginDate" jwcid="@DateField" value="ognl:qryForm.beginDate"
+						desc="开始时间" datatype="date" afterAction="" uiid="qryForm_beginDate" format="yyyy-MM-dd HH:mm:ss" time="true" /></li>
+					<li class="li"><span class="label">结束时间:</span> <input type="text" name="endDate" id="endDate" jwcid="@DateField" value="ognl:qryForm.endDate"
+						desc="结束时间" datatype="date" afterAction="" uiid="qryForm_endDate" format="yyyy-MM-dd HH:mm:ss" time="true" /></li>
+					<div class="submitPlace">
+						<div class="c_submit" uitype="btngroup" editable="true">
+						<button onclick="return TriggerInfoJSObj.exportOnclick($(this));" template_type="operate" type="button" name="search_btn" class="e_button-form"
+							formId="qryForm" style="float:right">
+							<span>告警信息导出</span>
+						</button>
+						<button onclick="return TriggerInfoJSObj.qryOnclick($(this));" template_type="operate" type="button" name="search_btn" class="e_button-form"
+							formId="qryForm" style="float:right">
+							<span>查询</span>
+						</button>
+			 			</div>
+					</div>
+				</ul>
+		</div>
+			<div class="c_table" jwcid="triggerTab@Part" uiid="triggerTab" id="triggerTab" element="div" type="table" objName="triggerTabItems,triggerTabCount"
+			bo="com.asiainfo.common.abo.bo.BOABGMonWTrigger" uitype="table" editable="true">
+				<div class="c_scroll" style="height: 414px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="triggerTabTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="triggerTabRowIndex" style="display: none">RowIndex</th>
+									<th class="desc" col="triggerId" colcss="e_left" onclick="TriggerInfoJSObj.sortStr(2,this)"><span>触发标识</span></th>
+									<th class="desc" col="ip" colcss="e_left" onclick="TriggerInfoJSObj.sortStr(3,this)"><span>IP</span></th>
+									<th class="desc" col="infoName" colcss="e_left" onclick="TriggerInfoJSObj.sortStr(4,this)"><span>信息名称</span></th>
+									<th class="desc" col="content" colcss="e_left" onclick="TriggerInfoJSObj.sortStr(5,this)"><span>内容</span></th>
+									<th class="desc" col="warnLevel" colcss="e_left" onclick="TriggerInfoJSObj.sortMath(6,this)"><span>告警级别</span></th>
+									<th class="desc" col="createDate" colcss="e_left" onclick="TriggerInfoJSObj.sortStr(7,this)"><span>创建日期</span></th>
+									<th class="desc" col="remarks" colcss="e_left" onclick="TriggerInfoJSObj.sortStr(8,this)"><span>备注</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:triggerTabItems" value="ognl:triggerTabItem" index="ognl:triggerTabRowIndex">
+									<tr jwcid="@Conditional" condition="ognl:triggerTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+										<td style="display: none"><span jwcid="@Insert" value="ognl:triggerTabRowIndex+1"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.triggerId" name="triggerId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.ip" name="ip"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.infoName" name="infoName"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.content" name="content"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.warnLevel" name="warnLevel"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.remarks" name="remarks"></span></td>
+
+									</tr>
+									<tr jwcid="@Conditional" condition="ognl:triggerTabRowIndex % 2 == 1" element="tr">
+										<td style="display: none"><span jwcid="@Insert" value="ognl:triggerTabRowIndex+1"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.triggerId" name="triggerId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.ip" name="ip"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.infoName" name="infoName"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.content" name="content"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.warnLevel" name="warnLevel"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:triggerTabItem.remarks" name="remarks"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+				<div jwcid="@NavBar" name="triggerTabNavBar" cond="qryForm" part="triggerTab" listener="loadWTriggerInfo" count="ognl:triggerTabCount"></div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
+<script language="javascript">
+    $(document).ready(function() {
+        var dateField = new $.st_datefield("beginDate");
+    });
+</script>

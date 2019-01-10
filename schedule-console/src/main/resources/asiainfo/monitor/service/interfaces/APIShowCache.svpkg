@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="APIShowCache" desc="" dna-code="05eb56f9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.APIShowCacheSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAPIShowCacheSV" name="APIShowCache" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAPIShowCacheSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="APIShowCacheSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="APIShowCache.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAPIShowCacheSV_getFrameCacheType" desc="" dna-code="ea0457f9-4501-0010-9646-9bbd8b625d8b" name="getFrameCacheType" opt-flag="Y" serv-func="getFrameCacheType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowCacheSV_getBusiCacheType" desc="" dna-code="f00457f9-4501-0010-9646-9bbd8b625d8b" name="getBusiCacheType" opt-flag="Y" serv-func="getBusiCacheType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowCacheSV_getBusiCacheType" desc="" dna-code="f50457f9-4501-0010-9646-9bbd8b625d8b" name="getBusiCacheType" opt-flag="Y" serv-func="getBusiCacheType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowCacheSV_getFrameCache" desc="" dna-code="fd0457f9-4501-0010-9646-9bbd8b625d8b" name="getFrameCache" opt-flag="Y" serv-func="getFrameCache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+          <param datatype="java.lang.String" name="type" param-kind="java"/>
+          <param datatype="java.lang.String" name="key" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="start" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="end" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowCacheSV_getBusiCache" desc="" dna-code="190557f9-4501-0010-9646-9bbd8b625d8b" name="getBusiCache" opt-flag="Y" serv-func="getBusiCache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="type" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="start" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="end" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowCacheSV_getBusiCacheFromMultiApp" desc="" dna-code="300557f9-4501-0010-9646-9bbd8b625d8b" name="getBusiCacheFromMultiApp" opt-flag="Y" serv-func="getBusiCacheFromMultiApp" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+          <param datatype="java.lang.String" name="type" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowCacheSV_getBusiCacheFromMultiAppForAppFrame" desc="" dna-code="3b0557f9-4501-0010-9646-9bbd8b625d8b" name="getBusiCacheFromMultiAppForAppFrame" opt-flag="Y" serv-func="getBusiCacheFromMultiAppForAppFrame" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+          <param datatype="java.lang.String" name="type" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.appframe2.common.DataContainerInterface[]" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

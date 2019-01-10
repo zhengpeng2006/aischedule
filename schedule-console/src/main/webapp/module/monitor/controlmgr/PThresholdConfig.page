@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.configmgr.view.PThresholdConfig">
+  <property-specification name="queryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="thresholdInfosItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="thresholdInfosItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="thresholdInfosCount" type="long"/>
+  <property-specification name="thresholdInfosRowIndex" type="int"/>
+  <property-specification name="thresholdInput" type="net.sf.json.JSONObject"/>
+  <property-specification name="exprDetail" type="net.sf.json.JSONObject"/>
+</page-specification>

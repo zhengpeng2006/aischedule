@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+    <sysbo datasource="Monitor" name="BOAIMonRuleSetRelat" mainattr="RULESET_ID">
+        <mapingenty type="table">AI_MON_RULESET_RELAT</mapingenty>
+        <datafilter />
+        <attrlist>
+            <attr floatlength="0" name="RULESET_ID" maxlength="12" datatype="Long" type="PK">
+                <mapingcol datatype="NUMBER">RULESET_ID</mapingcol>
+            </attr>
+            <attr floatlength="0" name="RULE_ID" maxlength="12" datatype="Long" type="COL">
+                <mapingcol datatype="NUMBER">RULE_ID</mapingcol>
+            </attr>
+            <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL">
+                <mapingcol datatype="CHAR">STATE</mapingcol>
+            </attr>
+            <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL">
+                <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+            </attr>
+        </attrlist>
+        <relationlist />
+        <oplist />
+    </sysbo>
+</sysbolist>

@@ -1,0 +1,28 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "fsTabItems": [{
+            "path": "/",
+            "blocks": "217546m",
+            "percent": "97%"
+        }, {
+            "path": "/dev/shm",
+            "blocks": "16113m",
+            "percent": "7%"
+        }, {
+            "path": "/app",
+            "blocks": "100666m",
+            "percent": "45%"
+        }],
+        "total": 21
+    }
+}

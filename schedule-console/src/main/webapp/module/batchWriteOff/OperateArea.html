@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script type="text/javascript" src="module/batchWriteOff/js/OperateArea.js"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+		<div style="height:200px;width:600px;">
+			<!-- start --> <!-- 启动开始 -->
+			<div  id="passwordDiv" style="display:none">
+				<div class="c_form c_form-col-2 c_form-label-2" jwcid="pwdInput@Part" uiid="pwdInput" id="pwdInput" type="form" objName="pwdInput" bo=""
+				uitype="form" editable="true" style="height:120px;">
+					<ul class="ul">
+						<li class="li"><span class="label">密码:</span> <span class="e_elements">
+								<span class="e_input">
+									<span>
+										<input id="password" jwcid="@TextField" type="text" name="pwd" value="ognl:pwdInput.pwd" desc="密码" uiid="pwdInput_pwd" />
+									</span>
+								</span>
+							</span></li>
+					</ul>
+					<div class="submitPlace"></div>
+			</div>
+				<div class="c_submit" uitype="btngroup" editable="true" id="startButton" style="display:none;width:800px;">
+					<button onclick="OperateAreaJS.run()" name="startNode" id="startNode" class="e_button-form">
+						<span>启动</span>
+					</button>
+					<button onclick="OperateAreaJS.commit()" name="confirmNode" id="confirmNode" class="e_button-form">
+						<span>确认</span>
+					</button>
+			</div>
+				<div class="c_submit" uitype="btngroup" editable="true" id="reStartButton" style="display:none;width:800px;" >
+					<button onclick="OperateAreaJS.reRun()" name="restartNode" id="restartNode" class="e_button-form">
+						<span>重启</span>
+					</button>
+					<button onclick="OperateAreaJS.commit()" name="confirmNode1" id="confirmNode1" class="e_button-form">
+						<span>确认</span>
+					</button>
+			</div>
+			
+		</div> <!-- 启动结束 -->
+	</div>
+	</div>
+	</div>
+</body>
+</html>

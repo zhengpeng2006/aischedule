@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="PTimeConfig" desc="" dna-code="549947a9-4701-0010-aaa9-197f2770c7ec" full-name="module.monitor.configmgr.PTimeConfig" kind="0" name="PTimeConfig">
+  <uientity-version branch="" code="" desc="" name="PTimeConfig" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.PTimeConfig</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPTime" type="form" uiid="timeInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="timeInput_timeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="timeInput_expr"/>
+      <area bo="java.lang.String" type="textfield" uiid="timeInput_remarks"/>
+      <area bo="java.lang.String" type="select" uiid="timeInput_TType"/>
+      <area bo="java.lang.String" type="textfield" uiid="timeInput_state"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="PTimeConfig.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="PTimeConfig.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="PTimeConfig.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="PTimeConfig.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="dataSelect" type="button"/>
+      <ui-event id="" name="query" type="button"/>
+      <ui-event id="" name="add" type="button"/>
+      <ui-event id="" name="save" type="button"/>
+      <ui-event id="" name="delete" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onclick" element-id="query">{descRow:'queryOnclick',nameRow:'queryOnclick'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="delete">{descRow:'deleteOnclick',nameRow:'deleteOnclick'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAIMonPTimeSV_getTimeInfoByExpr" data-uiid="queryForm" desc="" dna-code="db0647a9-4701-0010-aaa9-197f2770c7ec" element-event="onclick" element-id="query" is-template="false" method="getTimeInfoByExpr" name="" on-fail="" on-success="" refresh-uiid="timeInfos" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPTime.svpkg" type="condform">
+        <ui-parameter code="expr" param-kind="java" scope="queryForm" type="java.lang.String" uiparam-type="FormEle" uiparam-value="expr"/>
+        <ui-parameter code="startNum" param-kind="java" scope="" type="java.lang.Integer" uiparam-type="innerArg" uiparam-value="PAGINSTART"/>
+        <ui-parameter code="endNum" param-kind="java" scope="" type="java.lang.Integer" uiparam-type="innerArg" uiparam-value="PAGINEND"/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="IAIMonPTimeSV_delete" data-uiid="" desc="" dna-code="ee0647a9-4701-0010-aaa9-197f2770c7ec" element-event="onclick" element-id="delete" is-template="false" method="delete" name="" on-fail="" on-success="" refresh-uiid="timeInfos" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces/AIMonPTime.svpkg" type="button">
+        <ui-parameter code="timeId" param-kind="java" scope="" type="long" uiparam-type="" uiparam-value=""/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

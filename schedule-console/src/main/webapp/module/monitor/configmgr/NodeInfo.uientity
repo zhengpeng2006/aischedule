@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="NodeInfo" desc="" dna-code="0a07be7f-4701-0010-b254-a74a44328a96" full-name="module.monitor.configmgr.NodeInfo" kind="0" name="NodeInfo">
+  <uientity-version branch="" code="" desc="" name="NodeInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.NodeInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNode" type="form" uiid="nodeDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeDetail_nodeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeDetail_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeDetail_nodeCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeDetail_nodeNameNew"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeDetail_state"/>
+      <area bo="java.lang.String" type="datepopup" uiid="nodeDetail_createDate"/>
+      <area bo="java.lang.String" type="select" uiid="nodeDetail_deployStrategyId"/>
+      <area bo="java.lang.String" type="select" uiid="nodeDetail_idMonitorNode"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeDetail_remark"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="NodeInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="NodeInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="NodeInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="NodeInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="btnSave" type="button"/>
+      <ui-event id="" name="btnCancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

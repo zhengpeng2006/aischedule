@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="component/widget/echarts/custom/EchartsExt.js" type="text/javascript"></script>
+<!-- <script src="module/monitor/portal/js/EchartTest.js" type="text/javascript"></script> -->
+<script src="module/monitor/portal/js/MonProcInfoPortal.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="module/monitor/css/monitor.css" />
+<link rel="stylesheet" type="text/css" href="module/monitor/portal/css/MonProcInfoPortal.css" />
+</head>
+
+<body jwcid="@Body">
+	<script src="component/widget/echarts/echarts-plain.js"></script>
+	<div id="layout" class="l_col" uitype="layout" editable="true">
+	<div class="l_left" style="width: 20%;">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">监控资源</div>
+			</div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 500px;overflow:auto;" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true"
+					id="sysOrgTree" parentNodeId="parentId" initAfterAction="MonProcInfoPortalJs.treeInitAfterAction()" nodeId="id" nodeText="name"
+					textAction="MonProcInfoPortalJs.treeTextClick(nodedata)" bo="" showCheckBox="false" expandPath="-1" async="false"></div>
+			</div>
+		</div>
+		</div>
+		<div class="l_auto" style="height:540px;overflow:auto" >
+				<div>
+				<div id="showGrpHostDiv" style="display: none; border: 1px solid #D3D3D3; height: 600px">
+					<div class="c_title" id="grpHostTitle">
+						<div class="text">系统集群信息</div>
+						<div class="fn">
+							<button onclick="MonProcInfoPortalJs.refreshGrpHostInfo()" id="btn_run_1" name="btn_run_1" class="e_button-form">
+								<span> 刷新 </span>
+							</button>
+					</div>
+
+				</div>
+					<table style="margin: auto;">
+						<tr>
+							<td style="background-color: #0084D6; width: 100px; height: 25px; font-weight: bold; text-align: center; color: white;">主机正常连通</td>
+							<td style="background-color: red; width: 100px; height: 25px; font-weight: bold; text-align: center; color: white;">主机未连通</td>
+						</tr>
+					</table>
+
+					<div id="grpHostDiv"></div>
+			</div>
+				<div id="hostKpiDiv" style="display: none">
+					<!-- 展示单个主机KPI信息： -->
+					<div style="height: 60px;" class="c_box">
+						<div class="c_title">
+							<div class="text">主机信息展示</div>
+					</div>
+
+						<div style="margin: 5px; padding: 4px"><span>
+								主机编码：
+								<span id="showHostCode"></span>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span>
+									主机名称：
+									<span id="showHostName"></span>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>
+										主机&nbsp;&nbsp;&nbsp;IP：
+										<span id="showHostIp"></span>
+									</span>
+								</span>
+							</span></div>
+
+				</div>
+					<div class="c_box">
+						<div class="c_title">
+							<div class="text">主机资源KPI</div>
+							<div class="fn">
+								<div class="" uiid="qryForm" id="qryForm" type="condForm" objName="qryForm" uitype="condform" editable="true">
+									<table>
+										<tr>
+											<td><span class="label">开始时间:</span> <input type="text" name="beginDate" jwcid="@DateField" value="ognl:qryForm.beginDate" desc="开始时间"
+												datatype="date" afterAction="" uiid="qryForm_beginDate" format="yyyy-MM-dd HH:mm:ss" time="true" /></td>
+											<td><span class="label">结束时间:</span> <input type="text" name="endDate" jwcid="@DateField" value="ognl:qryForm.endDate" desc="结束时间"
+												datatype="date" afterAction="" uiid="qryForm_endDate" format="yyyy-MM-dd HH:mm:ss" time="true" /></td>
+											<td>
+												<div class="submitPlace"></div>
+												<div class="submit">
+													<button onclick="return MonProcInfoPortalJs.qryHostKpiHisInfo($(this));" template_type="operate" type="button" name="qryHisInfo"
+														class="e_button-form" formId="qryForm">
+														<span>查询历史信息</span>
+													</button>
+											</div>
+											</td>
+											<td><span id="runbtndiv">
+													<!-- <button onclick="MonProcInfoPortalJs.clickRefresh()" id="btn_run" name="btn_run" class="e_button-form">
+														<span> 刷新 </span>
+													</button> -->
+												</span></td>
+										</tr>
+									</table>
+							</div>
+						</div>
+					</div>
+						<div>
+							<div id="dycDiv" style="height: 300px;"></div>
+					</div>
+				</div>
+			</div> <!-- 展示分组下主机KPI信息 -->
+				<div id="grpHostKpiDiv" style="display: none">
+					<div class="c_box">
+						<div class="c_title">
+							<div class="text">主机资源KPI</div>
+					</div>
+						<div id="grpHostInfoDiv">
+							<div id="dycDiv" style="height: 300px;"></div>
+					</div>
+				</div>
+			</div>
+					<div jwcid="fsTab@Part" style="display: none" uiid="fsTab" id="fsTab" element="div" type="table" objName="fsTabItems,fsTabCount"
+					bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonCmd" uitype="table" editable="true">
+						<div class="c_scroll" style="height: 180px">
+						<div class="c_title">
+							<div class="text">文件系统使用率展示</div>
+					</div>
+						<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="fsTabTable" scroll="true">
+									<thead>
+										<tr>
+											<th col="fsTabRowIndex" style="display: none">RowIndex</th>
+											<th col="path" colcss="e_left" class="wrap">挂载点</th>
+											<th col="blocks" colcss="e_left" class="wrap">总空间</th>
+											<th col="percent" colcss="e_left" class="wrap">使用百分比</th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:fsTabItems" value="ognl:fsTabItem" index="ognl:fsTabRowIndex">
+											<tr>
+												<td style="display: none"><span jwcid="@Insert" value="ognl:fsTabRowIndex+1"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:fsTabItem.path" name="path"></span></td>
+												
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:fsTabItem.blocks" name="blocks"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:fsTabItem.percent" name="percent"></span></td>
+											</tr>
+										</span>
+									</tbody>
+								</table>
+						</div>
+					</div>
+				</div>
+					<div class="c_box" id="processInfoTab" style="display: none">
+						<div class="c_title">
+							<div class="text">进程信息</div>
+							<div class="fn" id="fn" style="display: none">
+								<!-- <button onclick="MonProcInfoPortalJs.refreshProcessInfo()" id="btn_run" name="btn_run" class="e_button-form">
+								<span> 刷新 </span>
+							</button> -->
+						</div>
+
+					</div>
+						<div jwcid="procTab@Tabset" name="procTab" switchAction="MonProcInfoPortalJs.showBtn(1)" uitype="tabset" editable="true">﻿
+							<div jwcid="@TabsetContent" title="应用进程信息展示" onclick="">
+								<div class="c_box" id="hostProcDiv">
+									<div jwcid="processTab@Part" uiid="processTab" id="processTab" element="div" type="table" objName="processTabItems,processTabCount" bo=""
+									uitype="table" editable="true">
+										<div class="c_scroll" style="height: 242px">
+											<div class="c_table c_table-row-10">
+												<table jwcid="@Table" name="processTabTable" scroll="true">
+													<thead>
+														<tr>
+															<th col="processTabRowIndex" style="display: none">RowIndex</th>
+															<th col="serverId" colcss="e_left" class="desc" style="display: none;" onclick="MonProcInfoPortalJs.sort(2,this)"><span>应用标识</span></th>
+															<th col="userName" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(3,this)"><span>用户名称</span></th>
+															<th col="pId" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(4,this)"><span>进程标识</span></th>
+															<th col="serverCode" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(5,this)"><span>应用编码</span></th>
+															<th col="serverName" colcss="e_left" class="desc" style="display: none;" onclick="MonProcInfoPortalJs.sort(6,this)"><span>应用名称</span></th>
+															<th col="kpiCpu" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sortPercent(7,this)"><span>CPU_KPI</span></th>
+															<th col="kpiMem" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sortPercent(8,this)"><span>内存KPI</span></th>
+															<th col="state" colcss="e_left" class="wrap">状态</th>
+															<th col="taskCount" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(10,this)"><span>任务数</span></th>
+															<th col="showTasks" colcss="e_left" class="wrap" style="display: none;">任务详情</th>
+															<th col="show" colcss="e_left" class="wrap">任务</th>
+														</tr>
+													</thead>
+													<tbody>
+														<span jwcid="@Foreach" source="ognl:processTabItems" value="ognl:processTabItem" index="ognl:processTabRowIndex">
+															<tr jwcid="@Conditional" condition="ognl:processTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+																<td style="display: none"><span jwcid="@Insert" value="ognl:processTabRowIndex+1"></span></td>
+
+																<td class="e_left wrap" style="display: none;"><span jwcid="@Insert" value="ognl:processTabItem.SERVER_ID" name="SERVER_ID"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.USER_NAME" name="USER_NAME"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.PID" name="PID"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.SERVER_CODE" name="SERVER_CODE"></span></td>
+
+																<td class="e_left wrap" style="display: none;"><span jwcid="@Insert" value="ognl:processTabItem.SERVER_NAME" name="SERVER_NAME"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.KPI_CPU" name="KPI_CPU"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.KPI_MEM" name="KPI_MEM"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('PROC_STATE',processTabItem.STATE)" name="STATE"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.TASK_COUNT" name="TASK_COUNT"></span></td>
+
+																<td class="e_left wrap">
+																	<button jwcid="@Button" onclick="MonProcInfoPortalJs.showTasksInfo($(this));" name="showBtn1"
+																		serverCode="ognl:processTabItem.SERVER_CODE" class="">
+																		<span> 任务详细信息 </span>
+																	</button>
+																</td>
+
+															</tr>
+															<tr jwcid="@Conditional" condition="ognl:processTabRowIndex % 2 == 1" element="tr">
+																<td style="display: none"><span jwcid="@Insert" value="ognl:processTabRowIndex+1"></span></td>
+
+																<td class="e_left wrap" style="display: none;"><span jwcid="@Insert" value="ognl:processTabItem.SERVER_ID" name="SERVER_ID"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.USER_NAME" name="USER_NAME"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.PID" name="PID"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.SERVER_CODE" name="SERVER_CODE"></span></td>
+
+																<td class="e_left wrap" style="display: none;"><span jwcid="@Insert" value="ognl:processTabItem.SERVER_NAME" name="SERVER_NAME"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.KPI_CPU" name="KPI_CPU"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.KPI_MEM" name="KPI_MEM"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('PROC_STATE',processTabItem.STATE)" name="STATE"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:processTabItem.TASK_COUNT" name="TASK_COUNT"></span></td>
+
+																<td class="e_left wrap">
+																	<button jwcid="@Button" onclick="MonProcInfoPortalJs.showTasksInfo($(this));" name="showBtn"
+																		serverCode="ognl:processTabItem.SERVER_CODE" class="">
+																		<span> 任务详细信息 </span>
+																	</button>
+																</td>
+
+															</tr>
+														</span>
+													</tbody>
+												</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+							<div jwcid="@TabsetContent" title="非应用进程信息展示">
+								<div class="c_box" id="hostProcKpiDiv">
+									<div jwcid="procKpiTab@Part" uiid="procKpiTab" id="procKpiTab" element="div" type="table" objName="procKpiTabItems,procKpiTabCount" bo=""
+									uitype="table" editable="true">
+										<div class="c_scroll" style="height: 242px">
+											<div class="c_table c_table-row-10">
+												<table jwcid="@Table" name="procKpiTabTable" scroll="true">
+													<thead>
+														<tr>
+															<th col="procKpiTabRowIndex" style="display: none">RowIndex</th>
+															<th col="userName" colcss="e_left" class="desc" style="width: 200px" onclick="MonProcInfoPortalJs.sort(2,this)"><span>用户名称</span></th>
+															<th col="pId" colcss="e_left" class="desc" style="width: 200px" onclick="MonProcInfoPortalJs.sort(3,this)"><span>进程标识</span></th>
+															<th col="kpiCpu" colcss="e_left" class="desc" style="width: 200px" onclick="MonProcInfoPortalJs.sortPercent(4,this)"><span>CPU_KPI</span></th>
+															<th col="kpiMem" colcss="e_left" class="desc" style="width: 200px" onclick="MonProcInfoPortalJs.sortPercent(5,this)"><span>内存KPI</span></th>
+															<th col="cmdInfo" colcss="e_left" class="wrap" style="width: 500px">命令</th>
+														</tr>
+													</thead>
+													<tbody>
+														<span jwcid="@Foreach" source="ognl:procKpiTabItems" value="ognl:procKpiTabItem" index="ognl:procKpiTabRowIndex">
+															<tr jwcid="@Conditional" condition="ognl:procKpiTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+																<td style="display: none"><span jwcid="@Insert" value="ognl:procKpiTabRowIndex+1"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:procKpiTabItem.USER_NAME" name="USER_NAME"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:procKpiTabItem.PID" name="PID"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:procKpiTabItem.KPI_CPU" name="KPI_CPU"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:procKpiTabItem.KPI_MEM" name="KPI_MEM"></span></td>
+
+																<td class="e_left wrap" style="width: 500px">
+																	<button jwcid="@Button" onclick="MonProcInfoPortalJs.showCmdInfo($(this));" name="detailBtn1" hostId="ognl:procKpiTabItem.CMD_INFO"
+																		class="">
+																		<span> 命令详细信息 </span>
+																	</button>
+																</td>
+															</tr>
+															<tr jwcid="@Conditional" condition="ognl:procKpiTabRowIndex % 2 == 1" element="tr">
+																<td style="display: none"><span jwcid="@Insert" value="ognl:procKpiTabRowIndex+1"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:procKpiTabItem.USER_NAME" name="USER_NAME"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:procKpiTabItem.PID" name="PID"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:procKpiTabItem.KPI_CPU" name="KPI_CPU"></span></td>
+
+																<td class="e_left wrap"><span jwcid="@Insert" value="ognl:procKpiTabItem.KPI_MEM" name="KPI_MEM"></span></td>
+
+																<td class="e_left wrap" style="width: 500px">
+																	<!-- span jwcid="@Insert" value="ognl:procKpiTabItem.CMD_INFO" name="CMD_INFO"></span-->
+																	<button jwcid="@Button" onclick="MonProcInfoPortalJs.showCmdInfo($(this));" name="detailBtn" hostId="ognl:procKpiTabItem.CMD_INFO"
+																		class="">
+																		<span> 命令详细信息 </span>
+																	</button>
+																</td>
+
+															</tr>
+														</span>
+													</tbody>
+												</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+					<div id="showCmd" style="height: 150px"></div>
+					<div id="showTasks" style="height: 150px"></div>
+					<div jwcid="taskTab@Part" uiid="taskTab" id="taskTab" element="div" type="table" objName="taskTabItems,taskTabCount" bo="" uitype="table"
+					editable="true" style="display: none;">
+						<div class="c_scroll" style="height: 242px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="taskTabTable" scroll="true">
+									<thead>
+										<tr>
+											<th col="taskTabRowIndex" style="display: none">RowIndex</th>
+											<th col="taskCode" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(2,this)"><span>任务编码</span></th>
+											<th col="taskItemId" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(3,this)"><span>拆分项</span></th>
+											<th col="serverId" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(4,this)"><span>应用编码</span></th>
+											<th col="taskVersion" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(5,this)"><span>任务版本</span></th>
+											<th col="priority" colcss="e_left" class="desc" onclick="MonProcInfoPortalJs.sort(6,this)"><sapn>优先级</sapn></th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:taskTabItems" value="ognl:taskTabItem" index="ognl:taskTabRowIndex">
+											<tr jwcid="@Conditional" condition="ognl:taskTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+												<td style="display: none"><span jwcid="@Insert" value="ognl:taskTabRowIndex+1"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.taskCode" name="taskCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.taskItemId" name="taskItemId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.serverId" name="serverId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.taskVersion" name="taskVersion"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.priority" name="priority"></span></td>
+
+											</tr>
+											<tr jwcid="@Conditional" condition="ognl:taskTabRowIndex % 2 == 1" element="tr">
+												<td style="display: none"><span jwcid="@Insert" value="ognl:taskTabRowIndex+1"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.taskCode" name="taskCode" /></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.taskItemId" name="taskItemId" /></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.serverId" name="serverId" /></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.taskVersion" name="taskVersion" /></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskTabItem.priority" name="priority" /></td>
+											</tr>
+										</span>
+									</tbody>
+								</table>
+						</div>
+					</div>
+				</div>
+			</div></body>
+</html>

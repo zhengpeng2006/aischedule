@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="TaskOperation" desc="" dna-code="e266f163-4901-0010-a312-21bc7e1e77a4" full-name="module.deploy.TaskOperation" kind="0" name="TaskOperation">
+  <uientity-version branch="" code="" desc="" name="TaskOperation" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.TaskOperation</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="select" uiid="taskQuery_taskGroup"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskQuery_taskCode"/>
+      <area bo="java.lang.String" type="select" uiid="queryFORM_hostGroup"/>
+      <area bo="java.lang.String" type="select" uiid="queryFORM_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryFORM_serverCode"/>
+      <area bo="" type="form" uiid="serverDetail"/>
+      <area bo="java.lang.String" type="textarea" uiid="serverDetail_serverId"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_hostName"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_pid"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_serverState"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_registTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_heartbeatTime"/>
+      <area bo="java.lang.String" type="textarea" uiid="serverDetail_heartbeatInfo"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/deploy" name="TaskOperation.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="TaskOperation.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="TaskOperation.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="TaskOperation.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="queryTask" type="button"/>
+      <ui-event id="" name="taskStop" type="button"/>
+      <ui-event id="" name="taskStart" type="button"/>
+      <ui-event id="" name="query" type="button"/>
+      <ui-event id="" name="serverStop" type="button"/>
+      <ui-event id="" name="serverStart" type="button"/>
+      <ui-event id="" name="taskSave" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

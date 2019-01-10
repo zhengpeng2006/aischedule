@@ -1,0 +1,39 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "conTabItems": [
+      {
+        "conId": 1,
+        "conPort": 22,
+        "conType": "SSH",
+        "createDate": "2016-02-26",
+        "remark": "SHH连接方式",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonConMode"
+      },
+      {
+        "conId": 3,
+        "conPort": 21,
+        "conType": "Ftp",
+        "createDate": "2016-02-26",
+        "remark": "FTP连接方式",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonConMode"
+      }
+    ],
+    "total": 2
+  }
+}

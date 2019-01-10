@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.schedule.view.Recoveray">
+  <property-specification name="switchFalg" type="net.sf.json.JSONObject"/>
+  <property-specification name="errorsItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="errorsItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="errorsCount" type="long"/>
+  <property-specification name="errorsRowIndex" type="int"/>
+  <property-specification name="TaskInfosItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="TaskInfosItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="TaskInfosCount" type="long"/>
+  <property-specification name="TaskInfosRowIndex" type="int"/>
+</page-specification>

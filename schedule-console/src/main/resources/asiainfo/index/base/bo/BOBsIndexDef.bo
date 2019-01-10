@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="indexBase" name="BOBsIndexDef" mainattr="INDEX_ID">
+    <mapingenty type="table">BS_INDEX_DEF</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="INDEX_ID" maxlength="6" datatype="Integer" type="PK" remark="监控指标编号">
+        <mapingcol datatype="NUMBER">INDEX_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_TYPE_ID" maxlength="6" datatype="Integer" type="COL" remark="监控指标类型编号">
+        <mapingcol datatype="NUMBER">INDEX_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_CODE" maxlength="64" datatype="String" type="COL" remark="监控指标代码">
+        <mapingcol datatype="VARCHAR2">INDEX_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_NAME" maxlength="64" datatype="String" type="COL" remark="监控指标名称">
+        <mapingcol datatype="VARCHAR2">INDEX_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_DESC" maxlength="256" datatype="String" type="COL" remark="监控指标说明">
+        <mapingcol datatype="VARCHAR2">INDEX_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_UNIT" maxlength="32" datatype="String" type="COL" remark="监控指标单位定义监控指标的度量单位，如：元、次数、年、月、日、时间等">
+        <mapingcol datatype="VARCHAR2">INDEX_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_FORMAT" maxlength="64" datatype="String" type="COL" remark="定义监控指标的数据格式，数据格式包括两部分：数据类型、数据格式，具体格式为：数据类型(数据格式)
+数据类型：S：字符串；N：数字；F：浮点数；D：日期时间；......
+数据格式：长度、最小长度,最大长度、最大长度.小数部分长度、YYYYMMDD HHMISS sss、......">
+        <mapingcol datatype="VARCHAR2">INDEX_FORMAT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_EXPR" maxlength="256" datatype="String" type="COL" remark="监控指标表达式定义监控指标取值的算法">
+        <mapingcol datatype="VARCHAR2">INDEX_EXPR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建时间">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="操作时间">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态：U：正常；E：删除">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

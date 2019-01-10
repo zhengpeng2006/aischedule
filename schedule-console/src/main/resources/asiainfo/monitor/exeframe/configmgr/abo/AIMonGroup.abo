@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BOAIMonGroup" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonGroup.cmpt" code="AIMonGroup" desc="分组abo" dna-code="30970143-4701-0010-9312-99dd0de23280" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonGroup" name="AIMonGroup">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="2aa90143-4701-0010-9312-99dd0de23280" datatype="long" name="group_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">GROUP_ID</mapingcol>
+        </attr>
+        <attr code="91ac0143-4701-0010-9312-99dd0de23280" datatype="String" name="group_name" order="2" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">GROUP_NAME</mapingcol>
+        </attr>
+        <attr code="a2b20143-4701-0010-9312-99dd0de23280" datatype="String" name="group_desc" order="3" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">GROUP_DESC</mapingcol>
+        </attr>
+        <attr code="6ab60143-4701-0010-9312-99dd0de23280" datatype="DateTime" name="create_date" order="4" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="9abb0143-4701-0010-9312-99dd0de23280" datatype="String" name="state" order="5" type="N" vdatatype="STATE">
+          <mapingcol length="8">STATE</mapingcol>
+        </attr>
+        <attr code="8a9db8a3-4701-0010-9051-bf1364199d98" datatype="String" isPrivate="N" name="group_code" order="1" type="N" vdatatype="CODE">
+          <mapingcol length="32">GROUP_CODE</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonGroup.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/impl" name="AIMonGroup.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/impl" name="AIMonGroupValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonGroupBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonGroup.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/interfaces" name="IAIMonGroupValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo" name="BOAIMonGroup.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/interfaces" name="IAIMonGroupDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/impl" name="AIMonGroupDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

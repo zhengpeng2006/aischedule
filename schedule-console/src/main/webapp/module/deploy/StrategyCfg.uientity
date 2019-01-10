@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="StrategyCfg" desc="" dna-code="46480d40-4901-0010-92f2-9f7db3e02abf" full-name="module.deploy.StrategyCfg" kind="0" name="StrategyCfg">
+  <uientity-version branch="" code="" desc="" name="StrategyCfg" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.deploy.view.StrategyCfg</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_name"/>
+      <area bo="com.asiainfo.deploy.common.bo.BODeployStrategy" type="form" uiid="strategyInfo"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_deployStrategyId"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_deployStrategyName"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_clientBinPath"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_clientHomePath"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_clientSbinPath"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_clientLogPath"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_ftpHostIp"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_ftpHostPort"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_ftpPackagePath"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_ftpUserName"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_ftpPassword"/>
+      <area bo="java.lang.String" type="select" uiid="strategyInfo_templateId"/>
+      <area bo="java.lang.String" type="select" uiid="strategyInfo_ftpProtocol"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_serverPackagePath"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_historyPackageNum"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_operatorId"/>
+      <area bo="java.lang.String" type="textarea" uiid="strategyInfo_remarks"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_createTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="strategyInfo_modifyTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="rulesItem_packageName"/>
+      <area bo="java.lang.String" type="textfield" uiid="rulesItem_installPath"/>
+      <area bo="java.lang.String" type="select" uiid="rulesItem_needUnzip"/>
+      <area bo="java.lang.String" type="select" uiid="rulesItem_unzipMethod"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/deploy" name="StrategyCfg.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="StrategyCfg.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="StrategyCfg.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/deploy/view" name="StrategyCfg.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="queryButton" type="button"/>
+      <ui-event id="" name="templateCfg" type="button"/>
+      <ui-event id="" name="ruleCfg" type="button"/>
+      <ui-event id="" name="delete" type="button"/>
+      <ui-event id="" name="update" type="button"/>
+      <ui-event id="" name="add" type="button"/>
+      <ui-event id="" name="saveStrategy" type="button"/>
+      <ui-event id="" name="cancel" type="button"/>
+      <ui-event id="" name="addRule" type="button"/>
+      <ui-event id="" name="deleteRule" type="button"/>
+      <ui-event id="" name="saveRule" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

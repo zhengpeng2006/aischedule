@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/configmgr/ConfigMgr.cmpt" code="ConfigMgr" desc="" dna-code="04e6893b-4601-0010-a968-1bf5c2ec4aac" full-name="monitor.configmgr.ConfigMgr" kind="0" name="ConfigMgr">
+  <uientity-version branch="" code="" desc="" name="ConfigMgr" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.configmgr.view.ConfigMgr</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/configmgr" name="ConfigMgr.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/configmgr" name="ConfigMgr.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/configmgr" name="ConfigMgr.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/configmgr/view" name="ConfigMgr.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

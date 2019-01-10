@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BODefaultAttr" catalog="" cmpt-url="config/com/ailk/common/DefaultAttr.cmpt" code="DefaultAttr" desc="" dna-code="1e841998-4501-0010-a2d9-c158121525f3" fullname="com.ailk.common.abo.DefaultAttr" name="DefaultAttr">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="d7221f98-4501-0010-86ec-432ae7341ade" datatype="long" isnotnull="N" name="createOpId" order="0" type="N" vdatatype="_$JAVA">
+          <mapingcol length="12">CREATE_OP_ID</mapingcol>
+        </attr>
+        <attr code="d8221f98-4501-0010-86ec-432ae7341ade" datatype="long" isnotnull="N" name="createOrgId" order="0" type="N" vdatatype="_$JAVA">
+          <mapingcol length="12">CREATE_ORG_ID</mapingcol>
+        </attr>
+        <attr code="d9221f98-4501-0010-86ec-432ae7341ade" datatype="long" isnotnull="N" name="opId" order="0" type="N" vdatatype="_$JAVA">
+          <mapingcol length="12">OP_ID</mapingcol>
+        </attr>
+        <attr code="da221f98-4501-0010-86ec-432ae7341ade" datatype="long" isnotnull="N" name="orgId" order="0" type="N" vdatatype="_$JAVA">
+          <mapingcol length="12">ORG_ID</mapingcol>
+        </attr>
+        <attr code="db221f98-4501-0010-86ec-432ae7341ade" datatype="long" isnotnull="N" name="doneCode" order="0" type="N" vdatatype="_$JAVA">
+          <mapingcol length="12">DONE_CODE</mapingcol>
+        </attr>
+        <attr code="dc221f98-4501-0010-86ec-432ae7341ade" datatype="DateTime" isnotnull="N" name="createDate" order="0" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="dd221f98-4501-0010-86ec-432ae7341ade" datatype="DateTime" isnotnull="N" name="doneDate" order="0" type="N" vdatatype="DATE">
+          <mapingcol length="8">DONE_DATE</mapingcol>
+        </attr>
+        <attr code="de221f98-4501-0010-86ec-432ae7341ade" datatype="DateTime" isnotnull="N" name="effectiveDate" order="0" type="N" vdatatype="DATE">
+          <mapingcol length="8">EFFECTIVE_DATE</mapingcol>
+        </attr>
+        <attr code="df221f98-4501-0010-86ec-432ae7341ade" datatype="DateTime" isnotnull="N" name="expireDate" order="0" type="N" vdatatype="DATE">
+          <mapingcol length="8">EXPIRE_DATE</mapingcol>
+        </attr>
+        <attr code="e0221f98-4501-0010-86ec-432ae7341ade" datatype="String" isnotnull="N" name="regionId" order="0" type="N" vdatatype="_$JAVA">
+          <mapingcol length="12">REGION_ID</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/ailk/common/abo" name="DefaultAttr.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

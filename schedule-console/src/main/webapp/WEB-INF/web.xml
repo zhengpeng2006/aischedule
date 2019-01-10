@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">-->
+<web-app>
+	<!-- 启动/关闭心跳线程的监听器 -->
+<!--	<listener> <listener-class>com.asiainfo.socket.pool.heartbeat.HeartbeatListener</listener-class>
+	</listener>-->
+	
+	<filter>
+		<filter-name>GzipFilter</filter-name>
+		<filter-class>com.ailk.web.servlet.gzip.GzipFilter</filter-class>
+		<init-param>
+			<param-name>max-age</param-name>
+			<param-value></param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>ETagFilter</filter-name>
+		<filter-class>com.ailk.web.servlet.etag.ETagFilter</filter-class>
+	</filter>
+
+	<!-- 原框架过滤器，新过滤器出问题时恢复用，超时跳转有问题  -->
+	<!-- <filter> <filter-name>SecurityFilter</filter-name> 
+		<filter-class>com.ailk.appengine.web.filter.SecurityFilter</filter-class> 
+		</filter> -->
+    
+<!--	<filter>
+		<filter-name>SecurityFilter</filter-name>
+		<filter-class>com.asiainfo.common.view.SecurityFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>SecurityFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>-->
+
+	<filter-mapping>
+		<filter-name>GzipFilter</filter-name>
+		<url-pattern>*.gzjs</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>GzipFilter</filter-name>
+		<url-pattern>*.gzcss</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>ETagFilter</filter-name>
+		<url-pattern>*.png</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>ETagFilter</filter-name>
+		<url-pattern>*.jpg</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>ETagFilter</filter-name>
+		<url-pattern>*.gif</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>ETagFilter</filter-name>
+		<url-pattern>*.css</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>ETagFilter</filter-name>
+		<url-pattern>*.js</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>ETagFilter</filter-name>
+		<url-pattern>*.gzcss</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>ETagFilter</filter-name>
+		<url-pattern>*.gzjs</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>PageServlet</servlet-name>
+		<servlet-class>com.ailk.appengine.web.servlet.CentralControlServlet</servlet-class>
+		<init-param>
+			<param-name>etag-page</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>attach</servlet-name>
+		<servlet-class>com.ailk.web.servlet.file.FileServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>image</servlet-name>
+		<servlet-class>com.ailk.web.servlet.file.ImageServlet</servlet-class>
+		<init-param>
+			<param-name>image-class</param-name>
+			<param-value>com.ailk.base.util.VerifyImage</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>handler</servlet-name>
+		<servlet-class>com.ailk.web.servlet.HttpHandlerServlet</servlet-class>
+		<init-param>
+			<param-name>etag-page</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>impExp</servlet-name>
+		<servlet-class>com.ailk.web.servlet.impexp.ImpExpServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>impExp</servlet-name>
+		<url-pattern>/impExp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>handler</servlet-name>
+		<url-pattern>/handler</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PageServlet</servlet-name>
+		<url-pattern>/business</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>attach</servlet-name>
+		<url-pattern>/attach</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>image</servlet-name>
+		<url-pattern>/image</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<welcome-file-list>
+		<welcome-file>business</welcome-file>
+	</welcome-file-list>
+
+	<!-- 任务导出用 add by lijing start -->
+	<servlet>
+		<servlet-name>export</servlet-name>
+		<servlet-class>com.asiainfo.schedule.view.TaskExportServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>export</servlet-name>
+		<url-pattern>/export</url-pattern>
+	</servlet-mapping>
+	<!-- 任务导出用 add by lijing end -->
+
+	<!-- 参数配置文件导入用 add by wanyl start -->
+	<servlet>
+		<servlet-name>import</servlet-name>
+		<servlet-class>com.asiainfo.schedule.view.ImportItemsServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>import</servlet-name>
+		<url-pattern>/import</url-pattern>
+	</servlet-mapping>
+	<!-- 参数配置文件导入用 add by wanyl end -->
+
+	<!-- 配置处理页面 start -->
+	<error-page>
+		<error-code>403</error-code>
+		<location>/module/handlepage/Page403.html</location>
+	</error-page>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/module/handlepage/Page404.html</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/module/handlepage/Page500.html</location>
+	</error-page>
+	<!-- 配置处理页面 end -->
+
+	<!-- 禁用PUT DELETE OPTIONS TRACE，只允许GET POST start -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>restricted methods</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+			<http-method>OPTIONS</http-method>
+			<http-method>TRACE</http-method>
+		</web-resource-collection>
+		<auth-constraint />
+	</security-constraint>
+	<!-- 禁用PUT DELETE OPTIONS TRACE，只允许GET POST end -->
+	
+</web-app>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bo-design attr-display="name" code="" columns="all">
+  <bo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNode" name="BOAIMonNode" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>0,100,150,310</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo/BOAIMonNode.bo</url>
+  </bo>
+  <joins/>
+</bo-design>

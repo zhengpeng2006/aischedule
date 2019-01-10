@@ -1,0 +1,53 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "nodeTableItems": [
+      {
+        "stragety": "监控部署策略",
+        "nodeId": 788,
+        "nodeCode": "monitorService",
+        "nodeName": "监控01",
+        "hostName": "测试主机01(10.1.243.23)",
+        "hostGroup": "调度南京",
+        "versionId": "",
+        "createDate": "2016-08-11 14:37:58",
+        "operationState": "",
+        "operationStateMsg": ""
+      },
+      {
+        "stragety": "监控部署策略",
+        "nodeId": 789,
+        "nodeCode": "monitorService2",
+        "nodeName": "监控02",
+        "hostName": "测试主机02(10.1.243.23)",
+        "hostGroup": "调度南京2",
+        "versionId": 108,
+        "createDate": "2016-08-11 14:37:58",
+        "operationState": "",
+        "operationStateMsg": ""
+      },
+      {
+        "stragety": "监控部署策略",
+        "nodeId": 790,
+        "nodeCode": "monitorService3",
+        "nodeName": "监控03",
+        "hostName": "测试主机03(10.1.243.23)",
+        "hostGroup": "调度南京3",
+        "versionId": 107,
+        "createDate": "2016-08-11 14:37:58",
+        "operationState": "",
+        "operationStateMsg": ""
+      }
+    ],
+    "total": 1
+  }
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOBsDistrict" mainattr="DISTRICT_ID" remark="行政区域">
+    <mapingenty type="table">BS_DISTRICT</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DISTRICT_ID" maxlength="8" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">DISTRICT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISTRICT_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DISTRICT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISTRICT_ENGLISH_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DISTRICT_ENGLISH_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISTRICT_TYPE_ID" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">DISTRICT_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_DISTRICT_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_DISTRICT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AREA_CODE" maxlength="8" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AREA_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_CODE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">POST_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORT_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SORT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CENTER_INFO_CODE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CENTER_INFO_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISTRICT_TWO_NUMBER" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">DISTRICT_TWO_NUMBER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COURSE_FLAG" maxlength="1" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">COURSE_FLAG</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

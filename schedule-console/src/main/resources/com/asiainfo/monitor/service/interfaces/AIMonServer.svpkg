@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="AIMonServer" desc="" dna-code="e6d255f9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.AIMonServerSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAIMonServerSV" name="AIMonServer" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAIMonServerSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="AIMonServerSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="AIMonServer.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonServerSV_getServerBeanById" desc="" dna-code="bcf555f9-4501-0010-9646-9bbd8b625d8b" name="getServerBeanById" opt-flag="N" serv-func="getServerBeanById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonServer" param-kind="bo"/>
+      </service>
+      <service code="IAIMonServerSV_getAllServer" desc="" dna-code="c8f555f9-4501-0010-9646-9bbd8b625d8b" name="getAllServer" opt-flag="N" serv-func="getAllServer" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getAllServerNocache" desc="" dna-code="c9f555f9-4501-0010-9646-9bbd8b625d8b" name="getAllServerNocache" opt-flag="N" serv-func="getAllServerNocache" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getAllServerBean" desc="" dna-code="caf555f9-4501-0010-9646-9bbd8b625d8b" name="getAllServerBean" opt-flag="N" serv-func="getAllServerBean" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonServer[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonServerSV_getServerByServerId" desc="" dna-code="cbf555f9-4501-0010-9646-9bbd8b625d8b" name="getServerByServerId" opt-flag="N" serv-func="getServerByServerId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="serverId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.config.ServerConfig" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerByServerCode" desc="" dna-code="d4f555f9-4501-0010-9646-9bbd8b625d8b" name="getServerByServerCode" opt-flag="N" serv-func="getServerByServerCode" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="serverCode" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.config.ServerConfig" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerByTempType" desc="" dna-code="e1f555f9-4501-0010-9646-9bbd8b625d8b" name="getServerByTempType" opt-flag="N" serv-func="getServerByTempType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="type" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerByServerIdNocache" desc="" dna-code="edf555f9-4501-0010-9646-9bbd8b625d8b" name="getServerByServerIdNocache" opt-flag="N" serv-func="getServerByServerIdNocache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="serverId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.config.ServerConfig" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerByServerIdFromDb" desc="" dna-code="fbf555f9-4501-0010-9646-9bbd8b625d8b" name="getServerByServerIdFromDb" opt-flag="N" serv-func="getServerByServerIdFromDb" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="serverId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.Server" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerByServerCodeFromDb" desc="" dna-code="08f655f9-4501-0010-9646-9bbd8b625d8b" name="getServerByServerCodeFromDb" opt-flag="N" serv-func="getServerByServerCodeFromDb" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="serverCode" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.Server" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_wrapperServerByBean" desc="" dna-code="14f655f9-4501-0010-9646-9bbd8b625d8b" name="wrapperServerByBean" opt-flag="N" serv-func="wrapperServerByBean" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonServer" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.Server" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getAppServerConfigByNodeId" desc="" dna-code="15f655f9-4501-0010-9646-9bbd8b625d8b" name="getAppServerConfigByNodeId" opt-flag="N" serv-func="getAppServerConfigByNodeId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="nodeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getAppServerConfigByNodeIdNocache" desc="" dna-code="20f655f9-4501-0010-9646-9bbd8b625d8b" name="getAppServerConfigByNodeIdNocache" opt-flag="N" serv-func="getAppServerConfigByNodeIdNocache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="nodeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getAppServerConfigByNodeIdAndUserId" desc="" dna-code="2ff655f9-4501-0010-9646-9bbd8b625d8b" name="getAppServerConfigByNodeIdAndUserId" opt-flag="N" serv-func="getAppServerConfigByNodeIdAndUserId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="nodeId" param-kind="java"/>
+          <param datatype="java.lang.String" name="userId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerTopuXmlByName" desc="" dna-code="55f655f9-4501-0010-9646-9bbd8b625d8b" name="getServerTopuXmlByName" opt-flag="N" serv-func="getServerTopuXmlByName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="serverName" param-kind="java"/>
+          <param datatype="java.lang.String" name="busiAreaId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.lang.String" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerTopuXmlByNodeIdAndUserId" desc="" dna-code="74f655f9-4501-0010-9646-9bbd8b625d8b" name="getServerTopuXmlByNodeIdAndUserId" opt-flag="N" serv-func="getServerTopuXmlByNodeIdAndUserId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="nodeId" param-kind="java"/>
+          <param datatype="java.lang.String" name="userId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.lang.String" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getAppServerConfigByName" desc="" dna-code="acf655f9-4501-0010-9646-9bbd8b625d8b" name="getAppServerConfigByName" opt-flag="N" serv-func="getAppServerConfigByName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="serverName" param-kind="java"/>
+          <param datatype="java.lang.String" name="busiAreaId" param-kind="java"/>
+          <param datatype="boolean" name="matchWhole" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerTreeXmlByNodeId" desc="" dna-code="c0f655f9-4501-0010-9646-9bbd8b625d8b" name="getServerTreeXmlByNodeId" opt-flag="N" serv-func="getServerTreeXmlByNodeId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="nodeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerTreeXmlByNodeIdNocache" desc="" dna-code="caf655f9-4501-0010-9646-9bbd8b625d8b" name="getServerTreeXmlByNodeIdNocache" opt-flag="N" serv-func="getServerTreeXmlByNodeIdNocache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="nodeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_checkUniteVersion" desc="" dna-code="d5f655f9-4501-0010-9646-9bbd8b625d8b" name="checkUniteVersion" opt-flag="N" serv-func="checkUniteVersion" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="ids" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.common.SimpleResult" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_checkVersion" desc="" dna-code="dff655f9-4501-0010-9646-9bbd8b625d8b" name="checkVersion" opt-flag="N" serv-func="checkVersion" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="ids" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.common.SimpleResult" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_saveOrUpdate" desc="" dna-code="e9f655f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonServer[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_saveOrUpdate" desc="" dna-code="eaf655f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonServer" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="long" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_saveOrUpdate" desc="" dna-code="ebf655f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonServer" name="value" param-kind="bo"/>
+          <param datatype="java.lang.String" name="domainId" param-kind="java"/>
+          <param datatype="java.lang.String" name="jmxState" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_deleteServer" desc="" dna-code="fff655f9-4501-0010-9646-9bbd8b625d8b" name="deleteServer" opt-flag="N" serv-func="deleteServer" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="serverId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerInfo" desc="" dna-code="00f755f9-4501-0010-9646-9bbd8b625d8b" name="getServerInfo" opt-flag="N" serv-func="getServerInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupName" param-kind="java"/>
+          <param datatype="java.lang.String" name="nodeName" param-kind="java"/>
+          <param datatype="java.lang.String" name="serverName" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerInfoNocache" desc="" dna-code="1ff755f9-4501-0010-9646-9bbd8b625d8b" name="getServerInfoNocache" opt-flag="N" serv-func="getServerInfoNocache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupName" param-kind="java"/>
+          <param datatype="java.lang.String" name="nodeName" param-kind="java"/>
+          <param datatype="java.lang.String" name="serverName" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerStatus" desc="" dna-code="40f755f9-4501-0010-9646-9bbd8b625d8b" name="getServerStatus" opt-flag="N" serv-func="getServerStatus" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.monitor.ServerControlInfo[]" name="serverInfo" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.ServerControlInfo[]" param-kind="java"/>
+      </service>
+      <service code="IAIMonServerSV_getServerIdsByType" desc="" dna-code="41f755f9-4501-0010-9646-9bbd8b625d8b" name="getServerIdsByType" opt-flag="N" serv-func="getServerIdsByType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="tempType" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

@@ -1,0 +1,148 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "-1": {
+            "text": "业务分组",
+            "showcheck": "false",
+            "childNodes": {
+                "GroupCode1__2": {
+                    "text": "重构组1",
+                    "showcheck": "false",
+                    "childNodes": {
+                        "test100__3": {
+                            "text": "测试100",
+                            "showcheck": "false",
+                            "id": "test100__3",
+                            "haschild": "false",
+                            "level": "3",
+                            "order": "1",
+                            "complete": "false",
+                            "value": "test100__3",
+                            "expand": "false",
+                            "groupid": null,
+                            "dataid": "-1●GroupCode1__2●test100__3",
+                            "href": null,
+                            "checked": "false",
+                            "disabled": "false"
+                        },
+                        "ceshi100__3": {
+                            "text": "ceshi100",
+                            "showcheck": "false",
+                            "id": "ceshi100__3",
+                            "haschild": "false",
+                            "level": "3",
+                            "order": "0",
+                            "complete": "false",
+                            "value": "ceshi100__3",
+                            "expand": "false",
+                            "groupid": null,
+                            "dataid": "-1●GroupCode1__2●ceshi100__3",
+                            "href": null,
+                            "checked": "false",
+                            "disabled": "false"
+                        },
+                        "task04__3": {
+                            "text": "任务四",
+                            "showcheck": "false",
+                            "id": "task04__3",
+                            "haschild": "false",
+                            "level": "3",
+                            "order": "2",
+                            "complete": "false",
+                            "value": "task04__3",
+                            "expand": "false",
+                            "groupid": null,
+                            "dataid": "-1●GroupCode1__2●task04__3",
+                            "href": null,
+                            "checked": "false",
+                            "disabled": "false"
+                        }
+                    },
+                    "id": "GroupCode1__2",
+                    "haschild": "true",
+                    "level": "2",
+                    "order": "1",
+                    "complete": "false",
+                    "value": "GroupCode1__2",
+                    "expand": "false",
+                    "groupid": null,
+                    "dataid": "-1●GroupCode1__2",
+                    "href": null,
+                    "checked": "false",
+                    "disabled": "false"
+                },
+                "111__2": {
+                    "text": "222",
+                    "showcheck": "false",
+                    "childNodes": {
+                        "4444__3": {
+                            "text": "222221",
+                            "showcheck": "false",
+                            "id": "4444__3",
+                            "haschild": "false",
+                            "level": "3",
+                            "order": "0",
+                            "complete": "false",
+                            "value": "4444__3",
+                            "expand": "false",
+                            "groupid": null,
+                            "dataid": "-1●111__2●4444__3",
+                            "href": null,
+                            "checked": "false",
+                            "disabled": "false"
+                        }
+                    },
+                    "id": "111__2",
+                    "haschild": "true",
+                    "level": "2",
+                    "order": "0",
+                    "complete": "false",
+                    "value": "111__2",
+                    "expand": "false",
+                    "groupid": null,
+                    "dataid": "-1●111__2",
+                    "href": null,
+                    "checked": "false",
+                    "disabled": "false"
+                },
+                "swtest__2": {
+                    "text": "swtest",
+                    "showcheck": "false",
+                    "id": "swtest__2",
+                    "haschild": "false",
+                    "level": "2",
+                    "order": "2",
+                    "complete": "false",
+                    "value": "swtest__2",
+                    "expand": "false",
+                    "groupid": null,
+                    "dataid": "-1●swtest__2",
+                    "href": null,
+                    "checked": "false",
+                    "disabled": "false"
+                }
+            },
+            "id": "-1",
+            "haschild": "true",
+            "level": "1",
+            "order": "0",
+            "complete": "false",
+            "value": "root",
+            "expand": "false",
+            "groupid": null,
+            "dataid": "-1",
+            "href": null,
+            "checked": "false",
+            "disabled": "false"
+        }
+    }
+}

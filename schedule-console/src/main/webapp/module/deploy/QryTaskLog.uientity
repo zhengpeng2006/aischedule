@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="QryTaskLog" desc="" dna-code="5d965b19-4a01-0010-8f4c-3dcbcac21c5d" full-name="module.deploy.QryTaskLog" kind="0" name="QryTaskLog">
+  <uientity-version branch="" code="" desc="" name="QryTaskLog" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.QryTaskLog</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="select" uiid="queryForm_taskGroup"/>
+      <area bo="java.lang.String" type="select" uiid="queryForm_taskCodeName"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_taskCode"/>
+      <area bo="java.lang.String" type="select" uiid="queryForm_state"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/deploy" name="QryTaskLog.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="QryTaskLog.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="QryTaskLog.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="QryTaskLog.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="queryButton" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

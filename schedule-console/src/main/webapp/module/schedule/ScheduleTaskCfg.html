@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/schedule/js/ScheduleTaskCfg.js"
+	type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body" >
+
+			<!-- start -->
+			<div class="c_box">
+				<!-- 查询条件 -->
+
+				<div class="c_form c_form-col-3 c_form-label-4 c_form-inline"
+					uiid="queryForm" id="queryForm" type="condForm" objName="queryForm"
+					uitype="condform" editable="true">
+					<ul class="ul">
+						<li class="li"><span class="label">任务分组:</span> <span
+							class="e_elements"><span class="e_select"> <span><span><select
+											jwcid="@Select" name="taskGroup"
+											value="ognl:queryForm.taskGroup" desc="任务分组"
+											source="ognl:getTaskGroupList()" changeValue="true"
+											addDefault="true" defaultText="请选择任务分组"
+											uiid="queryForm_taskGroup" id="taskGroup"></select></span></span>
+							</span></span></li>
+						<li class="li"><span class="label">任务类型:</span> <span
+							class="e_elements"><span class="e_select"> <span><span><select
+											jwcid="@Select" name="taskType"
+											value="ognl:queryForm.taskType" desc="任务类型"
+											source="ognl:getTaskTypeList()" changeValue="true"
+											addDefault="true" defaultText="请选择任务类型"
+											uiid="queryForm_taskType" id="taskType"></select></span></span>
+						</span></span></li>
+						<li class="li"><span class="label">任务名称:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="taskName"
+										value="ognl:queryForm.taskName" desc="任务名称"
+										uiid="queryForm_taskName" id="taskName" /></span>
+							</span></span></li>
+						<li class="li"><span class="label">任务编码:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="taskCode"
+										value="ognl:queryForm.taskCode" desc="任务编码"
+										uiid="queryForm_taskCode" id="taskCode" /></span>
+							</span></span></li>
+					</ul>
+					<div class="submitPlace"></div>
+					<div class="submit">
+						<button template_type="operate" type="button"
+							onclick="ScheduleTaskCtfJS.qryTask();" name="query"
+							class="e_button-form" formId="queryForm">
+							<span>查询</span>
+						</button>
+					</div>
+				</div>
+				<!-- 查询条件结束 -->
+				<!-- 表格 -->
+				<div jwcid="taskTable@Part" uiid="taskTable" id="taskTable"
+					element="div" type="table" objName="taskTableItems,taskTableCount"
+					bo="" uitype="table" editable="true">
+					<div class="c_scroll" style="height: 440px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="taskTableTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="taskTableRowIndex" style="display: none">RowIndex</th>
+										<th col="taskCode" colcss="e_left" class="wrap">任务编码</th>
+										<th col="taskName" colcss="e_left" class="wrap">任务名称</th>
+										<th col="taskGroupCode" colcss="e_left" class="wrap">任务分组</th>
+										<th col="startTime" colcss="e_left" class="wrap">开始时间</th>
+										<th col="endTime" colcss="e_left" class="wrap">结束时间</th>
+										<th col="version" colcss="e_left" class="wrap">版本号</th>
+										<th col="splitRegion" colcss="e_left" class="wrap">是否按地市分片</th>
+										<th col="items" colcss="e_left" class="wrap">拆分项</th>
+										<th col="type" colcss="e_left" class="wrap">任务类型</th>
+										<th col="state" colcss="e_left" class="wrap" colspan="2">配置状态</th>
+									</tr>
+								</thead>
+								<tbody>
+									<span jwcid="@Foreach" source="ognl:taskTableItems"
+										value="ognl:taskTableItem" index="ognl:taskTableRowIndex">
+										<tr>
+											<td style="display: none"><span jwcid="@Insert"
+												value="ognl:taskTableRowIndex+1"></span></td>
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.taskCode" name="taskCode"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.taskName" name="taskName"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.taskGroupCode"
+												name="taskGroupCode"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.startTime" name="startTime"></span></td>
+												
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.endTime" name="endTime"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.version" name="version"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.splitRegion" name="splitRegion"></span>
+											</td>
+											
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.items" name="items"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.taskType" name="taskType"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskTableItem.state" name="state"></span>
+												</td>
+												<td>
+												<button onclick="ScheduleTaskCtfJS.showDetail($(this))"
+													name="taskDetail" class="e_button-form"
+													style="float: right">
+													<span>详情</span>
+												</button></td>
+										</tr>
+									</span>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- 表格结束 -->
+				<!-- 标签组开始 -->
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button onclick="ScheduleTaskCtfJS.groupCfg();" name="groupCfg"
+						class="e_button-form" style="float: left">
+						<span>管理任务分组</span>
+					</button>
+					<button onclick="ScheduleTaskCtfJS.selectedOperation('paramCfg');" name="paramCfg"
+						class="e_button-form" style="float: left">
+						<span>参数配置</span>
+					</button>
+					<button onclick="ScheduleTaskCtfJS.selectedOperation('splitCfg');" name="splitCfg"
+						class="e_button-form" style="float: left">
+						<span>分片配置</span>
+					</button>
+					<button onclick="ScheduleTaskCtfJS.selectedOperation('tfCfg');" name="tfCfg"
+						class="e_button-form" style="float: left">
+						<span>tf/reload详细配置</span>
+					</button>
+					<button onclick="ScheduleTaskCtfJS.selectedOperation('enable');" name="enable"
+						class="e_button-form" style="float: left">
+						<span>启用任务</span>
+					</button>
+					<button onclick="ScheduleTaskCtfJS.selectedOperation('deleteTask');" name="deleteTask"
+						class="e_button-form" style="float: right">
+						<span>删除</span>
+					</button>
+					<button onclick="ScheduleTaskCtfJS.selectedOperation('updateTask');" name="updateTask"
+						class="e_button-form" style="float: right">
+						<span>修改</span>
+					</button>
+					<button onclick="ScheduleTaskCtfJS.addTask();" name="addTask"
+						class="e_button-form" style="float: right">
+						<span>新增</span>
+					</button>
+
+				</div>
+				<!-- 标签组结束 -->
+			</div>
+			<!-- 新增/修改任务开始 -->
+	<div id="taskInfoDiv" style="display: none">
+		<div class="c_form c_form-col-2 c_form-label-7"
+			jwcid="taskInfoData@Part" uiid="taskInfoData" id="taskInfoData"
+			type="form" objName="taskInfoData"
+			bo="" uitype="form"
+			editable="true">
+			<ul class="ul">
+				<li class="li"><span class="label"><span
+								class="e_required">任务编码:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField" id="taskCodeInput"
+										type="text" name="taskCode" value="ognl:taskInfoData.taskCode"
+										desc="任务编码" uiid="taskInfoData_taskCode" nullable="no" disabled="true"/></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">任务名称:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="taskName" value="ognl:taskInfoData.taskName"
+										desc="任务名称" uiid="taskInfoData_taskName" nullable="no" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">任务分组:</span></span> <span class="e_elements">
+								<span class="e_select"><span><span> <select
+											jwcid="@Select" name="taskGroup" id="taskGroupSel"
+											value="ognl:taskInfoData.taskGroup" desc="任务分组"
+											source="ognl:getTaskGroupList()" disabled="false"
+											changeValue="true" addDefault="true" defaultText="请选择任务分组"
+											uiid="taskInfoData_taskGroup" nullable="no"></select>
+									</span></span> </span>
+						</span></li>
+						<li class="li"><span class="label">任务描述:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="taskDesc"
+										value="ognl:taskInfoData.taskDesc" desc="任务描述"
+										uiid="taskInfoData_taskDesc" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">任务类型:</span></span> <span class="e_elements">
+								<span class="e_select"><span><span> <select id="taskType"
+											jwcid="@Select" name="taskType" onchange="ScheduleTaskCtfJS.checkType($(this))"
+											value="ognl:taskInfoData.taskType" desc="任务类型"
+											source="ognl:getTaskTypeList()" disabled="false"
+											changeValue="true" addDefault="true" defaultText="请选择任务类型"
+											uiid="taskInfoData_taskType" nullable="no"></select>
+									</span></span> </span>
+						</span></li>
+						<li class="li"><span class="label">开始时间:</span> <span class="e_elements"><span
+								class="e_input"> <span> <input jwcid="@TextField"
+										type="text" name="startTime"
+										value="ognl:taskInfoData.startTime" desc="开始时间"
+										uiid="taskInfoData_startTime" />
+								</span>
+							</span></span></li>
+						<li class="li"><span class="label">结束时间:</span> <span class="e_elements"><span
+								class="e_input"> <span> <input jwcid="@TextField"
+										type="text" name="endTime" value="ognl:taskInfoData.endTime"
+										desc="结束时间" uiid="taskInfoData_endTime" />
+								</span>
+							</span></span></li>
+							<li class="li"><span class="label"><span
+								class="e_required">扫描间隔时间:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="scanIntervalTime"
+										value="ognl:taskInfoData.scanIntervalTime" desc="扫描间隔时间"
+										uiid="taskInfoData_scanIntervalTime" nullable="no"
+										datatype="pinteger" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">每次扫描数:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="scanNum" value="ognl:taskInfoData.scanNum"
+										desc="每次扫描数" uiid="taskInfoData_scanNum" nullable="no"
+										datatype="pinteger" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">每次执行数:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="executeNum"
+										value="ognl:taskInfoData.executeNum" desc="每次执行数"
+										uiid="taskInfoData_executeNum" nullable="no"
+										datatype="pinteger" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">空闲休眠时间:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="idleSleepTime"
+										value="ognl:taskInfoData.idleSleepTime" desc="空闲休眠时间"
+										uiid="taskInfoData_idleSleepTime" nullable="no"
+										datatype="pinteger" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">线程数:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="threadNum"
+										value="ognl:taskInfoData.threadNum" desc="线程数"
+										uiid="taskInfoData_threadNum" nullable="no"
+										datatype="pinteger" /></span>
+							</span></span></li>
+
+						<li class="li"><span class="label"><span
+								class="e_required">故障处理方式:</span></span> <span class="e_elements">
+								<span class="e_select"><span><span> <select
+											jwcid="@Select" name="faultProcessMethod"
+											value="ognl:taskInfoData.faultProcessMethod" desc="故障处理方式"
+											source="ognl:getFaultProcessMethodList()" disabled="false"
+											changeValue="true" addDefault="false" defaultText="请选择故障处理方式"
+											uiid="taskInfoData_faultProcessMethod" nullable="no"></select>
+									</span></span> </span>
+						</span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">是否按地市分片:</span></span> <span class="e_elements">
+								<span class="e_select"><span><span> <select
+											jwcid="@Select" name="splitRegion" id="splitRegionInput"
+											value="ognl:taskInfoData.splitRegion" desc="是否按地市分片"
+											source="ognl:getSplitRegionList()" disabled="false"
+											changeValue="true" addDefault="false" defaultText="root"
+											uiid="taskInfoData_splitRegion" nullable="no"></select>
+									</span></span> </span>
+						</span></li>
+							<li class="li"><span class="label">优先级:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="priority"
+										value="ognl:taskInfoData.priority" desc="优先级"
+										uiid="taskInfoData_priority"
+										datatype="pinteger" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">是否记录日志:</span></span> <span class="e_elements">
+								<span class="e_select"><span><span> <select
+											jwcid="@Select" name="isLog" id="isLogInput"
+											value="ognl:taskInfoData.isLog" desc="是否记录日志"
+											source="ognl:getSplitRegionList()" disabled="false"
+											changeValue="true" addDefault="false" defaultText="root"
+											uiid="taskInfoData_isLog" nullable="no"></select>
+									</span></span> </span>
+						</span></li>
+						<li class="li col-2"><span class="label">拆分细项:</span> <span
+							class="e_textarea"> <span class="e_textareaTop"> <span></span>
+							</span> <span class="e_textareaContent"> <span> <textarea
+											type="text" name="items" jwcid="@TextArea"
+											value="ognl:taskInfoData.items" style="height: 40px;"
+											uiid="taskInfoData_items" id="itemsInput"></textarea>
+								</span>
+							</span> <span class="e_textareaBottom"> <span></span>
+							</span></span></li>
+						<li class="li col-2"><span class="label">业务执行类: </span><span class="e_textarea">
+								<span class="e_textareaTop"> <span></span>
+							</span> <span class="e_textareaContent"> <span> <textarea
+											type="text" name="processClass" jwcid="@TextArea"
+											value="ognl:taskInfoData.processClass" style="height: 40px;"
+											uiid="taskInfoData_processClass" id="processClassInput"
+											></textarea>
+								</span>
+							</span> <span class="e_textareaBottom"> <span></span>
+							</span>
+						</span></li>
+						<!-- 保存当前重要隐藏域 开始-->
+						<li style="display:none"><span class="label"><span
+								class="e_required">业务分组:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="taskGroup" id="taskGroupStr"
+										value="ognl:taskInfoData.taskGroup" desc="业务分组"
+										uiid="taskInfoData_taskGroupStr"
+										/></span>
+							</span></span></li>
+						<li style="display:none"><span class="label"><span
+								class="e_required">任务状态:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="state" id="stateRec"
+										value="ognl:taskInfoData.state" desc="任务状态"
+										uiid="taskInfoData_stateRec"
+										/></span>
+							</span></span></li>
+						<!-- 保存当前重要隐藏域 结束 -->
+			</ul>
+			<div class="submitPlace"></div>
+		</div>
+		<div class="c_submit" uitype="btngroup" editable="true">
+			<button onclick="ScheduleTaskCtfJS.saveTask()" name="taskSave"
+				class="e_button-form">
+				<span>保存</span>
+			</button>
+			<button onclick="ScheduleTaskCtfJS.quitDiv('taskInfoDiv')"
+				name="taskCancel" class="e_button-form">
+				<span>取消</span>
+			</button>
+		</div>
+	</div>
+	<!-- 新增/修改结束 -->
+			<!-- 任务详情开始 -->
+			<div id="taskDetailsDiv" style="display: none">
+				<!-- 任务基本信息开始 -->
+				<div class="c_form c_form-col-2 c_form-label-7"
+					jwcid="taskDtlView@Part" uiid="taskDtlView" id="taskDtlView"
+					type="form" objName="taskDtlView"
+					bo="" uitype="form"
+					editable="true">
+					<ul class="ul">
+							<li class="li"><span class="label">任务编码:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="taskCode" value="ognl:taskDtlView.taskCode"
+										desc="任务编码" uiid="taskDtlView_taskCode"  readonly="true"/></span>
+							</span></span></li>
+						<li class="li"><span class="label">任务名称:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="taskName" value="ognl:taskDtlView.taskName"
+										desc="任务名称" uiid="taskDtlView_taskName"  readonly="true"/></span>
+							</span></span></li>
+							
+						<li class="li"><span class="label">任务描述:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="taskDesc"
+										value="ognl:taskDtlView.taskDesc" desc="任务描述"
+										uiid="taskDtlView_taskDesc" readonly="true"/></span>
+							</span></span></li>
+						<li class="li"><span class="label">任务类型:</span> <span class="e_elements"><span
+								class="e_input"> <span> <input jwcid="@TextField"
+										type="text" name="taskType"
+										value="ognl:taskDtlView.taskType" desc="任务类型"
+										uiid="taskDtlView_taskType" readonly="true"/>
+								</span>
+							</span></span></li>
+						<li class="li"><span class="label">开始时间:</span> <span class="e_elements"><span
+								class="e_input"> <span> <input jwcid="@TextField"
+										type="text" name="startTime"
+										value="ognl:taskDtlView.startTime" desc="开始时间"
+										uiid="taskDtlView_startTime" readonly="true"/>
+								</span>
+							</span></span></li>
+						<li class="li"><span class="label">结束时间:</span> <span class="e_elements"><span
+								class="e_input"> <span> <input jwcid="@TextField"
+										type="text" name="endTime" value="ognl:taskDtlView.endTime"
+										desc="结束时间" uiid="taskDtlView_endTime" readonly="true"/>
+										</span>
+								</span></span></li>
+						<li class="li"><span class="label">扫描间隔时间:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="scanIntervalTime"
+										value="ognl:taskDtlView.scanIntervalTime" desc="扫描间隔时间"
+										uiid="taskDtlView_scanIntervalTime" 
+										datatype="pinteger" readonly="true"/></span>
+							</span></span></li>
+						<li class="li"><span class="label">每次扫描数:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="scanNum" value="ognl:taskDtlView.scanNum"
+										desc="每次扫描数" uiid="taskDtlView_scanNum" 
+										datatype="pinteger" readonly="true"/></span>
+							</span></span></li>
+						<li class="li"><span class="label">每次执行数:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="executeNum"
+										value="ognl:taskDtlView.executeNum" desc="每次执行数"
+										uiid="taskDtlView_executeNum" 
+										datatype="pinteger" readonly="true"/></span>
+							</span></span></li>
+						<li class="li"><span class="label">空闲休眠时间:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="idleSleepTime"
+										value="ognl:taskDtlView.idleSleepTime" desc="空闲休眠时间"
+										uiid="taskDtlView_idleSleepTime" 
+										datatype="pinteger" readonly="true"/></span>
+							</span></span></li>
+						<li class="li"><span class="label">线程数:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="threadNum"
+										value="ognl:taskDtlView.threadNum" desc="线程数"
+										uiid="taskDtlView_threadNum" readonly="true" 
+										/></span>
+							</span></span></li>
+						<li class="li"><span class="label">故障处理方式:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="faultProcessMethod"
+										value="ognl:taskDtlView.faultProcessMethod" desc="故障处理方式"
+										uiid="taskDtlView_faultProcessMethod"  readonly="true"
+										/></span>
+							</span></span></li>
+						<li class="li"><span class="label">是否按地市分片:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="splitRegion"
+										value="ognl:taskDtlView.splitRegion" desc="是否按地市分片"
+										uiid="taskDtlView_splitRegion"  readonly="true" 
+										/></span>
+							</span></span></li>
+							
+						<li class="li"><span class="label">创建时间:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="createTime"
+										value="ognl:taskDtlView.createTime" desc="创建时间"
+										uiid="taskDtlView_createTime"  readonly="true"
+										/></span>
+							</span></span></li>
+						
+							<li class="li"><span class="label">优先级:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="priority"
+										value="ognl:taskDtlView.priority" desc="优先级"
+										uiid="taskDtlView_priority"
+										readonly="true"/></span>
+							</span></span></li>
+							
+							<li class="li"><span class="label">是否记录日志:</span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="isLog"
+										value="ognl:transLog(taskDtlView.isLog)" desc="是否记录日志"
+										uiid="taskDtlView_isLog"
+										readonly="true"/></span>
+							</span></span></li>
+							
+											
+						<li class="li col-2"><span class="label">业务执行类:</span><span class="e_textarea">
+								<span class="e_textareaTop"> <span></span>
+							</span> <span class="e_textareaContent"> <span> <textarea
+											type="text" name="processClass" jwcid="@TextArea"
+											value="ognl:taskDtlView.processClass" style="height: 40px;"
+											uiid="taskDtlView_processClass"  readonly="true"
+											></textarea>
+								</span>
+							</span> <span class="e_textareaBottom"> <span></span>
+							</span>
+						</span></li>
+					</ul>
+					<div class="submitPlace"></div>
+				</div>
+				<!-- 任务基本信息结束 -->
+				<!-- 任务分片信息开始 -->
+				<div jwcid="splitView@Part" uiid="splitView" id="splitView"
+					element="div" type="table" objName="splitViewItems,splitViewCount"
+					bo="" uitype="table"
+					editable="true">
+					<div class="c_scroll" style="height: 180px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="splitViewTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="splitViewRowIndex" style="display: none">RowIndex</th>
+										<th col="taskItem" colcss="e_left" class="wrap">任务拆分项</th>
+										<th col="assignServer" colcss="e_left" class="wrap">指定任务处理器编码</th>
+									</tr>
+								</thead>
+								<tbody>
+									<span jwcid="@Foreach" source="ognl:splitViewItems"
+										value="ognl:splitViewItem" index="ognl:splitViewRowIndex">
+										<tr>
+											<td style="display: none"><span jwcid="@Insert"
+												value="ognl:splitViewRowIndex+1"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:splitViewItem.taskItem"
+												name="taskItem"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:splitViewItem.assignServer" name="assignServer"></span>
+											</td>
+
+										</tr>
+									</span>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- 任务分片信息开始 -->
+				
+			</div>
+			<!-- 任务详情结束 -->
+
+</body>
+</html>

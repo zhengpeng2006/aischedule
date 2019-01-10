@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+
+<script src="monitor/controlmgr/js/UserRolePrivEntity.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="l_fixed ">
+		<div class="l_fixedBox">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">菜单列表</div>
+				</div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="userPrivEntityTree@Tree" style="height:252px" class="c_scroll" name="userPrivEntityTree" 
+						listener="ognl:listeners.loadTreeData" uitype="tree" editable="true" id="userPrivEntityTree"
+						parentNodeId="parentId" nodeId="entityId" nodeText="entityName" bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntity"
+						showCheckBox="false"  checkBoxName="userPrivEntityTreeCheckBox" checkBoxType="checkbox" 
+						checkBoxAction="" 
+						initAfterAction="PrivEntityJsObj.treeInitAfterAction()"
+						textAction="PrivEntityJsObj.areaTreeTextAction(nodedata)" 
+						expandPath="1" async="false">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="l_fixedContent">
+			<div class="l_fixedWrapper">
+				<div class="c_box">
+					<div class="c_title">
+						<div class="text">详细信息</div>
+					</div>
+					<div class="c_form c_form-col-2 c_form-label-5" jwcid="userPrivEntityDetail@Part" uiid="userPrivEntityDetail" id="userPrivEntityDetail"
+						type="form" objName="userPrivEntityDetail" bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntity" uitype="form" editable="true">
+						<ul class="ul" id="privEntityUl">
+							<li class="li">
+								<span class="label">
+									<span class="e_required">实体编码：</span>
+								</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="entityCode" nullable="no" value="ognl:userPrivEntityDetail.entityCode" desc="实体编码"
+												uiid="userPrivEntityDetail_entityCode" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li">
+								<span class="label">
+									<span class="e_required">实体名称：</span>
+								</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="entityName" nullable="no" value="ognl:userPrivEntityDetail.entityName" desc="实体名称"
+												uiid="userPrivEntityDetail_entityName" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li">
+								<span class="label">
+									<span class="e_required">实体类型：</span>
+								</span>
+								<span class="e_elements">
+									<span class="e_select">
+										<span>
+											<span>
+												<select jwcid="@Select" name="entityType" value="ognl:userPrivEntityDetail.entityType" desc="实体类型"
+													source="ognl:getPrivEntityConsts('ENTITY_TYPE')" disabled="false" changeValue="true" addDefault="false" defaultText="root"
+													uiid="userPrivEntityDetail_entityType"></select>
+											</span>
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li">
+								<span class="label">
+									<span class="e_required">所属类型：</span>
+								</span>
+								<span class="e_elements">
+									<span class="e_select">
+										<span>
+											<span>
+												<select jwcid="@Select" name="selfType" value="ognl:userPrivEntityDetail.selfType" desc="所属类型"
+													source="ognl:getPrivEntityConsts('SELF_TYPE')" disabled="false" changeValue="true" addDefault="false" defaultText="root"
+													uiid="userPrivEntityDetail_selfType"></select>
+											</span>
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li">
+								<span class="label">关联样式：</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="entityStyle" value="ognl:userPrivEntityDetail.entityStyle" desc="关联样式"
+												uiid="userPrivEntityDetail_entityStyle" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li">
+								<span class="label">
+									<span class="e_required">实体属性：</span>
+								</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="entityAttr" nullable="no" value="ognl:userPrivEntityDetail.entityAttr" desc="实体属性"
+												uiid="userPrivEntityDetail_entityAttr" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li" style="display:">
+								<span class="label">
+									<span class="e_required">实体序号：</span>
+								</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="entitySeq" nullable="no" value="ognl:userPrivEntityDetail.entitySeq" desc="实体序号"
+												uiid="userPrivEntityDetail_entitySeq" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li" style="display:">
+								<span class="label">
+									<span class="e_required">发布类型：</span>
+								</span>
+								<span class="e_elements">
+
+									<span class="e_select">
+										<span>
+											<span>
+												<select jwcid="@Select" name="deployType" value="ognl:userPrivEntityDetail.deployType" desc="发布类型"
+													source="ognl:getPrivEntityConsts('DEPLOY_TYPE')" disabled="false" changeValue="true" addDefault="false" defaultText="root"
+													uiid="userPrivEntityDetail_deployType"></select>
+											</span>
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li">
+								<span class="label">备注：</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="notes" value="ognl:userPrivEntityDetail.notes" desc="备注" uiid="userPrivEntityDetail_notes" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li" style="display: none">
+								<span class="label">创建日期:</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="createDate" value="ognl:userPrivEntityDetail.createDate" desc="创建日期"
+												uiid="userPrivEntityDetail_createDate" />
+										</span>
+									</span>
+								</span>
+							</li>
+
+							<li class="li" style="display: none">
+								<span class="label">当前业务受理日期:</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="doneDate" value="ognl:userPrivEntityDetail.doneDate" desc="当前业务受理日期"
+												uiid="userPrivEntityDetail_doneDate" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li" style="display: none">
+								<span class="label">实体标识:</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="entityId" value="ognl:userPrivEntityDetail.entityId" desc="实体标识"
+												uiid="userPrivEntityDetail_entityId" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li" style="display: none">
+								<span class="label">实体标识:</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="parentId" value="ognl:userPrivEntityDetail.parentId" desc="父节点标识"
+												uiid="userPrivEntityDetail_parentId" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li" style="display: none">
+								<span class="label">加载方式:0,默认;1,预加载:</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="loadType" value="ognl:userPrivEntityDetail.loadType" desc="加载方式:0,默认;1,预加载"
+												uiid="userPrivEntityDetail_loadType" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li" style="display: none">
+								<span class="label">操作员:</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="opId" value="ognl:userPrivEntityDetail.opId" desc="操作员" uiid="userPrivEntityDetail_opId" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li" style="display: none">
+								<span class="label">用户状态 U-正常 E- 删除状态:</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="state" value="ognl:userPrivEntityDetail.state" desc="用户状态 U-正常 E- 删除状态"
+												uiid="userPrivEntityDetail_state" />
+										</span>
+									</span>
+								</span>
+							</li>
+						</ul>
+						<div style="width: 100%; height: 85px"></div>
+						<div class="submitPlace" style="width: 100%">
+							<div class="c_submit" uitype="btngroup" id="normalOpDiv" editable="true">
+								<button onclick="PrivEntityJsObj.buttonAddOnClick()" id="btn_new" name="btn_new" class="e_button-form">
+									<span>
+										<i class="e_ico-add"></i>新增
+									</span>
+								</button>
+								<button onclick="PrivEntityJsObj.btn_editOnclick($(this))" id="btn_edit" name="btn_edit" class="e_button-form">
+									<span>
+										<i class="e_ico-edit"></i>修改
+									</span>
+								</button>
+								<button onclick="PrivEntityJsObj.btn_delOnclick($(this))" id="btn_del" name="btn_del" class="e_button-form">
+									<span>
+										<i class="e_ico-delete"></i>删除
+									</span>
+								</button>
+							</div>
+
+							<div class="c_submit" uitype="btngroup" id="submitDiv" style="display: none" editable="true">
+								<button onclick="return PrivEntityJsObj.btn_saveOnclick($(this));" id="btn_save" name="btn_save" class="e_button-form">
+									<span>
+										<i class="e_ico-save"></i>保存
+									</span>
+								</button>
+								<button onclick="PrivEntityJsObj.btn_cancelOnclick($(this))" id="btn_cancel" name="btn_cancel" class="e_button-form">
+									<span>
+										<i class="e_ico-cancel"></i>取消
+									</span>
+								</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

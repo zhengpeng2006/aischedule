@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="Deploy" desc="" dna-code="41d8f8a1-4901-0010-85e7-af51126d27cf" name="Deploy">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="Deploy" label="Deploy">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/deploy/common/bo/abod/Deploy.abod</url>
+      </abod>
+      <ui-entity dna-code="463ee472-4c01-0010-9380-0d0bc2a57fa4" label="TaskStatus">
+        <uiinfo>25,41,160,40</uiinfo>
+        <url>/html/module/deploy/TaskStatus.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/deploy/common/bo" name="Deploy.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/deploy/common/bo/abod" name="Deploy.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="AIMonUserGroup" desc="" dna-code="796050f9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.AIMonUserGroupSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAIMonUserGroupSV" name="AIMonUserGroup" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAIMonUserGroupSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="AIMonUserGroupSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="AIMonUserGroup.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonUserGroupSV_getBeanById" desc="" dna-code="ddc150f9-4501-0010-9646-9bbd8b625d8b" name="getBeanById" opt-flag="Y" serv-func="getBeanById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="userGroupId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserGroupSV_getUserGroupById" desc="" dna-code="dec150f9-4501-0010-9646-9bbd8b625d8b" name="getUserGroupById" opt-flag="Y" serv-func="getUserGroupById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.GroupRole" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserGroupSV_getAllUserGroupBean" desc="" dna-code="e6c150f9-4501-0010-9646-9bbd8b625d8b" name="getAllUserGroupBean" opt-flag="Y" serv-func="getAllUserGroupBean" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserGroupSV_getUserGroupByIdFromDb" desc="" dna-code="e7c150f9-4501-0010-9646-9bbd8b625d8b" name="getUserGroupByIdFromDb" opt-flag="Y" serv-func="getUserGroupByIdFromDb" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.GroupRole" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserGroupSV_wrapperUserGroupByBean" desc="" dna-code="edc150f9-4501-0010-9646-9bbd8b625d8b" name="wrapperUserGroupByBean" opt-flag="Y" serv-func="wrapperUserGroupByBean" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.GroupRole" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserGroupSV_getUserGroupByCond" desc="" dna-code="eec150f9-4501-0010-9646-9bbd8b625d8b" name="getUserGroupByCond" opt-flag="Y" serv-func="getUserGroupByCond" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupCode" param-kind="java"/>
+          <param datatype="java.lang.String" name="groupName" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserGroupSV_saveOrUpdate" desc="" dna-code="fdc150f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserGroupSV_saveOrUpdate" desc="" dna-code="fec150f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserGroupSV_delete" desc="" dna-code="ffc150f9-4501-0010-9646-9bbd8b625d8b" name="delete" opt-flag="Y" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="userGroupId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

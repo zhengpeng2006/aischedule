@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonWTriggerHis" mainattr="TRIGGER_ID">
+    <mapingenty type="table">AI_MON_W_TRIGGER_HIS</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="TRIGGER_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">TRIGGER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RECORD_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">RECORD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IP" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">INFO_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFO_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAYER" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAYER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHONENUM" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PHONENUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTENT" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WARN_LEVEL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WARN_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRY_DATE" maxlength="20" datatype="DateTime" type="COL" remark="有效期限">
+        <mapingcol datatype="DATE">EXPIRY_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="C:创建需发送,S:已发送,U:正常不发送">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

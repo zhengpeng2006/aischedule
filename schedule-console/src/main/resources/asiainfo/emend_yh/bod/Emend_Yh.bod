@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bo-design attr-display="name" code="" columns="all">
+  <bo fullname="com.asiainfo.emend_yh.bo.BOAmTaskRely" name="BOAmTaskRely" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>241,24,150,210</uiinfo>
+    <url>/config/com/asiainfo/emend_yh/bo/BOAmTaskRely.bo</url>
+  </bo>
+  <bo fullname="com.asiainfo.emend_yh.bo.BOAmSchedPsMon" name="BOAmSchedPsMon" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>57,20,150,310</uiinfo>
+    <url>/config/com/asiainfo/emend_yh/bo/BOAmSchedPsMon.bo</url>
+  </bo>
+  <joins/>
+</bo-design>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/ailk/monitor/exeframe/controlmgr/ControlMgr.cmpt" code="UserGroup" desc="用户组管理页面" dna-code="4aad7b52-4601-0010-821b-55ecd93a540b" full-name="monitor.controlmgr.UserGroup" kind="0" name="UserGroup">
+  <uientity-version branch="" code="" desc="" name="UserGroup" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.controlmgr.view.UserGroup</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="qryfrom_groupCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="qryfrom_groupName"/>
+      <area bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonUserGroup" type="form" uiid="userGroupDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="userGroupDetail_groupCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="userGroupDetail_groupName"/>
+      <area bo="java.lang.String" type="textfield" uiid="userGroupDetail_notes"/>
+      <area bo="java.lang.String" type="textfield" uiid="userGroupDetail_opId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userGroupDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="userGroupDetail_userGroupId"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/controlmgr" name="UserGroup.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/controlmgr" name="UserGroup.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/controlmgr" name="UserGroup.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/controlmgr/view" name="UserGroup.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="btn_qry" type="button"/>
+      <ui-event id="" name="savaBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onclick" element-id="btn_qry">{descRow:'btn_qryOnclick',nameRow:'btn_qryOnclick'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAIMonUserGroupSV_getUserGroupByCond" data-uiid="qryfrom" desc="" dna-code="eec150f9-4501-0010-9646-9bbd8b625d8b" element-event="onclick" element-id="btn_qry" is-template="false" method="getUserGroupByCond" name="" on-fail="show result" on-success="show result" refresh-uiid="userGroupTab" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/ailk/monitor/service/interfaces/AIMonUserGroup.svpkg" type="condform">
+        <ui-parameter code="groupCode" param-kind="java" scope="qryfrom" type="java.lang.String" uiparam-type="FormEle" uiparam-value="groupCode"/>
+        <ui-parameter code="groupName" param-kind="java" scope="qryfrom" type="java.lang.String" uiparam-type="FormEle" uiparam-value="groupName"/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

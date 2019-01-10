@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.common.view.OperationLogQry">
+  <property-specification name="queryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="operateLogsItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="operateLogsItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="operateLogsCount" type="long"/>
+  <property-specification name="operateLogsRowIndex" type="int"/>
+</page-specification>

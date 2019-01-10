@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/NodeUserInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_title">
+				<div class="text">用户信息</div>
+		</div>
+			<div jwcid="nodeUserTab@Part" uiid="nodeUserTab" id="nodeUserTab" element="div" type="table" objName="nodeUserTabItems,nodeUserTabCount"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNodeUser" uitype="table" editable="true" onclick="NodeUserInfoJs.showDetail();">
+				<div class="c_scroll" style="height: 100px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="nodeUserTabTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="nodeUserTabRowIndex" style="display: none">RowIndex</th>
+									<th col="nodeUserId" colcss="e_left" class="wrap" style="display: none">节点用户标识</th>
+									<th col="nodeId" colcss="e_left" class="wrap" style="display: none">节点标识</th>
+									<th col="userId" colcss="e_left" class="wrap">用户编码</th>
+									<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+									<th col="modifyDate" colcss="e_left" class="wrap">修改日期</th>
+									<th col="state" colcss="e_left" class="wrap">状态</th>
+									<th col="remark" colcss="e_left" class="wrap">备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:nodeUserTabItems" value="ognl:nodeUserTabItem" index="ognl:nodeUserTabRowIndex">
+									<tr jwcid="@Conditional" condition="ognl:nodeUserTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+										<td style="display: none"><span jwcid="@Insert" value="ognl:nodeUserTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:nodeUserTabItem.nodeUserId" name="nodeUserId"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:nodeUserTabItem.nodeId" name="nodeId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_ID',nodeUserTabItem.userId)" name="userId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeUserTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeUserTabItem.modifyDate" name="modifyDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',nodeUserTabItem.state)" name="state"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeUserTabItem.remark" name="remark"></span></td>
+
+									</tr>
+									<tr jwcid="@Conditional" condition="ognl:nodeUserTabRowIndex % 2 == 1" element="tr">
+										<td style="display: none"><span jwcid="@Insert" value="ognl:nodeUserTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:nodeUserTabItem.nodeUserId" name="nodeUserId"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:nodeUserTabItem.nodeId" name="nodeId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_ID',nodeUserTabItem.userId)" name="userId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeUserTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeUserTabItem.modifyDate" name="modifyDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',nodeUserTabItem.state)" name="state"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeUserTabItem.remark" name="remark"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+			<div class="c_form c_form-col-2 c_form-label-5" jwcid="nodeUserDetail@Part" uiid="nodeUserDetail" id="nodeUserDetail" type="form"
+			objName="nodeUserDetail" bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNodeUser" uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li" style="display: none"><span class="label">节点用户标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="nodeUserId" value="ognl:nodeUserDetail.nodeUserId" desc="节点用户标识" uiid="nodeUserDetail_nodeUserId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">节点标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="nodeId" value="ognl:nodeUserDetail.nodeId" desc="节点标识" uiid="nodeUserDetail_nodeId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label"><span class="e_required">用户编码:</span> </span><span class="e_elements">
+							<span class="e_select">
+								<span>
+									<span>
+										<select jwcid="@Select" nullable="no" name="userId" value="ognl:nodeUserDetail.userId" desc="用户编码" source="ognl:getSelectList('USER_CODE')"
+											disabled="false" changeValue="true" addDefault="true" defaultText="请选择用户编码" uiid="nodeUserDetail_userId"></select>
+									</span>
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">创建日期:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="createDate" value="ognl:nodeUserDetail.createDate" desc="创建日期" uiid="nodeUserDetail_createDate" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">修改日期:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="modifyDate" value="ognl:nodeUserDetail.modifyDate" desc="修改日期" uiid="nodeUserDetail_modifyDate" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">状态:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="state" value="ognl:nodeUserDetail.state" desc="状态" uiid="nodeUserDetail_state" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">备注:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="remark" value="ognl:nodeUserDetail.remark" desc="备注" uiid="nodeUserDetail_remark" />
+								</span>
+							</span>
+						</span></li>
+				</ul>
+				<div class="submitPlace"></div>
+		</div>
+			<div id="btnGroupDiv1">
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button onclick="NodeUserInfoJs.newClick();" name="newBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-add"></i>新增
+						</span>
+					</button>
+					<button onclick="NodeUserInfoJs.editClick();" name="editBtn" id="editBtn" class="e_button-form" disabled="disabled">
+						<span>
+							<i class="e_ico-edit"></i>编辑
+						</span>
+					</button>
+					<button onclick="NodeUserInfoJs.delClick();" name="delBtn" id="delBtn" class="e_button-form" disabled="disabled">
+						<span>
+							<i class="e_ico-delete"></i>删除
+						</span>
+					</button>
+			</div>
+		</div>
+			<div id="btnGroupDiv2" style="display: none">
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button onclick="NodeUserInfoJs.saveClick();" name="saveBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-save"></i>保存
+						</span>
+					</button>
+					<button onclick="NodeUserInfoJs.cancelClick();" name="cancelBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-cancel"></i>取消
+						</span>
+					</button>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="HostAllInfo" desc="" dna-code="f39377ed-4701-0010-ba93-4bcfc0170e70" full-name="module.monitor.configmgr.HostAllInfo" kind="0" name="HostAllInfo">
+  <uientity-version branch="" code="" desc="" name="HostAllInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.HostAllInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost" type="form" uiid="hostAllDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostAllDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostAllDetail_hostCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostAllDetail_hostDesc"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostAllDetail_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostAllDetail_hostIp"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostAllDetail_hostName"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostAllDetail_remarks"/>
+      <area bo="java.lang.String" type="textfield" uiid="hostAllDetail_state"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="HostAllInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="HostAllInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="HostAllInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="HostAllInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

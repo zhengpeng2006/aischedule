@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="ImportItems" desc="" dna-code="bb1061e7-4a01-0010-83ef-bf1f34134174" full-name="module.schedule.ImportItems" kind="0" name="ImportItems">
+  <uientity-version branch="" code="" desc="" name="ImportItems" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.ImportItems</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/schedule" name="ImportItems.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="ImportItems.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="ImportItems.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="ImportItems.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOAmTaskRely" mainattr="TASK_GROUP">
+    <mapingenty type="table">AM_TASK_RELY</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="TASK_GROUP" maxlength="20" datatype="String" type="COL" order="1" notNull="N">
+        <mapingcol datatype="NVARCHAR2">TASK_GROUP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRE_TASK_CODE" maxlength="20" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol datatype="NVARCHAR2">PRE_TASK_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUR_TASK_CODE" maxlength="20" datatype="String" type="COL" order="7" notNull="N">
+        <mapingcol datatype="NVARCHAR2">CUR_TASK_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_ALLREGION_RELY" maxlength="20" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol datatype="NVARCHAR2">IS_ALLREGION_RELY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_HANDLE" maxlength="20" datatype="String" type="COL" order="6" notNull="N">
+        <mapingcol datatype="NVARCHAR2">IS_HANDLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="20" datatype="String" type="COL" order="3" notNull="N">
+        <mapingcol datatype="NVARCHAR2">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="20" datatype="String" type="COL" order="2" notNull="N">
+        <mapingcol datatype="NVARCHAR2">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="20" datatype="String" type="COL" order="0" notNull="N">
+        <mapingcol datatype="NVARCHAR2">EXT3</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

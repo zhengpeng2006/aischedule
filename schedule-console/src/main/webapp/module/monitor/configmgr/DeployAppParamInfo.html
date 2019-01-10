@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/DeployAppParamInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<div jwcid="deployAppParamTab@Part" uiid="deployAppParamTab" id="deployAppParamTab" element="div" type="table"
+			objName="deployAppParamTabItems,deployAppParamTabCount" bo="com.asiainfo.deploy.common.bo.BODeployAppParams" uitype="table" editable="true"
+			onclick="DeployAppParamInfoJs.showDetail();">
+				<div class="c_scroll" style="height: 242px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="deployAppParamTabTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="deployAppParamTabRowIndex" style="display: none"></th>
+									<th col="applicationId" colcss="e_left" class="wrap" style="display: none">应用标识</th>
+									<th col="applicationParamId" colcss="e_left" class="wrap" style="display: none">应用参数标识</th>
+									<th col="key" colcss="e_left" class="wrap">键</th>
+									<th col="value" colcss="e_left" class="wrap">值</th>
+									<th col="paramType" colcss="e_left" class="wrap">参数类型</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:deployAppParamTabItems" value="ognl:deployAppParamTabItem" index="ognl:deployAppParamTabRowIndex">
+									<tr jwcid="@Conditional" condition="ognl:deployAppParamTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+										<td style="display: none"><span jwcid="@Insert" value="ognl:deployAppParamTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:deployAppParamTabItem.applicationId" name="applicationId"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:deployAppParamTabItem.applicationParamId" name="applicationParamId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:deployAppParamTabItem.key" name="key"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:deployAppParamTabItem.value" name="value"></span></td>
+									
+	                                    <td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('PARAM_TYPE',deployAppParamTabItem.paramType)" name="paramType"></span></td>								
+									</tr>
+									<tr jwcid="@Conditional" condition="ognl:deployAppParamTabRowIndex % 2 == 1" element="tr">
+										<td style="display: none"><span jwcid="@Insert" value="ognl:deployAppParamTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:deployAppParamTabItem.applicationId" name="applicationId"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:deployAppParamTabItem.applicationParamId" name="applicationParamId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:deployAppParamTabItem.key" name="key"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:deployAppParamTabItem.value" name="value"></span></td>
+									
+									    <td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('PARAM_TYPE',deployAppParamTabItem.paramType)" name="paramType"></span></td>
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+			<div class="c_form c_form-col-2 c_form-label-7" jwcid="deployAppParamDetail@Part" uiid="deployAppParamDetail" id="deployAppParamDetail" type="form"
+			objName="deployAppParamDetail" bo="com.asiainfo.deploy.common.bo.BODeployAppParams" uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li" style="display: none"><span class="label">应用标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="applicationId" value="ognl:deployAppParamDetail.applicationId" desc="应用标识"
+										uiid="deployAppParamDetail_applicationId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">应用参数标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="applicationParamId" value="ognl:deployAppParamDetail.applicationParamId" desc="应用参数标识"
+										uiid="deployAppParamDetail_applicationParamId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label"> 键: </span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" disabled="disabled" type="text" name="key" value="ognl:deployAppParamDetail.key" desc="键"
+										uiid="deployAppParamDetail_key" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label"> 值: </span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="value" value="ognl:deployAppParamDetail.value" desc="值" uiid="deployAppParamDetail_value" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display:none"><span class="label"> 参数类型: </span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="paramType" value="ognl:deployAppParamDetail.paramType" desc="值" uiid="deployAppParamDetail_paramType" />
+								</span>
+							</span>
+						</span></li>
+				</ul>
+				<div class="submitPlace"></div>
+		</div>
+			<div id="btnGroupDiv1">
+				<div class="c_submit" style="text-align: right; margin: 8px;" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter"
+					name="updateAfter" type="hidden" textName="returnInput" value="" afterAction="" />
+					<button onclick="DeployAppParamInfoJs.newClick();" name="newBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-add"></i>新增
+						</span>
+					</button>
+					<button onclick="DeployAppParamInfoJs.editClick();" name="editBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-edit"></i>编辑
+						</span>
+					</button>
+					<button onclick="DeployAppParamInfoJs.delClick();" name="delBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-delete"></i>删除
+						</span>
+					</button></div>
+
+		</div>
+			<div id="btnGroupDiv2" style="display: none">
+				<div class="c_submit" style="text-align: right; margin: 8px;" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter"
+					name="updateAfter" type="hidden" textName="returnInput" value="" afterAction="" />
+
+					<button onclick="DeployAppParamInfoJs.saveClick();" name="saveBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-save"></i>保存
+						</span>
+					</button>
+					<button onclick="DeployAppParamInfoJs.cancelClick();" name="cancelBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-cancel"></i>取消
+						</span>
+					</button></div>
+
+		</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "tfInfo": {
+      "taskCode": "tfTask",
+      "srcDbCode": "111",
+      "srcTableName": "1111",
+      "pkCol": "",
+      "remark": "",
+      "querySql": "",
+      "proSql": "",
+      "finSql": "",
+      "errSql": "",
+      "conutSql": ""
+    },
+    "tfDetailItems": [
+      {
+        "cfgTfDtlId": "dtl^0000000000",
+        "cfgTfCode": "tfTask",
+        "destTableName": "2222",
+        "destDbName": "333",
+        "tfType": "DEST",
+        "finSql": "",
+        "remark": ""
+      }
+    ],
+    "tfDetailTotal": 1
+  }
+}

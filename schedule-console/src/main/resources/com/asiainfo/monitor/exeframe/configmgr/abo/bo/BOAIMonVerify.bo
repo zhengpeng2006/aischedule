@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo name="BOAIMonVerify">
+    <mapingenty type="table">AI_MON_VERIFY</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="VERIFY_TYPE" maxlength="50" datatype="String" type="COL" order="0" notNull="N">
+        <mapingcol>verify_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RULE" maxlength="1000" datatype="String" type="COL" order="1" notNull="N">
+        <mapingcol>rule</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

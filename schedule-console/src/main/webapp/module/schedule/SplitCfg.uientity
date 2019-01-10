@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="SplitCfg" desc="" dna-code="829eb6f7-4801-0010-b92a-97c43fabda9d" full-name="module.schedule.SplitCfg" kind="0" name="SplitCfg">
+  <uientity-version branch="" code="" desc="" name="SplitCfg" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.SplitCfg</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/schedule" name="SplitCfg.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="SplitCfg.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="SplitCfg.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="SplitCfg.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="save" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

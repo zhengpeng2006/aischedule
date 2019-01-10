@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonDomainRelat" mainattr="RELAT_ID">
+    <mapingenty type="table">AI_MON_DOMAIN_RELAT</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RELAT_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">RELAT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DOMAIN_ID" maxlength="12" datatype="Long" type="COL" remark="域标识">
+        <mapingcol datatype="NUMBER">DOMAIN_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RELATDOMAIN_ID" maxlength="12" datatype="Long" type="COL" remark="与域标识">
+        <mapingcol datatype="NUMBER">RELATDOMAIN_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RELATDOMAIN_TYPE" maxlength="2" datatype="String" type="COL" remark="与域类型:1,组;2,主机;3,应用">
+        <mapingcol datatype="VARCHAR2">RELATDOMAIN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RELAT_DESC" maxlength="255" datatype="String" type="COL" remark="关系描述">
+        <mapingcol datatype="VARCHAR2">RELAT_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

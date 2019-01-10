@@ -1,0 +1,35 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "taskParamsItems": [
+            {
+                "taskCode": "task01",
+                "paramKey": "参数一",
+                "paramValue": "aaa",
+                "paramDesc": "参数一描述"
+            },
+            {
+                "taskCode": "task01",
+                "paramKey": "参数二",
+                "paramValue": "bbb",
+                "paramDesc": "参数二描述"
+            },
+            {
+                "taskCode": "task01",
+                "paramKey": "参数三",
+                "paramValue": "ccc",
+                "paramDesc": "参数三描述"
+            }
+        ],
+        "total": 3
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mbeans>
+
+   <mbean name="appframe:name=JVM5Monitor" interfacename="com.ai.appframe2.complex.mbean.standard.jvm5.JVM5MonitorMBean" classname="com.ai.appframe2.complex.mbean.standard.jvm5.JVM5Monitor" desc="jvm的MBean"/>
+
+   <mbean name="appframe:name=SystemMonitor" interfacename="com.ai.appframe2.complex.mbean.standard.system.SystemMonitorMBean" classname="com.ai.appframe2.complex.mbean.standard.system.SystemMonitor" desc="系统的MBean"/>
+
+   <mbean name="appframe:name=CacheMonitor" interfacename="com.ai.appframe2.complex.mbean.standard.cache.CacheMonitorMBean" classname="com.ai.appframe2.complex.mbean.standard.cache.CacheMonitor" desc="缓存的MBean"/>
+
+   <mbean name="appframe:name=AppframeCacheMonitor" interfacename="com.ai.appframe2.complex.mbean.standard.ac.AppframeCacheMonitorMBean" classname="com.ai.appframe2.complex.mbean.standard.ac.AppframeCacheMonitor" desc="平台缓存的MBean"/>
+
+   <mbean name="appframe:name=ActionMonitor" interfacename="com.ai.appframe2.complex.mbean.standard.action.ActionMonitorMBean" classname="com.ai.appframe2.complex.mbean.standard.action.ActionMonitor" desc="web的action的MBean"/>
+
+   <mbean name="appframe:name=AppframeSessionMonitor" interfacename="com.ai.appframe2.complex.mbean.standard.session.AppframeSessionMonitorMBean" classname="com.ai.appframe2.complex.mbean.standard.session.AppframeSessionMonitor" desc="web的session的MBean"/>
+   
+   <mbean name="appframe:name=Log4jCategory" interfacename="com.ai.appframe2.complex.mbean.standard.log4j.Log4jCategoryMBean" classname="com.ai.appframe2.complex.mbean.standard.log4j.Log4jCategory" desc="Log4j日志设置MBean"/>
+      
+   <mbean name="appframe:name=WebTraceMonitor" interfacename="com.ai.appframe2.complex.mbean.standard.trace.WebTraceMonitorMBean" classname="com.ai.appframe2.complex.mbean.standard.trace.WebTraceMonitor" desc="WebTrace的MBean"/>
+
+</mbeans>

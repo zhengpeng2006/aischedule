@@ -1,0 +1,77 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "templatesItems": [
+      {
+        "contents": "XXXXXXXX",
+        "createTime": "2016-08-11 14:28:00",
+        "modifyTime": "2016-08-11 14:47:24",
+        "operatorId": null,
+        "remarks": "",
+        "setName": "",
+        "templateId": 143,
+        "templateName": "监控代理启动模板",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployAppTemplate"
+      },
+      {
+        "contents": "XXXXXXXX",
+        "createTime": "2016-08-11 14:28:00",
+        "modifyTime": "2016-08-11 14:47:24",
+        "operatorId": null,
+        "remarks": "",
+        "setName": "",
+        "templateId": 144,
+        "templateName": "调度管理启动模板",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployAppTemplate"
+      },
+      {
+        "contents": "XXXXXXXX",
+        "createTime": "2016-08-11 14:28:00",
+        "modifyTime": "2016-08-11 14:47:24",
+        "operatorId": null,
+        "remarks": "",
+        "setName": "",
+        "templateId": 163,
+        "templateName": "crm启动模板",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployAppTemplate"
+      },
+      {
+        "contents": "XXXXXXXX",
+        "createTime": "2016-08-11 14:28:00",
+        "modifyTime": "2016-08-11 14:47:24",
+        "operatorId": null,
+        "remarks": "",
+        "setName": "",
+        "templateId": 145,
+        "templateName": "应用进程启动模板",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployAppTemplate"
+      },
+      {
+        "contents": "XXXXXXXX",
+        "createTime": "2016-08-11 14:28:00",
+        "modifyTime": "2016-08-11 14:47:24",
+        "operatorId": null,
+        "remarks": "",
+        "setName": "",
+        "templateId": 183,
+        "templateName": "CBOSS启动模板",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployAppTemplate"
+      }
+    ],
+    "total": 5
+  }
+}

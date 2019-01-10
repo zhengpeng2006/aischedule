@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<application engine-class="com.ailk.web.BaseEngine" name="demo">
+  <description>Demo Application</description>
+  <property name="org.apache.tapestry.disable-caching" value="true"/>
+  <property name="org.apache.tapestry.enable-reset-service" value="true"/>
+  <property name="org.apache.tapestry.template-encoding" value="UTF-8"/>
+  <property name="org.apache.tapestry.output-encoding" value="UTF-8"/>
+  <property name="org.apache.tapestry.page-login" value="Home"/>
+  <property name="org.apache.tapestry.page-exception" value="Exception"/>
+  <property name="org.apache.tapestry.visit-class">com.ailk.common.data.impl.Visit</property>
+  <property name="org.apache.tapestry.page-main" value="Desktop"/>
+  <page name="Base.Welcome" specification-path="/base/Welcome.page" version=""/>
+  <page name="CustFlow" specification-path="/CustFlow.page" version=""/>
+  <page name="module.deploy.QryTaskLog" specification-path="/module/deploy/QryTaskLog.page" version=""/>
+  <page name="CustLog" specification-path="/CustLog.page" version=""/>
+  <page name="bizflow.bf1.bf1" specification-path="/bizflow/bf1/bf1.page" version=""/>
+  <page name="module.monitor.monitorItem.SqlStatInfo" specification-path="/module/monitor/monitorItem/SqlStatInfo.page" version=""/>
+  <page name="module.schedule.ColRel" specification-path="/module/schedule/ColRel.page" version=""/>
+  <page name="module.monitor.configmgr.NodeInfo" specification-path="/module/monitor/configmgr/NodeInfo.page" version=""/>
+  <page name="module.handlepage.Page404" specification-path="/module/handlepage/Page404.page" version=""/>
+  <page name="module.handlepage.Page403" specification-path="/module/handlepage/Page403.page" version=""/>
+  <page name="module.deploy.Deploy" specification-path="/module/deploy/Deploy.page" version=""/>
+  <page name="module.monitor.portal.MonProcInfoPortal" specification-path="/module/monitor/portal/MonProcInfoPortal.page" version=""/>
+  <page name="module.schedule.ScheduleTaskCfg" specification-path="/module/schedule/ScheduleTaskCfg.page" version=""/>
+  <page name="module.monitor.configmgr.PInfoConfig" specification-path="/module/monitor/configmgr/PInfoConfig.page" version=""/>
+  <page name="secframe.RoleEntity" specification-path="/secframe/RoleEntity.page" version=""/>
+  <page name="module.batchWriteOff.Detail" specification-path="/module/batchWriteOff/Detail.page" version=""/>
+  <page name="module.schedule.ProcessControl" specification-path="/module/schedule/ProcessControl.page" version=""/>
+  <page name="secframe.DataManager" specification-path="/secframe/DataManager.page" version=""/>
+  <page name="module.monitor.configmgr.OperationLogQry" specification-path="/module/monitor/configmgr/OperationLogQry.page" version=""/>
+  <page name="so.pageflow.CustProductInfo" specification-path="/so/pageflow/CustProductInfo.page" version=""/>
+  <page name="module.monitor.monitorItem.WarningInfo" specification-path="/module/monitor/monitorItem/WarningInfo.page" version=""/>
+  <page name="module.monitor.configmgr.NodeTreeInfo" specification-path="/module/monitor/configmgr/NodeTreeInfo.page" version=""/>
+  <page name="module.monitor.configmgr.ParamValueCfg" specification-path="/module/monitor/configmgr/ParamValueCfg.page" version=""/>
+  <page name="ModalHome" specification-path="/base/ModalHome.page" version=""/>
+  <page name="module.index.MonIndexInfo" specification-path="/module/index/MonIndexInfo.page" version=""/>
+  <page name="module.monitor.configmgr.NodeUserInfo" specification-path="/module/monitor/configmgr/NodeUserInfo.page" version=""/>
+  <page name="DynaTree" specification-path="/DynaTree.page" version=""/>
+  <page name="module.monitor.configmgr.PExecConfig" specification-path="/module/monitor/configmgr/PExecConfig.page" version=""/>
+  <page name="CustEdit" specification-path="/CustEdit.page" version=""/>
+  <page name="module.monitor.configmgr.ServerInfo" specification-path="/module/monitor/configmgr/ServerInfo.page" version=""/>
+  <page name="Tabset" specification-path="/Tabset.page" version=""/>
+  <page name="module.schedule.TaskExport" specification-path="/module/schedule/TaskExport.page" version=""/>
+  <page name="CustList" specification-path="/CustList.page" version=""/>
+  <page name="so.pageflow.CustKinshipInfo" specification-path="/so/pageflow/CustKinshipInfo.page" version=""/>
+  <page name="module.monitor.configmgr.UsersInfo" specification-path="/module/monitor/configmgr/UsersInfo.page" version=""/>
+  <page name="module.monitor.portal.EchartTest" specification-path="/module/monitor/portal/EchartTest.page" version=""/>
+  <page name="secframe.RoleData" specification-path="/secframe/RoleData.page" version=""/>
+  <page name="module.monitor.configmgr.PTimeConfig" specification-path="/module/monitor/configmgr/PTimeConfig.page" version=""/>
+  <page name="Tree" specification-path="/Tree.page" version=""/>
+  <page name="module.monitor.configmgr.HostUserInfo" specification-path="/module/monitor/configmgr/HostUserInfo.page" version=""/>
+  <page name="module.baseFrame.login.Login" specification-path="/module/baseFrame/login/Login.page" version=""/>
+  <page name="module.emend_yh.EmendYh" specification-path="/module/emend_yh/EmendYh.page" version=""/>
+  <page name="module.monitor.configmgr.BaseConfig" specification-path="/module/monitor/configmgr/BaseConfig.page" version=""/>
+  <page name="component.upload.Upload" specification-path="/component/upload/Upload.page" version=""/>
+  <page name="module.batchWriteOff.AllRegionDisplay" specification-path="/module/batchWriteOff/AllRegionDisplay.page" version=""/>
+  <page name="so.pageflow.CustPreviewInfo" specification-path="/so/pageflow/CustPreviewInfo.page" version=""/>
+  <page name="so.pageflow.CustActivityInfo" specification-path="/so/pageflow/CustActivityInfo.page" version=""/>
+  <page name="Base.Main" specification-path="/base/Main.page" version=""/>
+  <page name="bizflow.common.Mock" specification-path="/bizflow/common/Mock.page" version=""/>
+  <page name="secframe.RoleManager" specification-path="/secframe/RoleManager.page" version=""/>
+  <page name="module.monitor.configmgr.MasterSlaveInfo" specification-path="/module/monitor/configmgr/MasterSlaveInfo.page" version=""/>
+  <page name="module.monitor.configmgr.BaseConfigPortal" specification-path="/module/monitor/configmgr/BaseConfigPortal.page" version=""/>
+  <page name="secframe.RoleAuthorManager" specification-path="/secframe/RoleAuthorManager.page" version=""/>
+  <page name="module.schedule.ImportItems" specification-path="/module/schedule/ImportItems.page" version=""/>
+  <page name="module.batchWriteOff.OperateArea" specification-path="/module/batchWriteOff/OperateArea.page" version=""/>
+  <page name="module.baseFrame.mainFrame.BaseFrame" specification-path="/module/baseFrame/mainFrame/BaseFrame.page" version=""/>
+  <page name="module.handlepage.Page500" specification-path="/module/handlepage/Page500.page" version=""/>
+  <page name="module.schedule.Recoveray" specification-path="/module/schedule/Recoveray.page" version=""/>
+  <page name="Desktop" specification-path="/desktop/Desktop.page" version=""/>
+  <page name="Home" specification-path="/module/baseFrame/login/Login.page" version=""/>
+  <page name="so.pageflow.CustBaseInfo" specification-path="/so/pageflow/CustBaseInfo.page" version=""/>
+  <page name="module.monitor.configmgr.ConModeInfo" specification-path="/module/monitor/configmgr/ConModeInfo.page" version=""/>
+  <page name="module.monitor.portal.MonBusiInfoPortal" specification-path="/module/monitor/portal/MonBusiInfoPortal.page" version=""/>
+  <page name="module.deploy.TaskOperation" specification-path="/module/deploy/TaskOperation.page" version=""/>
+  <page name="secframe.FunctionManager" specification-path="/secframe/FunctionManager.page" version=""/>
+  <page name="module.monitor.configmgr.HostAllInfo" specification-path="/module/monitor/configmgr/HostAllInfo.page" version=""/>
+  <page name="module.schedule.TfCfg" specification-path="/module/schedule/TfCfg.page" version=""/>
+  <page name="monitor.monitorItem.MemoryInfo" specification-path="/module/monitor/monitorItem/MemoryInfo.page" version=""/>
+  <page name="module.batchWriteOff.QueryDetail" specification-path="/module/batchWriteOff/QueryDetail.page" version=""/>
+  <page name="monitor.controlmgr.UserInfo" specification-path="/module/monitor/controlmgr/UserInfo.page" version=""/>
+  <page name="module.monitor.configmgr.HostInfo" specification-path="/module/monitor/configmgr/HostInfo.page" version=""/>
+  <page name="Base.Home" specification-path="/base/Home.page" version=""/>
+  <page name="Exception" specification-path="/Exception.page" version=""/>
+  <page name="module.schedule.TaskGroupCfg" specification-path="/module/schedule/TaskGroupCfg.page" version=""/>
+  <page name="secframe.ServList" specification-path="/secframe/ServList.page" version=""/>
+  <page name="module.monitor.configmgr.DeployAppParamInfo" specification-path="/module/monitor/configmgr/DeployAppParamInfo.page" version=""/>
+  <page name="module.schedule.SplitCfg" specification-path="/module/schedule/SplitCfg.page" version=""/>
+  <page name="module.schedule.TaskParamCfg" specification-path="/module/schedule/TaskParamCfg.page" version=""/>
+  <page name="so.pageflow.CustOrderPageFlow" specification-path="/so/pageflow/CustOrderPageFlow.page" version=""/>
+  <page name="module.deploy.TemplateCfg" specification-path="/module/deploy/TemplateCfg.page" version=""/>
+  <page name="module.monitor.configmgr.GroupInfo" specification-path="/module/monitor/configmgr/GroupInfo.page" version=""/>
+  <page name="module.emend_yh.EmendInfo" specification-path="/module/emend_yh/EmendInfo.page" version=""/>
+  <page name="secframe.PrivManager" specification-path="/secframe/PrivManager.page" version=""/>
+  <page name="module.deploy.TaskStatus" specification-path="/module/deploy/TaskStatus.page" version=""/>
+  <page name="module.monitor.monitorItem.GuaranteeInfo" specification-path="/module/monitor/monitorItem/GuaranteeInfo.page" version=""/>
+  <page name="secframe.OperatorAuthor" specification-path="/secframe/OperatorAuthor.page" version=""/>
+  <page name="TemplateList" specification-path="/TemplateList.page" version=""/>
+  <page name="module.monitor.configmgr.PInfoGroupConfig" specification-path="/module/monitor/configmgr/PInfoGroupConfig.page" version=""/>
+  <page name="module.batchWriteOff.ProcessGraphics" specification-path="/module/batchWriteOff/ProcessGraphics.page" version=""/>
+  <page name="module.monitor.portal.FunsionChartTest" specification-path="/module/monitor/portal/FunsionChartTest.page" version=""/>
+  <page name="module.deploy.StrategyCfg" specification-path="/module/deploy/StrategyCfg.page" version=""/>
+  <page name="secframe.EntityManager" specification-path="/secframe/EntityManager.page" version=""/>
+  <page name="CustDemo" specification-path="/CustDemo.page" version=""/>
+  <page name="component.calendar.Calendar" specification-path="/component/calendar/Calendar.page" version=""/>
+  <page name="module.monitor.controlmgr.PThresholdConfig" specification-path="/module/monitor/controlmgr/PThresholdConfig.page" version=""/>
+  <page name="Desktop.Home" specification-path="/desktop/Home.page" version=""/>
+  <page name="module.baseFrame.mainFrame.Mainframe" specification-path="/module/baseFrame/mainFrame/Mainframe.page" version=""/>
+  <page name="module.monitor.monitorItem.TriggerInfo" specification-path="/module/monitor/monitorItem/TriggerInfo.page" version=""/>
+  <page name="module.monitor.HeapMemoryView" specification-path="/module/monitor/memory/HeapMemory.page" version=""/>
+  <page name="module.system.SystemConfigView" specification-path="/module/system/SystemConfigView.page" version=""/>
+  <page name="module.manager.TaskWarnLog" specification-path="/module/schedule/TaskWarnLog.page" version=""/>
+  <page name="module.system.Center" specification-path="/module/system/Center.page" version=""/>
+  <library id="base" specification-path="/com/ailk/base/view/jwcs/base.library"/>
+  <library id="Rule" specification-path="/com/ailk/appengine/web/view/component/rule/Rule.library"/>
+
+  <page name="module.system.TaskScheduleView" specification-path="/module/system/TaskSchedule.page" version=""/>
+</application>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOBsBatchWfPsMon" mainattr="REGION_ID">
+    <mapingenty type="table">BS_BATCH_WF_PS_MON</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILLING_CYCLE_ID" maxlength="6" datatype="Integer" type="PK">
+        <mapingcol datatype="NUMBER">BILLING_CYCLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_DAY" maxlength="6" datatype="Integer" type="PK">
+        <mapingcol datatype="NUMBER">BILL_DAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WF_PROCESS_ID" maxlength="100" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">WF_PROCESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WF_FLOW_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WF_FLOW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_COUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_COUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEAL_COUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DEAL_COUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_BALANCE_AMOUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_BALANCE_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_CUR_AMOUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_CUR_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_HIS_AMOUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_HIS_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_BILL_AMOUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_BILL_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="START_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">START_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINISH_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">FINISH_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">STATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

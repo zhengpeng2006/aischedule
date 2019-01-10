@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="AIMonUserRoleEntityRel" desc="" dna-code="621f52f9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.AIMonUserRoleEntityRelSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAIMonUserRoleEntityRelSV" name="AIMonUserRoleEntityRel" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAIMonUserRoleEntityRelSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="AIMonUserRoleEntityRelSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="AIMonUserRoleEntityRel.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonUserRoleEntityRelSV_getBeanById" desc="" dna-code="ca3b52f9-4501-0010-9646-9bbd8b625d8b" name="getBeanById" opt-flag="N" serv-func="getBeanById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="relateId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRoleEntityRel" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserRoleEntityRelSV_getEntityIdByRoleId" desc="" dna-code="cb3b52f9-4501-0010-9646-9bbd8b625d8b" name="getEntityIdByRoleId" opt-flag="N" serv-func="getEntityIdByRoleId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="roleId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRoleEntityRel[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserRoleEntityRelSV_saveOrUpdate" desc="" dna-code="d03b52f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRoleEntityRel" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleEntityRelSV_saveOrUpdate" desc="" dna-code="d13b52f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRoleEntityRel[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleEntityRelSV_saveOrUpdate" desc="" dna-code="d23b52f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRoleEntityRel[]" name="oldValues" param-kind="bo"/>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRoleEntityRel[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleEntityRelSV_getRoleEntityTreeXml" desc="" dna-code="d93b52f9-4501-0010-9646-9bbd8b625d8b" name="getRoleEntityTreeXml" opt-flag="N" serv-func="getRoleEntityTreeXml" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="roleId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.lang.String" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleEntityRelSV_getRoleEntityTreeXmlNocache" desc="" dna-code="e43b52f9-4501-0010-9646-9bbd8b625d8b" name="getRoleEntityTreeXmlNocache" opt-flag="N" serv-func="getRoleEntityTreeXmlNocache" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="roleId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.lang.String" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

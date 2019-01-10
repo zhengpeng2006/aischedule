@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/schedule/js/TfCfg.js" type="text/javascript"></script>
+
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+		<div style="height:520px;overflow-y:auto;">
+			<!-- start -->
+			<div class="c_box">
+			<!-- tf配置开始 -->
+			<div class="c_form c_form-col-2 c_form-label-7" jwcid="tfInfo@Part"
+				uiid="tfInfo" id="tfInfo" type="form" objName="tfInfo"
+				bo="" uitype="form"
+				editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label"><span
+							class="e_required">任务编码:</span></span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="taskCode" nullable="no"
+									value="ognl:tfInfo.taskCode" desc="任务编码" uiid="tfInfo_taskCode" readonly="true"/></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">源表数据源名称:</span></span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="srcDbCode" nullable="no"
+									value="ognl:tfInfo.srcDbCode" desc="源表数据源名称"
+									uiid="tfInfo_srcDbCode" /></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">源表名:</span></span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="srcTableName" nullable="no"
+									value="ognl:tfInfo.srcTableName" desc="源表名"
+									uiid="tfInfo_srcTableName" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">主键字段名:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="pkCol" 
+									value="ognl:tfInfo.pkCol" desc="主键字段名" uiid="tfInfo_pkCol" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">备注:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="remark"
+									value="ognl:tfInfo.remark" desc="备注"
+									uiid="tfInfo_remark" /></span>
+						</span></span></li>
+					<li class="li col-2"><span class="label">查询SQL:</span> <span class="e_textarea">
+							<span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="querySql" jwcid="@TextArea"
+											value="ognl:tfInfo.querySql" style="height: 40px;"
+											uiid="tfInfo_querySql" id="querySqlInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+					<li class="li col-2"><span class="label">处理中SQL:</span> <span class="e_textarea">
+							<span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="proSql" jwcid="@TextArea"
+											value="ognl:tfInfo.proSql" style="height: 40px;"
+											uiid="tfInfo_proSql" nullable="no" id="proSqlInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+					<li class="li col-2"><span class="label">完成SQL:</span> <span class="e_textarea">
+							<span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="finSql" jwcid="@TextArea"
+											value="ognl:tfInfo.finSql" style="height: 40px;"
+											uiid="tfInfo_querySql" nullable="no" id="finSqlInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+					<li class="li col-2"><span class="label">错误处理SQL:</span> <span class="e_textarea">
+							<span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="errSql" jwcid="@TextArea"
+											value="ognl:tfInfo.errSql" style="height: 20px;"
+											uiid="tfInfo_errSql" nullable="no" id="errSqlInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+					<li class="li col-2"><span class="label">统计SQL:</span> <span class="e_textarea">
+							<span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="conutSql" jwcid="@TextArea"
+											value="ognl:tfInfo.conutSql" style="height: 20px;"
+											uiid="tfInfo_conutSql" nullable="no" id="conutSqlInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+				</ul>
+				<!-- 保存按钮开始 -->
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button onclick="TfCfgJS.saveTfCfg()" name="saveOrUpdate" class="e_button-form">
+						<span>保存/修改内容</span>
+					</button>
+				</div>
+				<!-- 保存按钮结束-->
+				<div class="submitPlace"></div>
+				<h3>tf/reload详细配置</h3>
+			</div>
+			
+			<!-- tf配置结束 -->
+			<!-- tf详细配置开始 -->
+			<div jwcid="tfDetail@Part" uiid="tfDetail" id="tfDetail"
+				element="div" type="table" objName="tfDetailItems,tfDetailCount"
+				bo="" uitype="table"
+				editable="true">
+				<div class="c_scroll" style="height: 100px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="tfDetailTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="tfDetailRowIndex" style="display: none">RowIndex</th>
+									<th col="cfgTfDtlId" style="display: none">tf详细配置标识</th>
+									<th col="cfgTfCode" colcss="e_left" class="wrap">任务编码</th>
+									<th col="destTableName" colcss="e_left" class="wrap">目标表名</th>
+									<th col="destDbName" colcss="e_left" class="wrap">目标表数据源名称</th>
+									<th col="tfType" colcss="e_left" class="wrap">转移类型</th>
+									<th col="finSql" colcss="e_left" class="wrap">完成SQL</th>
+									<th col="remark" colcss="e_left" class="wrap">备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:tfDetailItems"
+									value="ognl:tfDetailItem" index="ognl:tfDetailRowIndex">
+									<tr>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:tfDetailRowIndex+1"></span></td>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:tfDetailItem.cfgTfDtlId" name="cfgTfDtlId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:tfDetailItem.cfgTfCode" name="cfgTfCode"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:tfDetailItem.destTableName" name="destTableName"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:tfDetailItem.destDbName" name="destDbName"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:tfDetailItem.tfType" name="tfType"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:tfDetailItem.finSql" name="finSql"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:tfDetailItem.remark" name="remark"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- tf详细配置结束 -->
+			<!-- 按钮组开始 -->
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="TfCfgJS.selectedOperation('colCfg')" name="colCfg" class="e_button-form"
+					style="float: left">
+					<span>配置字段映射关系 </span>
+				</button>
+				<button onclick="TfCfgJS.selectedOperation('delete')" name="delete" class="e_button-form"
+					style="float: right">
+					<span>删除</span>
+				</button>
+				<button onclick="TfCfgJS.addTfDtl()" name="add" class="e_button-form"
+					style="float: right">
+					<span>新增</span>
+				</button>
+			</div>
+			<!-- 按钮组结束 -->
+			</div>
+			<!-- 新增详细配置开始 -->
+			<div id="colInfoDiv" style="display:none">
+			<div class="c_form c_form-col-2 c_form-label-9" jwcid="colInfo@Part"
+				uiid="colInfo" id="colInfo" type="form" objName="colInfo"
+				bo="" uitype="form"
+				editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label"><span
+							class="e_required">目标表名:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="destTableName"
+									value="ognl:colInfo.destTableName" desc="目标表名"
+									uiid="colInfo_destTableName" nullable="no"/></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">目标表数据源名称:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="destDbName"
+									value="ognl:colInfo.destDbName" desc="目标表数据源名称"
+									uiid="colInfo_destDbName" nullable="no"/></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">转移类型:</span></span> <span
+							class="e_elements"><span class="e_select"> <span><span><select
+											jwcid="@Select" name="tfType"
+											value="ognl:colInfo.tfType" desc="转移类型"
+											source="ognl:getTfTypeList()" changeValue="true"
+											addDefault="true" defaultText="请选择转移类型"
+											uiid="colInfo_tfType" id="taskGroup" nullable="no"></select></span></span>
+							</span></span></li>
+					<li class="li"><span class="label">备注:</span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="remark"
+									value="ognl:colInfo.remark" desc="备注"
+									uiid="colInfo_remark" /></span>
+						</span></span></li>
+					<li class="li col-2"><span class="label">完成SQL:</span> <span class="e_textarea">
+							<span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="finSql" jwcid="@TextArea"
+											value="ognl:colInfo.finSql" style="height: 40px;"
+											uiid="colInfo_querySql" nullable="no" id="destfinSqlInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+						
+				</ul>
+				<div class="submitPlace"></div>
+			</div>
+			<!-- 保存按钮开始 -->
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="TfCfgJS.saveTfDtl()" name="saveColInfo" class="e_button-form">
+					<span>保存</span>
+				</button>
+				<button onclick="TfCfgJS.quitDiv()" name="cancel" class="e_button-form">
+					<span>取消</span>
+				</button>
+			</div>
+			<!-- 保存按钮结束 -->
+			</div>
+			<!-- 新增详细配置结束 -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

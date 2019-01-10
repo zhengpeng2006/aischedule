@@ -1,0 +1,72 @@
+/** 覆盖框架样式 **/
+
+/******** BEGIN 页面布局，左右框架，调整百分比***************/
+.l_fixedContent {
+	padding: 12px 12px 0 20%;
+	height: 100%;
+	position: relative;
+	overflow: auto;
+}
+
+.l_fixedBox {
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	width: 20%;
+	z-index: 2;
+}
+/******** END ************/
+
+.kpiInfo {
+	height: 100px;
+	width: 100%;
+	min-width:500px;
+	margin:0 auto;
+}
+
+/**********BEGIN 业务进程监控******************/
+.procInfo{
+	
+}
+.procInfo div{
+	margin:10px;
+}
+/*********END ************************/
+
+.busiKpiDiv{
+	
+	line-height:30px;
+	font-size:16px;
+}
+.busiKpiDiv span{
+	margin:10px;
+}
+.totalCnt{
+	margin:10px;
+	color: green;
+	font-weight:bold;
+}
+.dealCnt{
+	color: #33663D;
+	font-weight:bold;
+}
+.backCnt{
+	color: #CEA80F;
+	font-weight:bold;
+}
+.errCnt{
+	color: red;
+	font-weight:bold;
+}
+.dealTime{
+	color:blue;
+	font-weight:bold;
+}
+/*********END*********************************/
+
+.busiSpan{
+	margin:10px;
+	display:block;
+}
+
+

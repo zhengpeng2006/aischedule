@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/batchwriteoff/BatchWriteOff.cmpt" code="ProcessGraphics" desc="" dna-code="96952500-4b01-0010-b53b-a96e73ebe442" full-name="module.batchWriteOff.ProcessGraphics" kind="0" name="ProcessGraphics">
+  <uientity-version branch="" code="" desc="" name="ProcessGraphics" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.batchwriteoff.view.ProcessGraphics</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="select" uiid="paramterSet_city"/>
+      <area bo="java.lang.String" type="select" uiid="paramterSet_billDate"/>
+      <area bo="java.lang.String" type="select" uiid="paramterSet_mode"/>
+      <area bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonCmd" type="form" uiid="changPWD"/>
+      <area bo="java.lang.String" type="password" uiid="changPWD_oldPwd"/>
+      <area bo="java.lang.String" type="password" uiid="changPWD_newPwd"/>
+      <area bo="java.lang.String" type="password" uiid="changPWD_confirmPwd"/>
+      <area bo="" type="form" uiid="pwdInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="pwdInput_pwd"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/batchWriteOff" name="ProcessGraphics.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/batchWriteOff" name="ProcessGraphics.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/batchWriteOff" name="ProcessGraphics.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/batchwriteoff/view" name="ProcessGraphics.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="set" type="button"/>
+      <ui-event id="" name="reset" type="button"/>
+      <ui-event id="" name="showAll" type="button"/>
+      <ui-event id="" name="modifyPWD" type="button"/>
+      <ui-event id="" name="initPWD" type="button"/>
+      <ui-event id="" name="savePwd" type="button"/>
+      <ui-event id="" name="cancalPwd" type="button"/>
+      <ui-event id="" name="startNode" type="button"/>
+      <ui-event id="" name="restartNode" type="button"/>
+      <ui-event id="" name="confirmNode" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

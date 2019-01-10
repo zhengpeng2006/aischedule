@@ -1,0 +1,31 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "paramValuesItems": [
+            {
+                "VId": 600,
+                "paramCode": "参数码1",
+                "paramDesc": "",
+                "paramId": 600,
+                "paramValue": "参数值1",
+                "registeId": 640,
+                "registeType": 10,
+                "remarks": "",
+                "setName": "",
+                "sortId": 0,
+                "type": null,
+                "typeName": "com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues"
+            }
+        ],
+        "total": 1
+    }
+}

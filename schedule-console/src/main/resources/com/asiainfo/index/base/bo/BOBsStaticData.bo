@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="indexBase" name="BOBsStaticData" mainattr="CODE_TYPE">
+    <mapingenty type="table">BS_STATIC_DATA</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CODE_TYPE" maxlength="255" datatype="String" type="PK" remark="编码类型">
+        <mapingcol datatype="VARCHAR2">CODE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODE_VALUE" maxlength="255" datatype="String" type="PK" remark="编码值">
+        <mapingcol datatype="VARCHAR2">CODE_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODE_NAME" maxlength="255" datatype="String" type="COL" remark="编码名称">
+        <mapingcol datatype="VARCHAR2">CODE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODE_DESC" maxlength="255" datatype="String" type="COL" remark="编码描述">
+        <mapingcol datatype="VARCHAR2">CODE_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CODE_TYPE_ALIAS" maxlength="255" datatype="String" type="COL" remark="编码别名,用作java的参数名称">
+        <mapingcol datatype="VARCHAR2">CODE_TYPE_ALIAS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORT_ID" maxlength="3" datatype="Integer" type="COL" remark="排序ID">
+        <mapingcol datatype="NUMBER">SORT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="记录状态
+U-正常 E-删除">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXTERN_CODE_TYPE" maxlength="2000" datatype="String" type="COL" remark="外部编码">
+        <mapingcol datatype="VARCHAR2">EXTERN_CODE_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

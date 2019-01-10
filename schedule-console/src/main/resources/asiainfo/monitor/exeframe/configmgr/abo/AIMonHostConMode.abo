@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BOAIMonHostConMode" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonHostConMode.cmpt" code="AIMonHostConMode" desc="" dna-code="e8e327a4-4701-0010-9051-bf1364199d98" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonHostConMode" name="AIMonHostConMode">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="d38c28a4-4701-0010-9051-bf1364199d98" datatype="long" name="con_id" order="1" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">CON_ID</mapingcol>
+        </attr>
+        <attr code="7a2229a4-4701-0010-9051-bf1364199d98" datatype="long" name="host_id" order="2" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">HOST_ID</mapingcol>
+        </attr>
+        <attr code="42bc23af-4701-0010-af53-a9c66758dc8d" datatype="long" name="relation_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">RELATION_ID</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonHostConMode.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

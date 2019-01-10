@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.configmgr.view.PInfoConfig">
+  <property-specification name="groupInfosItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="groupInfosItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="groupInfosCount" type="long"/>
+  <property-specification name="groupInfosRowIndex" type="int"/>
+  <property-specification name="infosItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="infosItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="infosCount" type="long"/>
+  <property-specification name="infosRowIndex" type="int"/>
+  <property-specification name="infoDetail" type="net.sf.json.JSONObject"/>
+  <property-specification name="paramInfosItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="paramInfosItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="paramInfosCount" type="long"/>
+  <property-specification name="paramInfosRowIndex" type="int"/>
+  <property-specification name="groupInput" type="net.sf.json.JSONObject"/>
+  <property-specification name="infoDataInput" type="net.sf.json.JSONObject"/>
+</page-specification>

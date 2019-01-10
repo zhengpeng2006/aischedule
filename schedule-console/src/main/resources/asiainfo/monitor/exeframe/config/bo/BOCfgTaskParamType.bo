@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgTaskParamType" mainattr="PARAM_ID">
+    <mapingenty type="table">CFG_TASK_PARAM_TYPE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PARAM_ID" maxlength="12" datatype="Long" type="PK" remark="参数ID">
+        <mapingcol datatype="NUMBER">PARAM_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAM_NAME" maxlength="32" datatype="String" type="COL" remark="参数名称">
+        <mapingcol datatype="VARCHAR2">PARAM_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATA_TYPE" maxlength="2" datatype="String" type="COL" remark="1 int,2 float ,3 varchar2,4 date yyyymmdd ,5 datetime yyyymmddhh24miss">
+        <mapingcol datatype="VARCHAR2">DATA_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAM_VALUE_TYPE" maxlength="2" datatype="String" type="COL" remark="N-无限制 E-枚举 V-取值范围 F-自定义格式 T-表查询 ">
+        <mapingcol datatype="VARCHAR2">PARAM_VALUE_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

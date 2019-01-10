@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msghandle>
+    
+    <handles>
+        <!-- 消息为命令 -->
+        <handle>
+            <msgtype>1001</msgtype>
+            <msghandler>com.asiainfo.socket.handler.impl.CmdMsgHandler</msghandler>
+        </handle>
+        <!-- 消息为shell脚本 -->
+        <handle>
+            <msgtype>1002</msgtype>
+            <msghandler>com.asiainfo.socket.handler.impl.ShellMsgHandler</msghandler>
+        </handle>
+          <!-- 消息为shell脚本文件路径-->
+         <handle>
+            <msgtype>1003</msgtype>
+            <msghandler>com.asiainfo.socket.handler.impl.ShellFileMsgHandler</msghandler>
+        </handle>
+          <!-- 消息为FTP消息 -->
+         <handle>
+            <msgtype>1004</msgtype>
+            <msghandler>com.asiainfo.socket.handler.impl.FtpMsgHandler</msghandler>
+        </handle>
+        
+        <!-- 消息为web维持监控主机连接的心跳消息 -->
+         <handle>
+            <msgtype>1005</msgtype>
+            <msghandler>com.asiainfo.socket.handler.impl.HeartbeatMsgHandler</msghandler>
+        </handle>
+        
+    </handles>
+
+</msghandle>

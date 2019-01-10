@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="monitor/controlmgr/js/UserGroup.js" type="text/javascript"></script>
+<script src="monitor/controlmgr/js/UserGroupRelation.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="l_col l_col-2">
+				<div class="l_li1">
+					<div class="c_box">
+						<div class="c_title">
+							<div class="text">用户组</div>
+						</div>
+						<div class="c_form c_form-col-3 c_form-label-4 c_form-inline" uiid="qryform" id="qryform" type="condForm" objName="qryform" uitype="condform"
+							editable="true">
+							<ul class="ul">
+								<li class="li">
+									<span class="label">组编号:</span>
+									<span class="e_elements">
+										<span class="e_input">
+											<span>
+												<input jwcid="@TextField" type="text" name="groupCode" value="ognl:qryform.groupCode" desc="组编号" uiid="qryform_groupCode" />
+											</span>
+										</span>
+									</span>
+								</li>
+								<li class="li">
+									<span class="label">组名称:</span>
+									<span class="e_elements">
+										<span class="e_input">
+											<span>
+												<input jwcid="@TextField" type="text" name="groupName" value="ognl:qryform.groupName" desc="组名称" uiid="qryform_groupName" />
+											</span>
+										</span>
+									</span>
+								</li>
+							</ul>
+							<div class="submitPlace"></div>
+							<div class="submit">
+								<button onclick="UserGroupJSObj.btn_qryOnclick($(this))" template_type="operate" type="button" name="btn_qry" class="e_button-form"
+									formId="qryform">
+									<span>查询</span>
+								</button>
+							</div>
+						</div>
+						<div jwcid="userGroupTab@Part" uiid="userGroupTab" id="userGroupTab" element="div" type="table" objName="userGroupTabItems,userGroupTabCount"
+							bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup" uitype="table" editable="true">
+							<div class="c_scroll" style="height: 242px">
+								<div class="c_table c_table-row-10">
+									<table jwcid="@Table" rowClick="UserGroupRelJSObj.userGroupRowClick" name="userGroupTabTable" scroll="true">
+										<thead>
+											<tr>
+												<th col="userGroupTabRowIndex" style="display: none">RowIndex</th>
+												<th col="groupCode" colcss="e_left" class="wrap">组编码</th>
+												<th col="groupName" colcss="e_left" class="wrap">组名称</th>
+												<th col="state" colcss="e_left" class="wrap">状态</th>
+												<th col="notes" colcss="e_left" class="wrap">备注</th>
+												<th col="createDate" style="display: none">创建日期</th>
+												<th col="doneDate" style="display: none">操作日期</th>
+												<th col="opId" style="display: none">操作人员</th>
+												<th col="userGroupId" style="display: none">主键</th>
+											</tr>
+										</thead>
+										<tbody>
+											<span jwcid="@Foreach" source="ognl:userGroupTabItems" value="ognl:userGroupTabItem" index="ognl:userGroupTabRowIndex">
+												<tr jwcid="@Conditional" condition="ognl:userGroupTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabRowIndex+1"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.groupCode" name="groupCode"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.groupName" name="groupName"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userGroupTabItem.state)" name="state"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.notes" name="notes"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.createDate" name="createDate"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.doneDate" name="doneDate"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.opId" name="opId"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.userGroupId" name="userGroupId"></span></td>
+
+												</tr>
+												<tr jwcid="@Conditional" condition="ognl:userGroupTabRowIndex % 2 == 1" element="tr">
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabRowIndex+1"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.groupCode" name="groupCode"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.groupName" name="groupName"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userGroupTabItem.state)" name="state"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.notes" name="notes"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.createDate" name="createDate"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.doneDate" name="doneDate"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.opId" name="opId"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.userGroupId" name="userGroupId"></span></td>
+
+												</tr>
+											</span>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div jwcid="@NavBar" name="userGroupTabNavBar" cond="" part="userGroupTab" listener="" count="ognl:userGroupTabCount"></div>
+						</div>
+					</div>
+				</div>
+				<div class="l_li2">
+					<div class="c_box">
+						<div class="c_title">
+							<div class="text">用户组关联用户信息</div>
+						</div>
+
+						<div jwcid="userTab@Part" uiid="userTab" id="userTab" element="div" type="table" objName="userTabItems,userTabCount"
+							bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUser" uitype="table" editable="true">
+							<div class="c_scroll" style="height: 282px">
+								<div class="c_table c_table-row-10">
+									<table jwcid="@Table" name="userTabTable" scroll="true">
+										<thead>
+											<tr>
+												<th></th>
+												<th col="userTabRowIndex" style="display: none">RowIndex</th>
+												<th col="userCode" colcss="e_left" class="wrap">用户编码</th>
+												<th col="userName" colcss="e_left" class="wrap">用户姓名</th>
+												<th col="state" colcss="e_left" class="wrap">状态</th>
+												<th col="notes" colcss="e_left" class="wrap">备注</th>
+												<th col="userId" style="display: none">唯一标识。来源于系统序列号</th>
+											</tr>
+										</thead>
+										<tbody>
+											<span jwcid="@Foreach" source="ognl:userTabItems" value="ognl:userTabItem" index="ognl:userTabRowIndex">
+												<tr jwcid="@Conditional" condition="ognl:userTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+													<td><input jwcid="@Checkbox" type="checkbox" name="userTabCheckbox" /></td>
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userTabRowIndex+1"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.userCode" name="userCode"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.userName" name="userName"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userTabItem.state)" name="state"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.notes" name="notes"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userTabItem.userId" name="userId"></span></td>
+
+												</tr>
+												<tr jwcid="@Conditional" condition="ognl:userTabRowIndex % 2 == 1" element="tr">
+													<td><input jwcid="@Checkbox" type="checkbox" name="userTabCheckbox" /></td>
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userTabRowIndex+1"></span></td>
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.userCode" name="userCode"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.userName" name="userName"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userTabItem.state)" name="state"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userTabItem.notes" name="notes"></span></td>
+
+													<td style="display: none"><span jwcid="@Insert" value="ognl:userTabItem.userId" name="userId"></span></td>
+
+												</tr>
+											</span>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div jwcid="@NavBar" name="userTabNavBar" cond="" part="userTab" listener="" count="ognl:userTabCount"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_submit" uitype="btngroup">
+				<button onclick="return UserGroupRelJSObj.btn_config($(this));" template_type="operate" type="button" name="btn_config" class="e_button-form">
+					<span>
+						<i class='e_ico-config'></i>设置关联
+					</span>
+				</button>
+				<span style="width: 10px;"></span>
+				<button onclick="return UserGroupRelJSObj.btn_delConfig($(this));" template_type="operate" type="button" name="btn_del_C" class="e_button-form">
+					<span>
+						<i class='e_ico-delete'></i>删除关联
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="relUserPopDiv" style="display: none">
+		<div jwcid="relUserTab@Part" uiid="relUserTab" id="relUserTab" element="div" type="table" objName="relUserTabItems,relUserTabCount"
+			bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUser" uitype="table" editable="true">
+			<div class="c_scroll" style="height: 242px">
+				<div class="c_table c_table-row-10">
+					<table jwcid="@Table" name="relUserTabTable" scroll="true">
+						<thead>
+							<tr>
+								<th></th>
+								<th col="relUserTabRowIndex" style="display: none">RowIndex</th>
+								<th col="userName" colcss="e_left" class="wrap">用户姓名</th>
+								<th col="userCode" colcss="e_left" class="wrap">用户编码</th>
+								<th col="state" colcss="e_left" class="wrap">状态</th>
+								<th col="notes" colcss="e_left" class="wrap">备注</th>
+								<th col="userId" colcss="e_left" class="wrap" style="display: none">用户标识</th>
+							</tr>
+						</thead>
+						<tbody>
+							<span jwcid="@Foreach" source="ognl:relUserTabItems" value="ognl:relUserTabItem" index="ognl:relUserTabRowIndex">
+								<tr jwcid="@Conditional" condition="ognl:relUserTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+									<td><input jwcid="@Checkbox" type="checkbox" name="relUserTabCheckbox" /></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:relUserTabRowIndex+1"></span></td>
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:relUserTabItem.userName" name="userName"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:relUserTabItem.userCode" name="userCode"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',relUserTabItem.state)" name="state"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:relUserTabItem.notes" name="notes"></span></td>
+
+									<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:relUserTabItem.userId" name="userId"></span></td>
+
+								</tr>
+								<tr jwcid="@Conditional" condition="ognl:relUserTabRowIndex % 2 == 1" element="tr">
+									<td><input jwcid="@Checkbox" type="checkbox" name="relUserTabCheckbox" /></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:relUserTabRowIndex+1"></span></td>
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:relUserTabItem.userName" name="userName"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:relUserTabItem.userCode" name="userCode"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',relUserTabItem.state)" name="state"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:relUserTabItem.notes" name="notes"></span></td>
+
+									<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:relUserTabItem.userId" name="userId"></span></td>
+
+								</tr>
+							</span>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="c_submit" uitype="btngroup">
+			<button onclick="return UserGroupRelJSObj.btn_relUserSave($(this));" template_type="operate" type="button" name="btn_save" class="e_button-form">
+				<span>
+					<i class='e_ico-save'></i>保存
+				</span>
+			</button>
+		</div>
+	</div>
+
+
+</body>
+</html>

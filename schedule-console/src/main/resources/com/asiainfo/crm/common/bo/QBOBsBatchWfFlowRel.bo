@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="QBOBsBatchWfFlowRel" mainattr="WF_FLOW_ID">
+    <mapingenty type="query">select t.*,m.pre_wf_flow_id,m.pre_wf_flow_state,m.region_id as rel_region_id from bs_batch_wf_flow t,Bs_Batch_Wf_Flow_Rel m where t.wf_flow_id = m.wf_flow_id and t.state = 'U' and m.state = 'U'</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="WF_FLOW_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WF_FLOW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WF_FLOW_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WF_FLOW_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WF_FLOW_DESC" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WF_FLOW_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_CLASS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BUSINESS_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RUN_MODE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">RUN_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">STATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_DISCONTINUE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">IS_DISCONTINUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_DAY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BILL_DAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_DTL" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">IS_DTL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DTL_URL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DTL_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TIME_GROUP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TIME_GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRE_WF_FLOW_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PRE_WF_FLOW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRE_WF_FLOW_STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">PRE_WF_FLOW_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REL_REGION_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

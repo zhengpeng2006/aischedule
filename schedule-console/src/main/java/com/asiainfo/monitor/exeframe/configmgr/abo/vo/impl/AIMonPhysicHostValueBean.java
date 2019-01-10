@@ -1,0 +1,193 @@
+package com.asiainfo.monitor.exeframe.configmgr.abo.vo.impl;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import java.util.HashMap;
+import java.util.Map;
+import com.ailk.appengine.complex.abo.values.impl.AbstractValueBean;
+import com.asiainfo.monitor.exeframe.configmgr.abo.vo.interfaces.IAIMonPhysicHostValue;
+import java.sql.Timestamp;
+
+public class AIMonPhysicHostValueBean extends AbstractValueBean implements IAIMonPhysicHostValue
+{
+
+    private transient static Log log = LogFactory.getLog(AIMonPhysicHostValueBean.class);
+
+    private long host_id = 0;
+
+    private String host_code = null;
+
+    private String host_name = null;
+
+    private String host_desc = null;
+
+    private String host_ip = null;
+
+    private String state = null;
+
+    private Timestamp create_date = null;
+
+    private String remarks = null;
+
+    public AIMonPhysicHostValueBean()
+    {
+        super();
+    }
+
+    public void setHost_id(long host_id)
+    {
+        this.host_id = host_id;
+        this.setKey(this.host_id + "");
+    }
+
+    public long getHost_id()
+    {
+        return this.host_id;
+    }
+
+    public void setHost_code(String host_code)
+    {
+        this.host_code = host_code;
+    }
+
+    public String getHost_code()
+    {
+        return this.host_code;
+    }
+
+    public void setHost_name(String host_name)
+    {
+        this.host_name = host_name;
+    }
+
+    public String getHost_name()
+    {
+        return this.host_name;
+    }
+
+    public void setHost_desc(String host_desc)
+    {
+        this.host_desc = host_desc;
+    }
+
+    public String getHost_desc()
+    {
+        return this.host_desc;
+    }
+
+    public void setHost_ip(String host_ip)
+    {
+        this.host_ip = host_ip;
+    }
+
+    public String getHost_ip()
+    {
+        return this.host_ip;
+    }
+
+    public void setState(String state)
+    {
+        this.state = state;
+    }
+
+    public String getState()
+    {
+        return this.state;
+    }
+
+    public void setCreate_date(Timestamp create_date)
+    {
+        this.create_date = create_date;
+    }
+
+    public Timestamp getCreate_date()
+    {
+        return this.create_date;
+    }
+
+    public void setRemarks(String remarks)
+    {
+        this.remarks = remarks;
+    }
+
+    public String getRemarks()
+    {
+        return this.remarks;
+    }
+
+    public Map getClassMap()
+    {
+        if(this.classMap != null)
+            return this.classMap;
+        classMap = new HashMap();
+        return classMap;
+    }
+
+    private long host_user_id = 0;
+    private long con_id = 0;
+    private String attend_mode = null;
+    private short host_port = (short) 0;
+    private String host_user = null;
+    private String host_pwd = null;
+
+    public void setHost_user_id(long host_user_id)
+    {
+        this.host_user_id = host_user_id;
+    }
+
+    public long getHost_user_id()
+    {
+        return this.host_user_id;
+    }
+
+    public void setCon_id(long con_id)
+    {
+        this.con_id = con_id;
+    }
+
+    public long getCon_id()
+    {
+        return this.con_id;
+    }
+
+    public void setAttend_mode(String attend_mode)
+    {
+        this.attend_mode = attend_mode;
+    }
+
+    public String getAttend_mode()
+    {
+        return this.attend_mode;
+    }
+
+    public void setHost_port(short host_port)
+    {
+        this.host_port = host_port;
+    }
+
+    public short getHost_port()
+    {
+        return this.host_port;
+    }
+
+    public void setHost_user(String host_user)
+    {
+        this.host_user = host_user;
+    }
+
+    public String getHost_user()
+    {
+        return this.host_user;
+    }
+
+    public void setHost_pwd(String host_pwd)
+    {
+        this.host_pwd = host_pwd;
+    }
+
+    public String getHost_pwd()
+    {
+        return this.host_pwd;
+    }
+
+}

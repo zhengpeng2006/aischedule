@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonDBAcct" mainattr="DB_ACCT_CODE">
+    <mapingenty type="table">AI_MON_DB_ACCT</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DB_ACCT_CODE" maxlength="255" datatype="String" type="PK" remark="代码">
+        <mapingcol datatype="VARCHAR2">DB_ACCT_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USERNAME" maxlength="255" datatype="String" type="COL" remark="用户名">
+        <mapingcol datatype="VARCHAR2">USERNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PASSWORD" maxlength="255" datatype="String" type="COL" remark="密码">
+        <mapingcol datatype="VARCHAR2">PASSWORD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST" maxlength="255" datatype="String" type="COL" remark="主机">
+        <mapingcol datatype="VARCHAR2">HOST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PORT" maxlength="5" datatype="Integer" type="COL" remark="端口">
+        <mapingcol datatype="NUMBER">PORT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SID" maxlength="255" datatype="String" type="COL" remark="SID">
+        <mapingcol datatype="VARCHAR2">SID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONN_MIN" maxlength="3" datatype="Integer" type="COL" remark="最小连接">
+        <mapingcol datatype="NUMBER">CONN_MIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONN_MAX" maxlength="3" datatype="Integer" type="COL" remark="最大连接">
+        <mapingcol datatype="NUMBER">CONN_MAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="1000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

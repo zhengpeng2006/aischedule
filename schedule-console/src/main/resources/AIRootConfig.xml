@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AIRootConfig>
+  <item name="FetchConfigType" value="CLASSPATH" desc="获取配置信息方式：CLASSPATH,LOCALFILE,HTTP,RMI"></item>
+  <item name="ServerType" value="main" desc="服务器类型：main，bes，weblogic，jboss，tomcat"></item>
+  <item name="ServerId" value="server_qh" desc="如果没有，则根据服务器类型自动生成。与本地ip构成服务器唯一编号"></item>
+  <item name="ConfigServerURL" value="rmi://localhost:9999/qh_appframemanager" desc="服务器地址"></item>
+  <item name="JxmBeanName" value="Appframe:name=ServerConfigList" desc="服务器地址"></item>
+  <item name="LocalDirector" value="AppframeConfig" desc="本地配置文件目录"></item>
+  <item name="JmxInvokeTime" value="15" desc="调用远程Bean方法超时"></item>
+  <item name="JmxSummayTime" value="15" desc="统计调用远程Bean方法统计超时"></item>
+</AIRootConfig>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOBsBatchWfPs" mainattr="WF_PROCESS_ID">
+    <mapingenty type="table">BS_BATCH_WF_PS</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="WF_PROCESS_ID" maxlength="100" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">WF_PROCESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WF_PROCESS_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WF_PROCESS_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WF_FLOW_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WF_FLOW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THREAD_NUM" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">THREAD_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST_IP" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">HOST_IP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PORT" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">PORT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_NAME" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">USER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PASSWORD" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PASSWORD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SHELL_CATALOG" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SHELL_CATALOG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARAS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="START_SHELL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">START_SHELL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MONITOR_SHELL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MONITOR_SHELL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOP_SHELL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STOP_SHELL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WF_REDIS_ID" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WF_REDIS_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

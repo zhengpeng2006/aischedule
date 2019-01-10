@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<link rel="stylesheet" type="text/css" href="module/monitor/css/monitor.css" />
+<link href="component/widget/progressbar/css/processbar.css" rel="stylesheet" type="text/css" />
+<script src="module/monitor/portal/js/MonBusiInfoPortal.js" type="text/javascript"></script>
+<script src="component/widget/echarts/custom/EchartsExt.js" type="text/javascript"></script>
+<script src="component/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+</head>
+<body jwcid="@Body">
+	<script src="component/widget/echarts/echarts-plain-map.js"></script>
+
+
+	<!-- no fixed column, two columns, non equipartition -->
+	<div id="groupLayout" class="l_col" uitype="layout" editable="true">
+		<div class="l_left" style="width: 15%;" >
+			<!-- left content-->
+			<div class="c_box" >
+				<div class="c_title">
+					<div class="text">业务分组</div>
+				</div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree"
+						style="height: 500px;overflow:auto;" listener="ognl:listeners.loadTreeData"
+						uitype="tree" editable="true" id="sysOrgTree"
+						parentNodeId="parentId" 
+						initAfterAction="MonBusiInfoPortalJs.treeInitAfterAction()"
+						nodeId="id" nodeText="name"
+						textAction="MonBusiInfoPortalJs.treeTextClick(nodedata)" bo=""
+						showCheckBox="false" expandPath="-1" async="false"></div>
+				</div>
+			</div>
+		</div>
+		<div class="l_auto">
+		
+			<!-- right content -->
+			<!-- 分片显示信息 -->
+				<div id="cityDetail" style="display: none;overflow:auto;height:600px">
+					<div class="c_box" style="width:100%;overflow: auto">
+						<div class="c_title">
+							<div class="text">任务及分片信息</div>
+						</div>
+						<table cellspacing="5px" >
+							<tr id="firstRow" ></tr>
+							<tr id="secondRow" ></tr>
+						</table>
+					</div>
+					<div class="c_box" id="queryDiv" >
+						<div class="c_form c_form-label-4 c_form-inline" uiid="queryForm"
+							id="queryForm" type="condForm" objName="queryForm"
+							uitype="condform" editable="true">
+							<ul class="ul">
+									<li class="li"><span class="label">开始时间:</span> <span
+										class="e_elements">	<input id="startTime" class="Wdate" type="text" style="width:100%" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"/>
+									</span></li>
+								<li class="li"><span class="label">结束时间:</span> <span
+										class="e_elements">	<input id="endTime" class="Wdate" type="text" style="width:100%" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"/>
+								</span></li>
+							<div class="submitPlace"></div>
+							&nbsp;
+							<div class="submit">
+								<button onclick="MonBusiInfoPortalJs.qryHis()"
+									template_type="operate" type="button" name="queryHis"
+									class="e_button-form" formId="queryForm">
+									<span>查询历史数据</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="c_box" id="picDiv" >
+						<div class="c_title">
+							<div class="text">业务信息</div>
+							<div class="text" style="color:red;" id="errorMsgDiv"></div>
+						</div>
+						<!-- 显示业务信息 -->
+						<table>
+							<tr>
+								<td colspan="2">
+									<div id="busiDiv" style="width: 900px;height: 230px"></div>
+								</td>
+							</tr>
+							<tr>
+								<td><div id="speedDiv" style="width: 450px; height: 200px" /></td>
+								<td><div id="errorDiv" style="width: 450px; height: 200px" />
+									</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="c_box" id="processDiv" >
+						<div class="c_title">
+							<div class="text">进程信息</div>
+						</div>
+						<!-- 显示进程信息 -->
+						<div jwcid="processTab@Part" uiid="processTab" id="processTab"
+							element="div" type="table"
+							objName="processTabItems,processTabCount" bo="" uitype="table"
+							editable="true">
+							<div class="c_scroll" style="height: 245px">
+								<div class="c_table c_table-row-10">
+									<table jwcid="@Table" name="processTabTable" scroll="true">
+										<thead>
+											<tr>
+												<th col="processTabRowIndex" style="display: none">RowIndex</th>
+												<th col="serverId" colcss="e_left" class="wrap">应用标识</th>
+												<th col="userName" colcss="e_left" class="wrap">用户名称</th>
+												<th col="pId" colcss="e_left" class="wrap">进程标识</th>
+												<th col="serverCode" colcss="e_left" class="wrap">应用编码</th>
+												<th col="serverName" colcss="e_left" class="wrap">应用名称</th>
+												<th col="hostName" colcss="e_left" class="wrap">主机</th>
+												<th col="hostGroup" colcss="e_left" class="wrap">所属集群</th>
+												<th col="kpiCpu" colcss="e_left" class="wrap">CPU_KPI</th>
+												<th col="kpiMem" colcss="e_left" class="wrap">内存KPI</th>
+												<th col="procState" colcss="e_left" class="wrap">进程状态</th>
+											</tr>
+										</thead>
+										<tbody>
+											<span jwcid="@Foreach" source="ognl:processTabItems"
+												value="ognl:processTabItem" index="ognl:processTabRowIndex">
+												<tr jwcid="@Conditional"
+													condition="ognl:processTabRowIndex % 2 == 0" class="even"
+													raw_class="even" element="tr">
+													<td style="display: none"><span jwcid="@Insert"
+														value="ognl:processTabRowIndex+1"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.SERVER_ID" name="SERVER_ID"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.USER_NAME" name="USER_NAME"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.PID" name="PID"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.SERVER_CODE" name="SERVER_CODE"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.SERVER_NAME" name="SERVER_NAME"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.HOST_NAME" name="HOST_NAME"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.HOST_GROUP" name="HOST_GROUP"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.KPI_CPU" name="KPI_CPU"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.KPI_MEM" name="KPI_MEM"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.PROC_STATE" name="PROC_STATE"></span></td>
+
+												</tr>
+												<tr jwcid="@Conditional"
+													condition="ognl:processTabRowIndex % 2 == 1" element="tr">
+													<td style="display: none"><span jwcid="@Insert"
+														value="ognl:processTabRowIndex+1"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.SERVER_ID" name="SERVER_ID"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.USER_NAME" name="USER_NAME"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.PID" name="PID"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.SERVER_CODE" name="SERVER_CODE"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.SERVER_NAME" name="SERVER_NAME"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.HOST_NAME" name="HOST_NAME"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.HOST_GROUP" name="HOST_GROUP"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.KPI_CPU" name="KPI_CPU"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.KPI_MEM" name="KPI_MEM"></span></td>
+
+													<td class="e_left wrap"><span jwcid="@Insert"
+														value="ognl:processTabItem.PROC_STATE" name="PROC_STATE"></span></td>
+
+												</tr>
+											</span>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			<!-- 分片显示结束 -->
+		</div>
+	</div>
+</body>
+</html>

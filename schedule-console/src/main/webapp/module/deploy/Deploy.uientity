@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="Deploy" desc="" dna-code="ddb098a6-4801-0010-86e6-df96f4bab997" full-name="module.deploy.Deploy" kind="0" name="Deploy">
+  <uientity-version branch="" code="" desc="" name="Deploy" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.deploy.view.Deploy</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.deploy.common.bo.BODeployVersion" type="form" uiid="versionInfo"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_versionId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_packagePath"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_resolvedProblems"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_contacts"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_remarks"/>
+      <area bo="java.lang.String" type="textarea" uiid="versionInfo_fileList"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_deployStrategyId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_externalVersionId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_parentVersionId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_operatorId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_operateType"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_createTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionInfo_state"/>
+      <area bo="com.asiainfo.deploy.common.bo.BODeployVersion" type="form" uiid="versionDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_versionId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_resolvedProblems"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_contacts"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_packagePath"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_parentVersionId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_createTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_deployStrategyId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_operateType"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_operatorId"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_remarks"/>
+      <area bo="java.lang.String" type="textfield" uiid="versionDetail_externalVersionId"/>
+      <area bo="java.lang.String" type="textarea" uiid="versionDetail_fileList"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/deploy" name="Deploy.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="Deploy.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="Deploy.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/deploy/view" name="Deploy.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="deploy" type="button"/>
+      <ui-event id="" name="update" type="button"/>
+      <ui-event id="" name="rollback" type="button"/>
+      <ui-event id="" name="updateToCur" type="button"/>
+      <ui-event id="" name="monitorOper" type="button"/>
+      <ui-event id="" name="detail" type="button"/>
+      <ui-event id="" name="saveVersion" type="button"/>
+      <ui-event id="" name="quitVersionInput" type="button"/>
+      <ui-event id="" name="selectHisVersion" type="button"/>
+      <ui-event id="" name="quitHisVersionDiv" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

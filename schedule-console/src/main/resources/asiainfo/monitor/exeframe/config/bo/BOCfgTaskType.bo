@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgTaskType" mainattr="CFG_TASK_TYPE_ID">
+    <mapingenty type="table">CFG_TASK_TYPE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CFG_TASK_TYPE_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">CFG_TASK_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CFG_TASK_TYPE_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CFG_TASK_TYPE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CFG_TASK_TYPE_CODE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CFG_TASK_TYPE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_CLASS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BUSINESS_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="&apos;U&apos;正常 &apos;E&apos;注销">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

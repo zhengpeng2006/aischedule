@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="AIMonPExec" desc="" dna-code="6acf44b4-4701-0010-a186-83ee90379a18" implementation-class="com.asiainfo.monitor.busi.exe.task.service.impl.AIMonPExecSVImpl" interface-class="com.asiainfo.monitor.busi.exe.task.service.interfaces.IAIMonPExecSV" name="AIMonPExec" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="IAIMonPExecSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/impl" name="AIMonPExecSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="AIMonPExec.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonPExecSV_getExecByName" desc="" dna-code="dfea44b4-4701-0010-a186-83ee90379a18" name="getExecByName" opt-flag="Y" serv-func="getExecByName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="execName" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="startNum" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="endNum" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPExecSV_getExecCount" desc="" dna-code="e9ea44b4-4701-0010-a186-83ee90379a18" name="getExecCount" opt-flag="Y" serv-func="getExecCount" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="execName" param-kind="java"/>
+        </param-list>
+        <return-param datatype="int" param-kind="java"/>
+      </service>
+      <service code="IAIMonPExecSV_getBeanById" desc="" dna-code="ebea44b4-4701-0010-a186-83ee90379a18" name="getBeanById" opt-flag="Y" serv-func="getBeanById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="execId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPExecSV_saveOrUpdate" desc="" dna-code="ecea44b4-4701-0010-a186-83ee90379a18" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPExecSV_saveOrUpdate" desc="" dna-code="edea44b4-4701-0010-a186-83ee90379a18" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPExecSV_savePExecByGuide" desc="" dna-code="eeea44b4-4701-0010-a186-83ee90379a18" name="savePExecByGuide" opt-flag="Y" serv-func="savePExecByGuide" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.model.TaskExecContainer" name="model" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPExecSV_savePExecByGuide" desc="" dna-code="efea44b4-4701-0010-a186-83ee90379a18" name="savePExecByGuide" opt-flag="Y" serv-func="savePExecByGuide" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.model.TaskExecContainer" name="model" param-kind="java"/>
+          <param datatype="com.ai.appframe2.bo.DataContainer[]" name="dcs" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPExecSV_delete" desc="" dna-code="f0ea44b4-4701-0010-a186-83ee90379a18" name="delete" opt-flag="Y" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="execId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPExecSV_saveExecAndParams" desc="" dna-code="f1ea44b4-4701-0010-a186-83ee90379a18" name="saveExecAndParams" opt-flag="Y" serv-func="saveExecAndParams" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec" name="value" param-kind="bo"/>
+          <param datatype="com.ai.appframe2.bo.DataContainer[]" name="paramDcs" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPExecSV_getExecByNameAndExpr" desc="" dna-code="f2ea44b4-4701-0010-a186-83ee90379a18" name="getExecByNameAndExpr" opt-flag="Y" serv-func="getExecByNameAndExpr" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="execName" param-kind="java"/>
+          <param datatype="java.lang.String" name="expr" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="startNum" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="endNum" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec[]" param-kind="bo"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

@@ -1,0 +1,23 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": [
+        {
+            "appCode": "monitor01"
+        },
+        {
+            "appCode": "manager01"
+        },
+        {
+            "appCode": "coreSchedule01"
+        }
+    ]
+}

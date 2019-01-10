@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonLogin" mainattr="IP">
+    <mapingenty type="table">AI_MON_LOGIN</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="IP" maxlength="50" datatype="String" type="PK" order="0" notNull="N">
+        <mapingcol>IP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOGIN_NAME" maxlength="50" datatype="String" type="PK" order="1" notNull="N">
+        <mapingcol>LOGIN_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_FAIL_TIME" maxlength="0" datatype="DateTime" type="COL" order="2" notNull="N">
+        <mapingcol>LAST_FAIL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FAIL_COUNT" maxlength="12" datatype="Long" type="COL" order="3" notNull="N">
+        <mapingcol>FAIL_COUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_01" maxlength="225" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol>EXT_01</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_02" maxlength="225" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol>EXT_02</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

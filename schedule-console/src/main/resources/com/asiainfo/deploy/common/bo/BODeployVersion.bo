@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BODeployVersion" mainattr="VERSION_ID" remark="版本表">
+    <mapingenty type="table">AI_DEPLOY_VERSION</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="VERSION_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">VERSION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXTERNAL_VERSION_ID" maxlength="12" datatype="Long" type="COL" remark="????????????????
+??????????">
+        <mapingcol datatype="NUMBER">EXTERNAL_VERSION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPLOY_STRATEGY_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DEPLOY_STRATEGY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_VERSION_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_VERSION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="0??????????
+1??????????">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PACKAGE_PATH" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PACKAGE_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATE_TYPE" maxlength="1" datatype="String" type="COL" remark="0??????????
+1??????">
+        <mapingcol datatype="CHAR">OPERATE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FILE_LIST" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FILE_LIST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RESOLVED_PROBLEMS" maxlength="1024" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">RESOLVED_PROBLEMS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTACTS" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTACTS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATOR_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OPERATOR_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="E:/workspace-appengine/monitor/html/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+</head>
+
+<body jwcid="@Body">
+	<div class="l_fixed ">
+		<div class="l_fixedBox">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">系统组织结构</div>
+				</div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 400px" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true"
+						id="sysOrgTree" parentNodeId="parentId" 
+						initAfterAction="treeInitAfterAction()"
+						nodeId="id" nodeText="name" textAction="treeNodeClick(nodedata)" bo=""
+						showCheckBox="false" expandPath="-1" async="false"></div>
+				</div>
+			</div>
+		</div>
+		<div class="l_fixedContent">
+			<div class="l_fixedWrapper">
+				<div class="c_box">
+					<div class="c_form c_form-col-4 c_form-label-3 c_form-inline"
+						uiid="jvmQuery" id="jvmQuery" type="condForm" objName="jvmQuery"
+						uitype="condform" editable="true">
+						<ul class="ul">
+							<li class="li">
+								<span class="label" style="width:60px">监控名称：</span> 
+								<span class="e_elements">
+									<span class="e_input"> 
+										<span>
+											<input jwcid="@TextField" type="text" name="jvmName" value="ognl:jvmQuery.jvmName" desc="JVMNAME" uiid="jvmQuery_jvmName" />
+										</span>
+									</span>
+								</span>
+							</li>
+						</ul>
+						<div class="submitPlace"></div>
+						<div class="submit">
+							<span id="querydev">
+								<button onclick="return queryOnclick($(this));" template_type="operate" type="button" name="query" class="e_button-form" formId="jvmQuery">
+									<span>查询</span>
+								</button>
+							</span>
+						</div>
+					</div>
+					<div jwcid="jvmInfo@Part" uiid="jvmInfo" id="jvmInfo" element="div" type="table" objName="jvmInfoItems,jvmInfoCount" uitype="table" editable="true">
+					<div class="c_scroll" style="height: 406px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="jvmInfoTable" scroll="false">
+								<thead>
+									<tr>
+										<th col="jvmInfoRowIndex" style="width:20px">序号</th>
+										<th col="id" colcss="e_left" class="wrap">线程ID</th>
+										<th col="name" colcss="e_left" class="wrap">线程名称</th>
+										<th col="state" colcss="e_left" class="wrap">状态</th>
+										<th col="stack" colcss="e_left" class="wrap">堆栈</th>
+									</tr>
+								</thead>
+								<tbody>
+									<span jwcid="@Foreach" source="ognl:jvmInfoItems" value="ognl:jvmInfoItem" index="ognl:jvmInfoRowIndex">
+										<tr>
+											<td>
+												<span jwcid="@Insert" value="ognl:jvmInfoRowIndex+1"></span>
+											</td>
+											<td class="e_left wrap">
+												<span jwcid="@Insert" value="ognl:jvmInfoItem.id" name="id"></span>
+											</td>
+											<td class="e_left wrap">
+												<span jwcid="@Insert" value="ognl:jvmInfoItem.name" name="name"></span>
+											</td>
+											<td class="e_left wrap">
+												<span jwcid="@Insert" value="ognl:jvmInfoItem.state" name="state"></span>
+											</td>
+											<td class="e_left">
+												<input jwcid="@Hidden" type="hidden" name="stack" value="ognl:jvmInfoItem.stack" desc="Hidden" />
+												<button name="savaBtn" class="e_button-page e_button-page-ok" formId="form" onclick="return getFormData($(this));">
+													<span>show</span>
+												</button>
+											</td>
+										</tr>
+									</span>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript" sign="query_onclick">
+
+	var selNodeId;
+	var selNodeLevel;
+	var selNodeLabel;
+	
+	function queryOnclick(obj){
+		
+		if(selNodeId == null || selNodeId == "" || selNodeLevel == null || selNodeLevel == ""){
+            MessageBox.alert("提示信息", "未选取任何应用节点信息!");
+            return;
+		}
+		
+        if(selNodeLevel != 4){
+            MessageBox.alert("提示信息", "请选择应用节点");
+            return;
+        }
+		
+        $.ajax.submit(null,'auto_getThreadInfo_queryOnclick', "appId=" + selNodeId + "&jvmName=" + $("#jvmName").val(),'jvmInfo',null,function(e,i){$.showErrorMessage('Operation failed',i);});
+    }
+	
+	function treeInitAfterAction(){
+		$.tree.get("sysOrgTree").expand(-1);
+	}
+	
+    function treeNodeClick(nodeItem){
+        $.tree.get("sysOrgTree");
+        // 获取选中节点的层级和标识
+        selNodeId = nodeItem.id;
+        selNodeLevel = nodeItem.level;
+        selNodeLabel = nodeItem.text;
+        
+        if(selNodeLevel != 4){
+            disabledArea("querydev", true);
+        }else{
+        	disabledArea("querydev", false);
+        }
+    }
+    
+    $(function(){disabledArea("querydev", true);})
+    
+   	function getFormData(param){
+	
+		var value = param.parent("td").find("input:first").val()
+		alert(value+"");
+	}
+    
+    $(document).ready(function(){
+	$.fixTable("jvmInfoTable",{
+	fixHead:true,
+	fixFoot:true,
+	leftCols:0,
+	rightCols:0
+	});
+	});
+    
+</script>

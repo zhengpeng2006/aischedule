@@ -1,0 +1,62 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "nodeTabItems": [
+      {
+        "createDate": "2016-08-11",
+        "hostId": 693,
+        "isMonitorNode": "Y",
+        "nodeCode": "monitorService",
+        "nodeId": 788,
+        "nodeName": "监控01",
+        "remark": "",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNode",
+        "deployStrategyId": 208,
+        "deployStrategyName": "应用调度部署策略"
+      },
+      {
+        "createDate": "2016-08-11",
+        "hostId": 693,
+        "isMonitorNode": "N",
+        "nodeCode": "managerService",
+        "nodeId": 789,
+        "nodeName": "调度管理01",
+        "remark": "",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNode",
+        "deployStrategyId": 209,
+        "deployStrategyName": "调度管理部署策略"
+      },
+      {
+        "createDate": "2016-08-11",
+        "hostId": 693,
+        "isMonitorNode": "N",
+        "nodeCode": "coreService01",
+        "nodeId": 790,
+        "nodeName": "调度执行01",
+        "remark": "",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNode",
+        "deployStrategyId": 212,
+        "deployStrategyName": "调度执行部署策略"
+      }
+    ],
+    "total": 3
+  }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonSVStatisticsTmp" mainattr="LOGDATE">
+    <mapingenty type="table">AI_MON_SV_STATISTICS_TMP</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="TMP_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">TMP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOGDATE" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LOGDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLASSNAME" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CLASSNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="METHODNAME" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">METHODNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USERCODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USERCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USETIME" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USETIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CPUTIME" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CPUTIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ISSUCCESS" maxlength="1" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">ISSUCCESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FLAG" maxlength="1" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">FLAG</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

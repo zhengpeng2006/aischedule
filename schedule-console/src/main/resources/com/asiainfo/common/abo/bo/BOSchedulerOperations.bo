@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="logmgr" name="BOSchedulerOperations" mainattr="OPERATION_ID">
+    <mapingenty type="table">AI_SCHEDULER_OPERATIONS</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="OPERATION_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">OPERATION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATION_SOURCE" maxlength="128" datatype="String" type="COL" remark="操作来源：
+前台、后台">
+        <mapingcol datatype="VARCHAR2">OPERATION_SOURCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATION_MODEL" maxlength="1024" datatype="String" type="COL" remark="操作模块：
+调度、监控、部署、启停、配置">
+        <mapingcol datatype="VARCHAR2">OPERATION_MODEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATION_TYPE" maxlength="1024" datatype="String" type="COL" remark="操作类型
+配置模块分三种操作类型：新增、删除、修改
+其他模块直接记录操作名称（比如主机初始化，发布，回滚，同步至当前版本，任务挂起）
+">
+        <mapingcol datatype="VARCHAR2">OPERATION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATION_OBJECT_TYPE" maxlength="1024" datatype="String" type="COL" remark="操作对象类型
+部署： 直接记录为“节点”
+启动/停止： 直接记录为“应用”
+挂起：挂起的对象目前有应用和任务
+新增/修改/删除：记录所操作的对象，如主机、节点、用户、部署策略
+">
+        <mapingcol datatype="VARCHAR2">OPERATION_OBJECT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATION_OBJECT_CONTENT" maxlength="4000" datatype="String" type="COL" remark="操作对象标识
+部署：记录部署的节点列表（生成版本的地方单独记录一条配置日志）
+启动/停止：记录批量/单个进程的进程编码
+挂起：记录任务/应用编码
+新增/修改/删除：所操作对象的id:code(name)">
+        <mapingcol datatype="VARCHAR2">OPERATION_OBJECT_CONTENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATION_CLIENT_IP" maxlength="255" datatype="String" type="COL" remark="默认：CRM">
+        <mapingcol datatype="VARCHAR2">OPERATION_CLIENT_IP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SYSTEM_DOMAIN" maxlength="255" datatype="String" type="COL" remark="默认：CRM">
+        <mapingcol datatype="VARCHAR2">SYSTEM_DOMAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUBSYSTEM_DOMAIN" maxlength="255" datatype="String" type="COL" remark="日志所属子系统">
+        <mapingcol datatype="VARCHAR2">SUBSYSTEM_DOMAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APP_SERVER_NAME" maxlength="255" datatype="String" type="COL" remark="业务进程侧，填写APPCODE">
+        <mapingcol datatype="VARCHAR2">APP_SERVER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="YYYY-MM-DD 24H:mm:ss
+2014-09-04 08:30:29">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATOR" maxlength="128" datatype="String" type="COL" remark="操作员">
+        <mapingcol datatype="VARCHAR2">OPERATOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="4000" datatype="String" type="COL" remark="前面的字段无法完整描述的操作，可以将剩余内容记录在此">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/baseFrame/mainFrame/js/MainFrame.js"
+	type="text/javascript"></script>
+	
+<script type="text/javascript">
+ function logout() {
+	 MessageBox.confirm("提示框", "确定退出？", function(btn) {
+         if ("ok" == btn) {
+             debugger;
+             $.redirect.toPage(null,"Home","userLogout",null);
+         }
+     }, {
+         ok : "是",
+         cancel : "否"
+     });
+ }
+</script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<!-- no fixed column, two columns, non equipartition -->
+
+           <div class="c_submit" uitype="btngroup" editable="true" style="text-align:right;">
+           <button onclick="logout();" name="logout" class="e_button-form">
+							<span>退出</span>
+			</button>
+			</div>
+			<!-- no fixed column, two columns, non equipartition -->
+			<div id="testLayout" class="l_col" uitype="layout" editable="true">
+				<div class="l_left" style="width: 13%;">
+					<!-- left content-->
+					<div class="c_box" style="height: 540px">
+
+						<div class="c_title">
+							<div class="text">调度管控平台</div>
+						</div>
+						<div jwcid="infoTree@Tree" name="infoTree" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true" id="infoTree" parentNodeId="parentId" nodeId="id" nodeText="name" bo="" expandPath="-1" style="width:100%;height:560px;overflow:auto" textAction="MainFrameJS.treeTextClick(nodedata)" initAfterAction="MainFrameJS.treeInitAfterAction()" showCheckBox="false" async="false" />
+					</div>
+					<img id="img" src="base/img/splitter_left.jpg" onclick="MainFrameJS.hiddenLeft()" style="position: absolute; right: -5px; top: 50%"/>
+				</div>
+				<div class="l_auto">
+					<!-- 
+					<iframe jwcid="@Frame" type="iframe" page="module.monitor.monitorItem.TriggerInfo" listener="" params=""  subsys="" id="subFrame" onload="MainFrameJS.dyniframesize('subFrame');"/> -->
+					<iframe id="subFrame" style="width:100%;height:542px;visibility:hidden;" frameborder="0"></iframe>
+				</div>
+			</div>
+			
+			<!-- end -->
+		</div>
+	</div>
+</body>
+</html>

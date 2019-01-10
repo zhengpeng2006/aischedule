@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="APIShowStat" desc="" dna-code="88055bf9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.APIShowStatSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAPIShowStatSV" name="APIShowStat" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAPIShowStatSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="APIShowStatSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="APIShowStat.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAPIShowStatSV_checkActionStatByAppIds" desc="" dna-code="a7225bf9-4501-0010-9646-9bbd8b625d8b" name="checkActionStatByAppIds" opt-flag="Y" serv-func="checkActionStatByAppIds" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getActionInfoByIds" desc="" dna-code="ad225bf9-4501-0010-9646-9bbd8b625d8b" name="getActionInfoByIds" opt-flag="Y" serv-func="getActionInfoByIds" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+          <param datatype="java.lang.String" name="clazz" param-kind="java"/>
+          <param datatype="java.lang.String" name="method" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="start" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="end" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getActionInfo" desc="" dna-code="ca225bf9-4501-0010-9646-9bbd8b625d8b" name="getActionInfo" opt-flag="Y" serv-func="getActionInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="clazz" param-kind="java"/>
+          <param datatype="java.lang.String" name="method" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="start" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="end" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_checkSVMethodStatByAppIds" desc="" dna-code="e6225bf9-4501-0010-9646-9bbd8b625d8b" name="checkSVMethodStatByAppIds" opt-flag="Y" serv-func="checkSVMethodStatByAppIds" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getSVMehtodInfoByIds" desc="" dna-code="ec225bf9-4501-0010-9646-9bbd8b625d8b" name="getSVMehtodInfoByIds" opt-flag="Y" serv-func="getSVMehtodInfoByIds" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+          <param datatype="java.lang.String" name="clazz" param-kind="java"/>
+          <param datatype="java.lang.String" name="method" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getSVMehtodInfoByIds" desc="" dna-code="ff225bf9-4501-0010-9646-9bbd8b625d8b" name="getSVMehtodInfoByIds" opt-flag="Y" serv-func="getSVMehtodInfoByIds" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+          <param datatype="java.lang.String" name="clazz" param-kind="java"/>
+          <param datatype="java.lang.String" name="method" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="start" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="end" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getSVMehtodInfo" desc="" dna-code="1c235bf9-4501-0010-9646-9bbd8b625d8b" name="getSVMehtodInfo" opt-flag="Y" serv-func="getSVMehtodInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getSVMehtodInfo" desc="" dna-code="22235bf9-4501-0010-9646-9bbd8b625d8b" name="getSVMehtodInfo" opt-flag="Y" serv-func="getSVMehtodInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="clazz" param-kind="java"/>
+          <param datatype="java.lang.String" name="method" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="start" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="end" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getSVMehtodInfoForAppFrame" desc="" dna-code="3d235bf9-4501-0010-9646-9bbd8b625d8b" name="getSVMehtodInfoForAppFrame" opt-flag="Y" serv-func="getSVMehtodInfoForAppFrame" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="clazz" param-kind="java"/>
+          <param datatype="java.lang.String" name="method" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="start" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="end" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.appframe2.common.DataContainerInterface[]" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_checkSqlStatByAppIds" desc="" dna-code="59235bf9-4501-0010-9646-9bbd8b625d8b" name="checkSqlStatByAppIds" opt-flag="Y" serv-func="checkSqlStatByAppIds" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getSqlInfo" desc="" dna-code="5f235bf9-4501-0010-9646-9bbd8b625d8b" name="getSqlInfo" opt-flag="Y" serv-func="getSqlInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="condition" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getSqlInfoForAppFrame" desc="" dna-code="69235bf9-4501-0010-9646-9bbd8b625d8b" name="getSqlInfoForAppFrame" opt-flag="Y" serv-func="getSqlInfoForAppFrame" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+          <param datatype="java.lang.String" name="condition" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.appframe2.common.DataContainerInterface[]" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_getSqlInfoByIds" desc="" dna-code="73235bf9-4501-0010-9646-9bbd8b625d8b" name="getSqlInfoByIds" opt-flag="Y" serv-func="getSqlInfoByIds" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+          <param datatype="java.lang.String" name="condition" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="start" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="end" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_fecthActionMonitorState" desc="" dna-code="a9235bf9-4501-0010-9646-9bbd8b625d8b" name="fecthActionMonitorState" opt-flag="Y" serv-func="fecthActionMonitorState" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="boolean" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_fetchSVMethodState" desc="" dna-code="af235bf9-4501-0010-9646-9bbd8b625d8b" name="fetchSVMethodState" opt-flag="Y" serv-func="fetchSVMethodState" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="boolean" param-kind="java"/>
+      </service>
+      <service code="IAPIShowStatSV_fetchSqlMonitorState" desc="" dna-code="b4235bf9-4501-0010-9646-9bbd8b625d8b" name="fetchSqlMonitorState" opt-flag="Y" serv-func="fetchSqlMonitorState" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="boolean" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

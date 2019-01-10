@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/schedule/js/SplitCfg.js" type="text/javascript"></script>
+<script src="component/widget/fusion/Gallery/assets/ui/js/json2.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_box">
+				<!-- 表格开始 -->
+				<div jwcid="splitInfos@Part" uiid="splitInfos" id="splitInfos"
+					element="div" type="table"
+					objName="splitInfosItems,splitInfosCount"
+					bo="com.asiainfo.common.abo.bo.BOABGMonBusiErrorLog" uitype="table"
+					editable="true">
+					<div class="c_scroll" style="height: 500px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="splitInfosTable" scroll="true">
+								<thead>
+									<tr>
+										<th style="padding-left:0px"><input type="checkbox" id="allCheck"/></th>
+										<th col="splitInfosRowIndex" style="display: none">RowIndex</th>
+										<th col="taskCode" colcss="e_left" class="wrap">调度任务编码</th>
+										<th col="taskItem" colcss="e_left" class="desc" onclick="SplitCfgJS.sort(4,this)"><span>任务拆分项</span></th>
+										<th col="assignServer" colcss="e_left" class="wrap">指定任务处理器编码</th>
+										<th col="reAssign" colcss="e_left" class="wrap">重新指定任务处理器编码</th>
+									</tr>
+								</thead>
+								<tbody id="splitDatas">
+									<span jwcid="@Foreach" source="ognl:splitInfosItems"
+										value="ognl:splitInfosItem" index="ognl:splitInfosRowIndex">
+										<tr>
+										<td><input jwcid="@Checkbox" type="checkbox"
+											name="splitInfosCheckbox" value="1"/></td>
+											<td style="display: none"><span jwcid="@Insert"
+												value="ognl:splitInfosRowIndex+1"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:splitInfosItem.taskCode" name="taskCode"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:splitInfosItem.taskItem" name="taskItem"></span>
+											</td>
+
+											<td class="e_left wrap"><input type="text" jwcid="@TextField"
+												value="ognl:splitInfosItem.assignServer" name="assignServer"></input></td>
+
+											<td class="e_left">
+											主机: <select jwcid="@Select"
+												name="host" value="ognl:splitInfosItem.host"
+												desc="指定任务处理器编码" source="ognl:getHostList()"
+												disabled="false" changeValue="true" addDefault="true"
+												defaultText="请选择主机" uiid="splitInfosItem_host"
+												onchange="SplitCfgJS.getAppcodeList($(this))" />
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											应用编码：<select jwcid="@Select" name="assignServer" value=""
+												desc="应用编码" source="" changeValue="true"
+												addDefault="true" defaultText="请选择应用编码"
+												uiid="splitInfosItem_assignServer" onchange="SplitCfgJS.changeValue($(this))"/></td>
+										</tr>
+									</span>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- 表格结束 -->
+				<!-- 按钮组开始 -->
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button onclick="SplitCfgJS.clearServer()" name="clearServer" class="e_button-form">
+						<span>置空编码</span>
+					</button>
+					<button onclick="SplitCfgJS.saveSplits()" name="save" class="e_button-form">
+						<span>保存配置</span>
+					</button>
+					<button onclick="SplitCfgJS.quitSplits()" name="quitPage"
+						class="e_button-form">
+						<span>退出配置</span>
+					</button>
+				</div>
+				<!-- 按钮结束 -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

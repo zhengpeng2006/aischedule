@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BOAIMonGroupHostRel" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonGroupHostRel.cmpt" code="AIMonGroupHostRel" desc="分组与主机关系表" dna-code="a4947243-4701-0010-9312-99dd0de23280" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonGroupHostRel" name="AIMonGroupHostRel">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="8ec07243-4701-0010-9312-99dd0de23280" datatype="long" name="relation_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">RELATION_ID</mapingcol>
+        </attr>
+        <attr code="f6c27243-4701-0010-9312-99dd0de23280" datatype="long" name="group_id" order="1" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">GROUP_ID</mapingcol>
+        </attr>
+        <attr code="30c57243-4701-0010-9312-99dd0de23280" datatype="long" name="host_id" order="2" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">HOST_ID</mapingcol>
+        </attr>
+        <attr code="78c97243-4701-0010-9312-99dd0de23280" datatype="DateTime" name="create_date" order="4" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonGroupHostRel.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/impl" name="AIMonGroupHostRel.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/impl" name="AIMonGroupHostRelValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonGroupHostRelBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonGroupHostRel.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/interfaces" name="IAIMonGroupHostRelValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo" name="BOAIMonGroupHostRel.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/interfaces" name="IAIMonGroupHostRelDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/impl" name="AIMonGroupHostRelDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

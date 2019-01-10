@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="NodeTreeInfo" desc="" dna-code="1e8d4605-4b01-0010-b0d4-bb7b3f12a43d" full-name="module.monitor.configmgr.NodeTreeInfo" kind="0" name="NodeTreeInfo">
+  <uientity-version branch="" code="" desc="" name="NodeTreeInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.NodeTreeInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="part" uiid="treeOutPart"/>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonServer" type="form" uiid="serverDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_serverCode"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="NodeTreeInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="NodeTreeInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="NodeTreeInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="NodeTreeInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="btnSave" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/PInfoConfig.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+			<!-- start -->
+
+
+			<!-- no fixed column, two columns, non equipartition -->
+			<div id="baseLayout" class="l_col" uitype="layout" editable="true">
+				<div class="l_left" style="width: 20%;">
+					<!-- left content-->
+					<div class="c_box">
+						<div class="c_title">
+							<div class="text">任务分组</div>
+						</div>
+						<div jwcid="treeOutPart@Part" element="div" uiid="treeOutPart" uitype="part" editable="true">
+						<div jwcid="infoTree@Tree" name="infoTree"
+							listener="ognl:listeners.loadTreeData" uitype="tree"
+							editable="true" id="infoTree" parentNodeId="parentId" nodeId="id"
+							nodeText="name" bo="" expandPath="-1" style="height: 505px;overflow:auto"
+							textAction="PInfoConfigJS.treeTextClick(nodedata)"
+							initAfterAction="PInfoConfigJS.treeInitAfterAction()"
+							showCheckBox="false" async="false"></div>
+							</div>
+						<!-- 树结束 -->
+					</div>
+				</div>
+				<div class="l_auto">
+					<!-- right content -->
+					<!-- 任务分组 -->
+					<div id="PinfoGroupDiv" style="display: none">
+						<div class="c_box">
+							<div class="c_title">
+								<div class="text">任务分组</div>
+							</div>
+							<div jwcid="groupInfos@Part" uiid="groupInfos" id="groupInfos"
+								element="div" type="table"
+								objName="groupInfosItems,groupInfosCount"
+								bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup"
+								uitype="table" editable="true">
+								<div class="c_scroll" style="height: 485px">
+									<div class="c_table c_table-row-10">
+										<table jwcid="@Table" name="groupInfosTable" scroll="true">
+											<thead>
+												<tr>
+													<th col="groupInfosRowIndex" style="display: none">RowIndex</th>
+													<th col="groupId" style="display: none">标识</th>
+													<th col="groupName" colcss="e_left" class="wrap">名称</th>
+													<th col="groupCode" colcss="e_left" class="wrap">编码</th>
+													<th col="groupDesc" colcss="e_left" class="wrap">描述</th>
+													<th col="groupStyle" style="display: none">style</th>
+													<th col="layer" colcss="e_left" class="wrap">层</th>
+													<th col="sortId" colcss="e_left" class="wrap">位次</th>
+													<th col="remark" colcss="e_left" class="wrap">备注</th>
+													<th col="parentId" style="display: none">上级实体</th>
+													<th col="state" style="display: none">状态</th>
+												</tr>
+											</thead>
+											<tbody>
+												<span jwcid="@Foreach" source="ognl:groupInfosItems"
+													value="ognl:groupInfosItem" index="ognl:groupInfosRowIndex">
+													<tr>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:groupInfosRowIndex+1"></span></td>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.groupId" name="groupId"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.groupName" name="groupName"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.groupCode" name="groupCode"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.groupDesc" name="groupDesc"></span>
+														</td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.groupStyle" name="groupStyle"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:layerTrans(groupInfosItem.layer)"
+															name="layer"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.sortId" name="sortId"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.remark" name="remark"></span>
+														</td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.parentId" name="parentId"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:groupInfosItem.state" name="state"></span></td>
+
+													</tr>
+												</span>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</div>
+
+
+							<div class="c_submit" uitype="btngroup" editable="true">
+								<button onclick="PInfoConfigJS.groupAdd();" name="groupAdd"
+									class="e_button-form">
+									<span>新增</span>
+								</button>
+								<button onclick="PInfoConfigJS.groupUpdate();"
+									name="groupUpdate" class="e_button-form">
+									<span>修改</span>
+								</button>
+								<button onclick="PInfoConfigJS.groupDelete();"
+									name="groupDelete" class="e_button-form">
+									<span>删除</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 任务信息 -->
+					<div id="PInfoDiv" style="display: none">
+						<div class="c_box">
+							<div class="c_title">
+								<div class="text">任务信息</div>
+							</div>
+							<div jwcid="infos@Part" uiid="infos" id="infos" element="div"
+								type="table" objName="infosItems,infosCount"
+								bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo"
+								uitype="table" editable="true">
+								<div class="c_scroll" style="height: 485px">
+									<div class="c_table c_table-row-10">
+										<table jwcid="@Table" name="infosTable" scroll="true">
+											<thead>
+												<tr>
+													<th col="infosRowIndex" style="display: none">RowIndex</th>
+													<th col="infoId" style="display: none">任务标识</th>
+													<th col="name" colcss="e_left" class="wrap">任务名</th>
+													<th col="infoCode" colcss="e_left" class="wrap">任务编码</th>
+													<th col="groupId" colcss="e_left" class="wrap">分组信息</th>
+													<th col="hostId" colcss="e_left" class="wrap">主机</th>
+													<th col="layer" colcss="e_left" class="wrap">层</th>
+													<th col="MType" colcss="e_left" class="wrap">监控信息类型</th>
+													<th col="taskMethod" colcss="e_left" class="wrap">任务类型</th>
+													<th col="thresholdId" style="display: none">监控阀值</th>
+													<th col="timeId" style="display: none">时间配置</th>
+													<th col="typeId" style="display: none">监控配置</th>
+													<th col="remarks" colcss="e_left" class="wrap">备注</th>
+													<th col="splitRuleId" style="display: none">分拆规则标识</th>
+													<th col="resolveId" style="display: none">解析分组标识</th>
+													<th col="state" style="display: none">状态</th>
+													<th col="filterId" style="display: none">过滤器</th>
+												</tr>
+											</thead>
+											<tbody>
+												<span jwcid="@Foreach" source="ognl:infosItems"
+													value="ognl:infosItem" index="ognl:infosRowIndex">
+													<tr>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:infosRowIndex+1"></span></td>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:infosItem.infoId" name="infoId"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:infosItem.name" name="name"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:infosItem.infoCode" name="infoCode"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:groupTrans(infosItem.groupId)" name="groupId"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:hostTrans(infosItem.hostId)" name="hostId"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:layerTrans(infosItem.layer)" name="layer"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:typeTrans(infosItem.MType)" name="MType"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:methodTrans(infosItem.taskMethod)"
+															name="taskMethod"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:thresholdTrans(infosItem.thresholdId)"
+															name="thresholdId"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:timeTrans(infosItem.timeId)" name="timeId"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:ttypeTrans(infosItem.typeId)" name="typeId"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:infosItem.remarks" name="remarks"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:infosItem.splitRuleId" name="splitRuleId"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:infosItem.resolveId" name="resolveId"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:infosItem.state" name="state"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:infosItem.filterId" name="filterId"></span></td>
+
+													</tr>
+												</span>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</div>
+
+
+							<div class="c_submit" uitype="btngroup" editable="true"
+								style="float: left">
+								<button onclick="PInfoConfigJS.config('param');"
+									name="paramConfig" class="e_button-form">
+									<span>参数配置</span>
+								</button>
+								<button onclick="PInfoConfigJS.config('exec');"
+									name="typeConfig" class="e_button-form">
+									<span>监控脚本配置</span>
+								</button>
+								<button onclick="PInfoConfigJS.config('threshold');"
+									name="thresholdConfig" class="e_button-form">
+									<span>监控阀值配置</span>
+								</button>
+								<button onclick="PInfoConfigJS.config('time');"
+									name="timeConfig" class="e_button-form">
+									<span>监控时间配置</span>
+								</button>
+							</div>
+							<div class="c_submit" uitype="btngroup" editable="true"
+								style="float: right">
+								<button onclick="PInfoConfigJS.infoAdd();" name="infoAdd"
+									class="e_button-form">
+									<span>新增</span>
+								</button>
+								<button onclick="PInfoConfigJS.infoUpdate();" name="infoUpdate"
+									class="e_button-form">
+									<span>修改</span>
+								</button>
+								<button onclick="PInfoConfigJS.infoDelete();" name="infoDelete"
+									class="e_button-form">
+									<span>删除</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 任务详情 -->
+					<div id="infoDetailDiv" style="display: none">
+						<div class="c_box">
+							<div class="c_title">
+								<div class="text">任务详情</div>
+							</div>
+
+							<div class="c_form c_form-col-2 c_form-label-5"
+								jwcid="infoDetail@Part" uiid="infoDetail" id="infoDetail"
+								type="form" objName="infoDetail"
+								bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo"
+								uitype="form" editable="true">
+								<ul class="ul">
+									<li class="li" style="display: none"><span class="label">任务标识:</span>
+										<span class="e_elements"><span class="e_input">
+												<span><input jwcid="@TextField" type="text"
+													name="infoId" value="ognl:infoDetail.infoId" desc="任务标识"
+													uiid="infoDetail_infoId" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">任务名:</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="name"
+													value="ognl:infoDetail.name" desc="任务名"
+													uiid="infoDetail_name" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">任务编码:</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="infoCode"
+													value="ognl:infoDetail.infoCode" desc="任务编码"
+													uiid="infoDetail_infoCode" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">分组信息</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="groupId"
+													value="ognl:groupTrans(infoDetail.groupId)" desc="分组信息"
+													uiid="infoDetail_groupId" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">主机</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="hostId"
+													value="ognl:hostTrans(infoDetail.hostId)" desc="主机"
+													uiid="infoDetail_hostId" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">层:</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="layer"
+													value="ognl:layerTrans(infoDetail.layer)" desc="层"
+													uiid="infoDetail_layer" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">监控信息类型</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="MType"
+													value="ognl:typeTrans(infoDetail.MType)" desc="监控信息类型"
+													uiid="infoDetail_MType" readonly="true" /></span>
+										</span></span></li>
+
+									<li class="li"><span class="label">任务类型</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="taskMethod"
+													value="ognl:methodTrans(infoDetail.taskMethod)" desc="任务类型"
+													uiid="infoDetail_taskMethod" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">监控阀值:</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="thresholdId"
+													value="ognl:thresholdTrans(infoDetail.thresholdId)"
+													desc="监控阀值" uiid="infoDetail_thresholdId" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">时间配置:</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="timeId"
+													value="ognl:timeTrans(infoDetail.timeId)" desc="时间配置"
+													uiid="infoDetail_timeId" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">监控配置:</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="typeId"
+													value="ognl:ttypeTrans(infoDetail.typeId)" desc="监控配置"
+													uiid="infoDetail_typeId" readonly="true" /></span>
+										</span></span></li>
+									<li class="li"><span class="label">备注:</span> <span
+										class="e_elements"><span class="e_input"> <span><input
+													jwcid="@TextField" type="text" name="remarks"
+													value="ognl:infoDetail.remarks" desc="备注"
+													uiid="infoDetail_remarks" readonly="true" /></span>
+										</span></span></li>
+									<li class="li" style="display: none"><span class="label">解析分组标识:</span>
+										<span class="e_elements"><span class="e_input">
+												<span><input jwcid="@TextField" type="text"
+													name="resolveId" value="ognl:infoDetail.resolveId"
+													desc="解析分组标识" uiid="infoDetail_resolveId" /></span>
+										</span></span></li>
+									<li class="li" style="display: none"><span class="label">分拆规则标识:</span>
+										<span class="e_elements"><span class="e_input">
+												<span><input jwcid="@TextField" type="text"
+													name="splitRuleId" value="ognl:infoDetail.splitRuleId"
+													desc="分拆规则标识" uiid="infoDetail_splitRuleId" /></span>
+										</span></span></li>
+									<li class="li" style="display: none"><span class="label">过滤器:</span>
+										<span class="e_elements"><span class="e_input">
+												<span><input jwcid="@TextField" type="text"
+													name="filterId" value="ognl:infoDetail.filterId" desc="过滤器"
+													uiid="infoDetail_filterId" /></span>
+										</span></span></li>
+								</ul>
+							</div>
+
+							<!-- 任务参数信息 -->
+							<div class="c_title">
+								<div class="text">任务参数信息</div>
+							</div>
+
+
+							<div jwcid="paramInfos@Part" uiid="paramInfos" id="paramInfos"
+								element="div" type="table"
+								objName="paramInfosItems,paramInfosCount"
+								bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues"
+								uitype="table" editable="true">
+								<div class="c_scroll" style="height: 320px">
+									<div class="c_table c_table-row-10">
+										<table jwcid="@Table" name="paramInfosTable" scroll="true">
+											<thead>
+												<tr>
+													<th col="paramInfosRowIndex" style="display: none">RowIndex</th>
+													<th col="VId" style="display: none">标识</th>
+													<th col="paramCode" colcss="e_left" class="wrap">参数码</th>
+													<th col="paramValue" colcss="e_left" class="wrap">参数值</th>
+													<th col="paramDesc" colcss="e_left" class="wrap">描述</th>
+													<th col="remarks" colcss="e_left" class="wrap">备注</th>
+													<th col="paramId" style="display: none">参数标识</th>
+													<th col="registeId" style="display: none">寄主标识</th>
+													<th col="registeType" style="display: none">寄主类型</th>
+													<th col="sortId" style="display: none">顺序</th>
+												</tr>
+											</thead>
+											<tbody>
+												<span jwcid="@Foreach" source="ognl:paramInfosItems"
+													value="ognl:paramInfosItem" index="ognl:paramInfosRowIndex">
+													<tr>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:paramInfosRowIndex+1"></span></td>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.VId" name="VId"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.paramCode" name="paramCode"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.paramValue" name="paramValue"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.paramDesc" name="paramDesc"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.remarks" name="remarks"></span>
+														</td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.paramId" name="paramId"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.registeId" name="registeId"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.registeType"
+															name="registeType"></span></td>
+
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:paramInfosItem.sortId" name="sortId"></span></td>
+
+													</tr>
+												</span>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				<!-- 分组输入 -->
+				<div id="groupInputDiv" style="display: none">
+
+					<div class="c_form c_form-col-2 c_form-label-5"
+						jwcid="groupInput@Part" uiid="groupInput" id="groupInput"
+						type="form" objName="groupInput"
+						bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup"
+						uitype="form" editable="true">
+						<ul class="ul">
+							<li class="li" style="display: none"><span class="label">标识:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="groupId"
+											value="ognl:groupInput.groupId" desc="标识"
+											uiid="groupInput_groupId" /></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">名称:</span></span> <span class="e_elements"><span
+									class="e_input"> <span><input jwcid="@TextField"
+											type="text" name="groupName"
+											value="ognl:groupInput.groupName" desc="名称"
+											uiid="groupInput_groupName" id="groupNameInput" nullable="no" /></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">编码:</span></span> <span class="e_elements"><span
+									class="e_input"> <span><input jwcid="@TextField"
+											type="text" name="groupCode"
+											value="ognl:groupInput.groupCode" desc="编码"
+											uiid="groupInput_groupCode" id="groupCodeInput" nullable="no" /></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">层:</span></span> <span class="e_elements"><span
+									class="e_select"> <span><span><select
+												id="groupLayerInput" jwcid="@Select" name="layer"
+												value="ognl:groupInput.layer" desc="层"
+												source="ognl:getLayerSelectList()" disabled="false"
+												changeValue="true" addDefault="false" defaultText="root"
+												uiid="groupInput_layer" nullable="no"></select></span></span>
+								</span></span></li>
+							<li class="li"><span class="label">描述:</span> <span
+								class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="groupDesc"
+											value="ognl:groupInput.groupDesc" desc="描述"
+											uiid="groupInput_groupDesc" /></span>
+								</span></span></li>
+							<li class="li"><span class="label">顺序:</span> <span
+								class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="sortId"
+											value="ognl:groupInput.sortId" desc="位次"
+											uiid="groupInput_sortId" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">备注:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="remark"
+											value="ognl:groupInput.remark" desc="备注"
+											uiid="groupInput_remark" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">style:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="groupStyle"
+											value="ognl:groupInput.groupStyle" desc="style"
+											uiid="groupInput_groupStyle" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">上级实体:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="parentId"
+											value="ognl:groupInput.parentId" desc="上级实体"
+											uiid="groupInput_parentId" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">状态:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="state"
+											value="ognl:groupInput.state" desc="状态"
+											uiid="groupInput_state" /></span>
+								</span></span></li>
+						</ul>
+					</div>
+					<div class="c_submit">
+					<div class="submitPlace"></div>
+						<button onclick="PInfoConfigJS.groupInfoSave();"
+							name="groupDataSave" class="e_button-form">
+							<span>保存</span>
+						</button>
+						<button onclick="PInfoConfigJS.groupQuitDiv();"
+							name="groupDataQuit" class="e_button-form">
+							<span>取消</span>
+						</button>
+					</div>
+				</div>
+				
+				<!-- 任务信息输入 -->
+				<div id="infoInputDiv" style="display: none">
+
+					<div class="c_form c_form-col-2 c_form-label-5"
+						jwcid="infoDataInput@Part" uiid="infoDataInput" id="infoDataInput"
+						type="form" objName="infoDataInput"
+						bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo"
+						uitype="form" editable="true">
+						<ul class="ul">
+							<li class="li" style="display: none"><span class="label">任务标识:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="infoId"
+											value="ognl:infoDataInput.infoId" desc="任务标识"
+											uiid="infoDataInput_infoId" /></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">任务名:</span></span> <span class="e_elements"><span
+									class="e_input"> <span><input jwcid="@TextField"
+											type="text" name="name" value="ognl:infoDataInput.name"
+											desc="任务名" uiid="infoDataInput_name" id="infoDataName"
+											nullable="no" /></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">任务编码:</span></span> <span class="e_elements"><span
+									class="e_input"> <span><input jwcid="@TextField"
+											type="text" name="infoCode"
+											value="ognl:infoDataInput.infoCode" desc="任务编码"
+											uiid="infoDataInput_infoCode" id="infoDataCode" nullable="no" /></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">层:</span></span> <span class="e_elements"><span
+									class="e_select"> <span><span><select
+												jwcid="@Select" name="layer"
+												value="ognl:infoDataInput.layer" desc="层"
+												source="ognl:getLayerSelectList()" disabled="false"
+												changeValue="true" addDefault="false" defaultText="root"
+												uiid="infoDataInput_layer" id="infoDataLayer" nullable="no"></select></span></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">监控信息类型:</span></span> <span class="e_elements"><span
+									class="e_select"> <span><span><select
+												jwcid="@Select" name="MType"
+												value="ognl:infoDataInput.MType" desc="监控信息类型"
+												source="ognl:getTypeSelectList()" disabled="false"
+												changeValue="true" addDefault="false" defaultText="root"
+												uiid="infoDataInput_MType" id="infoDataMtype" nullable="no"></select></span></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">任务类型:</span></span> <span class="e_elements"><span
+									class="e_select"> <span><span><select
+												jwcid="@Select" name="taskMethod"
+												value="ognl:infoDataInput.taskMethod" desc="任务类型"
+												source="ognl:getMethodSelectList()" disabled="false"
+												changeValue="true" addDefault="false" defaultText="root"
+												uiid="infoDataInput_taskMethod" id="infoDataMethod"
+												nullable="no"></select></span></span>
+								</span></span></li>
+							<li class="li"><span class="label"><span
+									class="e_required">主机:</span></span> <span class="e_elements"><span
+									class="e_select"> <span><span><select
+												jwcid="@Select" name="hostId"
+												value="ognl:infoDataInput.hostId" desc="主机"
+												source="ognl:getHostSelectList()" disabled="false"
+												changeValue="true" addDefault="false" defaultText="root"
+												uiid="infoDataInput_hostId" id="infoDataHost" nullable="no"></select></span></span>
+								</span></span></li>
+							<li class="li"><span class="label">备注:</span> <span
+								class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="remarks"
+											value="ognl:infoDataInput.remarks" desc="备注"
+											uiid="infoDataInput_remarks" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">归属业务区域再分组:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="groupId"
+											value="ognl:infoDataInput.groupId" desc="归属业务区域再分组"
+											uiid="infoDataInput_groupId" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">过滤器:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="filterId"
+											value="ognl:infoDataInput.filterId" desc="过滤器"
+											uiid="infoDataInput_filterId" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">监控阀值标识:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="thresholdId"
+											value="ognl:infoDataInput.thresholdId" desc="监控阀值标识"
+											uiid="infoDataInput_thresholdId" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">时间配置:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="timeId"
+											value="ognl:infoDataInput.timeId" desc="时间配置"
+											uiid="infoDataInput_timeId" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">状态:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="state"
+											value="ognl:infoDataInput.state" desc="状态"
+											uiid="infoDataInput_state" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">解析分组标识:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="resolveId"
+											value="ognl:infoDataInput.resolveId" desc="解析分组标识"
+											uiid="infoDataInput_resolveId" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">监控配置标识(进程,表数据):</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="typeId"
+											value="ognl:infoDataInput.typeId" desc="监控配置标识(进程,表数据)"
+											uiid="infoDataInput_typeId" /></span>
+								</span></span></li>
+							<li class="li" style="display: none"><span class="label">分拆规则标识:</span>
+								<span class="e_elements"><span class="e_input"> <span><input
+											jwcid="@TextField" type="text" name="splitRuleId"
+											value="ognl:infoDataInput.splitRuleId" desc="分拆规则标识"
+											uiid="infoDataInput_splitRuleId" /></span>
+								</span></span></li>
+						</ul>
+						<div class="submitPlace"></div>
+					</div>
+
+					<div class="c_submit" uitype="btngroup" editable="true">
+						<button onclick="PInfoConfigJS.InfoDataSave();"
+							name="infoDataSave" class="e_button-form">
+							<span>保存</span>
+						</button>
+						<button onclick="PInfoConfigJS.infoQuitDiv();" name="infoDateQuit"
+							class="e_button-form">
+							<span>取消</span>
+						</button>
+					</div>
+				</div>
+					<!-- 结束 -->
+				</div>
+			</div>
+</body>
+</html>

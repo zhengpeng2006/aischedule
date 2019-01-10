@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/controlmgr/ControlMgr.cmpt" code="UserGroupRelation" desc="用户用户组权限管理" dna-code="f580406b-4601-0010-9886-9d88bf945ba0" full-name="monitor.controlmgr.UserGroupRelation" kind="0" name="UserGroupRelation">
+  <uientity-version branch="" code="" desc="" name="UserGroupRelation" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.controlmgr.view.UserGroupRelation</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="qryform_groupCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="qryform_groupName"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/controlmgr" name="UserGroupRelation.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/controlmgr" name="UserGroupRelation.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/controlmgr" name="UserGroupRelation.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/controlmgr/view" name="UserGroupRelation.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="btn_qry" type="button"/>
+      <ui-event id="" name="btn_config" type="button"/>
+      <ui-event id="" name="btn_del_C" type="button"/>
+      <ui-event id="" name="btn_save" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

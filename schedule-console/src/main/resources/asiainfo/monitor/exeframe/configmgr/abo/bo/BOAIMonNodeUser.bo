@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonNodeUser" mainattr="NODE_USER_ID">
+    <mapingenty type="table">AI_MON_NODE_USER</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="NODE_USER_ID" maxlength="12" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol>NODE_USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NODE_ID" maxlength="12" datatype="Long" type="COL" order="1" notNull="N">
+        <mapingcol>NODE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ID" maxlength="12" datatype="Long" type="COL" order="2" notNull="N">
+        <mapingcol>USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" order="3" notNull="N">
+        <mapingcol>STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="0" datatype="DateTime" type="COL" order="4" notNull="N">
+        <mapingcol>CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MODIFY_DATE" maxlength="0" datatype="DateTime" type="COL" order="5" notNull="N">
+        <mapingcol>MODIFY_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="20" datatype="String" type="COL" order="6" notNull="N">
+        <mapingcol>REMARK</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonCtRecord" mainattr="CT_ID">
+    <mapingenty type="table">AI_MON_CT_RECORD</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CT_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">CT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_TYPE" maxlength="2" datatype="Integer" type="COL" remark="操作类型;1、WebTrace启动,2、WebTrace停止,3、AppTrace启动,4、AppTrace停止,5、Action统计启动,6、Action统计停止,7、Dao统计启动,8、Dao统计停止,9、SQL统计启动,10、SQL统计停止">
+        <mapingcol datatype="NUMBER">CT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_DATE" maxlength="20" datatype="DateTime" type="COL" remark="操作时间">
+        <mapingcol datatype="DATE">CT_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_OBJTYPE" maxlength="2" datatype="Integer" type="COL" remark="对象类型,1、组,2、主机,3、应用">
+        <mapingcol datatype="NUMBER">CT_OBJTYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_OBJID" maxlength="12" datatype="Long" type="COL" remark="对象标识">
+        <mapingcol datatype="NUMBER">CT_OBJID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_OBJNAME" maxlength="255" datatype="String" type="COL" remark="对象名称">
+        <mapingcol datatype="VARCHAR2">CT_OBJNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_ACTOR" maxlength="50" datatype="String" type="COL" remark="操作者">
+        <mapingcol datatype="VARCHAR2">CT_ACTOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECT_DATE" maxlength="20" datatype="DateTime" type="COL" remark="生效时间">
+        <mapingcol datatype="DATE">EFFECT_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVALID_DATE" maxlength="20" datatype="DateTime" type="COL" remark="失效时间,默认情况下为生效时间+失效时长,在同一对象停止操作后为停止操作的时间,而失效时长是不变的">
+        <mapingcol datatype="DATE">INVALID_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVALID_DUTI" maxlength="12" datatype="Long" type="COL" remark="失效时长,在启动时设置延长时间值">
+        <mapingcol datatype="NUMBER">INVALID_DUTI</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_FLAG" maxlength="1" datatype="Integer" type="COL" remark="操作标志,1、成功,0、失败">
+        <mapingcol datatype="NUMBER">CT_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

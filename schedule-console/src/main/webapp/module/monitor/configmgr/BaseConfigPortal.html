@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/BaseConfigPortal.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="module/monitor/css/monitor.css" />
+</head>
+
+<body jwcid="@Body">
+	<div id="layout" class="l_col" uitype="layout" editable="true">
+		<div class="l_left" style="width: 20%;">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">组织结构</div>
+			</div>
+			<div class="l_left" style="width: 100%">
+				<div jwcid="treeOutPart@Part" element="div" uiid="treeOutPart" uitype="part" editable="true">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 490px;overflow:auto;" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true"
+					id="sysOrgTree" parentNodeId="parentId" initAfterAction="BaseConfigPortalJs.treeInitAfterAction()" nodeId="id" nodeText="name"
+					textAction="BaseConfigPortalJs.treeTextClick(nodedata)" bo="" showCheckBox="false" expandPath="-1" async="false"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="l_auto" style="height:540px;overflow:auto" >
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text" id="allInfo">基础配置</div>
+			</div> <!-- 分组管理DIV START... -->
+				<div id="groupTabDiv" style="display: none">
+					<div jwcid="groupTab@Part" uiid="groupTab" id="groupTab" element="div" type="table" objName="groupTabItems,groupTabCount"
+					bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup" uitype="table" editable="true" >
+						<div class="c_scroll" style="height: 438px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="groupTabTable" scroll="true" onclick="BaseConfigPortalJs.disGroupBtn();">
+									<thead>
+										<tr>
+											<th col="groupTabRowIndex"></th>
+											<th col="groupId" style="display: none">分组标识</th>
+											<th col="groupCode" colcss="e_left" class="wrap">分组编码</th>
+											<th col="groupName" colcss="e_left" class="wrap">分组名称</th>
+											<th col="groupDesc" colcss="e_left" class="wrap">描述</th>
+											<th col="state" colcss="e_left" class="wrap">状态</th>
+											<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:groupTabItems" value="ognl:groupTabItem" index="ognl:groupTabRowIndex">
+											<tr jwcid="@Conditional" condition="ognl:groupTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+												<td><span jwcid="@Insert" value="ognl:groupTabRowIndex+1"></span></td>
+												<td style="display: none"><span jwcid="@Insert" value="ognl:groupTabItem.groupId" name="groupId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:groupTabItem.groupCode" name="groupCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:groupTabItem.groupName" name="groupName"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:groupTabItem.groupDesc" name="groupDesc"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',groupTabItem.state)" name="state"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:groupTabItem.createDate" name="createDate"></span></td>
+
+											</tr>
+											<tr jwcid="@Conditional" condition="ognl:groupTabRowIndex % 2 == 1" element="tr">
+												<td><span jwcid="@Insert" value="ognl:groupTabRowIndex+1"></span></td>
+												<td style="display: none"><span jwcid="@Insert" value="ognl:groupTabItem.groupId" name="groupId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:groupTabItem.groupCode" name="groupCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:groupTabItem.groupName" name="groupName"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:groupTabItem.groupDesc" name="groupDesc"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',groupTabItem.state)" name="state"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:groupTabItem.createDate" name="createDate"></span></td>
+
+											</tr>
+										</span>
+									</tbody>
+								</table>
+						</div>
+					</div>
+
+				</div>
+			<div style="align: left; margin: 8px;" uitype="btngroup" editable="true">
+						<button onclick="BaseConfigPortalJs.exportHostInfo();" name="export_host" id="export_host" class="e_button-form">
+							<span>主机资源导出</span>
+						</button>
+				</div>
+			</div> <!-- 分组管理DIV END... --> <!-- 主机节点 管理  START... -->
+				<div id="hostTabDiv" style="display: none">
+					<div jwcid="hostTab@Part" uiid="hostTab" id="hostTab" element="div" type="table" objName="hostTabItems,hostTabCount"
+					bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost" uitype="table" editable="true" >
+						<div class="c_scroll" style="height: 437px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="hostTabTable" scroll="true" onclick="BaseConfigPortalJs.disHostBtn();">
+									<thead>
+										<tr>
+											<th col="hostTabRowIndex"></th>
+											<th col="hostId" colcss="e_left" class="wrap" style="display: none">主机标识</th>
+											<th col="hostCode" colcss="e_left" class="wrap">主机编码</th>
+											<th col="hostName" colcss="e_left" class="wrap">主机名称</th>
+											<th col="hostIp" colcss="e_left" class="wrap">主机IP</th>
+											<th col="hostDesc" colcss="e_left" class="wrap">主机描述</th>
+											<th col="state" colcss="e_left" class="wrap">状态</th>
+											<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+											<th col="remarks" colcss="e_left" class="wrap">备注</th>
+											<th colcss="e_left" class="wrap">主机详细信息</th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:hostTabItems" value="ognl:hostTabItem" index="ognl:hostTabRowIndex">
+											<tr jwcid="@Conditional" condition="ognl:hostTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+												<td><span jwcid="@Insert" value="ognl:hostTabRowIndex+1"></span></td>
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostTabItem.hostId" name="hostId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.hostCode" name="hostCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.hostName" name="hostName"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.hostIp" name="hostIp"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.hostDesc" name="hostDesc"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',hostTabItem.state)" name="state"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.createDate" name="createDate"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.remarks" name="remarks"></span></td>
+												<td class="e_left wrap"><span id="spanHostId" style="display: none">
+														<a href="#" jwcid='@Insert' value="ognl:hostTabItem.hostId" />
+													</span>
+													<button jwcid="@Button" onclick="BaseConfigPortalJs.qryClick($(this));" name="detailBtn" hostId="ognl:hostTabItem.hostId" class="">
+														<span> 主机详细信息 </span>
+													</button></td>
+											</tr>
+											<tr jwcid="@Conditional" condition="ognl:hostTabRowIndex % 2 == 1" element="tr">
+												<td><span jwcid="@Insert" value="ognl:hostTabRowIndex+1"></span></td>
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostTabItem.hostId" name="hostId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.hostCode" name="hostCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.hostName" name="hostName"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.hostIp" name="hostIp"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.hostDesc" name="hostDesc"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',hostTabItem.state)" name="state"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.createDate" name="createDate"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostTabItem.remarks" name="remarks"></span></td>
+												<td class="e_left wrap">
+													<button jwcid="@Button" onclick="BaseConfigPortalJs.qryClick($(this));" name="showBtn" class="" hostId="ognl:hostTabItem.hostId">
+														<span> 主机详细信息 </span>
+													</button>
+												</td>
+											</tr>
+										</span>
+									</tbody>
+								</table>
+						</div>
+					</div>
+				</div>
+					<div>
+						<div style="align: left; margin: 8px;" uitype="btngroup" editable="true">
+							<button onclick="BaseConfigPortalJs.conClick();" name="con_manager" id="con_manager" class="e_button-form" disabled="disabled">
+								<span>连接方式管理</span>
+							</button>
+							<button onclick="BaseConfigPortalJs.slaveClick();" name="gh_rel_manager" id="gh_rel_manager" class="e_button-form" disabled="disabled">
+								<span>主备机管理</span>
+							</button>
+					</div>
+				</div>
+			</div> <!-- 主机管理 END...  --> <!-- 节点管理 START... -->
+				<div id="nodeTabDiv" style="display: none">
+
+					<div jwcid="nodeTab@Part" uiid="nodeTab" id="nodeTab" element="div" type="table" objName="nodeTabItems,nodeTabCount"
+					bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNode" uitype="table" editable="true" >
+						<div class="c_scroll" style="height: 445px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="nodeTabTable" scroll="true" onclick="BaseConfigPortalJs.disNodeBtn();">
+									<thead>
+										<tr>
+											<th col="nodeTabRowIndex"></th>
+											<th col="nodeId" colcss="e_left" class="wrap" style="display: none">节点标识</th>
+											<th col="hostId" colcss="e_left" class="wrap" style="display: none">主机标识</th>
+											<th col="nodeCode" colcss="e_left" class="wrap">节点编码</th>
+											<th col="nodeName" colcss="e_left" class="wrap">节点名称</th>
+											<th col="deployStrategyName" colcss="e_left" class="wrap">部署策略</th>
+											<th col="isMonitorNode" colcss="e_left" class="wrap">是否监控节点</th>
+											<th col="state" colcss="e_left" class="wrap">状态</th>
+											<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+											<th col="remark" colcss="e_left" class="wrap">备注</th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:nodeTabItems" value="ognl:nodeTabItem" index="ognl:nodeTabRowIndex">
+											<tr jwcid="@Conditional" condition="ognl:nodeTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+												<td><span jwcid="@Insert" value="ognl:nodeTabRowIndex+1"></span></td>
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:nodeTabItem.nodeId" name="nodeId"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:nodeTabItem.hostId" name="hostId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.nodeCode" name="nodeCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.nodeName" name="nodeName"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.deployStrategyName" name="deployStrategyName"></span></td>
+												
+												<td class="e_left_wrap"><span jwcid="@Insert" value="ognl:doTranslate('IS_MONITOR_NODE',nodeTabItem.isMonitorNode)" name="isMonitorNode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',nodeTabItem.state)" name="state"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.createDate" name="createDate"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.remark" name="remark"></span></td>
+
+											</tr>
+											<tr jwcid="@Conditional" condition="ognl:nodeTabRowIndex % 2 == 1" element="tr">
+												<td><span jwcid="@Insert" value="ognl:nodeTabRowIndex+1"></span></td>
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:nodeTabItem.nodeId" name="nodeId"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:nodeTabItem.hostId" name="hostId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.nodeCode" name="nodeCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.nodeName" name="nodeName"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.deployStrategyName" name="deployStrategyName"></span></td>
+
+												<td class="e_left_wrap"><span jwcid="@Insert" value="ognl:doTranslate('IS_MONITOR_NODE',nodeTabItem.isMonitorNode)" name="isMonitorNode"></span></td>
+												
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',nodeTabItem.state)" name="state"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.createDate" name="createDate"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:nodeTabItem.remark" name="remark"></span></td>
+
+											</tr>
+										</span>
+									</tbody>
+								</table>
+						</div>
+					</div>
+					<button onclick="BaseConfigPortalJs.nodeUserClick();" name="user_manager" id="user_manager" class="e_button-form">
+								<span>节点用户管理</span>
+							</button>
+				</div>
+			</div> <!-- 节点管理END ... --> <!-- 应用服务管理 START... -->
+				<div id="serverTabDiv" style="display: none">
+					<div jwcid="serverTab@Part" uiid="serverTab" id="serverTab" element="div" type="table" objName="serverTabItems,serverTabCount"
+					bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonServer" uitype="table" editable="true" >
+						<div class="c_scroll" style="height: 437px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="serverTabTable" scroll="true" onclick="BaseConfigPortalJs.disDeployBtn();">
+									<thead>
+										<tr>
+											<th col="serverTabRowIndex"></th>
+											<th col="serverId" colcss="e_left" class="wrap" style="display: none">应用标识</th>
+											<th col="serverCode" colcss="e_left" class="wrap">应用编码</th>
+											<th col="serverName" colcss="e_left" class="wrap">应用名称</th>
+											<th col="businessType" colcss="e_left" class="wrap" style="display: none">业务类型</th>
+											<th col="serverIp" colcss="e_left" class="wrap" style="display: none">应用IP</th>
+											<th col="serverPort" colcss="e_left" class="wrap" style="display: none">应用端口</th>
+											<th col="locator" colcss="e_left" class="wrap" style="display: none">定位内容</th>
+											<th col="locatorType" colcss="e_left" class="wrap" style="display: none">定位类型</th>
+											<th col="midwareType" colcss="e_left" class="wrap" style="display: none">中间件类型</th>
+											<th col="tempType" colcss="e_left" class="wrap" style="display: none">模板类型</th>
+											<th col="sversion" colcss="e_left" class="wrap">应用版本</th>
+											<th col="state" colcss="e_left" class="wrap">状态</th>
+											<th col="remark" colcss="e_left" class="wrap">描述</th>
+											<th col="checkUrl" style="display: none">版本URL</th>
+											<th col="hostId" style="display: none">主机标识</th>
+											<th col="nodeId" colcss="e_left" class="wrap" style="display: none">节点标识</th>
+											<th col="startCmdId" style="display: none">启动命令</th>
+											<th col="stopCmdId" style="display: none">停止命令</th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:serverTabItems" value="ognl:serverTabItem" index="ognl:serverTabRowIndex">
+											<tr jwcid="@Conditional" condition="ognl:serverTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+												<td><span jwcid="@Insert" value="ognl:serverTabRowIndex+1"></span></td>
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.serverId" name="serverId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serverTabItem.serverCode" name="serverCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serverTabItem.serverName" name="serverName"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.businessType" name="businessType"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.serverIp" name="serverIp"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.serverPort" name="serverPort"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.locator" name="locator"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert"
+														value="ognl:doTranslate('LOCATOR_TYPE',serverTabItem.locatorType)" name="locatorType"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.midwareType" name="midwareType"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:doTranslate('TEMP_TYPE',serverTabItem.tempType)"
+														name="tempType"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serverTabItem.sversion" name="sversion"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',serverTabItem.state)" name="state"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serverTabItem.remark" name="remark"></span></td>
+
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.checkUrl" name="checkUrl"></span></td>
+
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.hostId" name="hostId"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.nodeId" name="nodeId"></span></td>
+
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.startCmdId" name="startCmdId"></span></td>
+
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.stopCmdId" name="stopCmdId"></span></td>
+
+											</tr>
+											<tr jwcid="@Conditional" condition="ognl:serverTabRowIndex % 2 == 1" element="tr">
+												<td><span jwcid="@Insert" value="ognl:serverTabRowIndex+1"></span></td>
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.serverId" name="serverId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serverTabItem.serverCode" name="serverCode"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serverTabItem.serverName" name="serverName"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.businessType" name="businessType"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.serverIp" name="serverIp"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.serverPort" name="serverPort"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.locator" name="locator"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert"
+														value="ognl:doTranslate('LOCATOR_TYPE',serverTabItem.locatorType)" name="locatorType"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.midwareType" name="midwareType"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:doTranslate('TEMP_TYPE',serverTabItem.tempType)"
+														name="tempType"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serverTabItem.sversion" name="sversion"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',serverTabItem.state)" name="state"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serverTabItem.remark" name="remark"></span></td>
+
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.checkUrl" name="checkUrl"></span></td>
+
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.hostId" name="hostId"></span></td>
+
+												<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.nodeId" name="nodeId"></span></td>
+
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.startCmdId" name="startCmdId"></span></td>
+
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serverTabItem.stopCmdId" name="stopCmdId"></span></td>
+
+											</tr>
+										</span>
+									</tbody>
+								</table>
+						</div>
+					</div>
+						<div style="align: left; margin: 8px;" uitype="btngroup" editable="true">
+							<button onclick="BaseConfigPortalJs.copyServer();" id="copyServer" name="copyServer" class="e_button-form" disabled="disabled">
+								<span>复制应用</span>
+							</button>
+							<button onclick="BaseConfigPortalJs.appParamClick();" id="app_manager" name="app_manager" class="e_button-form" disabled="disabled">
+								<span>部署参数管理</span>
+							</button>
+					</div>
+				</div>
+			</div> <!-- 应用服务管理 END... -->
+
+				<div id="btnGroupDiv" style="display: none">
+					<div style="text-align: right; margin: 8px;" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter" name="updateAfter"
+						type="hidden" textName="returnInput" value="" afterAction="BaseConfigPortalJs.afterAction();" />
+						<button onclick="BaseConfigPortalJs.newClick();" id="newBtn" name="newBtn" class="e_button-form">
+							<span>
+								<i class="e_ico-add"></i>新增
+							</span>
+						</button>
+						<button onclick="BaseConfigPortalJs.editClick();" name="editBtn" id="editBtn" class="e_button-form" disabled="true">
+							<span>
+								<i class="e_ico-edit"></i>编辑
+							</span>
+						</button>
+						<button onclick="BaseConfigPortalJs.delClick();" name="delBtn" id="delBtn" class="e_button-form" disabled="true">
+							<span>
+								<i class="e_ico-delete"></i>删除
+							</span>
+						</button></div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

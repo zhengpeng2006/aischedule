@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.schedule.view.ScheduleTaskCfg">
+  <property-specification name="aa" type="net.sf.json.JSONObject"/>
+  <property-specification name="queryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskTableItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskTableItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskTableCount" type="long"/>
+  <property-specification name="taskTableRowIndex" type="int"/>
+  <property-specification name="taskInfoData" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskDtlView" type="net.sf.json.JSONObject"/>
+  <property-specification name="splitViewItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="splitViewItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="splitViewCount" type="long"/>
+  <property-specification name="splitViewRowIndex" type="int"/>
+</page-specification>

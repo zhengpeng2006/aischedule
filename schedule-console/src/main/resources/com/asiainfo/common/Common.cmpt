@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="Common" desc="" dna-code="d685ef49-4201-0010-b736-a36e151febe6" name="Common">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="Common" label="Common">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/common/abod/Common.abod</url>
+      </abod>
+      <sv-package dna-code="af38f049-4201-0010-b736-a36e151febe6" label="Common">
+        <uiinfo>24,13,160,100</uiinfo>
+        <url>/config/com/asiainfo/common/servpkg/Common.svpkg</url>
+      </sv-package>
+      <ui-entity dna-code="be77100f-4a01-0010-878e-a7ba780f2900" label="OperationLogQry">
+        <uiinfo>28,138,160,40</uiinfo>
+        <url>/html/module/monitor/configmgr/OperationLogQry.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/common" name="Common.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/common/abod" name="Common.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/schedule/js/TaskGroupCfg.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_box">
+			<!-- 列表开始 -->
+			<div jwcid="groupInfos@Part" uiid="groupInfos" id="groupInfos"
+				element="div" type="table" objName="groupInfosItems,groupInfosCount"
+				bo=""
+				uitype="table" editable="true">
+				<div class="c_scroll" style="height: 480px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="groupInfosTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="groupInfosRowIndex" style="display: none">RowIndex</th>
+									<th col="groupCode" colcss="e_left" class="wrap">分组编码</th>
+									<th col="groupName" colcss="e_left" class="wrap">分组名称</th>
+									<th col="groupDesc" colcss="e_left" class="wrap">分组描述</th>
+									<th col="createTime" colcss="e_left" class="wrap">创建时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:groupInfosItems"
+									value="ognl:groupInfosItem" index="ognl:groupInfosRowIndex">
+									<tr>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:groupInfosRowIndex+1"></span></td>
+											
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:groupInfosItem.groupCode" name="groupCode"></span></td>
+											
+										<td class="e_left wrap""><span jwcid="@Insert"
+											value="ognl:groupInfosItem.groupName" name="groupName"></span></td>
+
+										
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:groupInfosItem.groupDesc" name="groupDesc"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:groupInfosItem.createTime" name="createTime"></span></td>
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- 列表结束 -->
+			<!-- 按钮组开始 -->
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="TaskGroupCfgJS.selectedOperation('deleteGroup')" name="deleteGroup" class="e_button-form"
+					>
+					<span>删除分组</span>
+				</button>
+				<button onclick="TaskGroupCfgJS.addGroup()" name="addGroup" class="e_button-form"
+					>
+					<span>新增分组</span>
+				</button>
+			</div>
+			</div>
+			<!-- 按钮组结束 -->
+			<!-- 新增/修改数据区域开始 -->
+			<div id="groupDiv" style="display:none">
+			<div class="c_form c_form-col-2 c_form-label-5"
+				jwcid="groupInfoInput@Part" uiid="groupInfoInput"
+				id="groupInfoInput" type="form" objName="groupInfoInput"
+				bo=""
+				uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label"><span
+							class="e_required">分组编码:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="groupCode"
+									value="ognl:groupInfoInput.groupCode" desc="分组编码"
+									uiid="groupInfoInput_groupCode" nullable="no"/></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">分组名称:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="groupName"
+									value="ognl:groupInfoInput.groupName" desc="分组名称"
+									uiid="groupInfoInput_groupName" nullable="no"/></span>
+						</span></span></li>
+					<li class="li col-2"><span class="label">分组描述:</span> <span
+							class="e_textarea"> <span class="e_textareaTop"> <span></span>
+							</span> <span class="e_textareaContent"> <span> <textarea
+											type="text" name="groupDesc" jwcid="@TextArea"
+											value="ognl:groupInfoInput.groupDesc" style="height: 40px;"
+											uiid="groupInfoInput_groupDesc" id="groupDescInput"></textarea>
+								</span>
+							</span> <span class="e_textareaBottom"> <span></span>
+							</span></span></li>
+				</ul>
+				<div class="submitPlace"></div>
+			</div>
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="TaskGroupCfgJS.saveGroup()" name="saveGroup" class="e_button-form">
+					<span>保存</span>
+				</button>
+				<button onclick="TaskGroupCfgJS.quitDiv()" name="quitDiv" class="e_button-form">
+					<span>取消</span>
+				</button>
+			</div>
+			</div>
+			<!-- 新增/修改数据区域结束 -->
+		</div>
+	</div>
+</body>
+</html>

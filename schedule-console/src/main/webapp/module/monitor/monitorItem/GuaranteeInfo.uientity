@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/monitorItem/MonitorItem.cmpt" code="GuaranteeInfo" desc="" dna-code="1523d0b6-4c01-0010-9a18-5f19885ac259" full-name="module.monitor.monitorItem.GuaranteeInfo" kind="0" name="GuaranteeInfo">
+  <uientity-version branch="" code="" desc="" name="GuaranteeInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.monitorItem.view.GuaranteeInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="datefield" uiid="qryCondition_beginDate"/>
+      <area bo="java.lang.String" type="datefield" uiid="qryCondition_endDate"/>
+      <area bo="java.lang.String" type="select" uiid="qryCondition_batchId"/>
+      <area bo="java.lang.String" type="select" uiid="qryCondition_year"/>
+      <area bo="java.lang.String" type="select" uiid="qryCondition_month"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/monitorItem" name="GuaranteeInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/monitorItem" name="GuaranteeInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/monitorItem" name="GuaranteeInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/monitorItem/view" name="GuaranteeInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="qryBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

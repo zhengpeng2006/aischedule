@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BOABGMonHostLog" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/loginfomgr/ABGMonHostLog.cmpt" code="ABGMonHostLog" desc="" dna-code="a8896c30-4801-0010-9434-b7393165699d" fullname="com.asiainfo.monitor.exeframe.loginfomgr.abo.ABGMonHostLog" name="ABGMonHostLog">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="0e347830-4801-0010-9434-b7393165699d" datatype="long" name="acq_log_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">ACQ_LOG_ID</mapingcol>
+        </attr>
+        <attr code="a0367830-4801-0010-9434-b7393165699d" datatype="long" name="host_id" order="1" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">HOST_ID</mapingcol>
+        </attr>
+        <attr code="77387830-4801-0010-9434-b7393165699d" datatype="String" name="kpi_cpu" order="2" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">KPI_CPU</mapingcol>
+        </attr>
+        <attr code="1f3a7830-4801-0010-9434-b7393165699d" datatype="String" name="kpi_mem" order="3" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">KPI_MEM</mapingcol>
+        </attr>
+        <attr code="cf3b7830-4801-0010-9434-b7393165699d" datatype="String" name="kpi_fs" order="4" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">KPI_FS</mapingcol>
+        </attr>
+        <attr code="9f3d7830-4801-0010-9434-b7393165699d" datatype="String" name="ext_kpi_1" order="5" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">EXT_KPI_1</mapingcol>
+        </attr>
+        <attr code="1f3f7830-4801-0010-9434-b7393165699d" datatype="String" name="ext_kpi_2" order="6" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">EXT_KPI_2</mapingcol>
+        </attr>
+        <attr code="90407830-4801-0010-9434-b7393165699d" datatype="String" name="ext_kpi_3" order="7" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">EXT_KPI_3</mapingcol>
+        </attr>
+        <attr code="07427830-4801-0010-9434-b7393165699d" datatype="String" name="ext_kpi_4" order="8" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">EXT_KPI_4</mapingcol>
+        </attr>
+        <attr code="5f437830-4801-0010-9434-b7393165699d" datatype="String" name="system_domain" order="9" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SYSTEM_DOMAIN</mapingcol>
+        </attr>
+        <attr code="00457830-4801-0010-9434-b7393165699d" datatype="String" name="subsystem_domain" order="10" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SUBSYSTEM_DOMAIN</mapingcol>
+        </attr>
+        <attr code="50467830-4801-0010-9434-b7393165699d" datatype="String" name="app_server_name" order="11" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">APP_SERVER_NAME</mapingcol>
+        </attr>
+        <attr code="ef477830-4801-0010-9434-b7393165699d" datatype="String" name="create_date" order="12" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="47497830-4801-0010-9434-b7393165699d" datatype="String" name="mon_flag" order="13" type="N" vdatatype="TYPE_CHAR">
+          <mapingcol length="1">MON_FLAG</mapingcol>
+        </attr>
+        <attr code="f74a7830-4801-0010-9434-b7393165699d" datatype="DateTime" name="acq_date" order="14" type="N" vdatatype="DATE">
+          <mapingcol length="8">ACQ_DATE</mapingcol>
+        </attr>
+        <attr code="684c7830-4801-0010-9434-b7393165699d" datatype="String" name="state" order="15" type="N" vdatatype="STATE">
+          <mapingcol length="8">STATE</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/loginfomgr/abo" name="ABGMonHostLog.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/loginfomgr/abo/impl" name="ABGMonHostLog.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/loginfomgr/abo/vo/impl" name="ABGMonHostLogValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/loginfomgr/abo/interfaces" name="IABGMonHostLogBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/loginfomgr/abo/interfaces" name="IABGMonHostLog.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/loginfomgr/abo/vo/interfaces" name="IABGMonHostLogValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/monitor/exeframe/loginfomgr/abo/bo" name="BOABGMonHostLog.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/loginfomgr/abo/dao/interfaces" name="IABGMonHostLogDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/loginfomgr/abo/dao/impl" name="ABGMonHostLogDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

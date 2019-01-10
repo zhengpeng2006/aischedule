@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="logmgr" name="BOAISchedTaskLogDTL" mainattr="SYSTEM_DOMAIN">
+    <mapingenty type="table">ABG_AI_SCHED_TASK_LOG_DTL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SYSTEM_DOMAIN" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SYSTEM_DOMAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUBSYSTEM_DOMAIN" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SUBSYSTEM_DOMAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APP_SERVER_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">APP_SERVER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_CODE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TASK_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_VERSION" maxlength="12" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TASK_VERSION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="JOB_ID" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">JOB_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_TYPE" maxlength="12" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LOG_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_ITEM" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TASK_ITEM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATOR" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OPERATOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_INFO" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OP_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">LOG_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EX_MSG" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EX_MSG</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

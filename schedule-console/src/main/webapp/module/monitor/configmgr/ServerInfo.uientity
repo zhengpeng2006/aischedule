@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="ServerInfo" desc="" dna-code="da19fd80-4701-0010-b254-a74a44328a96" full-name="module.monitor.configmgr.ServerInfo" kind="0" name="ServerInfo">
+  <uientity-version branch="" code="" desc="" name="ServerInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.ServerInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonServer" type="form" uiid="serverDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_serverCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_serverName"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_businessType"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_serverIp"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_serverPort"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_locator"/>
+      <area bo="java.lang.String" type="select" uiid="serverDetail_locatorType"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_midwareType"/>
+      <area bo="java.lang.String" type="select" uiid="serverDetail_tempType"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_sversion"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_remark"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_checkUrl"/>
+      <area bo="java.lang.String" type="datefield" uiid="serverDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_nodeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_serverId"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_startCmdId"/>
+      <area bo="java.lang.String" type="textfield" uiid="serverDetail_stopCmdId"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="ServerInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="ServerInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="ServerInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="ServerInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="btnSave" type="button"/>
+      <ui-event id="" name="btnCancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

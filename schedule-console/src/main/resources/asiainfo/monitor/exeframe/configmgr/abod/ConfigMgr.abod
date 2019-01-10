@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<abo-design attr-display="ConfigMgr" code="ConfigMgr" columns="">
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonHostConMode" name="AIMonHostConMode" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>11,249,163,27</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonHostConMode.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonHostUser" name="AIMonHostUser" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>15,292,160,28</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonHostUser.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonNode" name="AIMonNode" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>12,90,160,25</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonNode.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonServer" name="AIMonServer" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>12,126,160,28</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonServer.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonPhysicHost" name="AIMonPhysicHost" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>10,47,163,29</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonPhysicHost.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonMasterSlaveRel" name="AIMonMasterSlaveRel" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>16,205,160,28</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonMasterSlaveRel.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonConMode" name="AIMonConMode" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>11,332,160,32</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonConMode.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonGroup" name="AIMonGroup" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>9,9,160,28</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonGroup.abo</url>
+  </abo>
+  <abo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonGroupHostRel" name="AIMonGroupHostRel" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>14,167,160,27</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/AIMonGroupHostRel.abo</url>
+  </abo>
+  <joins/>
+</abo-design>

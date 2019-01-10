@@ -1,0 +1,44 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "total": 3,
+    "processTableItems": [
+      {
+        "serverCode": "coreSchedule01code",
+        "hostGroup": "调度南京",
+        "nodeNameStr": "调度执行01",
+        "hostName": "测试主机01(10.1.243.23)",
+        "hostId": "693",
+        "taskCode": "task01",
+        "processState": "运行中"
+      },
+       {
+        "serverCode": "coreSchedule02code",
+        "hostGroup": "调度南京",
+        "nodeNameStr": "调度执行02",
+        "hostName": "测试主机02(10.1.243.23)",
+        "hostId": "693",
+        "taskCode": "task02",
+        "processState": "运行中"
+      },
+       {
+        "serverCode": "coreSchedule03code",
+        "hostGroup": "调度南京",
+        "nodeNameStr": "调度执行03",
+        "hostName": "测试主机03(10.1.243.23)",
+        "hostId": "693",
+        "taskCode": "task03",
+        "processState": "运行中"
+      }
+    ]
+  }
+}

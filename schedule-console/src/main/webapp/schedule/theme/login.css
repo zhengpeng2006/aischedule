@@ -1,0 +1,115 @@
+@charset "utf-8";
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: normal;
+}
+html,
+body {
+	height: 100%;
+	color: #333333;
+	font-size: 12px;
+}
+.login-container{
+	height: 100%;
+	width: 100%;
+}
+.login-header{
+    height: 94px;
+    background: url(images/logo.png) 120px center no-repeat;
+}
+.login-panel{
+	height: 378px;
+	background: url(images/login-bg.png) no-repeat;
+}
+.login-core{
+	position: absolute;
+    border: 1px solid #fafafa;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 315px;
+	height: 260px;
+	top: 90px;
+    right: 100px;
+    background: #fafafa;
+    padding-top: 65px;
+    box-shadow: 5px 0px 10px #999999;
+}
+.login-core div {
+    height: 36px;
+    line-height: 36px;
+    white-space: nowrap;
+    margin-left: 35px;
+}
+.login-core p{
+	left: 35%;
+    color: #999999;
+}
+.login-core-input{
+	display: inline-block;
+    width: 230px;
+    height: 36px;
+    line-height: 36px;
+    margin: 10px 35px;
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.focused {
+	border-color: #3b9ddd;
+	box-shadow: 0 0 3px #75b9e6;
+}
+.text{
+	display: inline-block;
+    vertical-align: top;
+    width: 187px;
+    height: 23px;
+    line-height: 23px;
+    padding: 5px;
+    color: #333333;
+    border: none;
+    outline: none;
+    background: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.login-core a{
+	display: inline-block;
+    width: 240px;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 0 1px 0 #999999;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #fba500;
+    color: #ffffff;
+}
+.login-core i{
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    margin: -6px 0px 0px 7px;
+}
+.icon-user-grew{ 
+	background: url(images/icon-user-grew.png) center no-repeat;
+}
+.icon-password-grew{ 
+	background: url(images/icon-password-grew.png) center no-repeat;
+}
+.icon-user-blue{ 
+	background: url(images/icon-user-blue.png) center no-repeat;
+}
+.icon-password-blue{ 
+	background: url(images/icon-password-blue.png) center no-repeat;
+}
+.login-message{
+	color: #e4393c;
+}

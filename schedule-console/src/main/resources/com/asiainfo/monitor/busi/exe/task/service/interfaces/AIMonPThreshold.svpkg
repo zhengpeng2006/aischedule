@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="AIMonPThreshold" desc="" dna-code="91728bae-4701-0010-b59a-49dc1221d37a" implementation-class="com.asiainfo.monitor.busi.exe.task.service.impl.AIMonPThresholdSVImpl" interface-class="com.asiainfo.monitor.busi.exe.task.service.interfaces.IAIMonPThresholdSV" name="AIMonPThreshold" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="IAIMonPThresholdSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/impl" name="AIMonPThresholdSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="AIMonPThreshold.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonPThresholdSV_getThresholdByExpr" desc="" dna-code="1b8d8bae-4701-0010-b59a-49dc1221d37a" name="getThresholdByExpr" opt-flag="Y" serv-func="getThresholdByExpr" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="expr" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="startNum" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="endNum" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPThresholdSV_getThresholdCount" desc="" dna-code="238d8bae-4701-0010-b59a-49dc1221d37a" name="getThresholdCount" opt-flag="Y" serv-func="getThresholdCount" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="expr" param-kind="java"/>
+        </param-list>
+        <return-param datatype="int" param-kind="java"/>
+      </service>
+      <service code="IAIMonPThresholdSV_getBeanById" desc="" dna-code="258d8bae-4701-0010-b59a-49dc1221d37a" name="getBeanById" opt-flag="Y" serv-func="getBeanById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="thresholdId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPThresholdSV_saveOrUpdate" desc="" dna-code="268d8bae-4701-0010-b59a-49dc1221d37a" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPThresholdSV_saveOrUpdate" desc="" dna-code="278d8bae-4701-0010-b59a-49dc1221d37a" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPThresholdSV_savePThresholdByGuide" desc="" dna-code="288d8bae-4701-0010-b59a-49dc1221d37a" name="savePThresholdByGuide" opt-flag="Y" serv-func="savePThresholdByGuide" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.tools.model.ThresholdModel" name="model" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPThresholdSV_delete" desc="" dna-code="298d8bae-4701-0010-b59a-49dc1221d37a" name="delete" opt-flag="Y" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="thresholdId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPThresholdSV_getThresholdByExprAndName" desc="" dna-code="2a8d8bae-4701-0010-b59a-49dc1221d37a" name="getThresholdByExprAndName" opt-flag="Y" serv-func="getThresholdByExprAndName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="expr" param-kind="java"/>
+          <param datatype="java.lang.String" name="name" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="startNum" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="endNum" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold[]" param-kind="bo"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

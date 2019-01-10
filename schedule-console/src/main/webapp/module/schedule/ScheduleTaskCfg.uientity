@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="ScheduleTaskCfg" desc="" dna-code="ad33eb8b-4801-0010-b41e-61ad1d194e8f" full-name="module.schedule.ScheduleTaskCfg" kind="0" name="ScheduleTaskCfg">
+  <uientity-version branch="" code="" desc="" name="ScheduleTaskCfg" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.ScheduleTaskCfg</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="select" uiid="queryForm_taskGroup"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_taskName"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_taskCode"/>
+      <area bo="" type="form" uiid="taskInfoData"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_taskCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_taskName"/>
+      <area bo="java.lang.String" type="select" uiid="taskInfoData_taskGroup"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_taskDesc"/>
+      <area bo="java.lang.String" type="select" uiid="taskInfoData_taskType"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_startTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_endTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_scanIntervalTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_scanNum"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_executeNum"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_idleSleepTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_threadNum"/>
+      <area bo="java.lang.String" type="select" uiid="taskInfoData_faultProcessMethod"/>
+      <area bo="java.lang.String" type="select" uiid="taskInfoData_splitRegion"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_priority"/>
+      <area bo="java.lang.String" type="select" uiid="taskInfoData_isLog"/>
+      <area bo="java.lang.String" type="textarea" uiid="taskInfoData_items"/>
+      <area bo="java.lang.String" type="textarea" uiid="taskInfoData_processClass"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_taskGroupStr"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskInfoData_stateRec"/>
+      <area bo="" type="form" uiid="taskDtlView"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_taskCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_taskName"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_taskDesc"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_taskType"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_startTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_endTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_scanIntervalTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_scanNum"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_executeNum"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_idleSleepTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_threadNum"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_faultProcessMethod"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_splitRegion"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_createTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_priority"/>
+      <area bo="java.lang.String" type="textfield" uiid="taskDtlView_isLog"/>
+      <area bo="java.lang.String" type="textarea" uiid="taskDtlView_processClass"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/schedule" name="ScheduleTaskCfg.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="ScheduleTaskCfg.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="ScheduleTaskCfg.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="ScheduleTaskCfg.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="query" type="button"/>
+      <ui-event id="" name="taskDetail" type="button"/>
+      <ui-event id="" name="groupCfg" type="button"/>
+      <ui-event id="" name="paramCfg" type="button"/>
+      <ui-event id="" name="splitCfg" type="button"/>
+      <ui-event id="" name="tfCfg" type="button"/>
+      <ui-event id="" name="enable" type="button"/>
+      <ui-event id="" name="deleteTask" type="button"/>
+      <ui-event id="" name="updateTask" type="button"/>
+      <ui-event id="" name="addTask" type="button"/>
+      <ui-event id="" name="taskSave" type="button"/>
+      <ui-event id="" name="taskCancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

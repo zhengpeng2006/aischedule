@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="advpay" name="BOUpgMonitorData" mainattr="SEQ_ID">
+    <mapingenty type="table">{UPG_MONITOR_DATA}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SEQ_ID" maxlength="12" datatype="Long" type="PK" remark="序列号">
+        <mapingcol datatype="NUMBER">SEQ_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MONITOR_ID" maxlength="6" datatype="Integer" type="COL" remark="对象编号">
+        <mapingcol datatype="NUMBER">MONITOR_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIM_VALUE1" maxlength="64" datatype="String" type="COL" remark="维度1">
+        <mapingcol datatype="VARCHAR2">DIM_VALUE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIM_VALUE2" maxlength="64" datatype="String" type="COL" remark="维度2">
+        <mapingcol datatype="VARCHAR2">DIM_VALUE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIM_VALUE3" maxlength="64" datatype="String" type="COL" remark="维度3">
+        <mapingcol datatype="VARCHAR2">DIM_VALUE3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIM_VALUE4" maxlength="64" datatype="String" type="COL" remark="维度4">
+        <mapingcol datatype="VARCHAR2">DIM_VALUE4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIM_VALUE5" maxlength="64" datatype="String" type="COL" remark="维度5">
+        <mapingcol datatype="VARCHAR2">DIM_VALUE5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIM_VALUE6" maxlength="64" datatype="String" type="COL" remark="维度6">
+        <mapingcol datatype="VARCHAR2">DIM_VALUE6</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIM_VALUE7" maxlength="64" datatype="String" type="COL" remark="维度7">
+        <mapingcol datatype="VARCHAR2">DIM_VALUE7</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIM_VALUE8" maxlength="64" datatype="String" type="COL" remark="维度8">
+        <mapingcol datatype="VARCHAR2">DIM_VALUE8</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCA_VALUE1" maxlength="64" datatype="String" type="COL" remark="标量1">
+        <mapingcol datatype="VARCHAR2">SCA_VALUE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCA_VALUE2" maxlength="64" datatype="String" type="COL" remark="标量2">
+        <mapingcol datatype="VARCHAR2">SCA_VALUE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCA_VALUE3" maxlength="64" datatype="String" type="COL" remark="标量3">
+        <mapingcol datatype="VARCHAR2">SCA_VALUE3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCA_VALUE4" maxlength="64" datatype="String" type="COL" remark="标量4">
+        <mapingcol datatype="VARCHAR2">SCA_VALUE4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCA_VALUE5" maxlength="64" datatype="String" type="COL" remark="标量5">
+        <mapingcol datatype="VARCHAR2">SCA_VALUE5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCA_VALUE6" maxlength="64" datatype="String" type="COL" remark="标量6">
+        <mapingcol datatype="VARCHAR2">SCA_VALUE6</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCA_VALUE7" maxlength="64" datatype="String" type="COL" remark="标量7">
+        <mapingcol datatype="VARCHAR2">SCA_VALUE7</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCA_VALUE8" maxlength="64" datatype="String" type="COL" remark="标量8">
+        <mapingcol datatype="VARCHAR2">SCA_VALUE8</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建时间">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="操作时间">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态：U：正常；E：删除">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

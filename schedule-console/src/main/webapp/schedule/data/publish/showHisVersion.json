@@ -1,0 +1,53 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "total": 2,
+    "hisVersionTableItems": [
+      {
+        "contacts": "dpk",
+        "createTime": "2016-09-06 16:29:28",
+        "deployStrategyId": 207,
+        "externalVersionId": null,
+        "fileList": "2 3",
+        "operateType": "0",
+        "operatorId": null,
+        "packagePath": "/home/schedule/temp/116.tar.gz",
+        "parentVersionId": 115,
+        "remarks": "备注",
+        "resolvedProblems": "1",
+        "setName": "",
+        "state": "V",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployVersion",
+        "versionId": 116
+      },
+      {
+        "contacts": "dpk",
+        "createTime": "2016-09-06 17:10:29",
+        "deployStrategyId": 207,
+        "externalVersionId": null,
+        "fileList": "23",
+        "operateType": "0",
+        "operatorId": null,
+        "packagePath": "/home/schedule/temp/117.tar.gz",
+        "parentVersionId": 116,
+        "remarks": "2",
+        "resolvedProblems": "chongxin",
+        "setName": "",
+        "state": "V",
+        "type": null,
+        "typeName": "com.asiainfo.deploy.common.bo.BODeployVersion",
+        "versionId": 117
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="CacheInfo" desc="" dna-code="08b99efe-4501-0010-a4a7-cd238c6a64a0" full-name="monitor.monitorBase.CacheInfo" kind="0" name="CacheInfo">
+  <uientity-version branch="" code="" desc="" name="CacheInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.monitorBase.view.CacheInfo</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/monitorBase" name="CacheInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="CacheInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="CacheInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/monitorBase/view" name="CacheInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

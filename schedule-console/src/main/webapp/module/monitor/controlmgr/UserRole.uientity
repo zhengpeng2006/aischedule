@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/controlmgr/ControlMgr.cmpt" code="UserRole" desc="用户角色关系" dna-code="1581665f-4601-0010-8d65-c33b6df03922" full-name="monitor.controlmgr.UserRole" kind="0" name="UserRole">
+  <uientity-version branch="" code="" desc="" name="UserRole" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.controlmgr.view.UserRole</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="qryform_roleCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="qryform_roleName"/>
+      <area bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRole" type="form" uiid="userRoleDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_roldCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_roleName"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_domainId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_notes"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_doneDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_opId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="userRoleDetail_userRoleId"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/controlmgr" name="UserRole.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/controlmgr" name="UserRole.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/controlmgr" name="UserRole.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/controlmgr/view" name="UserRole.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="btn_qry" type="button"/>
+      <ui-event id="" name="savaBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onclick" element-id="btn_qry">{descRow:'btn_qryOnclick',nameRow:'btn_qryOnclick'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAIMonUserRoleSV_getUserRoleByCond" data-uiid="qryform" desc="" dna-code="b13351f9-4501-0010-9646-9bbd8b625d8b" element-event="onclick" element-id="btn_qry" is-template="false" method="getUserRoleByCond" name="" on-fail="" on-success="" refresh-uiid="userRoleTab" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserRole.svpkg" type="condform">
+        <ui-parameter code="roleCode" param-kind="java" scope="qryform" type="java.lang.String" uiparam-type="FormEle" uiparam-value="roleCode"/>
+        <ui-parameter code="roleName" param-kind="java" scope="qryform" type="java.lang.String" uiparam-type="FormEle" uiparam-value="roleName"/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

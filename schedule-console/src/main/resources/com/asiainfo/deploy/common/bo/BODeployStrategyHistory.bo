@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BODeployStrategyHistory" mainattr="DEPLOY_STRATEGY_HISTORY_ID">
+    <mapingenty type="table">H_AI_DEPLOY_STRATEGY</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="DEPLOY_STRATEGY_HISTORY_ID" maxlength="12" datatype="Long" type="PK" remark="??????????????????" order="18" notNull="N">
+        <mapingcol datatype="NUMBER">DEPLOY_STRATEGY_HISTORY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HISTORY_CREATE_TIME" maxlength="20" datatype="DateTime" type="COL" order="8" notNull="N">
+        <mapingcol datatype="DATE">HISTORY_CREATE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPLOY_STRATEGY_ID" maxlength="12" datatype="Long" type="COL" remark="??????????????" order="7" notNull="N">
+        <mapingcol datatype="NUMBER">DEPLOY_STRATEGY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPLOY_STRATEGY_NAME" maxlength="128" datatype="String" type="COL" remark="????????????" order="6" notNull="N">
+        <mapingcol datatype="VARCHAR2">DEPLOY_STRATEGY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLIENT_HOME_PATH" maxlength="256" datatype="String" type="COL" remark="??????????????????????" order="19" notNull="N">
+        <mapingcol datatype="VARCHAR2">CLIENT_HOME_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLIENT_BIN_PATH" maxlength="256" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol datatype="VARCHAR2">CLIENT_BIN_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLIENT_SBIN_PATH" maxlength="256" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol datatype="VARCHAR2">CLIENT_SBIN_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLIENT_LOG_PATH" maxlength="256" datatype="String" type="COL" order="21" notNull="N">
+        <mapingcol datatype="VARCHAR2">CLIENT_LOG_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVER_PACKAGE_PATH" maxlength="256" datatype="String" type="COL" remark="?????????????????????? ????????????" order="12" notNull="N">
+        <mapingcol datatype="VARCHAR2">SERVER_PACKAGE_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HISTORY_PACKAGE_NUM" maxlength="1" datatype="Integer" type="COL" remark="??????????????????" order="9" notNull="N">
+        <mapingcol datatype="NUMBER">HISTORY_PACKAGE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FTP_HOST_IP" maxlength="128" datatype="String" type="COL" remark="????????????????ip" order="11" notNull="N">
+        <mapingcol datatype="VARCHAR2">FTP_HOST_IP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FTP_HOST_PORT" maxlength="5" datatype="Integer" type="COL" remark="??????????????????????" order="1" notNull="N">
+        <mapingcol datatype="NUMBER">FTP_HOST_PORT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FTP_PROTOCOL" maxlength="1" datatype="String" type="COL" remark="???????????????????????????? ??????????SFTP" order="20" notNull="N">
+        <mapingcol datatype="CHAR">FTP_PROTOCOL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FTP_PACKAGE_PATH" maxlength="512" datatype="String" type="COL" remark="???????????????? ????????????" order="3" notNull="N">
+        <mapingcol datatype="VARCHAR2">FTP_PACKAGE_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FTP_USER_NAME" maxlength="256" datatype="String" type="COL" remark="??????????????????" order="2" notNull="N">
+        <mapingcol datatype="VARCHAR2">FTP_USER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FTP_PASSWORD" maxlength="256" datatype="String" type="COL" remark="????????????????" order="0" notNull="N">
+        <mapingcol datatype="VARCHAR2">FTP_PASSWORD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INSTALL_RULE" maxlength="1024" datatype="String" type="COL" remark="??????????????????id" order="16" notNull="N">
+        <mapingcol datatype="VARCHAR2">INSTALL_RULE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMPLATE_ID" maxlength="12" datatype="Long" type="COL" remark="??????????????????id" order="10" notNull="N">
+        <mapingcol datatype="NUMBER">TEMPLATE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_TIME" maxlength="20" datatype="DateTime" type="COL" remark="????????" order="14" notNull="N">
+        <mapingcol datatype="DATE">CREATE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MODIFY_TIME" maxlength="20" datatype="DateTime" type="COL" remark="????????" order="15" notNull="N">
+        <mapingcol datatype="DATE">MODIFY_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATOR_ID" maxlength="12" datatype="Long" type="COL" remark="??????" order="17" notNull="N">
+        <mapingcol datatype="NUMBER">OPERATOR_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="512" datatype="String" type="COL" remark="????" order="13" notNull="N">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOP_TEMPLATE_ID" maxlength="12" datatype="Long" type="COL" remark="??????????????????id" order="22" notNull="N">
+        <mapingcol datatype="NUMBER">STOP_TEMPLATE_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

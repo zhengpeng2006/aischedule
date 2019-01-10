@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="TfCfg" desc="" dna-code="30d3fefd-4801-0010-a118-732c1bf50bb0" full-name="module.schedule.TfCfg" kind="0" name="TfCfg">
+  <uientity-version branch="" code="" desc="" name="TfCfg" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.TfCfg</action-class>
+    <data-areas>
+      <area bo="" type="form" uiid="tfInfo"/>
+      <area bo="java.lang.String" type="textfield" uiid="tfInfo_taskCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="tfInfo_srcDbCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="tfInfo_srcTableName"/>
+      <area bo="java.lang.String" type="textfield" uiid="tfInfo_pkCol"/>
+      <area bo="java.lang.String" type="textfield" uiid="tfInfo_remark"/>
+      <area bo="java.lang.String" type="textarea" uiid="tfInfo_querySql"/>
+      <area bo="java.lang.String" type="textarea" uiid="tfInfo_proSql"/>
+      <area bo="java.lang.String" type="textarea" uiid="tfInfo_querySql"/>
+      <area bo="java.lang.String" type="textarea" uiid="tfInfo_errSql"/>
+      <area bo="java.lang.String" type="textarea" uiid="tfInfo_conutSql"/>
+      <area bo="" type="form" uiid="colInfo"/>
+      <area bo="java.lang.String" type="textfield" uiid="colInfo_destTableName"/>
+      <area bo="java.lang.String" type="textfield" uiid="colInfo_destDbName"/>
+      <area bo="java.lang.String" type="select" uiid="colInfo_tfType"/>
+      <area bo="java.lang.String" type="textfield" uiid="colInfo_remark"/>
+      <area bo="java.lang.String" type="textarea" uiid="colInfo_querySql"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/schedule" name="TfCfg.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="TfCfg.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="TfCfg.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="TfCfg.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="saveOrUpdate" type="button"/>
+      <ui-event id="" name="colCfg" type="button"/>
+      <ui-event id="" name="delete" type="button"/>
+      <ui-event id="" name="add" type="button"/>
+      <ui-event id="" name="saveColInfo" type="button"/>
+      <ui-event id="" name="cancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

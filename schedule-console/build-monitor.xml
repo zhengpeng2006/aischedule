@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" basedir="." name="monitor">
+	<!--定义lib -->
+	<path id="libpath">
+		<fileset dir="."  includes="**/*.jar"/>
+	</path>
+ 
+	<target name="init">
+		<delete dir="${basedir}/tmp"/>
+		<mkdir dir="${basedir}/tmp/classes"/>
+	</target>
+	
+	<target name="compile" depends="init" description="compile">
+		<javac srcdir="${basedir}/src" destdir="${basedir}/tmp/classes"  optimize="on"  debug="on" debuglevel="lines,vars,source" fork="true" memoryMaximumSize="512m" encoding="utf-8">
+				<classpath refid="libpath"></classpath>
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile">
+	  <copy todir="${basedir}/tmp/classes">
+      <fileset dir="${basedir}/config">
+         <include name="**/*.bo" />
+      </fileset>
+    </copy>
+		<jar basedir="${basedir}/tmp/classes" jarfile="${basedir}/dest/monitor.jar" compress="false"/>
+	</target>
+</project>

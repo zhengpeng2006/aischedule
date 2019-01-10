@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="TaskParamCfg" desc="" dna-code="7901b5f4-4801-0010-98d1-89276bad3e93" full-name="module.schedule.TaskParamCfg" kind="0" name="TaskParamCfg">
+  <uientity-version branch="" code="" desc="" name="TaskParamCfg" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.TaskParamCfg</action-class>
+    <data-areas>
+      <area bo="" type="form" uiid="paramInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="paramInput_paramKey"/>
+      <area bo="java.lang.String" type="textarea" uiid="paramInput_paramValue"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/schedule" name="TaskParamCfg.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="TaskParamCfg.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="TaskParamCfg.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="TaskParamCfg.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="addParam" type="button"/>
+      <ui-event id="" name="deleteParam" type="button"/>
+      <ui-event id="" name="saveParams" type="button"/>
+      <ui-event id="" name="cancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

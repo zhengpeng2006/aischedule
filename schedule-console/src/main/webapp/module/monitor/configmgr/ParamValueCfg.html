@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/ParamValueCfg.js" type="text/javascript"></script>
+
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_title">
+				<div class="text">任务参数配置</div>
+			</div>
+
+			<div jwcid="paramValues@Part" uiid="paramValues" id="paramValues"
+				element="div" type="table"
+				objName="paramValuesItems,paramValuesCount"
+				bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues"
+				uitype="table" editable="true">
+				<div class="c_scroll" style="height: 242px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="paramValuesTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="paramValuesRowIndex" style="display: none">RowIndex</th>
+									<th col="VId" style="display: none">标识</th>
+									<th col="paramCode" colcss="e_left" class="wrap">参数码</th>
+									<th col="paramDesc" colcss="e_left" class="wrap">描述</th>
+									<th col="paramValue" colcss="e_left" class="wrap">参数值</th>
+									<th col="sortId" colcss="e_left" class="wrap">顺序</th>
+									<th col="remarks" style="display: none">备注</th>
+									<th col="registeId" style="display: none">寄主标识</th>
+									<th col="registeType" style="display: none">寄主类型</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:paramValuesItems"
+									value="ognl:paramValuesItem" index="ognl:paramValuesRowIndex">
+									<tr onclick="ParamValueCfgJS.updateInfo($(this));">
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:paramValuesRowIndex+1"></span></td>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:paramValuesItem.VId" name="VId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:paramValuesItem.paramCode" name="paramCode"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:paramValuesItem.paramDesc" name="paramDesc"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:paramValuesItem.paramValue" name="paramValue"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:paramValuesItem.sortId" name="sortId"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:paramValuesItem.remarks" name="remarks"></span></td>
+
+
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:paramValuesItem.registeId" name="registeId"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:paramValuesItem.registeType" name="registeType"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- 输入区 -->
+
+			<div class="c_form c_form-col-2 c_form-label-5"
+				jwcid="paramInput@Part" uiid="paramInput" id="paramInput"
+				type="form" objName="paramInput"
+				bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues"
+				uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li" style="display: none"><span class="label">标识:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="VId"
+									value="ognl:paramInput.VId" desc="标识" uiid="paramInput_VId" /></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">参数码:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="paramCode" value="ognl:paramInput.paramCode"
+									desc="参数码" uiid="paramInput_paramCode" nullable="no"/></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">参数值:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="paramValue"
+									value="ognl:paramInput.paramValue" desc="参数值"
+									uiid="paramInput_paramValue" nullable="no"/></span>
+						</span></span></li>
+					<li class="li"><span class="label">描述:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="paramDesc"
+									value="ognl:paramInput.paramDesc" desc="描述"
+									uiid="paramInput_paramDesc" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">顺序:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="sortId"
+									value="ognl:paramInput.sortId" desc="顺序"
+									uiid="paramInput_sortId" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">备注:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="remarks"
+									value="ognl:paramInput.remarks" desc="备注"
+									uiid="paramInput_remarks" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">参数标识:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="paramId"
+									value="ognl:paramInput.paramId" desc="参数标识"
+									uiid="paramInput_paramId" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">寄主标识:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="registeId"
+									value="ognl:paramInput.registeId" desc="寄主标识"
+									uiid="paramInput_registeId" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">寄主类型:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="registeType"
+									value="ognl:paramInput.registeType" desc="寄主类型"
+									uiid="paramInput_registeType" /></span>
+						</span></span></li>
+				</ul>
+				<div class="submitPlace"></div>
+			</div>
+			<div class="c_submit" uitype="btngroup" editable="true" id="editDiv">
+				<button onclick="ParamValueCfgJS.addInfo('add');" name="add"
+					class="e_button-form">
+					<span>新增</span>
+				</button>
+				<button onclick="ParamValueCfgJS.addInfo('update');" name="update"
+					class="e_button-form">
+					<span>修改</span>
+				</button>
+				<button onclick="ParamValueCfgJS.deleteOnclick();" name="delete"
+					class="e_button-form">
+					<span>删除</span>
+				</button>
+			</div>
+			<div class="c_submit" uitype="btngroup" editable="true"
+				style="display: none" id="saveDiv">
+				<button onclick="ParamValueCfgJS.infoSave();" name="paramSave"
+					class="e_button-form">
+					<span>保存</span>
+				</button>
+				<button onclick="ParamValueCfgJS.cancel();" name="cancel"
+					class="e_button-form">
+					<span>取消</span>
+				</button>
+			</div>
+			<!-- end -->
+		</div>
+	</div>
+</body>
+</html>

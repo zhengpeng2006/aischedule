@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/deploy/js/TaskOperation.js"
+	type="text/javascript"></script>
+<script src="component/widget/fusion/Gallery/assets/ui/js/json2.js" type="text/javascript"></script>
+	
+</head>
+
+<body jwcid="@Body">
+	<!-- start -->
+	<div class="c_box">
+	<div jwcid="operationTab@Tabset" name="operationTab" switchAction=""
+		uitype="tabset" editable="true">
+			<div jwcid="@TabsetContent" title="业务维度">
+			<!-- 任务编码查询开始 -->
+				<div class="c_form c_form-col-3 c_form-label-4 c_form-inline" uiid="taskQuery"
+					id="taskQuery" type="condForm" objName="taskQuery"
+					uitype="condform" editable="true">
+					<ul class="ul">
+						<li class="li"><span class="label">任务分组:</span> <span
+							class="e_elements"><span class="e_select"> <span><span><select
+											jwcid="@Select" name="taskGroup"
+											value="" desc="任务分组"
+											source="ognl:getTaskGroupList()" changeValue="true"
+											addDefault="true" defaultText="请选择任务分组"
+											uiid="taskQuery_taskGroup" id="taskGroup"></select></span></span>
+							</span></span></li>
+						<li class="li"><span class="label">任务编码:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="taskCode"
+										value="ognl:taskQuery.taskCode" desc="任务编码"
+										uiid="taskQuery_taskCode" /></span>
+							</span></span></li>
+					</ul>
+					<div class="submitPlace"></div>
+					<div class="submit">
+						<button onclick="TaskOperationJS.qryTaskInfos()" template_type="operate" type="button"
+							name="queryTask" class="e_button-form" formId="taskQuery">
+							<span>查询</span>
+						</button>
+					</div>
+				</div>
+				<!-- 任务编码查询开始 -->
+				<!-- 管理任务列表开始 -->
+				<div class="c_box">
+					<div class="c_title">
+						<div class="text">任务列表</div>
+					</div>
+					<div jwcid="taskInfos@Part" uiid="taskInfos" id="taskInfos"
+						element="div" type="table" objName="taskInfosItems,taskInfosCount"
+						bo="" uitype="table" editable="true">
+						<div class="c_scroll" style="height: 205px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="taskInfosTable" scroll="true">
+									<thead>
+										<tr>
+											<th col="taskInfosRowIndex" style="display: none">RowIndex</th>
+											<th class="desc" colcss="e_left"
+												onclick="TaskOperationJS.sort(2,this)"><span>任务编码</span></th>
+											<th col="taskName" colcss="e_left"  class="desc" onclick="TaskOperationJS.sort(3,this)"><span>任务名称</span></th>
+											<th col="taskName" colcss="e_left"  class="desc" onclick="TaskOperationJS.sort(4,this)"><span>任务类型</span></th>
+											<th col="curVersion" colcss="e_left">当前版本号</th>
+											<th col="taskState" colcss="e_left" colspan="2" class="desc" onclick="TaskOperationJS.sort(6,this)"><span>调度状态</span></th>
+											<th col="jobId" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(8,this)"><span>流水号</span></th>
+											<th col="startTime" colcss="e_left" >开始时间</th>
+											<th col="endTime" colcss="e_left">结束时间</th>
+											<th col="nextSchedTime" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(11,this)"><span>计划执行开始时间</span></th>
+											<th col="nextSchedEndTime" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(12,this)"><span>计划执行结束时间</span></th>
+											<th col="createTime" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(13,this)"><span>创建时间</span></th>
+											<th col="curManagerId" colcss="e_left">当前调度ID</th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:taskInfosItems"
+											value="ognl:taskInfosItem" index="ognl:taskInfosRowIndex">
+											<tr onclick="TaskOperationJS.showDetails($(this))">
+												<td style="display: none"><span jwcid="@Insert"
+													value="ognl:taskInfosRowIndex+1"></span></td>
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.taskCode" name="taskCode"></span></td>
+												
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.taskName" name="taskName"></span></td>
+													
+											    <td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.taskType" name="taskType"></span></td>
+												
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.curVersion" name="curVersion"></span></td>
+													
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.taskState" name="taskState">
+												</span></td>
+												<td class="e_left">
+													<div jwcid="@Conditional"
+														condition="ognl:taskInfosItem.flag == 1">
+														<button onclick="TaskOperationJS.hangOn($(this))"
+															name="taskStop" class="e_button-form"
+															style="float: right">
+															<span>挂起</span>
+														</button>
+													</div>
+													<div jwcid="@Conditional"
+														condition="ognl:taskInfosItem.flag == 2">
+														<button onclick="TaskOperationJS.showParam($(this))"
+															name="taskStart" class="e_button-form"
+															style="float: right">
+															<span>启动</span>
+													</div></td>
+														
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.jobId" name="jobId"></span></td>
+													
+												<td class="e_left "><span jwcid="@Insert"
+													value="ognl:taskInfosItem.startTime" name="startTime"></span></td>
+													
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.endTime" name="endTime"></span></td>
+
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.nextSchedTime"
+													name="nextSchedTime"></span></td>
+
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.nextSchedEndTime"
+													name="nextSchedEndTime"></span></td>
+
+												<td class="e_left"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.createTime" name="createTime"></span>
+												</td>
+												
+												<td class="e_left" onclick="TaskOperationJS.showServerInfo($(this))"><span jwcid="@Insert"
+													value="ognl:taskInfosItem.curManagerId" name="curManagerId"></span>
+												</td>
+											</tr>
+										</span>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					</div>
+				<!-- 管理任务列表结束 -->
+			</div>
+			<div jwcid="@TabsetContent" title="主机维度">
+			<!-- 任务进程查询开始 -->
+			<div class="c_box">
+				<div class="c_form c_form-col-4 c_form-label-4 c_form-inline"
+					uiid="queryFORM" id="queryFORM" type="condForm" objName="queryFORM"
+					uitype="condform" editable="true">
+					<ul class="ul">
+						<li class="li"><span class="label">主机集群:</span> <span
+							class="e_elements"><span class="e_select"> <span><span><select
+											jwcid="@Select" name="hostGroup"
+											value="ognl:queryFORM.hostGroup" desc="主机集群" source="ognl:getHostGroupList()"
+											changeValue="true" addDefault="true" defaultText="请选择主机集群" onchange="TaskOperationJS.getHost($(this))"
+											uiid="queryFORM_hostGroup" id="param_hostGroup"></select></span></span>
+							</span></span></li>
+							<li class="li"><span class="label">主机:</span> <span
+							class="e_elements"><span class="e_select"> <span><span><select
+											jwcid="@Select" name="hostId"
+											value="ognl:queryFORM.hostId" desc="主机" source=""
+											changeValue="true" addDefault="true" defaultText="请选择主机"
+											uiid="queryFORM_hostId" id="param_hostId"></select></span></span>
+							</span></span></li>
+						<li class="li"><span class="label">应用编码:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="serverCode"
+										value="ognl:queryFORM.serverCode" desc="应用编码"
+										uiid="queryFORM_serverCode" id="param_serverCode"/></span>
+							</span></span></li>
+					</ul>
+					<div class="submitPlace"></div>
+					<div class="submit">
+						<button onclick="TaskOperationJS.qryPro()" template_type="operate" type="button"
+							name="query" class="e_button-form" formId="queryFORM">
+							<span>查询</span>
+						</button>
+					</div>
+				</div>
+				<!-- 任务进程查询结束 -->
+				<!-- 任务进程列表开始 -->
+				<div class="c_title">
+					<div class="text">进程列表</div>
+				</div>
+				<div jwcid="taskProcesses@Part" uiid="taskProcesses"
+					id="taskProcesses" element="div" type="table"
+					objName="taskProcessesItems,taskProcessesCount" bo=""
+					uitype="table" editable="true">
+					<div class="c_scroll" style="height:205px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="taskProcessesTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="taskServersRowIndex" style="display: none">RowIndex</th>
+										<th col="serverId" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(2,this)"><span>应用编码</span></th>
+										<th col="hostName" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(3,this)"><span>主机名</span></th>
+										<th col="pid" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(4,this)"><span>PID</span></th>
+										<th col="registTime" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(5,this)"><span>注册时间</span></th>
+										<th col="heartbeatTime" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(6,this)"><span>心跳时间</th>
+										<th col="heartbeatInfo" colcss="e_left" class="wrap">心跳信息</th>
+										<th col="serverState" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(8,this)"><span>服务状态</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<span jwcid="@Foreach" source="ognl:taskProcessesItems"
+										value="ognl:taskProcessesItem"
+										index="ognl:taskProcessesRowIndex">
+										<tr onclick="TaskOperationJS.showTaskPros($(this));">
+											<td style="display: none"><span jwcid="@Insert"
+												value="ognl:taskProcessesRowIndex+1"></span></td>
+										
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskProcessesItem.serverId" name="serverId"></span>
+											</td>
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskProcessesItem.hostName" name="hostName"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskProcessesItem.pid" name="pid"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskProcessesItem.registTime" name="registTime"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskProcessesItem.heartbeatTime"
+												name="heartbeatTime"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskProcessesItem.heartbeatInfo"
+												name="heartbeatInfo"></span></td>
+												
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:taskProcessesItem.serverState"
+												name="serverState"></span></td>
+												
+											<!--  td class="e_left wrap">
+												<div jwcid="@Conditional"
+													condition="ognl:taskProcessesItem.flag == 1">
+													<button onclick="TaskOperationJS.hangOnServer($(this))"
+														name="serverStop" class="e_button-form" style="float: right">
+														<span>挂起</span>
+													</button>
+												</div>
+												<div jwcid="@Conditional"
+													condition="ognl:taskProcessesItem.flag == 2">
+													<button onclick="TaskOperationJS.resumeServer($(this))"
+														name="serverStart" class="e_button-form"
+														style="float: right">
+														<span>恢复</span>
+												</div>
+											</td-->
+
+										</tr>
+									</span>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 任务进程列表结束 -->
+		</div>
+		
+		
+	</div>
+</div>
+<!-- 执行详情列表开始 -->
+<div class="c_box">
+					<div class="c_title">
+						<div class="text">执行详情</div>
+					</div>
+					<div jwcid="taskBaseLogs@Part" uiid="taskBaseLogs"
+						id="taskBaseLogs" element="div" type="table"
+						objName="taskBaseLogsItems,taskBaseLogsCount"
+						bo="" uitype="table"
+						editable="true">
+						<div class="c_scroll" style="height: 190px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="taskBaseLogsTable" scroll="true">
+									<thead>
+										<tr>
+											<th col="taskBaseLogsRowIndex" style="display: none">RowIndex</th>
+											<th col="taskCode" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(2,this)"><span>任务编码</span></th>
+											<th col="taskItemId" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(3,this)"><span>拆分项</span></th>
+											<th style="display:none">任务流水号</th>
+											<th col="itemJobId" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(5,this)"><span>拆分项流水号</span></th>
+											<th col="serverId" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(6,this)"><span>应用编码</span></th>
+											<th col="priority" colcss="e_left" class="desc" onclick="TaskOperationJS.sort(7,this)"><span>优先级</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:taskBaseLogsItems"
+											value="ognl:taskBaseLogsItem"
+											index="ognl:taskBaseLogsRowIndex">
+											<tr>
+												<td style="display: none"><span jwcid="@Insert"
+													value="ognl:taskBaseLogsRowIndex+1"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:taskBaseLogsItem.taskCode" name="taskCode"></span>
+												</td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:taskBaseLogsItem.taskItemId" name="taskItemId"></span>
+												</td>
+
+												<td style="display:none"><span jwcid="@Insert"
+													value="ognl:taskBaseLogsItem.taskJobId"
+													name="taskJobId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:taskBaseLogsItem.itemJobId"
+													name="itemJobId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:taskBaseLogsItem.serverId" name="serverId"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:taskBaseLogsItem.priority" name="priority"></span>
+												</td>
+											</tr>
+										</span>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+	<!--执行详情列表结束  -->
+	<!-- 任务参数显开始 -->
+	<div id="taskParamsDiv" style="display: none">
+	<div jwcid="taskParams@Part" uiid="taskParams" id="taskParams"
+				element="div" type="table" objName="taskParamsItems,taskParamsCount"
+				bo="" uitype="table" editable="true">
+				<div class="c_scroll" style="height: 450px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="taskParamsTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="taskParamsRowIndex" style="display: none">RowIndex</th>
+									<th col="taskCode" colcss="e_left" class="wrap">任务编码</th>
+									<th col="paramKey" colcss="e_left" class="wrap">参数名</th>
+									<th col="paramValue" colcss="e_left" class="wrap">参数值</th>
+									<th col="paramDesc" colcss="e_left" class="wrap">参数描述</th>
+								</tr>
+							</thead>
+							<tbody id="paramData">
+								<span jwcid="@Foreach" source="ognl:taskParamsItems"
+									value="ognl:taskParamsItem" index="ognl:taskParamsRowIndex">
+									<tr>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:taskParamsRowIndex+1"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:taskParamsItem.taskCode" name="taskCode"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:taskParamsItem.paramKey"
+											name="paramKey"></span></td>
+										<td class="e_left wrap"><input jwcid="@TextField" type="text"
+											value="ognl:taskParamsItem.paramValue" name="paramValue" style="width:100%"></input>
+										</td>
+										
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:taskParamsItem.paramDesc"
+											name="paramDesc"></span>
+										</td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="c_submit" uitype="btngroup" editable="true">
+			<button onclick="TaskOperationJS.startTask('page')" name="taskSave"
+				class="e_button-form">
+				<span>确定</span>
+			</button>
+			
+		</div>
+		</div>	
+	<!-- 任务参数显结束 -->
+	<!-- 查看服务开始 -->
+	<div id="serverDiv" style="display: none">
+		<div class="c_form c_form-col-2 c_form-label-5"
+			jwcid="serverDetail@Part" uiid="serverDetail" id="serverDetail"
+			type="form" objName="serverDetail"
+			bo="" uitype="form"
+			editable="true">
+			<ul class="ul">
+					<li class="li col-2"><span class="label">应用编码:</span> <span class="e_textarea"> <span
+							class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+										type="text" name="serverId" jwcid="@TextArea"
+										value="ognl:serverDetail.serverId" readonly="true"
+										uiid="serverDetail_serverId"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+				<li class="li"><span class="label">主机名:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="hostName"
+								value="ognl:serverDetail.hostName" desc="主机名"
+								uiid="serverDetail_hostName" readonly="true"/></span>
+					</span></span></li>
+				<li class="li"><span class="label">PID:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="pid"
+								value="ognl:serverDetail.pid" desc="PID"
+								uiid="serverDetail_pid" readonly="true"/></span>
+					</span></span></li>
+						<li class="li"><span class="label">服务状态:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="serverState"
+								value="ognl:serverDetail.serverState" desc="服务状态"
+								uiid="serverDetail_serverState" readonly="true"/></span>
+					</span></span></li>
+						<li class="li"><span class="label">注册时间:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="registTime"
+								value="ognl:serverDetail.registTime" desc="注册时间"
+								uiid="serverDetail_registTime" readonly="true"/></span>
+					</span></span></li>
+					<li class="li"><span class="label">心跳时间:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="heartbeatTime"
+								value="ognl:serverDetail.heartbeatTime" desc="心跳时间"
+								uiid="serverDetail_heartbeatTime" readonly="true"/></span>
+					</span></span></li>
+					<li class="li col-2"><span class="label">心跳信息:</span> <span class="e_textarea"> <span class="e_textareaTop"> <span/>
+						</span> <span class="e_textareaContent"> <span><textarea type="text" name="heartbeatInfo" jwcid="@TextArea" value="ognl:serverDetail.heartbeatInfo" readonly="true" uiid=serverDetail_heartbeatInfo/></span>
+						</span> <span class="e_textareaBottom"> <span/>
+						</span>
+					</span></li>	
+			</ul>
+			<div class="submitPlace"></div>
+		</div>
+	</div>
+	<!-- 查看服务结束 -->
+</body>
+</html>

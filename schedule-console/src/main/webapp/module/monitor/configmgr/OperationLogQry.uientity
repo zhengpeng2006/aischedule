@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/common/Common.cmpt" code="OperationLogQry" desc="" dna-code="be77100f-4a01-0010-878e-a7ba780f2900" full-name="module.monitor.configmgr.OperationLogQry" kind="0" name="OperationLogQry">
+  <uientity-version branch="" code="" desc="" name="OperationLogQry" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.common.view.OperationLogQry</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="select" uiid="queryForm_module"/>
+      <area bo="java.lang.String" type="select" uiid="queryForm_operType"/>
+      <area bo="java.lang.String" type="select" uiid="queryForm_operObj"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_content"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_operator"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_startTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_endTime"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="OperationLogQry.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="OperationLogQry.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="OperationLogQry.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/common/view" name="OperationLogQry.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="queryButton" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

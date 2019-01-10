@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="BatchWriteOff" desc="" dna-code="7c6ef8ff-4a01-0010-8f6e-77688bf5de18" name="BatchWriteOff">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="BatchWriteOff" label="BatchWriteOff">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/batchwriteoff/abod/BatchWriteOff.abod</url>
+      </abod>
+      <ui-entity dna-code="96952500-4b01-0010-b53b-a96e73ebe442" label="ProcessGraphics">
+        <uiinfo>22,18,160,40</uiinfo>
+        <url>/html/module/batchWriteOff/ProcessGraphics.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="dd34e300-4b01-0010-afc2-dd4efb9ae0b4" label="Detail">
+        <uiinfo>25,81,160,40</uiinfo>
+        <url>/html/module/batchWriteOff/Detail.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="021ae700-4b01-0010-afc2-dd4efb9ae0b4" label="QueryDetail">
+        <uiinfo>25,149,160,40</uiinfo>
+        <url>/html/module/batchWriteOff/QueryDetail.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="8febe424-4b01-0010-8bf9-c39aa1ad1e37" label="OperateArea">
+        <uiinfo>23,216,160,40</uiinfo>
+        <url>/html/module/batchWriteOff/OperateArea.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="01906a29-4b01-0010-8942-bf123b42b777" label="AllRegionDisplay">
+        <uiinfo>22,282,160,40</uiinfo>
+        <url>/html/module/batchWriteOff/AllRegionDisplay.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/batchwriteoff" name="BatchWriteOff.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/batchwriteoff/abod" name="BatchWriteOff.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

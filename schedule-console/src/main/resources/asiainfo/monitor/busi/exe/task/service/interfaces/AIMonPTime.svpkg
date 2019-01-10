@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="AIMonPTime" desc="" dna-code="18e646a9-4701-0010-aaa9-197f2770c7ec" implementation-class="com.asiainfo.monitor.busi.exe.task.service.impl.AIMonPTimeSVImpl" interface-class="com.asiainfo.monitor.busi.exe.task.service.interfaces.IAIMonPTimeSV" name="AIMonPTime" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="IAIMonPTimeSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/impl" name="AIMonPTimeSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="AIMonPTime.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonPTimeSV_getTimeInfoByExpr" desc="" dna-code="db0647a9-4701-0010-aaa9-197f2770c7ec" name="getTimeInfoByExpr" opt-flag="Y" serv-func="getTimeInfoByExpr" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="expr" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="startNum" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="endNum" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPTime[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPTimeSV_getTimeInfoCount" desc="" dna-code="e60647a9-4701-0010-aaa9-197f2770c7ec" name="getTimeInfoCount" opt-flag="Y" serv-func="getTimeInfoCount" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="expr" param-kind="java"/>
+        </param-list>
+        <return-param datatype="int" param-kind="java"/>
+      </service>
+      <service code="IAIMonPTimeSV_saveOrUpdate" desc="" dna-code="ea0647a9-4701-0010-aaa9-197f2770c7ec" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPTime[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPTimeSV_getBeanById" desc="" dna-code="eb0647a9-4701-0010-aaa9-197f2770c7ec" name="getBeanById" opt-flag="Y" serv-func="getBeanById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="timeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPTime" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPTimeSV_saveOrUpdate" desc="" dna-code="ec0647a9-4701-0010-aaa9-197f2770c7ec" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPTime" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPTimeSV_savePTimeByGuide" desc="" dna-code="ed0647a9-4701-0010-aaa9-197f2770c7ec" name="savePTimeByGuide" opt-flag="Y" serv-func="savePTimeByGuide" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.tools.model.TimeModel" name="model" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPTimeSV_delete" desc="" dna-code="ee0647a9-4701-0010-aaa9-197f2770c7ec" name="delete" opt-flag="Y" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="timeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

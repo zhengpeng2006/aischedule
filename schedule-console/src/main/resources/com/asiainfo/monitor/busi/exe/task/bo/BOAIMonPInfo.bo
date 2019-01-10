@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonPInfo" mainattr="INFO_ID">
+    <mapingenty type="table">AI_MON_P_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="INFO_ID" maxlength="12" datatype="Long" type="PK" remark="任务标识">
+        <mapingcol datatype="NUMBER">INFO_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_CODE" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFO_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NAME" maxlength="255" datatype="String" type="COL" remark="任务名">
+        <mapingcol datatype="VARCHAR2">NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST_ID" maxlength="12" datatype="Long" type="COL" remark="主机标识">
+        <mapingcol datatype="NUMBER">HOST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_METHOD" maxlength="1" datatype="String" type="COL" remark="任务类型:F,为固定时间;C,为cron周期执行;I,为立即执行;P:面板执行">
+        <mapingcol datatype="CHAR">TASK_METHOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TYPE_ID" maxlength="12" datatype="Long" type="COL" remark="监控配置标识(进程,表数据)">
+        <mapingcol datatype="NUMBER">TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THRESHOLD_ID" maxlength="12" datatype="Long" type="COL" remark="监控阀值标识">
+        <mapingcol datatype="NUMBER">THRESHOLD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RESOLVE_ID" maxlength="12" datatype="Long" type="COL" remark="解析分组标识">
+        <mapingcol datatype="NUMBER">RESOLVE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TIME_ID" maxlength="12" datatype="Long" type="COL" remark="时间配置">
+        <mapingcol datatype="NUMBER">TIME_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SPLIT_RULE_ID" maxlength="12" datatype="Long" type="COL" remark="分拆规则标识">
+        <mapingcol datatype="NUMBER">SPLIT_RULE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FILTER_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">FILTER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="M_TYPE" maxlength="255" datatype="String" type="COL" remark="监控信息类型,EXEC：进程方式;TABLE：表方式">
+        <mapingcol datatype="VARCHAR2">M_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAYER" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAYER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="12" datatype="Long" type="COL" remark="归属业务区域再分组">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态U:正常　E:注销">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

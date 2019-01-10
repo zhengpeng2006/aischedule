@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/emend_yh/js/EmendYh.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text" id="showTitle">月对账信息</div>
+				</div>
+			</div>
+
+			<div jwcid="emendYh@Part" uiid="emendYh" id="emendYh" element="div"
+				type="table" objName="emendYhItems,emendYhCount"
+				bo="com.asiainfo.emend_yh.bo.BOAmTaskRely" uitype="table"
+				editable="true">
+				<div class="c_scroll" style="height: 500px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="emendYhTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="emendYhRowIndex"></th>
+									<th col="column0" colcss="e_left">地市</th>
+									<th col="column1" colcss="e_left">地市1</th>
+									<th col="column2" colcss="e_left">地市2</th>
+									<th col="column3" colcss="e_left">地市3</th>
+									<th col="column4" colcss="e_left">地市4</th>
+									<th col="column5" colcss="e_left">地市5</th>
+									<th col="column6" colcss="e_left">地市6</th>
+									<th col="column7" colcss="e_left">地市7</th>
+									<th col="column8" colcss="e_left">地市8</th>
+									<th col="column9" colcss="e_left">地市9</th>
+									<th col="column10" colcss="e_left">地市10</th>
+									<th col="column11" colcss="e_left">地市11</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:emendYhItems"
+									value="ognl:emendYhItem" index="ognl:emendYhRowIndex">
+									<tr>
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhRowIndex+1"></span></td>
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column0"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column1"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert" 
+											value="ognl:emendYhItem.column2"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column3"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column4"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column5"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column6"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column7"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column8"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column9"></span></td>
+
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column10"></span></td>
+											
+										<td class="e_center"><span jwcid="@Insert"
+											value="ognl:emendYhItem.column11"></span></td>
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- <div jwcid="@NavBar" name="emendYhNavBar" cond="" part="emendYh"
+					listener="" count="ognl:emendYhCount"></div> -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

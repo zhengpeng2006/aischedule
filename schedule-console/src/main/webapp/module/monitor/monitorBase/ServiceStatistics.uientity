@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="ServiceStatistics" desc="" dna-code="a0b3f618-4601-0010-9b80-95f73a671264" full-name="monitor.monitorBase.ServiceStatistics" kind="0" name="ServiceStatistics">
+  <uientity-version branch="" code="" desc="" name="ServiceStatistics" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.monitorBase.view.ServiceStatistics</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="query_appId"/>
+      <area bo="java.lang.String" type="textfield" uiid="query_className"/>
+      <area bo="java.lang.String" type="textfield" uiid="query_functionName"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/monitorBase" name="ServiceStatistics.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="ServiceStatistics.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="ServiceStatistics.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/monitorBase/view" name="ServiceStatistics.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="queryButton" type="button"/>
+      <ui-event id="" name="statistics" type="button"/>
+      <ui-event id="" name="copy" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

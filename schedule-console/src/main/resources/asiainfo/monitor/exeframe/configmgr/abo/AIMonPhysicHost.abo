@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo abo-type="0" boname="BOAIMonPhysicHost" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonPhysicHost.cmpt" code="AIMonPhysicHost" desc="物理主机" dna-code="051c2243-4701-0010-9312-99dd0de23280" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonPhysicHost" name="AIMonPhysicHost">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="7f372243-4701-0010-9312-99dd0de23280" datatype="long" name="host_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">HOST_ID</mapingcol>
+        </attr>
+        <attr code="1e3b2243-4701-0010-9312-99dd0de23280" datatype="String" name="host_code" order="1" type="N" vdatatype="CODE">
+          <mapingcol length="32">HOST_CODE</mapingcol>
+        </attr>
+        <attr code="5e3f2243-4701-0010-9312-99dd0de23280" datatype="String" name="host_name" order="2" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">HOST_NAME</mapingcol>
+        </attr>
+        <attr code="17422243-4701-0010-9312-99dd0de23280" datatype="String" name="host_desc" order="6" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">HOST_DESC</mapingcol>
+        </attr>
+        <attr code="65482243-4701-0010-9312-99dd0de23280" datatype="String" name="host_ip" order="5" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">HOST_IP</mapingcol>
+        </attr>
+        <attr code="ad572243-4701-0010-9312-99dd0de23280" datatype="String" name="state" order="7" type="N" vdatatype="STATE">
+          <mapingcol length="8">STATE</mapingcol>
+        </attr>
+        <attr code="c75e2243-4701-0010-9312-99dd0de23280" datatype="DateTime" name="create_date" order="8" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="97a92343-4701-0010-9312-99dd0de23280" datatype="String" name="remarks" order="9" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">REMARKS</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonPhysicHost.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/impl" name="AIMonPhysicHost.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/impl" name="AIMonPhysicHostValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonPhysicHostBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonPhysicHost.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/interfaces" name="IAIMonPhysicHostValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo" name="BOAIMonPhysicHost.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/interfaces" name="IAIMonPhysicHostDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/impl" name="AIMonPhysicHostDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

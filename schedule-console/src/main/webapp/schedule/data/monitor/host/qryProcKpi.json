@@ -1,0 +1,24 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "procKpiTabItems": [
+            {
+                "USER_NAME": "root",
+                "PID": "338",
+                "KPI_CPU": "0.0%",
+                "KPI_MEM": "0.0%(0m)",
+                "CMD_INFO": "[ttm_swap]"
+            }
+        ],
+        "total": 1
+    }
+}

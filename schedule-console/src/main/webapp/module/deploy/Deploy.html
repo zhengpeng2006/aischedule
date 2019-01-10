@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/deploy/js/Deploy.js" type="text/javascript"></script>
+
+</head>
+
+<body jwcid="@Body">
+
+			<!-- start -->
+			
+			<!-- no fixed column, two columns, non equipartition -->
+			<div id="deployLayout" class="l_col" uitype="layout" editable="true">
+				<div class="l_left" style="width: 20%;">
+					<!-- left content-->
+					<div class="c_box" style="height:540px">
+					<div jwcid="strategyTree@Tree" name="strategyTree" listener="ognl:listeners.loadTreeData"
+						uitype="tree" editable="true" id="strategyTree" parentNodeId="parentId"
+						nodeId="id" nodeText="name" 
+						bo="" expandPath="-1"  style="height:540px;overflow:auto"
+						textAction="DeployJS.treeTextClick(nodedata)"
+						initAfterAction="DeployJS.treeInitAfterAction()"
+						showCheckBox="false" async="false"></div>
+						</div>
+				</div>
+				<div class="l_auto">
+					<!-- right content -->
+					<div id="nodeDiv" style="display:none">
+						<div class="c_box">
+							<!-- 按钮组开始 -->
+
+							<div class="c_submit" uitype="btngroup" editable="true">
+								<button onclick="DeployJS.hostInit();" name="deploy" class="e_button-form">
+									<span>主机初始化</span>
+								</button>
+								<button onclick="DeployJS.deployByNodes();" name="update" class="e_button-form">
+									<span>发布</span>
+								</button>
+								<button onclick="DeployJS.rollbackByNodes();" name="rollback" class="e_button-form">
+									<span>回滚</span>
+								</button>
+								<button onclick="DeployJS.updateToCurVersion();" name="updateToCur" class="e_button-form">
+									<span>同步至当前版本</span>
+								</button>
+								<button onclick="DeployJS.checkOperationState();" name="monitorOper" class="e_button-form">
+									<span>监控操作进程</span>
+								</button>
+							</div>
+							<!-- 按钮组结束 -->
+							<!-- 列表开始 -->
+							<div jwcid="nodeTable@Part" uiid="nodeTable" id="nodeTable"
+								element="div" type="table"
+								objName="nodeTableItems,nodeTableCount" bo="" uitype="table"
+								editable="true">
+								<div class="c_scroll" style="height: 505px">
+									<div class="c_table c_table-row-10">
+										<table jwcid="@Table" name="nodeTableTable" scroll="true">
+											<thead>
+												<tr>
+													<th style="padding-left:0px"><input type="checkbox" id="allCheck"/></th>
+													<th col="nodeTableRowIndex" style="display: none">RowIndex</th>
+													<th col="nodeId" style="display: none">节点标识</th>
+													<th col="nodeCode" colcss="e_left" class="wrap">节点编码</th>
+													<th col="nodeName" colcss="e_left" class="wrap">节点名称</th>
+													<th col="stragety" colcss="e_left" class="wrap">部署策略</th>
+													<th col="hostName" colcss="e_left" class="wrap">主机</th>
+													<th col="hostGroup" colcss="e_left" class="wrap">主机集群</th>
+													<th col="versionId" colcss="e_left" class="wrap">版本号</th>
+													<th col="createDate" colcss="e_left" class="wrap">创建时间</th>
+													<th col="operationState" colcss="e_left" class="wrap">操作结果</th>
+													<th col="remark" colcss="e_left" class="wrap">备注</th>
+												</tr>
+											</thead>
+											<tbody>
+												<span jwcid="@Foreach" source="ognl:nodeTableItems"
+													value="ognl:nodeTableItem" index="ognl:nodeTableRowIndex">
+													<tr>
+														<td><input jwcid="@Checkbox" type="checkbox"
+															name="nodeTableCheckbox"
+															value="ognl:nodeTableItem.nodeId+'#'+nodeTableItem.versionId" /></td>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:nodeTableRowIndex+1"></span></td>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.nodeId" name="nodeId"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.nodeCode" name="nodeCode"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.nodeName" name="nodeName"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.stragety" name="stragety"></span>
+														</td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.hostName" name="hostName"></span></td>
+															
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.hostGroup" name="hostGroup"></span></td>
+
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.versionId" name="versionId"></span>
+															<button onclick="DeployJS.showVersionDetail($(this))"
+																name="detail" class="e_button-form" style="float: right">
+																<span>详情</span>
+															</button></td>
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.createDate" name="createDate"></span>
+														</td>
+														<td class="e_left wrap" onclick="DeployJS.showError($(this))"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.operationState"
+															name="operationState"></span></td>
+														<td style="display: none"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.operationStateMsg"
+															name="operationState"></span></td>
+														<td class="e_left wrap"><span jwcid="@Insert"
+															value="ognl:nodeTableItem.remark" name="remark"></span></td>
+
+													</tr>
+												</span>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- 列表结束 -->
+							<!-- 版本信息录入开始 -->
+							<div id="versionInfoInput" style="display: none">
+								<div class="c_form c_form-col-2 c_form-label-7"
+									jwcid="versionInfo@Part" uiid="versionInfo" id="versionInfo"
+									type="form" objName="versionInfo"
+									bo="com.asiainfo.deploy.common.bo.BODeployVersion"
+									uitype="form" editable="true">
+									<ul class="ul">
+										<li class="li" style="display: none"><span class="label">版本编号:</span>
+											<span class="e_elements"><span class="e_input">
+													<span><input jwcid="@TextField" type="text"
+														name="versionId" value="ognl:versionInfo.versionId"
+														desc="版本编号" uiid="versionInfo_versionId" /></span>
+											</span></span></li>
+										<li class="li" style="display: none"><span class="label"><span
+												class="e_required">包路径:</span></span> <span class="e_elements"><span
+												class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="packagePath"
+														value="ognl:versionInfo.packagePath" desc="包路径"
+														uiid="versionInfo_packagePath"/></span>
+											</span></span></li>
+										<li class="li"><span class="label">解决问题:</span> <span class="e_elements"><span
+												class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="resolvedProblems"
+														value="ognl:versionInfo.resolvedProblems" desc="解决问题"
+														uiid="versionInfo_resolvedProblems"/></span>
+											</span></span></li>
+										<li class="li"><span class="label"><span
+											class="e_required">版本联系人:</span></span> <span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="contacts"
+														value="ognl:versionInfo.contacts" desc="版本联系人"
+														uiid="versionInfo_contacts" nullable="no" /></span>
+											</span></li>
+										<li class="li"><span class="label">备注:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="remarks"
+														value="ognl:versionInfo.remarks" desc="备注"
+														uiid="versionInfo_remarks" /></span>
+											</span></span></li>
+										<li class="li col-2"><span class="label">修改文件列表:</span> <span class="e_textarea">
+												<span class="e_textareaTop"> <span></span>
+											</span> <span class="e_textareaContent"> <span><textarea
+															type="text" name="fileList" jwcid="@TextArea"
+															value="ognl:versionInfo.fileList" style="height: 200px;"
+															uiid="versionInfo_fileList"></textarea></span>
+											</span> <span class="e_textareaBottom"> <span></span>
+											</span>
+										</span></li>
+										<li class="li" style="display: none"><span class="label">部署策略ID:</span>
+											<span class="e_elements"><span class="e_input">
+													<span><input jwcid="@TextField" type="text"
+														name="deployStrategyId"
+														value="ognl:versionInfo.deployStrategyId" desc="部署策略ID"
+														uiid="versionInfo_deployStrategyId" /></span>
+											</span></span></li>
+
+										<li class="li" style="display: none"><span class="label">关联的外部版本号:</span>
+											<span class="e_elements"><span class="e_input">
+													<span><input jwcid="@TextField" type="text"
+														name="externalVersionId"
+														value="ognl:versionInfo.externalVersionId" desc="关联的外部版本号"
+														uiid="versionInfo_externalVersionId" /></span>
+											</span></span></li>
+										<li class="li" style="display: none"><span class="label">上个版本ID:</span>
+											<span class="e_elements"><span class="e_input">
+													<span><input jwcid="@TextField" type="text"
+														name="parentVersionId"
+														value="ognl:versionInfo.parentVersionId" desc="上个版本ID"
+														uiid="versionInfo_parentVersionId" /></span>
+											</span></span></li>
+										<li class="li" style="display: none"><span class="label">操作员ID:</span>
+											<span class="e_elements"><span class="e_input">
+													<span><input jwcid="@TextField" type="text"
+														name="operatorId" value="ognl:versionInfo.operatorId"
+														desc="操作员ID" uiid="versionInfo_operatorId" /></span>
+											</span></span></li>
+										<li class="li" style="display: none"><span class="label">操作类型:</span>
+											<span class="e_elements"><span class="e_input">
+													<span><input jwcid="@TextField" type="text"
+														name="operateType" value="ognl:versionInfo.operateType"
+														desc="操作类型" uiid="versionInfo_operateType" /></span>
+											</span></span></li>
+										<li class="li" style="display: none"><span class="label">创建时间:</span>
+											<span class="e_elements"><span class="e_input">
+													<span><input jwcid="@TextField" type="text"
+														name="createTime" value="ognl:versionInfo.createTime"
+														desc="创建时间" uiid="versionInfo_createTime" /></span>
+											</span></span></li>
+										<li class="li" style="display: none"><span class="label">状态:</span>
+											<span class="e_elements"><span class="e_input">
+													<span><input jwcid="@TextField" type="text"
+														name="state" value="ognl:versionInfo.state" desc="状态"
+														uiid="versionInfo_state" /></span>
+											</span></span></li>
+									</ul>
+									<div class="submitPlace"></div>
+								</div>
+
+								<div class="c_submit" uitype="btngroup" editable="true">
+									<button onclick="DeployJS.saveVersion()" name="saveVersion"
+										class="e_button-form">
+										<span>保存</span>
+									</button>
+									<button onclick="DeployJS.closePopDiv('versionInfoInput')"
+										name="quitVersionInput" class="e_button-form">
+										<span>取消</span>
+									</button>
+								</div>
+							</div>
+							<!-- 版本信息录入结束 -->
+							<!-- 版本详情开始 -->
+							<div id="versionDetailDiv" style="display: none">
+								<div class="c_form c_form-col-2 c_form-label-7"
+									jwcid="versionDetail@Part" uiid="versionDetail"
+									id="versionDetail" type="form" objName="versionDetail"
+									bo="com.asiainfo.deploy.common.bo.BODeployVersion"
+									uitype="form" editable="true">
+									<ul class="ul">
+										<li class="li"><span class="label">版本号:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="versionId"
+														value="ognl:versionDetail.versionId" desc="版本号"
+														uiid="versionDetail_versionId" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">解决问题:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="resolvedProblems"
+														value="ognl:versionDetail.resolvedProblems" desc="解决问题"
+														uiid="versionDetail_resolvedProblems" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">版本联系人:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="contacts"
+														value="ognl:versionDetail.contacts" desc="版本联系人"
+														uiid="versionDetail_contacts" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">版本包的存放路径:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="packagePath"
+														value="ognl:versionDetail.packagePath" desc="版本包的存放路径"
+														uiid="versionDetail_packagePath" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">上个版本版本号:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="parentVersionId"
+														value="ognl:versionDetail.parentVersionId" desc="上个版本版本号"
+														uiid="versionDetail_parentVersionId" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">创建时间:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="createTime"
+														value="ognl:versionDetail.createTime" desc="创建时间"
+														uiid="versionDetail_createTime" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">部署策略:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="deployStrategyId"
+														value="ognl:versionDetail.deployStrategyId" desc="部署策略"
+														uiid="versionDetail_deployStrategyId" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">操作类型:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="operateType"
+														value="ognl:versionDetail.operateType" desc="操作类型"
+														uiid="versionDetail_operateType" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">版本状态:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="state"
+														value="ognl:versionDetail.state" desc="版本状态"
+														uiid="versionDetail_state" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">操作员:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="operatorId"
+														value="ognl:versionDetail.operatorId" desc="操作员"
+														uiid="versionDetail_operatorId" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">备注:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="remarks"
+														value="ognl:versionDetail.remarks" desc="备注"
+														uiid="versionDetail_remarks" readonly="true" /></span>
+											</span></span></li>
+										<li class="li"><span class="label">关联的外部版本号:</span> <span
+											class="e_elements"><span class="e_input"> <span><input
+														jwcid="@TextField" type="text" name="externalVersionId"
+														value="ognl:versionDetail.externalVersionId"
+														desc="关联的外部版本号" uiid="versionDetail_externalVersionId"
+														readonly="true" /></span>
+											</span></span></li>
+										<li class="li col-2"><span class="label">修改文件列表:</span> <span class="e_textarea">
+												<span class="e_textareaTop"> <span></span>
+											</span> <span class="e_textareaContent"> <span><textarea
+															type="text" name="fileList" jwcid="@TextArea"
+															value="ognl:versionDetail.fileList"
+															style="height: 200px;" uiid="versionDetail_fileList"
+															readonly="true"></textarea></span>
+											</span> <span class="e_textareaBottom"> <span></span>
+											</span>
+										</span></li>
+									</ul>
+									<div class="submitPlace"></div>
+								</div>
+
+								<!-- 版本详情结束 -->
+								<!-- 可选历史版本开始 -->
+								<div id="hisVersionListDiv" style="display: none">
+
+									<div jwcid="hisVersionTable@Part" uiid="hisVersionTable"
+										id="hisVersionTable" element="div" type="table"
+										objName="hisVersionTableItems,hisVersionTableCount"
+										bo="com.asiainfo.deploy.common.bo.BODeployVersion"
+										uitype="table" editable="true">
+										<div class="c_scroll" style="height: 242px">
+											<div class="c_table c_table-row-10">
+												<table jwcid="@Table" name="hisVersionTableTable"
+													scroll="true">
+													<thead>
+														<tr>
+															<th col="hisVersionTableRowIndex" style="display: none">RowIndex</th>
+															<th col="versionId" colcss="e_left" class="wrap">版本号</th>
+															<th col="parentVersionId" colcss="e_left" class="wrap">上个版本版本号</th>
+															<th col="packagePath" colcss="e_left" class="wrap">版本包的存放路径</th>
+															<th col="fileList" colcss="e_left" class="wrap">修改文件列表</th>
+															<th col="resolvedProblems" colcss="e_left" class="wrap">解决问题</th>
+															<th col="contacts" colcss="e_left" class="wrap">版本联系人</th>
+															<th col="createTime" colcss="e_left" class="wrap">创建时间</th>
+															<th col="deployStrategyId" colcss="e_left" class="wrap">发布策略</th>
+															<th col="operateType" colcss="e_left" class="wrap">操作类型</th>
+															<th col="operatorId" colcss="e_left" class="wrap">操作员</th>
+															<th col="remarks" colcss="e_left" class="wrap">备注</th>
+															<th col="state" colcss="e_left" class="wrap">版本状态</th>
+															<th col="externalVersionId" colcss="e_left" class="wrap">关联的外部版本号</th>
+														</tr>
+													</thead>
+													<tbody>
+														<span jwcid="@Foreach" source="ognl:hisVersionTableItems"
+															value="ognl:hisVersionTableItem"
+															index="ognl:hisVersionTableRowIndex">
+															<tr>
+																<td style="display: none"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableRowIndex+1"></span></td>
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.versionId"
+																	name="versionId"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.parentVersionId"
+																	name="parentVersionId"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.packagePath"
+																	name="packagePath"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.fileList"
+																	name="fileList"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.resolvedProblems"
+																	name="resolvedProblems"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.contacts"
+																	name="contacts"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.createTime"
+																	name="createTime"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:strategyTrans(hisVersionTableItem.deployStrategyId)"
+																	name="deployStrategyId"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:operTypeTrans(hisVersionTableItem.operateType)"
+																	name="operateType"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.operatorId"
+																	name="operatorId"></span></td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.remarks" name="remarks"></span>
+																</td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:versionTypeTrans(hisVersionTableItem.state)" name="state"></span>
+																</td>
+
+																<td class="e_left"><span jwcid="@Insert"
+																	value="ognl:hisVersionTableItem.externalVersionId"
+																	name="externalVersionId"></span></td>
+
+															</tr>
+														</span>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+									<div class="c_submit" uitype="btngroup" editable="true">
+										<button onclick="DeployJS.selectVersion()"
+											name="selectHisVersion" class="e_button-form">
+											<span>选择</span>
+										</button>
+										<button onclick="DeployJS.closePopDiv('hisVersionListDiv')"
+											name="quitHisVersionDiv" class="e_button-form">
+											<span>取消</span>
+										</button>
+									</div>
+								</div>
+								<!-- 可选历史版本结束 -->
+							</div>
+						</div>
+					</div>
+			</div>
+
+</body>
+</html>

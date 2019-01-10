@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="TaskGroupCfg" desc="" dna-code="d81b83f3-4801-0010-9be6-275a0047a9fb" full-name="module.schedule.TaskGroupCfg" kind="0" name="TaskGroupCfg">
+  <uientity-version branch="" code="" desc="" name="TaskGroupCfg" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.schedule.view.TaskGroupCfg</action-class>
+    <data-areas>
+      <area bo="" type="form" uiid="groupInfoInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInfoInput_groupCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupInfoInput_groupName"/>
+      <area bo="java.lang.String" type="textarea" uiid="groupInfoInput_groupDesc"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/schedule" name="TaskGroupCfg.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="TaskGroupCfg.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/schedule" name="TaskGroupCfg.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/schedule/view" name="TaskGroupCfg.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="deleteGroup" type="button"/>
+      <ui-event id="" name="addGroup" type="button"/>
+      <ui-event id="" name="saveGroup" type="button"/>
+      <ui-event id="" name="quitDiv" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/deploy/common/bo/Deploy.cmpt" code="TaskStatus" desc="" dna-code="463ee472-4c01-0010-9380-0d0bc2a57fa4" full-name="module.deploy.TaskStatus" kind="0" name="TaskStatus">
+  <uientity-version branch="" code="" desc="" name="TaskStatus" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.deploy.common.bo.view.TaskStatus</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="select" uiid="taskType"/>
+      <area bo="java.lang.String" type="select" uiid="taskCode"/>
+      <area bo="java.lang.String" type="input" uiid="taskCode1"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/deploy" name="TaskStatus.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="TaskStatus.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="TaskStatus.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/deploy/common/bo/view" name="TaskStatus.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="qryTaskInfoBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="Bizflow" desc="Bizflow" dna-code="125f75bf-4401-0010-b399-1708e264f4e5" name="Bizflow">
+  <cmpt-version branch="" code="trunk" desc="bizflow default cmpt" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="Bizflow" label="Bizflow">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/bizflow/abod/Bizflow.abod</url>
+      </abod>
+      <sv-package dna-code="f21676bf-4401-0010-b399-1708e264f4e5" label="Bizflow">
+        <uiinfo>371,13,160,100</uiinfo>
+        <url>/config/com/asiainfo/bizflow/servpkg/Bizflow.svpkg</url>
+      </sv-package>
+      <ui-entity dna-code="d1ae7ebf-4401-0010-b399-1708e264f4e5" label="Mock">
+        <uiinfo>554,13,160,60</uiinfo>
+        <url>/html/bizflow/common/Mock.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/bizflow" name="Bizflow.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/bizflow/abod" name="Bizflow.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions>
+      <function desc="" dna-code="f7b4a8bf-4401-0010-b399-1708e264f4e5" name="Mock">
+        <func-version source-dna-code="d1ae7ebf-4401-0010-b399-1708e264f4e5" type="2">
+          <uiinfo>583,84,100,40</uiinfo>
+        </func-version>
+      </function>
+    </functions>
+    <joins>
+      <join label="">
+        <item source="d1ae7ebf-4401-0010-b399-1708e264f4e5" target="f7b4a8bf-4401-0010-b399-1708e264f4e5" type="2"/>
+        <uiinfo>10.0,10.0,500,500,634,43,648,165</uiinfo>
+      </join>
+    </joins>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

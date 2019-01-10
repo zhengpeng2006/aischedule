@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BOAIMonNode" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonNode.cmpt" code="AIMonNode" desc="节点abo" dna-code="f51a4043-4701-0010-9312-99dd0de23280" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonNode" name="AIMonNode">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="5ef34043-4701-0010-9312-99dd0de23280" datatype="long" name="node_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">NODE_ID</mapingcol>
+        </attr>
+        <attr code="a7f64043-4701-0010-9312-99dd0de23280" datatype="long" name="host_id" order="1" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">HOST_ID</mapingcol>
+        </attr>
+        <attr code="f6024143-4701-0010-9312-99dd0de23280" datatype="String" isPrivate="N" name="node_code" order="3" type="N" vdatatype="CODE">
+          <mapingcol length="32">NODE_CODE</mapingcol>
+        </attr>
+        <attr code="96064143-4701-0010-9312-99dd0de23280" datatype="String" name="node_name" order="4" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">NODE_NAME</mapingcol>
+        </attr>
+        <attr code="ff084143-4701-0010-9312-99dd0de23280" datatype="String" name="node_path" order="5" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">NODE_PATH</mapingcol>
+        </attr>
+        <attr code="7e194143-4701-0010-9312-99dd0de23280" datatype="String" name="state" order="11" type="N" vdatatype="STATE">
+          <mapingcol length="8">STATE</mapingcol>
+        </attr>
+        <attr code="f51c4143-4701-0010-9312-99dd0de23280" datatype="DateTime" name="create_date" order="12" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="17204143-4701-0010-9312-99dd0de23280" datatype="String" name="remark" order="13" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">REMARK</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonNode.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

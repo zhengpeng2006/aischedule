@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="Schedule" desc="" dna-code="7f89ea8b-4801-0010-b41e-61ad1d194e8f" name="Schedule">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="Schedule" label="Schedule">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/schedule/abod/Schedule.abod</url>
+      </abod>
+      <ui-entity dna-code="ad33eb8b-4801-0010-b41e-61ad1d194e8f" label="ScheduleTaskCfg">
+        <uiinfo>148,8,160,40</uiinfo>
+        <url>/html/module/schedule/ScheduleTaskCfg.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="47001da1-4801-0010-aca3-936952cf1d9c" label="ProcessControl">
+        <uiinfo>150,68,160,40</uiinfo>
+        <url>/html/module/schedule/ProcessControl.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="ddb098a6-4801-0010-86e6-df96f4bab997" label="Deploy">
+        <uiinfo>152,123,160,40</uiinfo>
+        <url>/html/module/deploy/Deploy.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="d81b83f3-4801-0010-9be6-275a0047a9fb" label="TaskGroupCfg">
+        <uiinfo>151,187,160,40</uiinfo>
+        <url>/html/module/schedule/TaskGroupCfg.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="7901b5f4-4801-0010-98d1-89276bad3e93" label="TaskParamCfg">
+        <uiinfo>153,255,160,40</uiinfo>
+        <url>/html/module/schedule/TaskParamCfg.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="829eb6f7-4801-0010-b92a-97c43fabda9d" label="SplitCfg">
+        <uiinfo>154,316,160,40</uiinfo>
+        <url>/html/module/schedule/SplitCfg.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="30d3fefd-4801-0010-a118-732c1bf50bb0" label="TfCfg">
+        <uiinfo>336,6,160,40</uiinfo>
+        <url>/html/module/schedule/TfCfg.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="c7d12ffe-4801-0010-a118-732c1bf50bb0" label="ColRel">
+        <uiinfo>339,65,160,40</uiinfo>
+        <url>/html/module/schedule/ColRel.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="46480d40-4901-0010-92f2-9f7db3e02abf" label="StrategyCfg">
+        <uiinfo>337,121,160,40</uiinfo>
+        <url>/html/module/deploy/StrategyCfg.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="258ba94f-4901-0010-b99a-957677315aee" label="TemplateCfg">
+        <uiinfo>335,185,160,40</uiinfo>
+        <url>/html/module/deploy/TemplateCfg.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="e266f163-4901-0010-a312-21bc7e1e77a4" label="TaskOperation">
+        <uiinfo>338,255,160,40</uiinfo>
+        <url>/html/module/deploy/TaskOperation.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="d1303eac-4901-0010-a477-ad1d7806f5ae" label="Recoveray">
+        <uiinfo>339,315,160,40</uiinfo>
+        <url>/html/module/schedule/Recoveray.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="5d965b19-4a01-0010-8f4c-3dcbcac21c5d" label="QryTaskLog">
+        <uiinfo>153,366,160,40</uiinfo>
+        <url>/html/module/deploy/QryTaskLog.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="c9f98833-4a01-0010-8c37-d12f69c24246" label="TaskExport">
+        <uiinfo>339,362,160,40</uiinfo>
+        <url>/html/module/schedule/TaskExport.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="bb1061e7-4a01-0010-83ef-bf1f34134174" label="ImportItems">
+        <uiinfo>528,9,160,40</uiinfo>
+        <url>/html/module/schedule/ImportItems.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/schedule" name="Schedule.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/schedule/abod" name="Schedule.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

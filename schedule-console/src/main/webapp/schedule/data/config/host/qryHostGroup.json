@@ -1,0 +1,53 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "groupTabItems": [
+      {
+        "createDate": "2016-08-10",
+        "groupCode": "TEST_GR",
+        "groupDesc": "个人业务",
+        "groupId": 1,
+        "groupName": "个人业务",
+        "priv": "-110_admin",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup"
+      },
+      {
+        "createDate": "2016-08-10",
+        "groupCode": "TEST_JT",
+        "groupDesc": "家庭业务",
+        "groupId": 2,
+        "groupName": "家庭业务",
+        "priv": "-110_admin",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup"
+      },
+      {
+        "createDate": "2016-08-10",
+        "groupCode": "TEST_JTU",
+        "groupDesc": "集团业务",
+        "groupId": 3,
+        "groupName": "集团业务",
+        "priv": "-110_admin",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup"
+      }
+    ],
+    "total": 3
+  }
+}

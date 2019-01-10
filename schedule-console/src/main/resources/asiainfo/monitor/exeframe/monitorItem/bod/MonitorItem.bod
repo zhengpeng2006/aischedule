@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bo-design attr-display="name" code="" columns="all">
+  <bo fullname="com.asiainfo.monitor.exeframe.monitorItem.bo.BOAIMonBatch" name="BOAIMonBatch" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>20,54,120,50</uiinfo>
+    <url>config/com/asiainfo/monitor/exeframe/monitorItem/bo/BOAIMonBatch.bo</url>
+  </bo>
+  <joins/>
+</bo-design>

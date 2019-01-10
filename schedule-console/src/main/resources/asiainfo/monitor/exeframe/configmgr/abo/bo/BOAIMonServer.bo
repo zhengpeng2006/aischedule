@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo name="BOAIMonServer" remark="应用服务abo">
+    <mapingenty type="table">AI_Mon_Server</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="SERVER_ID" maxlength="20" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol datatype="NUMBER">SERVER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVER_CODE" maxlength="32" datatype="String" type="COL" order="1" notNull="N">
+        <mapingcol datatype="VARCHAR2">SERVER_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NODE_ID" maxlength="20" datatype="Long" type="COL" order="2" notNull="N">
+        <mapingcol datatype="NUMBER">NODE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVER_NAME" maxlength="128" datatype="String" type="COL" order="3" notNull="N">
+        <mapingcol datatype="VARCHAR2">SERVER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_TYPE" maxlength="32" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol datatype="VARCHAR2">BUSINESS_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOCATOR_TYPE" maxlength="32" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol datatype="VARCHAR2">LOCATOR_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOCATOR" maxlength="256" datatype="String" type="COL" order="6" notNull="N">
+        <mapingcol datatype="VARCHAR2">LOCATOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVER_IP" maxlength="256" datatype="String" type="COL" order="7" notNull="N">
+        <mapingcol datatype="VARCHAR2">SERVER_IP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVER_PORT" maxlength="12" datatype="Short" type="COL" order="8" notNull="N">
+        <mapingcol datatype="NUMBER">SERVER_PORT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SVERSION" maxlength="256" datatype="String" type="COL" order="9" notNull="N">
+        <mapingcol datatype="VARCHAR2">SVERSION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHECK_URL" maxlength="256" datatype="String" type="COL" order="10" notNull="N">
+        <mapingcol datatype="VARCHAR2">CHECK_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDWARE_TYPE" maxlength="32" datatype="String" type="COL" order="11" notNull="N">
+        <mapingcol datatype="VARCHAR2">MIDWARE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="START_CMD_ID" maxlength="12" datatype="Short" type="COL" order="13" notNull="N">
+        <mapingcol datatype="NUMBER">START_CMD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STOP_CMD_ID" maxlength="12" datatype="Short" type="COL" order="14" notNull="N">
+        <mapingcol datatype="NUMBER">STOP_CMD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="8" datatype="String" type="COL" order="15" notNull="N">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="0" datatype="DateTime" type="COL" order="16" notNull="N">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="512" datatype="String" type="COL" order="17" notNull="N">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMP_TYPE" maxlength="32" datatype="String" type="COL" order="12" notNull="N">
+        <mapingcol datatype="VARCHAR2">TEMP_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

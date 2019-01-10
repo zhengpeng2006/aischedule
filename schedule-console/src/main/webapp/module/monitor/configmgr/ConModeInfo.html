@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/ConModeInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div jwcid="conTab@Part" uiid="conTab" id="conTab" element="div" type="table" objName="conTabItems,conTabCount"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonConMode" uitype="table" editable="true" onclick="ConModeInfoJs.onClick();">
+				<div class="c_scroll" style="height: 242px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="conTabTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="conTabRowIndex"></th>
+									<th col="conId" colcss="e_left" class="wrap" style="display: none">连接标识</th>
+									<th col="conType" colcss="e_left" class="wrap">连接类型</th>
+									<th col="conPort" colcss="e_left" class="wrap">连接端口</th>
+									<th col="state" colcss="e_left" class="wrap">状态</th>
+									<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+									<th col="remark" colcss="e_left" class="wrap">备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:conTabItems" value="ognl:conTabItem" index="ognl:conTabRowIndex">
+									<tr jwcid="@Conditional" condition="ognl:conTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+										<td><span jwcid="@Insert" value="ognl:conTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"}><span jwcid="@Insert" value="ognl:conTabItem.conId" name="conId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:conTabItem.conType" name="conType"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:conTabItem.conPort" name="conPort"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',conTabItem.state)" name="state"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:conTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:conTabItem.remark" name="remark"></span></td>
+
+									</tr>
+									<tr jwcid="@Conditional" condition="ognl:conTabRowIndex % 2 == 1" element="tr">
+
+										<td><span jwcid="@Insert" value="ognl:conTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:conTabItem.conId" name="conId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:conTabItem.conType" name="conType"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:conTabItem.conPort" name="conPort"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',conTabItem.state)" name="state"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:conTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:conTabItem.remark" name="remark"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+
+			<div class="c_form c_form-col-2 c_form-label-5" jwcid="conDetail@Part" uiid="conDetail" id="conDetail" type="form" objName="conDetail"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonConMode" uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li" style="display:none"><span class="label">连接标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="conId" value="ognl:conDetail.conId" desc="连接标识" uiid="conDetail_conId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label"><span class="e_required">连接类型:</span></span> <span class="e_elements">
+							<span class="e_select">
+								<span>
+									<span>
+										<select jwcid="@Select" nullable="no" name="conType" value="ognl:conDetail.conType" onchange="ConModeInfoJs.displayPort(this.value);" desc="连接类型"
+											source="ognl:getSelectList()" disabled="false" changeValue="true" addDefault="true" defaultText="请选择连接类型" uiid="conDetail_conType"></select>
+									</span>
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">连接端口:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" readonly="readonly" type="text" name="conPort" value="ognl:conDetail.conPort" desc="连接端口" uiid="conDetail_conPort" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">状态:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="state" value="ognl:conDetail.state" desc="状态" uiid="conDetail_state" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">创建日期:</span> <input type="text" name="createDate" jwcid="@DateField"
+						value="ognl:conDetail.createDate" desc="创建日期" datatype="date" afterAction="" uiid="conDetail_createDate" /></li>
+					<li class="li" style="display: none"><span class="label">备注:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="remark" value="ognl:conDetail.remark" desc="备注" uiid="conDetail_remark" />
+								</span>
+							</span>
+						</span></li>
+				</ul>
+				<div class="submitPlace"></div>
+		</div>
+			<div id="btnGroupDiv1">
+				<div class="c_submit" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter" name="updateAfter" type="hidden"
+					textName="returnInput" value="" afterAction="" />
+					<button onclick="ConModeInfoJs.newClick();" id="newBtn" name="newBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-add"></i>新增
+						</span>
+					</button>
+					<button style="display: none" onclick="ConModeInfoJs.editClick();" name="editBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-edit"></i>编辑
+						</span>
+					</button>
+					<button onclick="ConModeInfoJs.delClick();" name="delBtn" id="delBtn" disabled="disabled" class="e_button-form">
+						<span>
+							<i class="e_ico-delete"></i>删除
+						</span>
+					</button></div>
+
+		</div>
+			<div id="btnGroupDiv2" style="display: none">
+				<div class="c_submit" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter" name="updateAfter" type="hidden"
+					textName="returnInput" value="" afterAction="" />
+
+					<button onclick="ConModeInfoJs.saveClick();" name="saveBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-save"></i>保存
+						</span>
+					</button>
+					<button onclick="ConModeInfoJs.cancelClick();" name="cancelBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-cancel"></i>取消
+						</span>
+					</button></div>
+
+		</div>
+	</div>
+	</div>
+</body>
+</html>

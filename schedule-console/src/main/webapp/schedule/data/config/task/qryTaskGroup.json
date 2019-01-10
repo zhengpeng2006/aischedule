@@ -1,0 +1,47 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "groupInfosItems": [
+      {
+        "groupName": "重构分组一",
+        "groupCode": "test01",
+        "groupDesc": "",
+        "createTime": "2016-08-11 02:50:08"
+      },
+      {
+        "groupName": "重构分组二",
+        "groupCode": "test02",
+        "groupDesc": "",
+        "createTime": "2016-08-30 05:03:07"
+      },
+      {
+        "groupName": "重构分组三",
+        "groupCode": "test03",
+        "groupDesc": "",
+        "createTime": "2016-08-11 02:50:08"
+      },
+      {
+        "groupName": "重构分组四",
+        "groupCode": "test04",
+        "groupDesc": "",
+        "createTime": "2016-08-11 02:50:08"
+      },
+      {
+        "groupName": "重构分组五",
+        "groupCode": "test05",
+        "groupDesc": "",
+        "createTime": "2016-08-11 02:50:08"
+      }
+    ],
+    "total": 4
+  }
+}

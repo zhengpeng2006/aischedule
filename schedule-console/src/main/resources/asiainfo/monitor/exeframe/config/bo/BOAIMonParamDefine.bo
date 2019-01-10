@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonParamDefine" mainattr="PARAM_ID">
+    <mapingenty type="table">AI_MON_PARAM_DEFINE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PARAM_ID" maxlength="12" datatype="Long" type="PK" remark="参数标识">
+        <mapingcol datatype="NUMBER">PARAM_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGISTE_TYPE" maxlength="2" datatype="Integer" type="COL" remark="寄主类型;1、进程，2、表，3、命令">
+        <mapingcol datatype="NUMBER">REGISTE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGISTE_ID" maxlength="12" datatype="Long" type="COL" remark="寄主标识">
+        <mapingcol datatype="NUMBER">REGISTE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAM_CODE" maxlength="40" datatype="String" type="COL" remark="参数码">
+        <mapingcol datatype="VARCHAR2">PARAM_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAM_DESC" maxlength="255" datatype="String" type="COL" remark="参数描述">
+        <mapingcol datatype="VARCHAR2">PARAM_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_MUST" maxlength="1" datatype="String" type="COL" remark="是否必填,1必填;0不必">
+        <mapingcol datatype="CHAR">IS_MUST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATA_TYPE" maxlength="20" datatype="String" type="COL" remark="参数类型">
+        <mapingcol datatype="VARCHAR2">DATA_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORT_ID" maxlength="2" datatype="Integer" type="COL" remark="顺序">
+        <mapingcol datatype="NUMBER">SORT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

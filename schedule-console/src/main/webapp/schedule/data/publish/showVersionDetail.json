@@ -1,0 +1,32 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "versionDetail": {
+      "contacts": "dpk",
+      "createTime": "2016-09-06 15:23:53",
+      "deployStrategyId": 207,
+      "externalVersionId": null,
+      "fileList": "fdsagfda",
+      "operateType": "0",
+      "operatorId": null,
+      "packagePath": "/home/schedule/temp/108.tar.gz",
+      "parentVersionId": 107,
+      "remarks": "fdsaf",
+      "resolvedProblems": "11111",
+      "setName": "",
+      "state": "C",
+      "type": null,
+      "typeName": "com.asiainfo.deploy.common.bo.BODeployVersion",
+      "versionId": 115
+    }
+  }
+}

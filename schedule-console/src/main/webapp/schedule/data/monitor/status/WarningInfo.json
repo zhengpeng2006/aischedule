@@ -1,0 +1,139 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "hostServer": [
+            [
+                {
+                    "group": "个人业务"
+                },
+                [
+                    {
+                        "title": "49(10.5.1.49):"
+                    },
+                    [
+                        {
+                            "state": "进程正常",
+                            "desc": "正常的进程",
+                            "hostId": "731",
+                            "hostName": "49",
+                            "serverCode": "MONITOR_49",
+                            "serverName": "MONITOR_49",
+                            "runCnt": 0,
+                            "stopCut": 0,
+                            "totolCnt": 0
+                        },
+                        {
+                            "state": "进程正常",
+                            "desc": "正常的进程",
+                            "hostId": "731",
+                            "hostName": "49",
+                            "serverCode": "MANAGER_49",
+                            "serverName": "MANAGER_49",
+                            "runCnt": 0,
+                            "stopCut": 0,
+                            "totolCnt": 0
+                        },
+                        {
+                            "state": "进程正常",
+                            "desc": "正常的进程",
+                            "hostId": "731",
+                            "hostName": "49",
+                            "serverCode": "PROCESSOR_49",
+                            "serverName": "PROCESSOR_49",
+                            "runCnt": 0,
+                            "stopCut": 0,
+                            "totolCnt": 0
+                        },
+                        {
+                            "hostId": "731",
+                            "hostName": "49",
+                            "serverCode": "testOtherTask",
+                            "serverName": "testOtherTask",
+                            "state": "进程异常",
+                            "desc": "未启动的进程",
+                            "runCnt": 0,
+                            "stopCut": 1,
+                            "totolCnt": 1
+                        }
+                    ]
+                ],
+                [
+                    {
+                        "title": "50(10.5.1.50):该主机未连通"
+                    }
+                ]
+            ],
+            [
+                {
+                    "group": "家庭业务"
+                },
+                [
+                    {
+                        "title": "49(10.5.1.49):"
+                    },
+                    [
+                        {
+                            "state": "进程正常",
+                            "desc": "正常的进程",
+                            "hostId": "731",
+                            "hostName": "49",
+                            "serverCode": "MONITOR_49",
+                            "serverName": "MONITOR_49",
+                            "runCnt": 0,
+                            "stopCut": 0,
+                            "totolCnt": 0
+                        },
+                        {
+                            "state": "进程正常",
+                            "desc": "重复的进程",
+                            "hostId": "731",
+                            "hostName": "49",
+                            "serverCode": "MANAGER_49",
+                            "serverName": "MANAGER_49",
+                            "runCnt": 0,
+                            "stopCut": 0,
+                            "totolCnt": 0
+                        },
+                        {
+                            "state": "进程正常",
+                            "desc": "正常的进程",
+                            "hostId": "731",
+                            "hostName": "49",
+                            "serverCode": "PROCESSOR_49",
+                            "serverName": "PROCESSOR_49",
+                            "runCnt": 0,
+                            "stopCut": 0,
+                            "totolCnt": 0
+                        },
+                        {
+                            "hostId": "731",
+                            "hostName": "49",
+                            "serverCode": "testOtherTask",
+                            "serverName": "testOtherTask",
+                            "state": "进程异常",
+                            "desc": "未启动的进程",
+                            "runCnt": 0,
+                            "stopCut": 1,
+                            "totolCnt": 1
+                        }
+                    ]
+                ],
+                [
+                    {
+                        "title": "50(10.5.1.50):该主机未连通"
+                    }
+                ]
+            ]
+        ],
+        "curVersion": 13773
+    }
+}

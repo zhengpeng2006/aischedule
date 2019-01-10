@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/controlmgr/ControlMgr.cmpt" code="UserRoleEntityRel" desc="用户角色和权限实体管理" dna-code="c81abb7a-4601-0010-b193-af78e4d3a11c" full-name="monitor.controlmgr.UserRoleEntityRel" kind="0" name="UserRoleEntityRel">
+  <uientity-version branch="" code="" desc="" name="UserRoleEntityRel" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.controlmgr.view.UserRoleEntityRel</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="qryform_roleCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="qryform_roleName"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/controlmgr" name="UserRoleEntityRel.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/controlmgr" name="UserRoleEntityRel.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/controlmgr" name="UserRoleEntityRel.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/controlmgr/view" name="UserRoleEntityRel.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="btn_qry" type="button"/>
+      <ui-event id="" name="btn_config" type="button"/>
+      <ui-event id="" name="btn_del_C" type="button"/>
+      <ui-event id="" name="btn_save" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/deploy/js/TemplateCfg.js"
+	type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_box">
+				<!-- 列表开始 -->
+
+				<div jwcid="templates@Part" uiid="templates" id="templates"
+					element="div" type="table" objName="templatesItems,templatesCount"
+					bo="com.asiainfo.deploy.common.bo.BODeployAppTemplate"
+					uitype="table" editable="true">
+					<div class="c_scroll" style="height: 480px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="templatesTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="templatesRowIndex" style="display: none">RowIndex</th>
+										<th col="templateId" style="display: none">模板标识</th>
+										<th col="templateName" colcss="e_left" class="wrap">模板名称</th>
+										<th col="contents" colcss="e_left" class="wrap">模板内容</th>
+										<th col="createTime" colcss="e_left" class="wrap">创建时间</th>
+										<th col="modifyTime" colcss="e_left" class="wrap">修改时间</th>
+										<th col="operatorId" colcss="e_left" class="wrap">操作员</th>
+										<th col="remarks" colcss="e_left" class="wrap">备注</th>
+									</tr>
+								</thead>
+								<tbody>
+									<span jwcid="@Foreach" source="ognl:templatesItems"
+										value="ognl:templatesItem" index="ognl:templatesRowIndex">
+										<tr>
+											<td style="display: none"><span jwcid="@Insert"
+												value="ognl:templatesRowIndex+1"></span></td>
+											<td style="display: none"><span jwcid="@Insert"
+												value="ognl:templatesItem.templateId" name="templateId"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:templatesItem.templateName" name="templateName"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:templatesItem.contents" name="contents"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:templatesItem.createTime" name="createTime"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:templatesItem.modifyTime" name="modifyTime"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:templatesItem.operatorId" name="operatorId"></span>
+											</td>
+
+											<td class="e_left wrap"><span jwcid="@Insert"
+												value="ognl:templatesItem.remarks" name="remarks"></span></td>
+
+										</tr>
+									</span>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- 列表结束 -->
+				<!-- 按钮组开始 -->
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button onclick="TemplateCfgJS.add()" name="add"
+						class="e_button-form">
+						<span>新增</span>
+					</button>
+					<button onclick="TemplateCfgJS.operation('update')" name="update"
+						class="e_button-form">
+						<span>修改</span>
+					</button>
+					<button onclick="TemplateCfgJS.operation('delete')" name="delete"
+						class="e_button-form">
+						<span>删除</span>
+					</button>
+				</div>
+				<!-- 按钮组结束 -->
+			</div>
+			<!-- 模板录入开始 -->
+			<div id="tamplateInputDiv" style="display: none">
+
+
+				<div class="c_form c_form-col-2 c_form-label-5"
+					jwcid="tamplateInput@Part" uiid="tamplateInput" id="tamplateInput"
+					type="form" objName="tamplateInput"
+					bo="com.asiainfo.deploy.common.bo.BODeployAppTemplate"
+					uitype="form" editable="true">
+					<ul class="ul">
+						<li class="li" style="display: none"><span class="label">模板标识:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="templateId"
+										value="ognl:tamplateInput.templateId" desc="模板标识"
+										uiid="tamplateInput_templateId" /></span>
+							</span></span></li>
+						<li class="li"><span class="label">模板名称:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="templateName"
+										value="ognl:tamplateInput.templateName" desc="模板名称"
+										uiid="tamplateInput_templateName" /></span>
+							</span></span></li>
+						<li class="li col-2"><span class="label">模板内容:</span> <span
+							class="e_textarea"> <span class="e_textareaTop"> <span></span>
+							</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="contents" jwcid="@TextArea"
+											value="ognl:tamplateInput.contents" style="height: 60px;"
+											uiid="tamplateInput_contents"></textarea></span>
+							</span> <span class="e_textareaBottom"> <span></span>
+							</span>
+						</span></li>
+						<li class="li" style="display:none"><span class="label">创建时间:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="createTime"
+										value="ognl:tamplateInput.createTime" desc="创建时间"
+										uiid="tamplateInput_createTime" /></span>
+							</span></span></li>
+						<li class="li" style="display:none"><span class="label">修改时间:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="modifyTime"
+										value="ognl:tamplateInput.modifyTime" desc="修改时间"
+										uiid="tamplateInput_modifyTime" /></span>
+							</span></span></li>
+						<li class="li" style="display:none"><span class="label">操作员:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="operatorId"
+										value="ognl:tamplateInput.operatorId" desc="操作员"
+										uiid="tamplateInput_operatorId" /></span>
+							</span></span></li>
+						<li class="li col-2"><span class="label">备注:</span> <span
+							class="e_textarea"> <span class="e_textareaTop"> <span></span>
+							</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="remarks" jwcid="@TextArea"
+											value="ognl:tamplateInput.remarks" style="height: 60px;"
+											uiid="tamplateInput_remarks"></textarea></span>
+							</span> <span class="e_textareaBottom"> <span></span>
+							</span>
+						</span></li>
+					</ul>
+					<div class="submitPlace"></div>
+				</div>
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button onclick="TemplateCfgJS.saveTemplate()" name="saveTemplate"
+						class="e_button-form">
+						<span>保存</span>
+					</button>
+					<button onclick="TemplateCfgJS.quitDiv('tamplateInputDiv')"
+						name="cancel" class="e_button-form">
+						<span>取消</span>
+					</button>
+				</div>
+			</div>
+			<!-- 模板录入结束 -->
+			
+		</div>
+	</div>
+</body>
+</html>

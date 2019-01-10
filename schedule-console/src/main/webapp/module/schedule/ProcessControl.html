@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+	
+</span>
+<script src="module/schedule/js/ProcessControl.js"
+	type="text/javascript"></script>
+
+	
+</head>
+
+<body jwcid="@Body">
+			<!-- start -->
+			<div class="c_box">
+			<!-- 查询部分开始 -->
+			<div jwcid="queryTab@Tabset" name="queryTab" switchAction=""
+				uitype="tabset" editable="true">
+			<div jwcid="@TabsetContent" title="业务维度">
+
+				<div class="c_form c_form-col-3 c_form-label-5 c_form-inline"
+					uiid="BusiQueryForm" id="BusiQueryForm" type="condForm"
+					objName="BusiQueryForm" uitype="condform" editable="true">
+					<ul class="ul">
+						<li class="li"><span class="label"><span	class="e_required">任务分组:</span> </span><span
+							class="e_elements"><span class="e_select"> <span><span><select
+											jwcid="@Select" name="taskGroup"
+											value="ognl:BusiQueryForm.taskGroup" desc="任务分组" source="ognl:getTaskGroupList()"
+											changeValue="true" addDefault="true" defaultText="请选择分组"  id="bGroup"
+											uiid="BusiQueryForm_taskGroup"  onchange="PocessCtrlJS.showTaskCodes($(this))"></select></span></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span	class="e_required">任务名称:</span></span> <span
+							class="e_elements"><span class="e_select"> <span><span><select
+											jwcid="@Select" name="taskCode" id="bTaskCode"
+											value="ognl:BusiQueryForm.taskCode" desc="任务名称" source=""
+											changeValue="true" addDefault="true" defaultText="请先选择分组"
+											uiid="BusiQueryForm_taskCode"  ></select></span></span>
+							</span></span></li>
+					</ul>
+					<div class="submitPlace"></div>
+					<div class="submit">
+						<button onclick="PocessCtrlJS.qryProcess('BusiQueryForm')" template_type="operate" type="button"
+							name="busiQry" class="e_button-form" formId="BusiQueryForm">
+							<span>查询</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div jwcid="@TabsetContent" title="主机维度">
+
+					<div class="c_form c_form-col-4 c_form-label-5 c_form-inline"
+						uiid="hostQueryForm" id="hostQueryForm" type="condForm"
+						objName="hostQueryForm" uitype="condform" editable="true">
+						<ul class="ul">
+						<li class="li"><span class="label">主机集群:</span> <span
+								class="e_elements"><span class="e_select"> <span><span><select
+												jwcid="@Select" name="hostGroup"
+												value="ognl:hostQueryForm.hostGroup" desc="主机集群" source="ognl:getHostGroupList()"
+												changeValue="true" addDefault="true" defaultText="请选择集群"
+												uiid="hostQueryForm_hostGroup" id="hGroup" onchange="PocessCtrlJS.showHosts($(this))"></select></span></span>
+								</span></span></li>
+									<li class="li"><span class="label">主机:</span> <span
+								class="e_elements"><span class="e_select"> <span><span><select
+												jwcid="@Select" name="hostName"
+												value="ognl:hostQueryForm.hostName" desc="主机" source=""
+												changeValue="true" addDefault="true" defaultText="请先选择集群"
+												uiid="hostQueryForm_hostName" id="hostName"></select></span></span>
+								</span></span></li>
+									<li class="li"><span class="label">应用编码:</span> <span
+								class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="taskCode"
+									value="ognl:hostQueryForm.taskCode" desc="应用编码" uiid="hostQueryForm_taskCode" id="hTaskCode"/></span>
+						</span></span></li>
+						</ul>
+						<div class="submitPlace"></div>
+						<div class="submit">
+							<button onclick="PocessCtrlJS.qryProcess('hostQueryForm')"
+								template_type="operate" type="button" name="hostQry"
+								class="e_button-form" formId="hostQueryForm">
+								<span>查询</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 查询部分结束 -->
+			<div class="c_box">
+			<!-- 进程列表开始 -->
+
+			<div jwcid="processTable@Part" uiid="processTable" id="processTable"
+				element="div" type="table"
+				objName="processTableItems,processTableCount"
+				bo="" uitype="table"
+				editable="true">
+				<div class="c_scroll" style="height: 428px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="processTableTable" scroll="true">
+							<thead>
+								<tr>
+									<th style="padding-left:0px"><input type="checkbox" id="allCheck"/></th>
+									<th col="processTableRowIndex" style="display: none">RowIndex</th>
+									<th class="desc" col="appCode" colcss="e_left" onclick="PocessCtrlJS.sort(3,this)"><span>应用编码</span></th>	
+									<th class="desc" col="appCode" colcss="e_left" onclick="PocessCtrlJS.sort(4,this)"><span>主机名</span></th>
+									<th class="desc" col="appCode" colcss="e_left" onclick="PocessCtrlJS.sort(5,this)"><span>主机集群</span></th>
+									<th col="taskCode" colcss="e_left" class="wrap">任务编码</th>
+									<th class="desc" col="appCode" colcss="e_left" onclick="PocessCtrlJS.sort(7,this)"><span>进程状态</span></th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:processTableItems"
+									value="ognl:processTableItem" index="ognl:processTableRowIndex">
+									<tr>
+										<td><input jwcid="@Checkbox" type="checkbox"
+											name="processTableCheckbox" value="ognl:processTableItem.serverCode"/></td>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:processTableRowIndex+1"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:processTableItem.serverCode" name="serverCode"></span>
+										</td>
+										
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:processTableItem.hostName" name="hostName"></span></td>
+										
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:processTableItem.hostGroup"
+											name="hostGroup"></span></td>
+											
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:processTableItem.taskCode" name="taskCode"></span>
+											<button onclick="PocessCtrlJS.showDetail($(this));" name="detail" class="e_button-form" style="float:right">
+												<span>详情</span>
+											</button>
+										</td>
+
+										
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:processTableItem.processState" name="processState"></span>
+										</td>
+										
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- 进程列表结束 -->
+			</div>
+			<!-- 按钮组开始 -->
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<span style="float:left;font:14px/1.5" >进程总数：</span>
+				<span id="totalCnt" style="float:left;font:14px/1.5"></span>
+				<button onclick="PocessCtrlJS.operateProcess(1);" name="startProcess" class="e_button-form">
+					<span>启动进程</span>
+				</button>
+				<button onclick="PocessCtrlJS.operateProcess(2);" name="stopProcess" class="e_button-form">
+					<span>终止进程</span>
+				</button>
+			</div>
+			<!-- 按钮组结束 -->
+			<!-- 业务详情显示开始 -->
+				<div id="detailDiv" style="display: none">
+
+					<div jwcid="busiDetail@Part" uiid="busiDetail" id="busiDetail"
+						element="div" type="table"
+						objName="busiDetailItems,busiDetailCount"
+						bo="com.asiainfo.common.abo.bo.BOABGMonBusiErrorLog"
+						uitype="table" editable="true">
+						<div class="c_scroll" style="height: 242px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="busiDetailTable" scroll="true">
+									<thead>
+										<tr>
+											<th col="busiDetailRowIndex" style="display: none">RowIndex</th>
+											<th col="groupCode" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(2,this)"><span>分组编码</span></th>
+											<th col="groupName" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(3,this)"><span>分组名称</span></th>
+											<th col="taskCode" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(4,this)"><span>任务编码</span></th>
+											<th col="taskName" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(5,this)"><span>任务名称</span></th>
+											<th col="appCode" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(6,this)"><span>应用编码</span></th>
+											<th col="version" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(7,this)"><span>版本号</span></th>
+											<th col="state" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(8,this)"><span>任务配置状态</span></th>
+											<th col="runState" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(9,this)"><span>任务运行状态</span></th>
+											<th col="splitRegion" colcss="e_left" class="desc" onclick="PocessCtrlJS.sort(10,this)"><span>是否按地区分片</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:busiDetailItems"
+											value="ognl:busiDetailItem" index="ognl:busiDetailRowIndex">
+											<tr>
+												<td style="display: none"><span jwcid="@Insert"
+													value="ognl:busiDetailRowIndex+1"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.groupCode" name="groupCode"></span>
+												</td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.groupName"
+													name="groupName"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.taskCode" name="taskCode"></span>
+												</td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.taskName" name="taskName"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.appCode" name="appCode"></span>
+												</td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.version" name="version"></span>
+												</td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.state" name="state"></span>
+												</td>
+												
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.runState" name="runState"></span>
+												</td>
+
+												<td class="e_left wrap"><span jwcid="@Insert"
+													value="ognl:busiDetailItem.splitRegion" name="splitRegion"></span>
+												</td>
+											</tr>
+										</span>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 业务详情显示开始 -->
+			</div>
+</body>
+</html>

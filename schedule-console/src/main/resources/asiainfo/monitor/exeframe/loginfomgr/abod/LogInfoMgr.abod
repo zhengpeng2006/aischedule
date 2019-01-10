@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<abo-design attr-display="LogInfoMgr" code="LogInfoMgr" columns="">
+  <abo fullname="com.asiainfo.monitor.exeframe.loginfomgr.abo.ABGMonHostLog" name="ABGMonHostLog" type="abo">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>113,124,160,40</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/loginfomgr/abo/ABGMonHostLog.abo</url>
+  </abo>
+  <joins/>
+</abo-design>

@@ -1,0 +1,24 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "colRelsItems": [
+      {
+        "mappingId": "mapping^0000000000",
+        "cfgTfDtlId": "dtl^0000000001",
+        "srcColumnName": "aa",
+        "tfColumnName": "sss",
+        "remark": ""
+      }
+    ],
+    "total": 1
+  }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/mainFrame/baseFrame.cmpt" code="Login" desc="" dna-code="822d3f15-4801-0010-ac9c-d3bb9824e2fc" full-name="module.baseFrame.login.Login" kind="0" name="Login">
+  <uientity-version branch="" code="" desc="" name="Login" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.mainFrame.view.Login</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="input" uiid="userName"/>
+      <area bo="java.lang.String" type="input" uiid="userPwd"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/baseFrame/login" name="Login.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/baseFrame/login" name="Login.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/baseFrame/login" name="Login.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/mainFrame/view" name="Login.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="login" type="button"/>
+      <ui-event id="" name="cancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

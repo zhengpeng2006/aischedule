@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/common/Common.cmpt" code="Common" desc="" dna-code="af38f049-4201-0010-b736-a36e151febe6" implementation-class="com.asiainfo.common.service.impl.CommonSVImpl" interface-class="com.asiainfo.common.service.interfaces.ICommonSV" name="Common" type="1">
+  <servpkg-version branch="+srv/Common--trunk" code="trunk" name="trunk" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/config/com/asiainfo/common/servpkg" name="Common.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/common/service/interfaces" name="ICommonSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/common/service/impl" name="CommonSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/common/dao/interfaces" name="ICommonDAO.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/common/dao/impl" name="CommonDAOImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="getStaticDataByCodeType" desc="get static data with code type condition" dna-code="5376f049-4201-0010-b736-a36e151febe6" name="getStaticDataByCodeType" opt-flag="Y" serv-func="getStaticDataByCodeType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="codeType" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.common.bo.BOBsStaticData[]" param-kind="bo"/>
+      </service>
+      <service code="getStaticDataByCodeTypeAndCodeVal" desc="get static data with code type and code value condition" dna-code="8366f649-4201-0010-b736-a36e151febe6" name="getStaticDataByCodeTypeAndCodeVal" opt-flag="Y" serv-func="getStaticDataByCodeTypeAndCodeVal" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="codeType" param-kind="java"/>
+          <param datatype="java.lang.String" name="codeValue" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.common.bo.BOBsStaticData" param-kind="bo"/>
+      </service>
+    </services>
+    <status>1</status>
+  </servpkg-version>
+</servpkg>

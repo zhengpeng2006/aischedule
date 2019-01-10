@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgTaskParamDefine" mainattr="ID">
+    <mapingenty type="table">CFG_TASK_PARAM_DEFINE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CFG_TASK_TYPE_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CFG_TASK_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAM_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARAM_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_MUST" maxlength="1" datatype="String" type="COL" remark="&apos;1&apos;必选 &apos;0&apos;非必选">
+        <mapingcol datatype="CHAR">IS_MUST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="&apos;U&apos;正常 &apos;E&apos;注销">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

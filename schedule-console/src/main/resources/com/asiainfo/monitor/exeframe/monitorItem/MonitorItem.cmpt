@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="MonitorItem" desc="" dna-code="3b75c2d0-4601-0010-b790-3db2a0bc1060" name="MonitorItem">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="MonitorItem" label="MonitorItem">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/monitor/exeframe/monitorItem/abod/MonitorItem.abod</url>
+      </abod>
+      <ui-entity dna-code="3ad4c4d0-4601-0010-b790-3db2a0bc1060" label="MemoryInfo">
+        <uiinfo>32,74,160,40</uiinfo>
+        <url>/html/module/monitor/monitorItem/MemoryInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="e7b5b8eb-4601-0010-80ab-9184e770b69e" label="SvInvokeStatic">
+        <uiinfo>32,129,160,40</uiinfo>
+        <url>/html/module/monitor/monitorItem/SvInvokeStatic.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="41407a87-4801-0010-977a-c38b3e868338" label="SqlStatInfo">
+        <uiinfo>36,199,156,40</uiinfo>
+        <url>/html/module/monitor/monitorItem/SqlStatInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="fcc7f7f8-4801-0010-a247-ef223b86565f" label="TriggerInfo">
+        <uiinfo>39,270,160,40</uiinfo>
+        <url>/html/module/monitor/monitorItem/TriggerInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="5b4f1fea-4901-0010-9704-b7094b7c3685" label="WarningInfo">
+        <uiinfo>40,328,154,40</uiinfo>
+        <url>/html/module/monitor/monitorItem/WarningInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="1523d0b6-4c01-0010-9a18-5f19885ac259" label="GuaranteeInfo">
+        <uiinfo>37,11,160,40</uiinfo>
+        <url>/html/module/monitor/monitorItem/GuaranteeInfo.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/monitor/exeframe/monitorItem" name="MonitorItem.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/exeframe/monitorItem/abod" name="MonitorItem.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

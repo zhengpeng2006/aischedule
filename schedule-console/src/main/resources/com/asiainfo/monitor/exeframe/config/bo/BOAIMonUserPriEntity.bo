@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="appframe" name="BOAIMonUserPriEntity" mainattr="ENTITY_ID">
+    <mapingenty type="table">AI_MON_USER_PRI_ENTITY</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ENTITY_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">ENTITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTITY_CODE" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTITY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTITY_NAME" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTITY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTITY_TYPE" maxlength="1" datatype="Integer" type="COL" remark="1-菜单
+2-操作">
+        <mapingcol datatype="NUMBER">ENTITY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTITY_ATTR" maxlength="400" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTITY_ATTR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTITY_STYLE" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTITY_STYLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTITY_SEQ" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">ENTITY_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPLOY_TYPE" maxlength="200" datatype="String" type="COL" remark="模板类型">
+        <mapingcol datatype="VARCHAR2">DEPLOY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SELF_TYPE" maxlength="1" datatype="Integer" type="COL" remark="1--系统所属, 2--扩展">
+        <mapingcol datatype="NUMBER">SELF_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="用户状态
+U-正常
+E- 删除状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOAD_TYPE" maxlength="1" datatype="String" type="COL" remark="加载方式:0,默认;1,预加载">
+        <mapingcol datatype="CHAR">LOAD_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="monitor/controlmgr/js/UserGroup.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!--area start -->
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">Part</div>
+				</div>
+				<div class="c_form c_form-col-3 c_form-label-4 c_form-inline" uiid="qryform" id="qryform" type="condForm" objName="qryform" uitype="condform"
+					editable="true">
+					<ul class="ul">
+						<li class="li">
+							<span class="label">组编号：</span>
+							<span class="e_elements">
+								<span class="e_input">
+									<span>
+										<input jwcid="@TextField" type="text" name="groupCode" value="ognl:qryfrom.groupCode" desc="组编号：" uiid="qryfrom_groupCode" />
+									</span>
+								</span>
+							</span>
+						</li>
+						<li class="li">
+							<span class="label">组名称：</span>
+							<span class="e_elements">
+								<span class="e_input">
+									<span>
+										<input jwcid="@TextField" type="text" name="groupName" value="ognl:qryfrom.groupName" desc="组名称：" uiid="qryfrom_groupName" />
+									</span>
+								</span>
+							</span>
+						</li>
+					</ul>
+					<div class="submitPlace"></div>
+					<div class="submit">
+						<button onclick="return UserGroupJSObj.btn_qryOnclick($(this));" template_type="operate" type="button" name="btn_qry" class="e_button-form"
+							formId="qryfrom">
+							<span>查询</span>
+						</button>
+					</div>
+				</div>
+
+
+				<div class="c_table" jwcid="userGroupTab@Part" uiid="userGroupTab" id="userGroupTab" element="div" type="table"
+					objName="userGroupTabItems,userGroupTabCount" bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup" uitype="table" editable="true">
+					<div class="c_scroll" style="height: 242px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="userGroupTabTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="userGroupTabRowIndex" style="display: none">RowIndex</th>
+										<th col="groupCode" colcss="e_left" class="wrap">组编号</th>
+										<th col="groupName" colcss="e_left" class="wrap">组名称</th>
+										<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+										<th col="doneDate" colcss="e_left" class="wrap">操作日期</th>
+										<th col="state" colcss="e_left" class="wrap">状态</th>
+										<th col="notes" colcss="e_left" class="wrap">备注</th>
+										<th col="opId" style="display: none">对记录修改的人员id</th>
+										<th col="userGroupId" style="display: none">唯一标识。来源于系统序列号</th>
+									</tr>
+								</thead>
+								<tbody>
+									<span jwcid="@Foreach" source="ognl:userGroupTabItems" value="ognl:userGroupTabItem" index="ognl:userGroupTabRowIndex">
+										<tr>
+											<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabRowIndex+1"></span></td>
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.groupCode" name="groupCode"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.groupName" name="groupName"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.createDate" name="createDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.doneDate" name="doneDate"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',userGroupTabItem.state)" name="state"></span></td>
+
+											<td class="e_left wrap"><span jwcid="@Insert" value="ognl:userGroupTabItem.notes" name="notes"></span></td>
+
+											<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.opId" name="opId"></span></td>
+
+											<td style="display: none"><span jwcid="@Insert" value="ognl:userGroupTabItem.userGroupId" name="userGroupId"></span></td>
+
+										</tr>
+									</span>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div jwcid="@NavBar" name="userGroupTabNavBar" cond="qryform" part="userGroupTab" listener="loadUserGropuData"
+						count="ognl:userGroupTabCount"></div>
+				</div>
+				<div class="c_submit" uitype="btngroup" editable="true">
+					<button name="btn_add" class="e_button-form" onclick="UserGroupJSObj.buttonAddOnClick();">
+						<span>
+							<i class="e_ico-add"></i>新增
+						</span>
+					</button>
+
+					<button onclick="return UserGroupJSObj.btn_editOnclick($(this));" name="btn_edit" class="e_button-form">
+						<span>
+							<i class="e_ico-edit"></i>修改
+						</span>
+					</button>
+					<button onclick="UserGroupJSObj.btn_delOnclick();" name="btn_del" class="e_button-form">
+						<span>
+							<i class="e_ico-delete"></i>删除
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="userGroupDetailForm" style="display: none;">
+		<div class="c_form c_form-col-2 c_form-label-5" jwcid="userGroupDetail@Part" uiid="userGroupDetail" id="userGroupDetail" type="form"
+			objName="userGroupDetail" boType="" uitype="form" editable="true" bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroup">
+			<ul class="ul">
+				<li class="li">
+					<span class="label">
+						<span class="e_required">组编号：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="groupCode" value="ognl:userGroupDetail.groupCode" nullable="no" desc="组编号"
+									uiid="userGroupDetail_groupCode" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">
+						<span class="e_required">组名称：</span>
+					</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="groupName" value="ognl:userGroupDetail.groupName" nullable="no" desc="组名称"
+									uiid="userGroupDetail_groupName" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li">
+					<span class="label">备注：</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="notes" value="ognl:userGroupDetail.notes" desc="备注" uiid="userGroupDetail_notes" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li" style="display: none">
+					<span class="label">对记录修改的人员id:</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="opId" value="ognl:userGroupDetail.opId" desc="对记录修改的人员id" uiid="userGroupDetail_opId" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li" style="display: none">
+					<span class="label">用户状态 U-正常 E- 删除状态:</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="state" value="ognl:userGroupDetail.state" desc="用户状态 U-正常 E- 删除状态" uiid="userGroupDetail_state" />
+							</span>
+						</span>
+					</span>
+				</li>
+				<li class="li" style="display: none">
+					<span class="label">唯一标识。来源于系统序列号:</span>
+					<span class="e_elements">
+						<span class="e_input">
+							<span>
+								<input jwcid="@TextField" type="text" name="userGroupId" value="ognl:userGroupDetail.userGroupId" desc="唯一标识。来源于系统序列号"
+									uiid="userGroupDetail_userGroupId" />
+							</span>
+						</span>
+					</span>
+				</li>
+			</ul>
+			<div class="submitPlace"></div>
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="return UserGroupJSObj.btn_saveOnclick($(this));" id="btn_save" name="btn_save" class="e_button-form">
+					<span>
+						<i class="e_ico-save"></i>保存
+					</span>
+				</button>
+				<button onclick="" id="btn_cancel" name="btn_cancel" class="e_button-form">
+					<span>
+						<i class="e_ico-cancel"></i>取消
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

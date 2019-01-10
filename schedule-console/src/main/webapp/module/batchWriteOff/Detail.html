@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script type="text/javascript" src="module/batchWriteOff/js/Detail.js"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text" id="showTitle">明细列表</div>
+			</div>
+		</div>
+			<div class="c_box">
+				<div jwcid="processList@Part" uiid="processList" id="processList" element="div" type="table" objName="processListItems,processListCount" bo=""
+				uitype="table" editable="true">
+					<div class="c_scroll" style="height: 484px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="processListTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="processListRowIndex" style="display: none">RowIndex</th>
+										<th col="BEFORE_BALANCE" colcss="e_left" class="wrap">批销前账单总金额</th>
+										<th col="BEFORE_BILL_AMOUNT" colcss="e_left" class="wrap">批销前账单总费用</th>
+										<th col="BEFORE_HIS_AMOUNT" colcss="e_left" class="wrap">批销前历史账单总费用</th>
+										<th col="WRITEOFF_AMOUNT" colcss="e_left" class="wrap">销账金额</th>
+										<th col="AFTER_BALANCE" colcss="e_left" class="wrap">批销后账单总金额</th>
+										<th col="AFTER_BILL_AMOUNT" colcss="e_left" class="wrap">批销后账单总欠费</th>
+										<th col="LAST_WRITEOFF_AMOUNT" colcss="e_left" class="wrap">上月销账金额</th>
+										<th col="RATE" colcss="e_left" class="wrap" style="display:none">环比波动（%）</th>
+									</tr>
+								</thead>
+								<tbody>
+									<div jwcid="@Conditional" condition="ognl:listSize>0"><span jwcid="@Foreach" source="ognl:processListItems" value="ognl:processListItem"
+											index="ognl:processListRowIndex">
+											<tr>
+												<td style="display: none"><span jwcid="@Insert" value="ognl:processListRowIndex+1"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('BEFORE_BALANCE',processListItem.BEFORE_BALANCE)" name="BEFORE_BALANCE"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('BEFORE_BILL_AMOUNT',processListItem.BEFORE_BILL_AMOUNT)" name="BEFORE_BILL_AMOUNT"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('BEFORE_HIS_AMOUNT',processListItem.BEFORE_HIS_AMOUNT)" name="BEFORE_HIS_AMOUNT"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('WRITEOFF_AMOUNT',processListItem.WRITEOFF_AMOUNT)" name="WRITEOFF_AMOUNT"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('AFTER_BALANCE',processListItem.AFTER_BALANCE)" name="AFTER_BALANCE"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('AFTER_BILL_AMOUNT',processListItem.AFTER_BILL_AMOUNT)" name="AFTER_BILL_AMOUNT"></span></td>
+
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('LAST_WRITEOFF_AMOUNT',processListItem.LAST_WRITEOFF_AMOUNT)" name="LAST_WRITEOFF_AMOUNT"></span></td>
+
+												<td class="e_left wrap" style="display:none"><span jwcid="@Insert" value="ognl:doTranslate('RATE',processListItem.RATE)" name="RATE"></span></td>
+
+											</tr>
+										</span></div>
+
+									<div jwcid="@Conditional" condition="ognl:listSize==0">
+										<div class="c_nodata">没有查询结果，请重新查询</div>
+									</div>
+								</tbody>
+							</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

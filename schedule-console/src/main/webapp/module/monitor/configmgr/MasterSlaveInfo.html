@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/MasterSlaveInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div jwcid="slaveTab@Part" uiid="slaveTab" id="slaveTab" element="div" type="table" objName="slaveTabItems,slaveTabCount"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost" uitype="table" editable="true" onclick="MasterSlaveInfoJs.onClick();">
+				<div class="c_scroll" style="height: 242px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="slaveTabTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="slaveTabRowIndex"></th>
+									<th col="hostId" colcss="e_left" class="wrap" style="display: none">主机标识</th>
+									<th col="hostCode" colcss="e_left" class="wrap">主机编码</th>
+									<th col="hostName" colcss="e_left" class="wrap">主机名称</th>
+									<th col="hostIp" colcss="e_left" class="wrap">主机IP</th>
+									<th col="hostDesc" colcss="e_left" class="wrap">主机描述</th>
+									<th col="state" colcss="e_left" class="wrap">状态</th>
+									<th col="createDate" colcss="e_left" class="wrap">创建日期</th>
+									<th col="remarks" colcss="e_left" class="wrap">备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:slaveTabItems" value="ognl:slaveTabItem" index="ognl:slaveTabRowIndex">
+									<tr jwcid="@Conditional" condition="ognl:slaveTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+										<td><span jwcid="@Insert" value="ognl:slaveTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:slaveTabItem.hostId" name="hostId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.hostCode" name="hostCode"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.hostName" name="hostName"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.hostIp" name="hostIp"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.hostDesc" name="hostDesc"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',slaveTabItem.state)" name="state"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.remarks" name="remarks"></span></td>
+
+									</tr>
+									<tr jwcid="@Conditional" condition="ognl:slaveTabRowIndex % 2 == 1" element="tr">
+										<td><span jwcid="@Insert" value="ognl:slaveTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:slaveTabItem.hostId" name="hostId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.hostCode" name="hostCode"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.hostName" name="hostName"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.hostIp" name="hostIp"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.hostDesc" name="hostDesc"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('USER_STATE',slaveTabItem.state)" name="state"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:slaveTabItem.remarks" name="remarks"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+
+			<div class="c_form c_form-col-2 c_form-label-5" jwcid="slaveDetail@Part" uiid="slaveDetail" id="slaveDetail" type="form" objName="slaveDetail"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost" uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">
+							<span class="e_required">备机:</span>
+						</span> <span class="e_elements">
+							<span class="e_select">
+								<span>
+									<span>
+										<select id="hostIdDetail" jwcid="@Select" nullable="no" name="hostId" value="ognl:slaveDetail.hostId" desc="主机标识" source="ognl:getHostList()"
+											disabled="true" changeValue="true" addDefault="true" defaultText="请选择备机" uiid="slaveDetail_hostId"></select>
+									</span>
+								</span>
+							</span>
+						</span></li>
+				</ul>
+				<div class="submitPlace"></div>
+		</div> <!-- 按钮组 一-->
+			<div id="btnGroupDiv1">
+				<div class="c_submit" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter" name="updateAfter" type="hidden"
+					textName="returnInput" value="" afterAction="" />
+					<button onclick="MasterSlaveInfoJs.newClick();" name="newBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-add"></i>新增
+						</span>
+					</button>
+					<button onclick="MasterSlaveInfoJs.delClick();" name="delBtn" id="delBtn" disabled="disabled" class="e_button-form">
+						<span>
+							<i class="e_ico-delete"></i>删除
+						</span>
+					</button></div>
+		</div> <!-- 按钮组一 --> <!-- 按钮组二 -->
+			<div id="btnGroupDiv2" style="display: none">
+				<div class="c_submit" uitype="btngroup" editable="true"><input jwcid="@Any" id="updateAfter" name="updateAfter" type="hidden"
+					textName="returnInput" value="" afterAction="" />
+					<button onclick="MasterSlaveInfoJs.saveClick();" name="saveBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-save"></i>保存
+						</span>
+					</button>
+					<button onclick="MasterSlaveInfoJs.cancelClick();" name="cancelBtn" class="e_button-form">
+						<span>
+							<i class="e_ico-cancel"></i>取消
+						</span>
+					</button></div>
+		</div> <!-- 按钮组二 -->
+	</div>
+	</div>
+</body>
+</html>

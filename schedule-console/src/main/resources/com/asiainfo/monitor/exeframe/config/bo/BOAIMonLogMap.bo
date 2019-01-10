@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+    <sysbo datasource="appframe" name="BOAIMonLogMap" mainattr="LOG_ID">
+        <mapingenty type="table">AI_MON_LOG_MAP</mapingenty>
+        <datafilter />
+        <attrlist>
+            <attr floatlength="0" name="LOG_ID" maxlength="20" datatype="Long" type="PK" remark="LOG ID">
+                <mapingcol datatype="NUMBER">LOG_ID</mapingcol>
+            </attr>
+            <attr floatlength="0" name="CLASS_NAME" maxlength="50" datatype="String" type="COL" remark="类名">
+                <mapingcol datatype="VARCHAR2">CLASS_NAME</mapingcol>
+            </attr>
+            <attr floatlength="0" name="METHOD" maxlength="20" datatype="String" type="COL" remark="方法名">
+                <mapingcol datatype="VARCHAR2">METHOD</mapingcol>
+            </attr>
+            <attr floatlength="0" name="PARAM_NUM" maxlength="4" datatype="Integer" type="COL" remark="参数个数">
+                <mapingcol datatype="NUMBER">PARAM_NUM</mapingcol>
+            </attr>
+            <attr floatlength="0" name="OPERATION" maxlength="2000" datatype="String" type="COL" remark="对应具体操作">
+                <mapingcol datatype="VARCHAR2">OPERATION</mapingcol>
+            </attr>
+            <attr floatlength="0" name="REMARKS" maxlength="50" datatype="String" type="COL" remark="备注">
+                <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+            </attr>
+        </attrlist>
+        <relationlist />
+        <oplist />
+    </sysbo>
+</sysbolist>

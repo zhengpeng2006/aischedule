@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="HandlePage" desc="" dna-code="e8bd609d-4d01-0010-bf04-af1db7e9d33c" name="HandlePage">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="HandlePage" label="HandlePage">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/handlepage/abod/HandlePage.abod</url>
+      </abod>
+      <ui-entity dna-code="c520629d-4d01-0010-bf04-af1db7e9d33c" label="Page403">
+        <uiinfo>34,29,160,40</uiinfo>
+        <url>/html/module/handlepage/Page403.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="2ea6629d-4d01-0010-bf04-af1db7e9d33c" label="Page404">
+        <uiinfo>33,94,160,40</uiinfo>
+        <url>/html/module/handlepage/Page404.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="1b15639d-4d01-0010-bf04-af1db7e9d33c" label="Page500">
+        <uiinfo>33,158,160,40</uiinfo>
+        <url>/html/module/handlepage/Page500.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/handlepage" name="HandlePage.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/handlepage/abod" name="HandlePage.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

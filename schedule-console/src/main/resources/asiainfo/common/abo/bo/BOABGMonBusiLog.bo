@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOABGMonBusiLog" mainattr="THROUGHPUT_ID">
+    <mapingenty type="table">{ABG_MON_BUSI_LOG}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="THROUGHPUT_ID" maxlength="12" datatype="Long" type="PK" remark="主键ID">
+        <mapingcol datatype="NUMBER">THROUGHPUT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERIAL_NO" maxlength="12" datatype="Long" type="COL" remark="流水号">
+        <mapingcol datatype="NUMBER">SERIAL_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_ID" maxlength="12" datatype="String" type="COL" remark="任务编号">
+        <mapingcol datatype="VARCHAR2">TASK_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_SPLIT_ID" maxlength="255" datatype="String" type="COL" remark="任务分片标识">
+        <mapingcol datatype="VARCHAR2">TASK_SPLIT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVER_CODE" maxlength="40" datatype="String" type="COL" remark="应用服务编码">
+        <mapingcol datatype="VARCHAR2">SERVER_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_CNT" maxlength="12" datatype="Long" type="COL" remark="业务处理总量">
+        <mapingcol datatype="NUMBER">TOTAL_CNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PER_HANDLE_CNT" maxlength="12" datatype="Long" type="COL" remark="当次处理量">
+        <mapingcol datatype="NUMBER">PER_HANDLE_CNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HANDLE_CNT" maxlength="12" datatype="Long" type="COL" remark="当前总处理量">
+        <mapingcol datatype="NUMBER">HANDLE_CNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PER_ERR_CNT" maxlength="12" datatype="Long" type="COL" remark="当次处理错单量">
+        <mapingcol datatype="NUMBER">PER_ERR_CNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ERR_CNT" maxlength="12" datatype="Long" type="COL" remark="当前错误总量">
+        <mapingcol datatype="NUMBER">ERR_CNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_CODE" maxlength="3" datatype="String" type="COL" remark="地市编码">
+        <mapingcol datatype="CHAR">REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONSUME_TIME" maxlength="12" datatype="Long" type="COL" remark="当次处理消耗时间">
+        <mapingcol datatype="NUMBER">CONSUME_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SYSTEM_DOMAIN" maxlength="255" datatype="String" type="COL" remark="默认：CRM">
+        <mapingcol datatype="VARCHAR2">SYSTEM_DOMAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUBSYSTEM_DOMAIN" maxlength="255" datatype="String" type="COL" remark="日志所属子系统">
+        <mapingcol datatype="VARCHAR2">SUBSYSTEM_DOMAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APP_SERVER_NAME" maxlength="255" datatype="String" type="COL" remark="业务进程侧，填写APPCODE">
+        <mapingcol datatype="VARCHAR2">APP_SERVER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="日志生成时间">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEQ" maxlength="12" datatype="Long" type="COL" remark="序号">
+        <mapingcol datatype="NUMBER">SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MON_FLAG" maxlength="1" datatype="String" type="COL" remark="默认：N N：未监控展示Y：已监控展示">
+        <mapingcol datatype="CHAR">MON_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT2</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

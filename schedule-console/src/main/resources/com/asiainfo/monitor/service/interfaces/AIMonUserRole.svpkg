@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="AIMonUserRole" desc="" dna-code="da1a51f9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.AIMonUserRoleSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAIMonUserRoleSV" name="AIMonUserRole" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAIMonUserRoleSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="AIMonUserRoleSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="AIMonUserRole.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonUserRoleSV_getBeanById" desc="" dna-code="9b3351f9-4501-0010-9646-9bbd8b625d8b" name="getBeanById" opt-flag="Y" serv-func="getBeanById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="userRoleId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRole" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserRoleSV_getRoleGuildById" desc="" dna-code="9c3351f9-4501-0010-9646-9bbd8b625d8b" name="getRoleGuildById" opt-flag="Y" serv-func="getRoleGuildById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.RoleDomain" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleSV_getRoleGuildByIdFromDb" desc="" dna-code="a83351f9-4501-0010-9646-9bbd8b625d8b" name="getRoleGuildByIdFromDb" opt-flag="Y" serv-func="getRoleGuildByIdFromDb" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.RoleDomain" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleSV_wrapperRoleGuildByBean" desc="" dna-code="b03351f9-4501-0010-9646-9bbd8b625d8b" name="wrapperRoleGuildByBean" opt-flag="Y" serv-func="wrapperRoleGuildByBean" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRole" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.cache.impl.RoleDomain" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleSV_getUserRoleByCond" desc="" dna-code="b13351f9-4501-0010-9646-9bbd8b625d8b" name="getUserRoleByCond" opt-flag="Y" serv-func="getUserRoleByCond" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="roleCode" param-kind="java"/>
+          <param datatype="java.lang.String" name="roleName" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRole[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserRoleSV_queryRolesByUserId" desc="" dna-code="c23351f9-4501-0010-9646-9bbd8b625d8b" name="queryRolesByUserId" opt-flag="Y" serv-func="queryRolesByUserId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="userId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRole[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserRoleSV_getAllUserRoleBean" desc="" dna-code="cb3351f9-4501-0010-9646-9bbd8b625d8b" name="getAllUserRoleBean" opt-flag="Y" serv-func="getAllUserRoleBean" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRole[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserRoleSV_saveOrUpdate" desc="" dna-code="cc3351f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRole" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleSV_saveOrUpdate" desc="" dna-code="cd3351f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserRole[]" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserRoleSV_delete" desc="" dna-code="ce3351f9-4501-0010-9646-9bbd8b625d8b" name="delete" opt-flag="Y" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="userRoleId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

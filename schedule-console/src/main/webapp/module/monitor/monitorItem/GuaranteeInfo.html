@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script type="text/javascript" src="module/monitor/monitorItem/js/GuaranteeInfo.js"></script>
+
+<script src="stl/component/datefield/st_datefield.js" type="text/javascript" sign="st_datefield"></script></head>
+
+<body jwcid="@Body">
+	<!--area start -->
+	<div class="c_box">
+		<div class="c_title">
+			<div class="text">月末月初保障</div>
+	</div>
+		<div class="c_form c_form-col-6 c_form-label-4 c_form-inline" uiid="qryCondition" id="qryCondition" type="condForm" objName="qryCondition"
+		uitype="condform" editable="true">
+			<ul class="ul">
+			    <li class="li"><span class="label">批次:</span> <span class="e_elements">
+						<span class="e_select">
+							<span>
+								<span>
+									<select jwcid="@Select" name="batchId" value="ognl:qryCondition.batchId" desc="批次" source="ognl:getBatchList()" changeValue="true"
+										addDefault="false" defaultText="root" uiid="qryCondition_batchId"></select>
+								</span>
+							</span>
+						</span>
+					</span></li>
+				<li class="li"><span class="label">开始时间:</span> <input type="text" name="beginDate" jwcid="@DateField" value="ognl:qryCondition.beginDate" desc="开始时间"
+					datatype="date" afterAction="" uiid="qryCondition_beginDate" format="yyyy-MM-dd HH:mm:ss" time="true" /></li>
+				<li class="li"><span class="label">结束时间:</span> <input type="text" name="endDate" jwcid="@DateField" value="ognl:qryCondition.endDate" desc="结束时间"
+					datatype="date" afterAction="" uiid="qryCondition_endDate" format="yyyy-MM-dd HH:mm:ss" time="true" /></li>
+			</ul>
+			<div class="submitPlace"></div>
+			<div class="submit">
+				<button onclick="GuaranteeInfoJs.qryInfo();" template_type="operate" type="button" name="qryBtn" class="e_button-form" formId="qryCondition">
+					<span>查询</span>
+				</button>
+		</div>
+	</div>
+
+
+		<div class="c_table" jwcid="batchTab@Part" uiid="batchTab" id="batchTab" element="div" type="table" objName="batchTabItems,batchTabCount" bo=""
+		uitype="table" editable="true">
+			<div class="c_scroll" style="height: 470px">
+				<div class="c_table c_table-row-10">
+					<table jwcid="@Table" name="batchTabTable" scroll="true">
+						<thead>
+							<tr>
+								<th col="batchTabRowIndex" style="display: none">RowIndex</th>
+								<th col="column0" colcss="e_left" class="wrap"></th>
+								<th col="column1" colcss="e_left" class="wrap">570</th>
+								<th col="column2" colcss="e_left" class="wrap">571</th>
+								<th col="column3" colcss="e_left" class="wrap">572</th>
+								<th col="column4" colcss="e_left" class="wrap">573</th>
+								<th col="column5" colcss="e_left" class="wrap">574</th>
+								<th col="column6" colcss="e_left" class="wrap">575</th>
+								<th col="column7" colcss="e_left" class="wrap">576</th>
+								<th col="column8" colcss="e_left" class="wrap">577</th>
+								<th col="column9" colcss="e_left" class="wrap">578</th>
+								<th col="column10" colcss="e_left" class="wrap">579</th>
+								<th col="column11" colcss="e_left" class="wrap">580</th>
+							</tr>
+						</thead>
+						<tbody>
+							<span jwcid="@Foreach" source="ognl:batchTabItems" value="ognl:batchTabItem" index="ognl:batchTabRowIndex">
+								<tr>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabRowIndex+1"></span></td>
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:batchTabItem.column0" name="column0"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column1)" name="column1"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime1" name="startEndTime1"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column2)" name="column2"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime2" name="startEndTime2"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column3)" name="column3"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime3" name="startEndTime3"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column4)" name="column4"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime4" name="startEndTime4"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column5)" name="column5"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime5" name="startEndTime5"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column6)" name="column6"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime6" name="startEndTime6"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column7)" name="column7"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime7" name="startEndTime7"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column8)" name="column8"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime8" name="startEndTime8"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column9)" name="column9"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime9" name="startEndTime9"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column10)" name="column10"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime10" name="startEndTime10"></span></td>
+
+									<td class="e_left wrap" title="" onmouseover="GuaranteeInfoJs.showTime($(this));"><span jwcid="@Insert"
+											value="ognl:logTypeTrans(batchTabItem.column11)" name="column11"></span></td>
+									<td style="display: none"><span jwcid="@Insert" value="ognl:batchTabItem.startEndTime11" name="startEndTime11"></span></td>
+								</tr>
+							</span>
+						</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
+<script language="javascript">
+    $(document).ready(function() {
+        var dateField = new $.st_datefield("startTime");
+    });
+</script>

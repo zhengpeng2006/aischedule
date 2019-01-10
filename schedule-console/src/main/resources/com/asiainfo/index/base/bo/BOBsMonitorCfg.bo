@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="indexBase" name="BOBsMonitorCfg" mainattr="MONITOR_CFG_ID">
+    <mapingenty type="table">BS_MONITOR_CFG</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="MONITOR_CFG_ID" maxlength="6" datatype="Integer" type="PK" remark="监控配置编号">
+        <mapingcol datatype="NUMBER">MONITOR_CFG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MONITOR_ID" maxlength="6" datatype="Integer" type="COL" remark="监控编号">
+        <mapingcol datatype="NUMBER">MONITOR_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_ID" maxlength="6" datatype="Integer" type="COL" remark="监控指标编号">
+        <mapingcol datatype="NUMBER">INDEX_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_KIND" maxlength="1" datatype="String" type="COL" remark="监控指标分类：0：维度；1：标量">
+        <mapingcol datatype="VARCHAR2">INDEX_KIND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_CODE_MAPPING" maxlength="64" datatype="String" type="COL" remark="监控指标映射编码">
+        <mapingcol datatype="VARCHAR2">INDEX_CODE_MAPPING</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_CODE_DISPLAY" maxlength="64" datatype="String" type="COL" remark="监控指标显视代码">
+        <mapingcol datatype="VARCHAR2">INDEX_CODE_DISPLAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDEX_NAME_DISPLAY" maxlength="64" datatype="String" type="COL" remark="监控指标显视名称">
+        <mapingcol datatype="VARCHAR2">INDEX_NAME_DISPLAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建时间">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="操作时间">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态：U：正常；E：删除">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

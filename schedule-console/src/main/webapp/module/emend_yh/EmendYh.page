@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.emend_yh.view.EmendYh">
+  <property-specification name="emendYhItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="emendYhItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="emendYhCount" type="long"/>
+  <property-specification name="emendYhRowIndex" type="int"/>
+</page-specification>

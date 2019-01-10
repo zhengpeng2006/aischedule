@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.deploy.view.Deploy">
+  <property-specification name="testItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="testItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="testCount" type="long"/>
+  <property-specification name="testRowIndex" type="int"/>
+  <property-specification name="nodeTableItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="nodeTableItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="nodeTableCount" type="long"/>
+  <property-specification name="nodeTableRowIndex" type="int"/>
+  <property-specification name="versionInfo" type="net.sf.json.JSONObject"/>
+  <property-specification name="versionDetail" type="net.sf.json.JSONObject"/>
+  <property-specification name="hisVersionTableItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="hisVersionTableItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="hisVersionTableCount" type="long"/>
+  <property-specification name="hisVersionTableRowIndex" type="int"/>
+</page-specification>

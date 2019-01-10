@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BODeployNodeVersion" mainattr="NODE_ID">
+    <mapingenty type="table">AI_DEPLOY_NODE_VERSION</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="NODE_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">NODE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VERSION_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">VERSION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="TIMESTAMP(6)">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATOR_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OPERATOR_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

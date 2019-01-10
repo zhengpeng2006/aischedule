@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgTaskParamValue" mainattr="ID">
+    <mapingenty type="table">CFG_TASK_PARAM_VALUE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="12" datatype="Long" type="PK" remark="主键ID">
+        <mapingcol datatype="NUMBER">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CFG_TASK_ID" maxlength="12" datatype="Long" type="COL" remark="任务配置ID">
+        <mapingcol datatype="NUMBER">CFG_TASK_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAM_ID" maxlength="12" datatype="Long" type="COL" remark="参数ID">
+        <mapingcol datatype="NUMBER">PARAM_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAM_VALUE" maxlength="255" datatype="String" type="COL" remark="N-无限制 E-枚举 V-取值范围 F-自定义格式 T-表查询">
+        <mapingcol datatype="VARCHAR2">PARAM_VALUE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="Local_monitor" name="BOAIMonAttentionPanel" mainattr="PANEL_ID">
+    <mapingenty type="table">AI_MON_ATTENTION_PANEL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PANEL_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">PANEL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PANEL_NAME" maxlength="255" datatype="String" type="COL" remark="名称">
+        <mapingcol datatype="VARCHAR2">PANEL_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PANEL_DESC" maxlength="255" datatype="String" type="COL" remark="描述">
+        <mapingcol datatype="VARCHAR2">PANEL_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAYER" maxlength="20" datatype="String" type="COL" remark="层">
+        <mapingcol datatype="VARCHAR2">LAYER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OBJ_TYPE" maxlength="40" datatype="String" type="COL" remark="对象类型:EXEC,进程;TABLE,表;">
+        <mapingcol datatype="VARCHAR2">OBJ_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OBJ_ID" maxlength="12" datatype="Long" type="COL" remark="对象标识:根据OBJ_TYPE为EXEC则为进程标识,为TABLE则是表标识">
+        <mapingcol datatype="NUMBER">OBJ_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXEC_METHOD" maxlength="10" datatype="String" type="COL" remark="执行方式:WT,前台定时;HT,后台定时,HC后台周期">
+        <mapingcol datatype="VARCHAR2">EXEC_METHOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THRESHOLD_ID" maxlength="12" datatype="Long" type="COL" remark="警告">
+        <mapingcol datatype="NUMBER">THRESHOLD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TIME_ID" maxlength="12" datatype="Long" type="COL" remark="时间">
+        <mapingcol datatype="NUMBER">TIME_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TYPE" maxlength="40" datatype="String" type="COL" remark="展现类型:AREACHART,区域图;BARCHART,横向柱状图;COLUMNCHART,柱状图;LINECHART,线图;PIECHART,饼图;3DCOLUMNCHART;3DPIECHART;3DBARCHART;RINGCHART,环状图;3DRINGCHART;SCALER,仪表盘">
+        <mapingcol datatype="VARCHAR2">VIEW_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRAIL" maxlength="1" datatype="String" type="COL" remark="轨迹:1、有;0、无">
+        <mapingcol datatype="CHAR">CONTRAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMP_TYPE" maxlength="20" datatype="String" type="COL" remark="模板类型（APP、WEB、OTHER）">
+        <mapingcol datatype="VARCHAR2">TEMP_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_STRATEGY" maxlength="255" datatype="String" type="COL" remark="显示策略">
+        <mapingcol datatype="VARCHAR2">VIEW_STRATEGY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TRANSFORM" maxlength="255" datatype="String" type="COL" remark="策略实现">
+        <mapingcol datatype="VARCHAR2">VIEW_TRANSFORM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态:U为正常,E为删除">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

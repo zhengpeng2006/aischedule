@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonBatch" mainattr="SN">
+    <mapingenty type="table">AI_MON_BATCH</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="BATCH_ID" maxlength="12" datatype="Long" type="COL" order="0" notNull="N">
+        <mapingcol>BATCH_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_CODE" maxlength="255" datatype="String" type="COL" order="1" notNull="N">
+        <mapingcol>TASK_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SN" maxlength="12" datatype="Long" type="COL" order="2" notNull="N">
+        <mapingcol>SN</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

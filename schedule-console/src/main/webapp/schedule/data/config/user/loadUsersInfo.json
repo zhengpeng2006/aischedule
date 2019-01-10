@@ -1,0 +1,43 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "total": 25,
+    "rows": [
+      {
+        "createDate": "2016-08-30",
+        "modifyDate": "",
+        "remark": "",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonUsers",
+        "userCode": "schedule1",
+        "userId": 720,
+        "userName": "schedule1",
+        "userPwd": "5+c="
+      },
+      {
+        "createDate": "2016-08-30",
+        "modifyDate": "",
+        "remark": "",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonUsers",
+        "userCode": "schedule2",
+        "userId": 721,
+        "userName": "schedule2",
+        "userPwd": "5+c="
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/schedule/js/TaskParamCfg.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_box">
+			<!-- 参数列表开始 -->
+			<div jwcid="taskParams@Part" uiid="taskParams" id="taskParams"
+				element="div" type="table" objName="taskParamsItems,taskParamsCount"
+				bo="" uitype="table" editable="true">
+				<div class="c_scroll" style="height: 500px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="taskParamsTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="taskParamsRowIndex" style="display: none">RowIndex</th>
+									<th col="taskCode" colcss="e_left" class="wrap">任务编码</th>
+									<th col="paramKey" colcss="e_left" class="wrap">参数名</th>
+									<th col="paramValue" colcss="e_left" class="wrap">参数值</th>
+									<th col="paramDesc" colcss="e_left" class="wrap">参数描述</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:taskParamsItems"
+									value="ognl:taskParamsItem" index="ognl:taskParamsRowIndex">
+									<tr>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:taskParamsRowIndex+1"></span></td>
+										<td class="e_left"><span jwcid="@Insert"
+											value="ognl:taskParamsItem.taskCode" name="taskCode"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert"
+											value="ognl:taskParamsItem.paramKey"
+											name="paramKey"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:taskParamsItem.paramValue" name="paramValue"></span>
+										</td>
+										
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:taskParamsItem.paramDesc" name="paramDesc"></span>
+										</td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- 参数列表结束 -->
+			<!-- 按钮组开始 -->
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="TaskParamCfgJS.addParam()" name="addParam" class="e_button-form">
+					<span>新增</span>
+				</button>
+				<button onclick="TaskParamCfgJS.selectedOperation('deleteParam')" name="deleteParam" class="e_button-form">
+					<span>删除</span>
+				</button>
+			</div>
+			<!-- 按钮组结束 -->
+			</div>
+			<!-- 添加/修改参数开始 -->
+			<div id="paramDiv" style="display:none">
+			<div class="c_form c_form-col-1 c_form-label-5"
+				jwcid="paramInput@Part" uiid="paramInput" id="paramInput"
+				type="form" objName="paramInput"
+				bo="" uitype="form"
+				editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label"><span
+							class="e_required">参数名:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="paramKey" value="ognl:paramInput.paramKey"
+									desc="参数名" uiid="paramInput_paramKey" nullable="no"/></span>
+						</span></span></li>
+					<li class="li"><span class="label">参数值:</span> <span class="e_textarea">
+							<span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="paramValue" jwcid="@TextArea"
+											value="ognl:paramInput.paramValue" style="height: 30px;"
+											uiid="paramInput_paramValue" nullable="no" id="paramValueInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+					<li class="li"><span class="label">参数描述:</span> <span class="e_textarea">
+							<span class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="paramDesc" jwcid="@TextArea"
+											value="ognl:paramInput.paramDesc" style="height: 30px;"
+											uiid="paramInput_paramDesc" nullable="no" id="paramDescInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+				</ul>
+				<div class="submitPlace"></div>
+				<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="TaskParamCfgJS.saveParam()" name="saveParams" class="e_button-form">
+					<span>保存</span>
+				</button>
+				<button onclick="TaskParamCfgJS.quitDiv()" name="cancel" class="e_button-form">
+					<span>取消</span>
+				</button>
+			</div>
+			</div>
+			
+			</div>
+			<!-- 添加修改结束 -->
+		</div>
+	</div>
+</body>
+</html>

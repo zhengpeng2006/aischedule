@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="BusinessCacheInfo" desc="" dna-code="d508a4fe-4501-0010-a4a7-cd238c6a64a0" full-name="monitor.monitorBase.BusinessCacheInfo" kind="0" name="BusinessCacheInfo">
+  <uientity-version branch="" code="" desc="" name="BusinessCacheInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.monitorBase.view.BusinessCacheInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="businessQuery_appID"/>
+      <area bo="java.lang.String" type="select" uiid="businessQuery_cacheType"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/monitorBase" name="BusinessCacheInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="BusinessCacheInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="BusinessCacheInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/monitorBase/view" name="BusinessCacheInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="query" type="button"/>
+      <ui-event id="" name="copy" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="source" element-id="cacheType">{descRow:'cacheTypeSource',nameRow:'cacheTypeSource'}</jsfunction>
+      <jsfunction element-event="onclick" element-id="query">{descRow:'queryOnclick',nameRow:'queryOnclick'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAPIShowCacheSV_getBusiCache" data-uiid="businessQuery" desc="" dna-code="190557f9-4501-0010-9646-9bbd8b625d8b" element-event="onclick" element-id="query" is-template="false" method="getBusiCache" name="" on-fail="show result" on-success="no operation" refresh-uiid="cacheInfo" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIShowCache.svpkg" type="condform">
+        <ui-parameter code="appId" param-kind="java" scope="businessQuery" type="java.lang.String" uiparam-type="FormEle" uiparam-value="appID"/>
+        <ui-parameter code="type" param-kind="java" scope="businessQuery" type="java.lang.String" uiparam-type="FormEle" uiparam-value="cacheType"/>
+        <ui-parameter code="start" param-kind="java" scope="" type="java.lang.Integer" uiparam-type="Constant" uiparam-value=""/>
+        <ui-parameter code="end" param-kind="java" scope="" type="java.lang.Integer" uiparam-type="Constant" uiparam-value=""/>
+      </ui-service>
+      <ui-service bind-operate-name="" code="IAPIShowCacheSV_getBusiCacheType" data-uiid="businessQuery" desc="" dna-code="f50457f9-4501-0010-9646-9bbd8b625d8b" element-event="source" element-id="cacheType" is-template="false" method="getBusiCacheType" name="" on-fail="no operation" on-success="no operation" refresh-uiid="businessQuery" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIShowCache.svpkg" type="select">
+        <ui-parameter code="appId" param-kind="java" scope="businessQuery" type="java.lang.String" uiparam-type="FormEle" uiparam-value="appID"/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

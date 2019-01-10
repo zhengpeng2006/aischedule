@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="component/widget/echarts/custom/EchartsExt.js" type="text/javascript"></script>
+<script src="module/index/js/MonIndexInfo.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="module/monitor/css/monitor.css" />
+</head>
+
+<body jwcid="@Body">
+	<script src="component/widget/echarts/echarts-plain.js"></script>
+	<div id="layout" class="l_col" uitype="layout" editable="true">
+		<div class="l_left" style="width: 20%; height: 800px;">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">组织结构</div>
+			</div>
+				<div jwcid="MonIndex@Tree" name="MonIndex" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true" id="MonIndex"
+				style="height: 491px; overflow: auto;" initAfterAction="MonIndexInfoJs.treeInitAfterAction()" parentNodeId="parentId" nodeId="monitorId"
+				nodeText="monitorName" bo="com.asiainfo.index.base.bo.BOBsMonitor" showCheckBox="false" textAction="MonIndexInfoJs.treeTextClick(nodedata)"
+				expandPath="-1" async="false"></div>
+		</div>
+	</div>
+		<div class="l_auto" style="height: 540px; overflow: auto">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text" id="allInfo">指标监控</div>
+			</div>
+		</div>
+			<div id="condition" style="display: none">
+				<div class="c_title">
+					<div class="text" id="allInfo">查询维度</div>
+			</div>
+				<div><div class="c_form c_form-col-4 c_form-label-6 c_form-inline" uiid="qryReal" id="qryReal" type="condForm" objName="qryReal"
+					uitype="condform" editable="true">
+						<ul class="ul" id="cond">
+						</ul>
+						<div class="submitPlace"></div>
+						<div class="submit">
+							<button onclick="return MonIndexInfoJs.showInfo($(this));" template_type="operate" type="button" name="qryRealBtn" class="e_button-form"
+								formId="qryReal">
+								<span>查询实时信息</span>
+							</button>
+					</div>
+				</div></div>
+				<div class="c_title">
+					<div class="text" id="allInfo">查询历史</div>
+			</div>
+				<div class="c_form c_form-col-3 c_form-label-4 c_form-inline" uiid="qryForm" id="qryForm" type="condForm" objName="qryForm" uitype="condform"
+				editable="true">
+					<ul class="ul">
+						<li class="li"><span class="label">开始时间:</span> <input type="text" name="beginDate" jwcid="@DateField" value="ognl:qryForm.beginDate"
+							desc="开始时间" datatype="date" afterAction="" uiid="qryForm_beginDate" format="yyyy-MM-dd HH:mm:ss" time="true" /></li>
+						<li class="li"><span class="label">结束时间:</span> <input type="text" name="endDate" jwcid="@DateField" value="ognl:qryForm.endDate"
+							desc="结束时间" datatype="date" afterAction="" uiid="qryForm_endDate" format="yyyy-MM-dd HH:mm:ss" time="true" /></li>
+					</ul>
+					<div class="submitPlace"></div>
+					<div class="submit">
+						<button onclick="return MonIndexInfoJs.showHisInfo($(this));" template_type="operate" type="button" name="qryInfo" class="e_button-form"
+							formId="qryForm">
+							<span>查询历史信息</span>
+						</button>
+				</div>
+			</div>
+				<div id="dycDiv" style="height: 300px;" />
+		</div>
+
+	</div>
+	</div>
+
+</body>
+</html>

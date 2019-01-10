@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/index/Index.cmpt" code="MonIndexInfo" desc="" dna-code="f6e9396a-4d01-0010-8229-8b0f6a727ee6" full-name="module.index.MonIndexInfo" kind="0" name="MonIndexInfo">
+  <uientity-version branch="" code="" desc="" name="MonIndexInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.index.view.MonIndexInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="select" uiid="qryReal_condition1"/>
+      <area bo="java.lang.String" type="datefield" uiid="qryForm_beginDate"/>
+      <area bo="java.lang.String" type="datefield" uiid="qryForm_endDate"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/index" name="MonIndexInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/index" name="MonIndexInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/index" name="MonIndexInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/index/view" name="MonIndexInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="qryRealBtn" type="button"/>
+      <ui-event id="" name="qryInfo" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

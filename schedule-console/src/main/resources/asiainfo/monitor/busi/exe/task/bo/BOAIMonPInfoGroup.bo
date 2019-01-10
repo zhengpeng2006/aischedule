@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonPInfoGroup" mainattr="GROUP_ID">
+    <mapingenty type="table">AI_MON_P_INFO_GROUP</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="GROUP_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CODE" maxlength="40" datatype="String" type="COL" remark="编码">
+        <mapingcol datatype="VARCHAR2">GROUP_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="40" datatype="String" type="COL" remark="名称">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_DESC" maxlength="255" datatype="String" type="COL" remark="描述">
+        <mapingcol datatype="VARCHAR2">GROUP_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_ID" maxlength="12" datatype="Long" type="COL" remark="上级实体">
+        <mapingcol datatype="NUMBER">PARENT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORT_ID" maxlength="3" datatype="Integer" type="COL" remark="位次">
+        <mapingcol datatype="NUMBER">SORT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAYER" maxlength="40" datatype="String" type="COL" remark="层">
+        <mapingcol datatype="VARCHAR2">LAYER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_STYLE" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_STYLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

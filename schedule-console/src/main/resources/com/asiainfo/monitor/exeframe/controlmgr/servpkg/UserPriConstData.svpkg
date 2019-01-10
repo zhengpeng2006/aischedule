@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/monitor/exeframe/controlmgr/ControlMgr.cmpt" code="UserPriConstData" desc="用户权限常量数据" dna-code="fefde241-4601-0010-809c-b332abf327a1" implementation-class="com.asiainfo.monitor.exeframe.controlmgr.service.impl.UserPriConstDataSVImpl" interface-class="com.asiainfo.monitor.exeframe.controlmgr.service.interfaces.IUserPriConstDataSV" name="UserPriConstData" type="1">
+  <servpkg-version branch="+srv/UserPriConstData--trunk" code="trunk" name="trunk" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/config/com/asiainfo/monitor/exeframe/controlmgr/servpkg" name="UserPriConstData.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/controlmgr/service/interfaces" name="IUserPriConstDataSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/controlmgr/service/impl" name="UserPriConstDataSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/controlmgr/dao/interfaces" name="IUserPriConstDataDAO.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/controlmgr/dao/impl" name="UserPriConstDataDAOImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="getUserPrivConstByCode" desc="根据常量编码，获取常量信息" dna-code="7449e641-4601-0010-809c-b332abf327a1" name="getUserPrivConstByCode" opt-flag="Y" serv-func="getUserPrivConstByCode" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="constCode" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ailk.common.data.IDataBus" param-kind="java"/>
+      </service>
+      <service code="getDomainInfo" desc="" dna-code="58ec965f-4601-0010-8d65-c33b6df03922" name="getDomainInfo" opt-flag="Y" serv-func="getDomainInfo" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.monitor.exeframe.config.bo.BOAIMonDomainBean[]" param-kind="java"/>
+      </service>
+      <service code="loadTreeTableData" desc="" dna-code="b5a2bd7e-4601-0010-9eb0-4d1507c85e6d" name="loadTreeTableData" opt-flag="Y" serv-func="loadTreeTableData" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+    </services>
+    <status>1</status>
+  </servpkg-version>
+</servpkg>

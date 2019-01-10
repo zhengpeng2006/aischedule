@@ -1,0 +1,68 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "logsItems": [
+      {
+        "appServerName": "manager01",
+        "createDate": "2016-09-02 10:43:00",
+        "finishTime": "2016-09-02 10:43:17",
+        "jobId": "task01$1472784180032",
+        "logDate": "2016-09-02 10:42:31",
+        "setName": "",
+        "startTime": "2016-09-02 10:43:00",
+        "state": "F",
+        "subsystemDomain": "AMS",
+        "systemDomain": "CRM",
+        "taskCode": "task01",
+        "taskName": "任务1",
+        "taskVersion": "3",
+        "type": null,
+        "typeName": "com.asiainfo.schedule.bo.BOAISchedTaskLog"
+      },
+      {
+        "appServerName": "manager02",
+        "createDate": "2016-09-02 10:43:00",
+        "finishTime": "2016-09-02 10:43:17",
+        "jobId": "task01$1472784180032",
+        "logDate": "2016-09-02 10:42:31",
+        "setName": "",
+        "startTime": "2016-09-02 10:43:00",
+        "state": "E",
+        "subsystemDomain": "AMS",
+        "systemDomain": "CRM",
+        "taskCode": "task02",
+        "taskName": "任务2",
+        "taskVersion": "3",
+        "type": null,
+        "typeName": "com.asiainfo.schedule.bo.BOAISchedTaskLog"
+      },
+      {
+        "appServerName": "manager03",
+        "createDate": "2016-09-02 10:43:00",
+        "finishTime": "2016-09-02 10:43:17",
+        "jobId": "task01$1472784180032",
+        "logDate": "2016-09-02 10:42:31",
+        "setName": "",
+        "startTime": "2016-09-02 10:43:00",
+        "state": "C",
+        "subsystemDomain": "AMS",
+        "systemDomain": "CRM",
+        "taskCode": "task03",
+        "taskName": "任务3",
+        "taskVersion": "3",
+        "type": null,
+        "typeName": "com.asiainfo.schedule.bo.BOAISchedTaskLog"
+      }
+    ],
+    "total": 3
+  }
+}

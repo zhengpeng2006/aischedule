@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo abo-type="0" boname="BOABGMonWTrigger" catalog="" cmpt-url="config/com/asiainfo/common/Common.cmpt" code="ABGMonWTrigger" desc="" dna-code="f9312cf4-4801-0010-9e1a-4750965ff553" fullname="com.asiainfo.common.abo.ABGMonWTrigger" name="ABGMonWTrigger">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="cd8a2cf4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="trigger_Id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">TRIGGER_ID</mapingcol>
+        </attr>
+        <attr code="998e30f4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="record_Id" order="1" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">RECORD_ID</mapingcol>
+        </attr>
+        <attr code="d18f30f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="ip" order="2" type="N" vdatatype="NAME">
+          <mapingcol length="128">IP</mapingcol>
+        </attr>
+        <attr code="619030f4-4801-0010-9e1a-4750965ff553" datatype="long" isPrivate="N" name="info_Id" order="3" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">INFO_ID</mapingcol>
+        </attr>
+        <attr code="f19030f4-4801-0010-9e1a-4750965ff553" datatype="String" name="info_Name" order="4" type="N" vdatatype="NAME">
+          <mapingcol length="128">INFO_NAME</mapingcol>
+        </attr>
+        <attr code="839130f4-4801-0010-9e1a-4750965ff553" datatype="String" name="layer" order="5" type="N" vdatatype="NAME">
+          <mapingcol length="128">LAYER</mapingcol>
+        </attr>
+        <attr code="119230f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="phonenum" order="6" type="N" vdatatype="NAME">
+          <mapingcol length="128">PHONENUM</mapingcol>
+        </attr>
+        <attr code="999230f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="content" order="7" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">CONTENT</mapingcol>
+        </attr>
+        <attr code="299330f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="warn_level" order="8" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">WARN_LEVEL</mapingcol>
+        </attr>
+        <attr code="8feb37f4-4801-0010-9e1a-4750965ff553" datatype="DateTime" isPrivate="N" name="expiry_date" order="9" type="N" vdatatype="DATE">
+          <mapingcol length="8">EXPIRY_DATE</mapingcol>
+        </attr>
+        <attr code="00ec37f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="system_domain" order="10" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SYSTEM_DOMAIN</mapingcol>
+        </attr>
+        <attr code="90ec37f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="subsystem_domain" order="11" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SUBSYSTEM_DOMAIN</mapingcol>
+        </attr>
+        <attr code="28ed37f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="app_server_name" order="12" type="N" vdatatype="NAME">
+          <mapingcol length="128">APP_SERVER_NAME</mapingcol>
+        </attr>
+        <attr code="d0ee37f4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="create_date" order="13" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="e8ef37f4-4801-0010-9e1a-4750965ff553" datatype="DateTime" isPrivate="N" name="create_time" order="14" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_TIME</mapingcol>
+        </attr>
+        <attr code="41fe3af4-4801-0010-9e1a-4750965ff553" datatype="DateTime" isPrivate="N" name="done_date" order="15" type="N" vdatatype="DATE">
+          <mapingcol length="8">DONE_DATE</mapingcol>
+        </attr>
+        <attr code="c1ff3af4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="state" order="16" type="N" vdatatype="TYPE_CHAR">
+          <mapingcol length="1">STATE</mapingcol>
+        </attr>
+        <attr code="d1013bf4-4801-0010-9e1a-4750965ff553" datatype="String" isPrivate="N" name="remarks" order="17" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">REMARKS</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/common/abo" name="ABGMonWTrigger.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

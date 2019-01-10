@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgRemote" mainattr="CFG_REMOTE_CODE">
+    <mapingenty type="table">CFG_REMOTE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CFG_REMOTE_CODE" maxlength="255" datatype="String" type="PK" remark="远程调用编码">
+        <mapingcol datatype="VARCHAR2">CFG_REMOTE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMOTE_GRP" maxlength="255" datatype="String" type="COL" remark="远程调用组">
+        <mapingcol datatype="VARCHAR2">REMOTE_GRP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMOTE_DESC" maxlength="1000" datatype="String" type="COL" remark="远程调用描述">
+        <mapingcol datatype="VARCHAR2">REMOTE_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMOTE_LOCATOR" maxlength="1000" datatype="String" type="COL" remark="远程调用的定位">
+        <mapingcol datatype="VARCHAR2">REMOTE_LOCATOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态(U,为正常;E,为删除)">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

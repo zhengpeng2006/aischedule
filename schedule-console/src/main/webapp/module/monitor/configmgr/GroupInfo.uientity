@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="GroupInfo" desc="分组管理页面" dna-code="b4a69a58-4701-0010-b566-bf801ef1dffc" full-name="module.monitor.configmgr.GroupInfo" kind="0" name="GroupInfo">
+  <uientity-version branch="" code="" desc="" name="GroupInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.GroupInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup" type="form" uiid="groupDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupDetail_groupName"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupDetail_groupDesc"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupDetail_groupId"/>
+      <area bo="java.lang.String" type="textfield" uiid="groupDetail_state"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="GroupInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="GroupInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="GroupInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="GroupInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="btnSave" type="button"/>
+      <ui-event id="" name="btnCancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

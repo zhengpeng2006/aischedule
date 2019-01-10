@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="ControlMgr" desc="" dna-code="8dba933c-4601-0010-a1fa-812c08c236b5" name="ControlMgr">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="ControlMgr" label="ControlMgr">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/monitor/exeframe/controlmgr/abod/ControlMgr.abod</url>
+      </abod>
+      <sv-package dna-code="fefde241-4601-0010-809c-b332abf327a1" label="UserPriConstData">
+        <uiinfo>17,25,160,100</uiinfo>
+        <url>/config/com/asiainfo/monitor/exeframe/controlmgr/servpkg/UserPriConstData.svpkg</url>
+      </sv-package>
+      <ui-entity dna-code="d1a3ae40-4601-0010-a3bb-717475e39cb4" label="UserInfo">
+        <uiinfo>19,173,160,40</uiinfo>
+        <url>/html/module/monitor/controlmgr/UserInfo.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="4aad7b52-4601-0010-821b-55ecd93a540b" label="UserGroup">
+        <uiinfo>20,231,160,40</uiinfo>
+        <url>/html/module/monitor/controlmgr/UserGroup.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="1581665f-4601-0010-8d65-c33b6df03922" label="UserRole">
+        <uiinfo>21,286,160,40</uiinfo>
+        <url>/html/module/monitor/controlmgr/UserRole.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="4d137260-4601-0010-86d9-db928134d243" label="UserRolePrivEntity">
+        <uiinfo>20,337,160,40</uiinfo>
+        <url>/html/module/monitor/controlmgr/UserRolePrivEntity.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="f580406b-4601-0010-9886-9d88bf945ba0" label="UserGroupRelation">
+        <uiinfo>212,179,160,40</uiinfo>
+        <url>/html/module/monitor/controlmgr/UserGroupRelation.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="e0554879-4601-0010-8670-21d1f0d64943" label="UserGroupRole">
+        <uiinfo>214,239,160,40</uiinfo>
+        <url>/html/module/monitor/controlmgr/UserGroupRole.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="c81abb7a-4601-0010-b193-af78e4d3a11c" label="UserRoleEntityRel">
+        <uiinfo>213,293,160,40</uiinfo>
+        <url>/html/module/monitor/controlmgr/UserRoleEntityRel.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/monitor/exeframe/controlmgr" name="ControlMgr.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/exeframe/controlmgr/abod" name="ControlMgr.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

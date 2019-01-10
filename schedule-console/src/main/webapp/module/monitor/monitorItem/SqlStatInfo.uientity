@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/monitorItem/MonitorItem.cmpt" code="SqlStatInfo" desc="" dna-code="41407a87-4801-0010-977a-c38b3e868338" full-name="module.monitor.monitorItem.SqlStatInfo" kind="0" name="SqlStatInfo">
+  <uientity-version branch="" code="" desc="" name="SqlStatInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.monitorItem.view.SqlStatInfo</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/monitorItem" name="SqlStatInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/monitorItem" name="SqlStatInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/monitorItem" name="SqlStatInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/monitorItem/view" name="SqlStatInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

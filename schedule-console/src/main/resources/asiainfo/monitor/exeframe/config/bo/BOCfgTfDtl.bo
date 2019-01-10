@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgTfDtl" mainattr="CFG_TF_DTL_ID">
+    <mapingenty type="table">CFG_TF_DTL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CFG_TF_DTL_ID" maxlength="12" datatype="Long" type="PK" remark="转移配置明显ID">
+        <mapingcol datatype="NUMBER">CFG_TF_DTL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CFG_TF_CODE" maxlength="255" datatype="String" type="COL" remark="转移配置CODE">
+        <mapingcol datatype="VARCHAR2">CFG_TF_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TABLE_NAME" maxlength="255" datatype="String" type="COL" remark="表名">
+        <mapingcol datatype="VARCHAR2">TABLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DB_ACCT_CODE" maxlength="255" datatype="String" type="COL" remark="数据库连接CODE">
+        <mapingcol datatype="VARCHAR2">DB_ACCT_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TF_TYPE" maxlength="16" datatype="String" type="COL" remark="转移类型(HIS为历史表,历史表必须有tf_date这个字段;DEST为目的表)">
+        <mapingcol datatype="VARCHAR2">TF_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINISH_SQL" maxlength="1000" datatype="String" type="COL" remark="完成SQL">
+        <mapingcol datatype="VARCHAR2">FINISH_SQL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态(U,为正常;E,为删除)">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="1000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

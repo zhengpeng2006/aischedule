@@ -1,0 +1,30 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "processTabItems": [
+            {
+                "SERVER_ID": 772,
+                "SERVER_CODE": "coreSchedule01code",
+                "SERVER_NAME": "coreSchedule01name",
+                "HOST_GROUP": "调度南京",
+                "HOST_NAME": "测试主机01(10.1.243.23)",
+                "PID": "24299",
+                "USER_NAME": "schedule",
+                "KPI_CPU": "0.0%",
+                "KPI_MEM": "0.6%",
+                "PROC_STATE": "正常"
+            }
+        ],
+        "total": 1,
+        "serverCode": "coreSchedule01code"
+    }
+}

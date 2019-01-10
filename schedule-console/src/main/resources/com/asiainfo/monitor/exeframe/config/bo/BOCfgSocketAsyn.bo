@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgSocketAsyn" mainattr="CFG_SOCKET_CODE">
+    <mapingenty type="table">CFG_SOCKET_ASYN</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CFG_SOCKET_CODE" maxlength="255" datatype="String" type="PK" remark="socket编码">
+        <mapingcol datatype="VARCHAR2">CFG_SOCKET_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_ASYN" maxlength="1" datatype="String" type="COL" remark="是否异步(为Y或者y代表异步)">
+        <mapingcol datatype="CHAR">IS_ASYN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_THREAD_MIN" maxlength="3" datatype="Integer" type="COL" remark="工作线程池的最小值">
+        <mapingcol datatype="NUMBER">WORK_THREAD_MIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_THREAD_MAX" maxlength="3" datatype="Integer" type="COL" remark="工作线程池的最大值">
+        <mapingcol datatype="NUMBER">WORK_THREAD_MAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_BUFFER_SIZE" maxlength="6" datatype="Integer" type="COL" remark="工作线程池的buffer大小">
+        <mapingcol datatype="NUMBER">WORK_BUFFER_SIZE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_KEEP_ALIVE_TIME" maxlength="6" datatype="Integer" type="COL" remark="工作线程池的线程空闲时间(以秒为单位)">
+        <mapingcol datatype="NUMBER">WORK_KEEP_ALIVE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_THREAD_MIN" maxlength="3" datatype="Integer" type="COL" remark="send线程池的最小值">
+        <mapingcol datatype="NUMBER">SEND_THREAD_MIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_THREAD_MAX" maxlength="3" datatype="Integer" type="COL" remark="send线程池的最大值">
+        <mapingcol datatype="NUMBER">SEND_THREAD_MAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_BUFFER_SIZE" maxlength="6" datatype="Integer" type="COL" remark="send线程池的buffer大小">
+        <mapingcol datatype="NUMBER">SEND_BUFFER_SIZE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEND_KEEP_ALIVE_TIME" maxlength="6" datatype="Integer" type="COL" remark="send线程池的线程空闲时间(以秒为单位)">
+        <mapingcol datatype="NUMBER">SEND_KEEP_ALIVE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OVERLOAD_PROTECT_PERCENT" maxlength="6" datatype="Integer" type="COL" remark="过载保护百分比,socket的实现类必须实现IOverloadProtect接口">
+        <mapingcol datatype="NUMBER">OVERLOAD_PROTECT_PERCENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

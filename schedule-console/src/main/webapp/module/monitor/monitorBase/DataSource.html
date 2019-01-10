@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+</head>
+
+<body jwcid="@Body">
+	<div class="l_fixed ">
+		<div class="l_fixedBox">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">系统组织结构</div>
+				</div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 400px" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true"
+						id="sysOrgTree" parentNodeId="parentId" 
+						initAfterAction="treeInitAfterAction()"
+						nodeId="id" nodeText="name" textAction="treeNodeClick(nodedata)" bo=""
+						showCheckBox="false" expandPath="-1" async="false"></div>
+				</div>
+			</div>
+		</div>
+		<div class="l_fixedContent">
+			<div class="l_fixedWrapper">
+				<div class="c_box">
+					<div class="submit">
+						<span id="querydev">
+							<button onclick="return RefreshOnclick($(this));" template_type="operate" type="button"
+								name="Refresh" class="e_button-form" formId="query">
+								<span>查询</span>
+							</button>
+						</span>
+					</div>
+					<div jwcid="DataSourceList@Part" uiid="DataSourceList" id="DataSourceList" element="div" type="table" 
+						objName="DataSourceListItems,DataSourceListCount" uitype="table" editable="true">
+						<div class="c_scroll" style="height: 423px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="DataSourceListTable" scroll="true">
+									<thead>
+										<tr>
+											<th col="DataSourceListRowIndex" style="display: none">RowIndex</th>
+											<th col="dataSource" colcss="e_left" class="wrap">数据源</th>
+											<th col="driver" colcss="e_left" class="wrap">驱动</th>
+											<th col="url" colcss="e_left" class="wrap">URL</th>
+											<th col="userName" colcss="e_left" class="wrap">用户名</th>
+											<th col="initialSize" colcss="e_left" class="wrap">初始化连接数</th>
+											<th col="maxActive" colcss="e_left" class="wrap">最大链接数</th>
+											<th col="maxIdle" colcss="e_left" class="wrap">最大空闲数量</th>
+											<th col="minIdle" colcss="e_left" class="wrap">最小空闲数量</th>
+											<th col="maxWait" colcss="e_left" class="wrap">最大等待数量</th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:DataSourceListItems" value="ognl:DataSourceListItem"
+											index="ognl:DataSourceListRowIndex">
+											<tr>
+												<td style="display: none"><span jwcid="@Insert" value="ognl:DataSourceListRowIndex+1"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.dataSource" name="dataSource"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.driver" name="driver"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.url" name="url"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.userName" name="userName"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.initialSize" name="initialSize"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.maxActive" name="maxActive"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.maxIdle" name="maxIdle"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.minIdle" name="minIdle"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:DataSourceListItem.maxWait" name="maxWait"></span></td>
+											</tr>
+										</span>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript" sign="Refresh_onclick">
+
+	var selNodeId;
+	var selNodeLevel;
+	var selNodeLabel;
+
+	$(function(){
+		disabledArea("querydev", true);
+		})
+	
+	
+	function treeInitAfterAction(){
+		$.tree.get("sysOrgTree").expand(-1);
+	}
+	
+    function treeNodeClick(nodeItem){
+        $.tree.get("sysOrgTree");
+        // 获取选中节点的层级和标识
+        selNodeId = nodeItem.id;
+        selNodeLevel = nodeItem.level;
+        selNodeLabel = nodeItem.text;
+        
+        if(selNodeLevel != 4){
+            disabledArea("querydev", true);
+        }else{
+        	disabledArea("querydev", false);
+        }
+    }
+	
+	function RefreshOnclick(obj){
+		
+		if(selNodeId == null || selNodeId == "" || selNodeLevel == null || selNodeLevel == ""){
+            MessageBox.alert("提示信息", "未选取任何应用节点信息!");
+            return;
+		}
+		
+        if(selNodeLevel != 4){
+            MessageBox.alert("提示信息", "请选择应用节点");
+            return;
+        }
+		
+        $.ajax.submit(null,'auto_getDataSourceConfig_RefreshOnclick', "appId=" + selNodeId,'DataSourceList',null,function(e,i){$.showErrorMessage('Operation failed',i);});
+    }
+</script>

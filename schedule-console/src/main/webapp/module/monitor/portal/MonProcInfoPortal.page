@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.monitorPortal.view.MonProcInfoPortal">
+  <property-specification name="monitorDetail" type="net.sf.json.JSONObject"/>
+  <property-specification name="monitorTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="monitorTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="monitorTabCount" type="long"/>
+  <property-specification name="monitorTabRowIndex" type="int"/>
+  <property-specification name="hostDetail" type="net.sf.json.JSONObject"/>
+  <property-specification name="qryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="fsTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="fsTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="fsTabCount" type="long"/>
+  <property-specification name="fsTabRowIndex" type="int"/>
+  <property-specification name="processTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="processTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="processTabCount" type="long"/>
+  <property-specification name="processTabRowIndex" type="int"/>
+  <property-specification name="procKpiTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="procKpiTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="procKpiTabCount" type="long"/>
+  <property-specification name="procKpiTabRowIndex" type="int"/>
+  <property-specification name="taskTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="taskTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="taskTabCount" type="long"/>
+  <property-specification name="taskTabRowIndex" type="int"/>
+</page-specification>

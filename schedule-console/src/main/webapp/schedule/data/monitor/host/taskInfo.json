@@ -1,0 +1,26 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "taskTabItems": [
+            {
+                "itemJobId": "55555555",
+                "priority": 0,
+                "serverId": "22",
+                "taskCode": "333",
+                "taskItemId": "0",
+                "taskJobId": "44444444444",
+                "taskVersion": 112
+            }
+        ],
+        "total": 1
+    }
+}

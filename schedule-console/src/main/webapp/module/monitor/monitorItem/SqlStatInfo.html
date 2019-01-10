@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+</head>
+
+<body jwcid="@Body">
+	<div class="l_fixed ">
+		<div class="l_fixedBox">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">组织结构</div>
+			</div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 570px" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true"
+					id="sysOrgTree" parentNodeId="parentId" initAfterAction="SqlStatInfoJs.treeInitAfterAction()" nodeId="id" nodeText="name"
+					textAction="SqlStatInfoJs.treeTextClick(nodedata)" bo="" showCheckBox="false" expandPath="-1" async="false"></div>
+			</div>
+		</div>
+	</div>
+		<div class="l_fixedContent"></div>
+	</div>
+
+</body>
+</html>

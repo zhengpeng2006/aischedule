@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.configmgr.view.HostAllInfo">
+  <property-specification name="hostUserDetail" type="net.sf.json.JSONObject"/>
+  <property-specification name="hostAllDetail" type="net.sf.json.JSONObject"/>
+  <property-specification name="hostUserTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="hostUserTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="hostUserTabCount" type="long"/>
+  <property-specification name="hostUserTabRowIndex" type="int"/>
+  <property-specification name="hostConTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="hostConTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="hostConTabCount" type="long"/>
+  <property-specification name="hostConTabRowIndex" type="int"/>
+  <property-specification name="hostSlaveTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="hostSlaveTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="hostSlaveTabCount" type="long"/>
+  <property-specification name="hostSlaveTabRowIndex" type="int"/>
+</page-specification>

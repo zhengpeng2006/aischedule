@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="AIMonUserGroupRole" desc="" dna-code="c4bc51f9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.AIMonUserGroupRoleSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAIMonUserGroupRoleSV" name="AIMonUserGroupRole" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAIMonUserGroupRoleSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="AIMonUserGroupRoleSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="AIMonUserGroupRole.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonUserGroupRoleSV_getBeanById" desc="" dna-code="e2de51f9-4501-0010-9646-9bbd8b625d8b" name="getBeanById" opt-flag="N" serv-func="getBeanById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="relateId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroupRoleRel" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserGroupRoleSV_getRoleIdByGroupId" desc="" dna-code="e3de51f9-4501-0010-9646-9bbd8b625d8b" name="getRoleIdByGroupId" opt-flag="N" serv-func="getRoleIdByGroupId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroupRoleRel[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonUserGroupRoleSV_saveOrUpdate" desc="" dna-code="ebde51f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroupRoleRel" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserGroupRoleSV_saveOrUpdate" desc="" dna-code="ecde51f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroupRoleRel[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserGroupRoleSV_saveOrUpdate" desc="" dna-code="edde51f9-4501-0010-9646-9bbd8b625d8b" name="saveOrUpdate" opt-flag="N" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroupRoleRel[]" name="oldValues" param-kind="bo"/>
+          <param datatype="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserGroupRoleRel[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonUserGroupRoleSV_delete" desc="" dna-code="eede51f9-4501-0010-9646-9bbd8b625d8b" name="delete" opt-flag="N" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="relateId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

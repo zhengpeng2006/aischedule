@@ -1,0 +1,37 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "taskInfosTabItems": [
+      {
+        "taskCode": "task01",
+        "taskName": "任务一",
+        "taskDesc": "",
+        "taskType": "single",
+        "taskGroup": "GroupCode1",
+        "startTime": "-1 -1 -1 -1 -1",
+        "endTime": "0 -1 18 9 -1 2016",
+        "scanIntervalTime": 100,
+        "scanNum": 1,
+        "executeNum": 1,
+        "threadNum": 1,
+        "idleSleepTime": 100,
+        "processClass": "com.asiainfo.schedule.test.DemoSingleTask",
+        "splitRegion": "否",
+        "createTime": "2016-09-14 10:17:35",
+        "state": "U",
+        "realityStartTime": "2016-09-14 10:49:16",
+        "status": "E"
+      }
+    ],
+    "total": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "total": 2,
+        "taskInfos": [
+            {
+                "taskCode": "tfTask01",
+                "item": "0",
+                "taskType": "tf",
+                "createTime": "2016-10-09 10:12:06",
+                "state": "start",
+                "taskJobId": "tfTask01$1475979126718",
+                "taskName": "tf任务01"
+            },
+            {
+                "taskCode": "scheduleTest",
+                "item": "0",
+                "taskType": "single",
+                "createTime": "2016-10-09 10:10:44",
+                "state": "stop",
+                "taskJobId": "scheduleTest$1475979044981",
+                "taskName": "scheduleTest"
+            }
+        ]
+    }
+}

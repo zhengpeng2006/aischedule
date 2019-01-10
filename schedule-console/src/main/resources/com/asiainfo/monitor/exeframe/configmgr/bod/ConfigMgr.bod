@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bo-design attr-display="name" code="" columns="all">
+  <bo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNode" name="BOAIMonNode" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>40,30,150,190</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo/BOAIMonNode.bo</url>
+  </bo>
+  <bo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonUsers" name="BOAIMonUsers" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>42,202,145,171</uiinfo>
+    <url>config/com/asiainfo/monitor/exeframe/configmgr/abo/bo/BOAIMonUsers.bo</url>
+  </bo>
+  <bo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNodeUser" name="BOAIMonNodeUser" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>238,26,156,171</uiinfo>
+    <url>config/com/asiainfo/monitor/exeframe/configmgr/abo/bo/BOAIMonNodeUser.bo</url>
+  </bo>
+  <bo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup" name="BOAIMonGroup" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>251,209,150,190</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo/BOAIMonGroup.bo</url>
+  </bo>
+  <bo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonLogin" name="BOAIMonLogin" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>428,36,120,50</uiinfo>
+    <url>config/com/asiainfo/monitor/exeframe/configmgr/abo/bo/BOAIMonLogin.bo</url>
+  </bo>
+  <bo fullname="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonVerify" name="BOAIMonVerify" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>432,211,120,50</uiinfo>
+    <url>config/com/asiainfo/monitor/exeframe/configmgr/abo/bo/BOAIMonVerify.bo</url>
+  </bo>
+  <joins/>
+</bo-design>

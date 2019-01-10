@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/monitorItem/js/WarningInfo.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="module/monitor/monitorItem/css/WarningInfo.css" />
+</head>
+
+<body jwcid="@Body">
+	<div style="background-color: #FCFCFC; border: 1px solid #D3D3D3;">
+		<!-- start -->
+		<div class="c_box">
+			<div class="c_title">
+				<div class="text">进程状态信息</div>
+				<div class="fn">
+					<button onclick="WarningInfoJs.refreshInfo()" id="btn_run" name="btn_run" class="e_button-form">
+						<span> 刷新 </span>
+					</button>
+			</div>
+		</div>
+	</div>
+		<div classs="c_box">
+			<table style="margin: auto;">
+				<tr>
+					<td style="background-color: #0084D6; width: 100px; height: 25px; font-weight: bold; text-align: center; color: white;">进程正常启动</td>
+					<td style="background-color: yellow; width: 100px; height: 25px; font-weight: bold; text-align: center; color: red;">进程未启动</td>
+					<td style="background-color: red; width: 100px; height: 25px; font-weight: bold; text-align: center; color: white;">进程重复启动</td>
+				</tr>
+			</table>
+			<div id="tips"
+			style="position: absolute; border: 1px solid #D3D3D3; padding: 0px 3px; display: none; height: 35px; line-height: 20px; background: #fcfcfc"></div>
+
+			<div id="taskInfoDiv" style="display: none">
+				<div jwcid="taskTab@Part" uiid="taskTab" id="taskTab" element="div" type="table" objName="taskTabItems,taskTabCount"
+				bo="com.asiainfo.monitor.exeframe.config.bo.BOAIMonCmd" uitype="table" editable="true">
+					<div class="c_scroll" style="height: 242px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="taskTabTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="taskTabRowIndex" style="display: none">RowIndex</th>
+										<th col="taskCode" colcss="e_left" class="desc" onclick="WarningInfoJs.sort(2,this)"><span>任务编码</span></th>
+										<th col="taskType" colcss="e_left" class="desc" onclick="WarningInfoJs.sort(3,this)"><span>任务类型</span></th>
+										<th col="taskName" colcss="e_left" class="desc" onclick="WarningInfoJs.sort(4,this)"><span>任务名称</span></th>
+										<th col="item" colcss="e_left" class="desc" onclick="WarningInfoJs.sort(5,this)"><span>拆分项</span></th>
+										<th col="state" colcss="e_left" class="desc" onclick="WarningInfoJs.sort(6,this)"><span>执行状态</span></th>
+										<th col="taskJobId" colcss="e_left" class="desc" onclick="WarningInfoJs.sort(7,this)"><span>执行流水号</span></th>
+										<th col="createTime" colcss="e_left" class="desc" onclick="WarningInfoJs.sort(8,this)"><span>创建时间</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<span jwcid="@Foreach" source="ognl:taskTabItems" value="ognl:taskTabItem" index="ognl:taskTabRowIndex">
+										<tr jwcid="@Conditional" condition="ognl:taskTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+											<td style="display: none"><span jwcid="@Insert" value="ognl:taskTabRowIndex+1"></span></td>
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.taskCode" name="taskCode"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.taskType" name="taskType"></span></td>
+
+                                            <td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.taskName" name="taskName"></span></td>
+											
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.item" name="item"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.state" name="state"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.taskJobId" name="taskJobId"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.createTime" name="createTime"></span></td>
+
+										</tr>
+										<tr jwcid="@Conditional" condition="ognl:taskTabRowIndex % 2 == 1" element="tr">
+											<td style="display: none"><span jwcid="@Insert" value="ognl:taskTabRowIndex+1"></span></td>
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.taskCode" name="taskCode"></span></td>
+											
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.taskType" name="taskType"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.taskName" name="taskName"></span></td>
+											
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.item" name="item"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.state" name="state"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.taskJobId" name="taskJobId"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:taskTabItem.createTime" name="createTime"></span></td>
+
+										</tr>
+									</span>
+								</tbody>
+							</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="grpHostDiv" class="hostPro" style="height: 458px; overflow: auto;"></div>
+	</div> <br />
+	</div>
+
+</body>
+</html>

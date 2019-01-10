@@ -1,0 +1,32 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "taskProcessesItems": [
+      {
+        "serverId": "coreSchedule01code",
+        "hostName": "测试主机01(10.1.243.23)",
+        "pid": "30353@host-10-1-243-23",
+        "registTime": "2016-09-01 18:32:02",
+        "heartbeatTime": "2016-09-02 10:26:37",
+        "heartbeatInfo": "version:5707,exeTaskCount:0,runningThreadCount:0",
+        "serverState": "start",
+        "flag": 1
+      },
+      {
+        "serverId": "33333",
+        "hostName": "测试主机01(10.1.243.23)",
+        "serverState": "异常"
+      }
+    ],
+    "total": 2
+  }
+}

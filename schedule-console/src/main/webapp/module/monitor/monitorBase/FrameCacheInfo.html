@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+</head>
+
+<body jwcid="@Body">
+	<div class="l_fixed ">
+		<div class="l_fixedBox">
+			<div class="c_box">
+				<div class="c_title"><div class="text">系统组织结构</div></div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 400px" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true"
+						id="sysOrgTree" parentNodeId="parentId" initAfterAction="treeInitAfterAction()"
+						nodeId="id" nodeText="name" textAction="treeNodeClick(nodedata)" bo=""
+						showCheckBox="false" expandPath="-1" async="false"></div>
+				</div>
+			</div>
+		</div>
+		<div class="l_fixedContent">
+			<div class="l_fixedWrapper">
+			<div class="c_box">
+				<div class="c_form c_form-col-3 c_form-label-4 c_form-inline" uiid="query" id="query_info" type="condForm" objName="query">
+					<ul class="ul">
+						<li class="li">
+							<div jwcid="SelectPart@Part">
+							<span class="label">缓存类型：</span> 
+							<span class="e_select"> 
+								<span>
+									<span>
+										<select jwcid="@Select" name="cacheType" value="ognl:query.cacheType" desc="cacheType" source="ognl:auto_getFrameCacheType_cacheTypeSource('')"
+											textField="TEXT" valueField="VALUE" titleField="TITLE" disabled="false" changeValue="true" addDefault="false" defaultText="root" uiid="frameQuery_cacheType"></select>
+									</span>
+								</span>
+							</span>
+							</div>
+						</li>
+						<li class="li">
+							<span class="label">主键值：</span>
+							<span class="e_input"> 
+								<span id="primary_text">
+									<input jwcid="@TextField" type="text" name="primaryKey" value="ognl:query.primaryKey" desc="primaryKey" uiid="query_primaryKey" />
+								</span>
+							</span>
+						</li>
+					</ul>
+					<div class="submitPlace"></div>
+					<div class="submit">
+						<span id="query_btn">
+						<button onclick="return queryButtonOnclick($(this));" template_type="operate" type="button" name="queryButton" class="e_button-form" formId="query">
+							<span>查询</span>
+						</button>
+						</span>
+					</div>
+				</div>
+
+			<div jwcid="cacheList@Part" uiid="cacheList" id="cacheList"
+				element="div" type="table" objName="cacheListItems,cacheListCount"
+				uitype="table" editable="true">
+				<div class="c_scroll" style="height: 406px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="cacheListTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="cacheListRowIndex" style="display: none">RowIndex</th>
+									<th col="type" colcss="e_left" class="wrap">类型</th>
+									<th col="primaryKey" colcss="e_left" class="wrap">主键值</th>
+									<th col="hashCode" colcss="e_left" class="wrap">对象的HashCode</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:cacheListItems"
+									value="ognl:cacheListItem" index="ognl:cacheListRowIndex">
+									<tr>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:cacheListRowIndex+1"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:cacheListItem.type" name="type"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:cacheListItem.primarykey" name="primarykey"></span></td>
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:cacheListItem.hashcode" name="hashcode"></span></td>
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" sign="queryButton_onclick">
+
+	var selNodeId;	
+	var selNodeLevel;
+	var selNodeLabel;
+
+	$(function(){
+		disabledArea("query_info", true);
+		})
+
+	function treeInitAfterAction(){
+		$.tree.get("sysOrgTree").expand(-1);
+	}
+	
+    function treeNodeClick(nodeItem){
+        $.tree.get("sysOrgTree");
+        // 获取选中节点的层级和标识
+        selNodeId = nodeItem.id;
+        selNodeLevel = nodeItem.level;
+        selNodeLabel = nodeItem.text;
+        
+        if(selNodeLevel != 4){
+            disabledArea("query_info", true);
+        }else{
+        	disabledArea("query_info", false);
+        	ajaxSubmit(null,null,"&appId="+selNodeId,"SelectPart");
+        }
+    }
+
+	function queryButtonOnclick(obj){
+		$.ajax.submit(null,'auto_getFrameCache_queryButtonOnclick', "appId=" + selNodeId + "&cacheType=" + $("#cacheType").val() + "&primaryKey=" + $("#primaryKey").val(),'cacheList',null,function(e,i){$.showErrorMessage('Operation failed',i);});
+    }
+</script>

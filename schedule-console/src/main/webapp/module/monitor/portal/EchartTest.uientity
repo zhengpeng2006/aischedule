@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/monitorPortal/MonitorPortal.cmpt" code="EchartTest" desc="" dna-code="3b96382b-4801-0010-be3d-c5a7c433e54c" full-name="module.monitor.portal.EchartTest" kind="0" name="EchartTest">
+  <uientity-version branch="" code="" desc="" name="EchartTest" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.monitorPortal.view.EchartTest</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/portal" name="EchartTest.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/portal" name="EchartTest.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/portal" name="EchartTest.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/monitorPortal/view" name="EchartTest.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

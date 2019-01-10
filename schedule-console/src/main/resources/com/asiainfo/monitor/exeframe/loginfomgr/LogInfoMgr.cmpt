@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="LogInfoMgr" desc="" dna-code="9b2d6930-4801-0010-9434-b7393165699d" name="LogInfoMgr">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="LogInfoMgr" label="LogInfoMgr">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/monitor/exeframe/loginfomgr/abod/LogInfoMgr.abod</url>
+      </abod>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/monitor/exeframe/loginfomgr" name="LogInfoMgr.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/exeframe/loginfomgr/abod" name="LogInfoMgr.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

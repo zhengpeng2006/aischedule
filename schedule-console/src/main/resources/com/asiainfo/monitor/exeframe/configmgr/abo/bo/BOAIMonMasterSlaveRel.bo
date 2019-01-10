@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo name="BOAIMonMasterSlaveRel" remark="主备机关系">
+    <mapingenty type="table">AI_Mon_Master_Slave_Rel</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="RELATION_ID" maxlength="20" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol datatype="NUMBER">RELATION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MASTER_HOST_ID" maxlength="20" datatype="Long" type="COL" order="1" notNull="N">
+        <mapingcol datatype="NUMBER">MASTER_HOST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SLAVE_HOST_ID" maxlength="20" datatype="Long" type="COL" order="2" notNull="N">
+        <mapingcol datatype="NUMBER">SLAVE_HOST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="8" datatype="String" type="COL" order="3" notNull="N">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="0" datatype="DateTime" type="COL" order="4" notNull="N">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="512" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

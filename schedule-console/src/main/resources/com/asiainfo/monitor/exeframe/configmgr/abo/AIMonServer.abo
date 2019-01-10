@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo abo-type="0" boname="BOAIMonServer" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonServer.cmpt" code="AIMonServer" desc="应用服务abo" dna-code="7b335043-4701-0010-9312-99dd0de23280" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonServer" name="AIMonServer">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="958a5043-4701-0010-9312-99dd0de23280" datatype="long" isPrivate="N" name="server_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">SERVER_ID</mapingcol>
+        </attr>
+        <attr code="8d8f5043-4701-0010-9312-99dd0de23280" datatype="String" name="server_code" order="1" type="N" vdatatype="CODE">
+          <mapingcol length="32">SERVER_CODE</mapingcol>
+        </attr>
+        <attr code="1e925043-4701-0010-9312-99dd0de23280" datatype="long" name="node_id" order="2" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">NODE_ID</mapingcol>
+        </attr>
+        <attr code="e7965043-4701-0010-9312-99dd0de23280" datatype="String" name="server_name" order="4" type="N" vdatatype="NAME">
+          <mapingcol length="128">SERVER_NAME</mapingcol>
+        </attr>
+        <attr code="a09a5043-4701-0010-9312-99dd0de23280" datatype="String" name="business_type" order="5" type="N" vdatatype="CODE">
+          <mapingcol length="32">BUSINESS_TYPE</mapingcol>
+        </attr>
+        <attr code="bf9c5043-4701-0010-9312-99dd0de23280" datatype="String" name="locator_type" order="6" type="N" vdatatype="CODE">
+          <mapingcol length="32">LOCATOR_TYPE</mapingcol>
+        </attr>
+        <attr code="479f5043-4701-0010-9312-99dd0de23280" datatype="String" name="locator" order="7" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">LOCATOR</mapingcol>
+        </attr>
+        <attr code="6fa15043-4701-0010-9312-99dd0de23280" datatype="String" name="server_ip" order="8" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SERVER_IP</mapingcol>
+        </attr>
+        <attr code="a8a35043-4701-0010-9312-99dd0de23280" datatype="short" name="server_port" order="9" type="N" vdatatype="ID(short)">
+          <mapingcol length="12">SERVER_PORT</mapingcol>
+        </attr>
+        <attr code="c6a55043-4701-0010-9312-99dd0de23280" datatype="String" name="sversion" order="10" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">SVERSION</mapingcol>
+        </attr>
+        <attr code="fea75043-4701-0010-9312-99dd0de23280" datatype="String" isPrivate="N" name="check_url" order="11" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">CHECK_URL</mapingcol>
+        </attr>
+        <attr code="3eaa5043-4701-0010-9312-99dd0de23280" datatype="String" name="midware_type" order="12" type="N" vdatatype="CODE">
+          <mapingcol length="32">MIDWARE_TYPE</mapingcol>
+        </attr>
+        <attr code="76ac5043-4701-0010-9312-99dd0de23280" datatype="short" name="start_cmd_id" order="14" type="N" vdatatype="ID(short)">
+          <mapingcol length="12">START_CMD_ID</mapingcol>
+        </attr>
+        <attr code="f7ae5043-4701-0010-9312-99dd0de23280" datatype="short" name="stop_cmd_id" order="15" type="N" vdatatype="ID(short)">
+          <mapingcol length="12">STOP_CMD_ID</mapingcol>
+        </attr>
+        <attr code="57b15043-4701-0010-9312-99dd0de23280" datatype="String" name="state" order="16" type="N" vdatatype="STATE">
+          <mapingcol length="8">STATE</mapingcol>
+        </attr>
+        <attr code="86b35043-4701-0010-9312-99dd0de23280" datatype="DateTime" name="create_date" order="17" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="b6b55043-4701-0010-9312-99dd0de23280" datatype="String" name="remark" order="18" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">REMARK</mapingcol>
+        </attr>
+        <attr code="37b85043-4701-0010-9312-99dd0de23280" datatype="String" name="temp_type" order="13" type="N" vdatatype="CODE">
+          <mapingcol length="32">TEMP_TYPE</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonServer.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/impl" name="AIMonServer.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/impl" name="AIMonServerValueBean.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonServerBase.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/interfaces" name="IAIMonServer.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/vo/interfaces" name="IAIMonServerValue.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo/bo" name="BOAIMonServer.bo">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/interfaces" name="IAIMonServerDAO.java">
+          <attach-tag>+</attach-tag>
+        </file>
+        <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/abo/dao/impl" name="AIMonServerDAOImpl.java">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

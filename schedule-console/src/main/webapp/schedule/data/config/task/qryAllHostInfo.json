@@ -1,0 +1,28 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "hostList": [
+            {
+                "TEXT": "test10000",
+                "VALUE": "751"
+            },
+            {
+                "TEXT": "测试主机01",
+                "VALUE": "693"
+            },
+            {
+                "TEXT": "测试主机02",
+                "VALUE": "732"
+            }
+        ]
+    }
+}

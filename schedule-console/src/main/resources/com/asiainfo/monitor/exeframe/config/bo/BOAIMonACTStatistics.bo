@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="appframe" name="BOAIMonACTStatistics" mainattr="ROW_ID">
+    <mapingenty type="table">AI_MON_ACT_STATISTICS</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ROW_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ROW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLASS_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CLASS_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="METHOD_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">METHOD_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USE_COUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USE_COUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAX_USE_TIME" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MAX_USE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIN_USE_TIME" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIN_USE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AGE_USE_TIME" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AGE_USE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUCC_COUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SUCC_COUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RULE_TIME" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">RULE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RULESET_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">RULESET_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RULESET_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">RULESET_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">APP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APP_NAME" maxlength="255" datatype="String" type="COL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

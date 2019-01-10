@@ -1,0 +1,43 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "hostTabItems": [
+      {
+        "createDate": "2016-08-11",
+        "hostCode": "testCenter01",
+        "hostDesc": "",
+        "hostId": 693,
+        "hostIp": "10.1.243.23",
+        "hostName": "测试主机01",
+        "remarks": "",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost"
+      },
+      {
+        "createDate": "2016-08-31",
+        "hostCode": "host02",
+        "hostDesc": "",
+        "hostId": 751,
+        "hostIp": "10.171.1.1",
+        "hostName": "测试主机2",
+        "remarks": "",
+        "setName": "",
+        "state": "U",
+        "type": null,
+        "typeName": "com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost"
+      }
+    ],
+    "total": 2
+  }
+}

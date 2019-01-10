@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.monitor.exeframe.configmgr.view.PExecConfig">
+  <property-specification name="queryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="execInfosItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="execInfosItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="execInfosCount" type="long"/>
+  <property-specification name="execInfosRowIndex" type="int"/>
+  <property-specification name="dataInput" type="net.sf.json.JSONObject"/>
+  <property-specification name="erprDetail" type="net.sf.json.JSONObject"/>
+</page-specification>

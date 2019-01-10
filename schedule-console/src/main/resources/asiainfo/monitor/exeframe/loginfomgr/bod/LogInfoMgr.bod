@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bo-design attr-display="name" code="" columns="all">
+  <bo fullname="com.asiainfo.monitor.exeframe.loginfomgr.abo.bo.BOABGMonHostLog" name="BOABGMonHostLog" type="table">
+    <background/>
+    <font-color/>
+    <font/>
+    <uiinfo>256,169,150,370</uiinfo>
+    <url>/config/com/asiainfo/monitor/exeframe/loginfomgr/abo/bo/BOABGMonHostLog.bo</url>
+  </bo>
+  <joins/>
+</bo-design>

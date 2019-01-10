@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.appframe.ext.exeframe.controlmgr.view.UserRoleEntityRel">
+  <property-specification name="userGroupTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="userGroupTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="userGroupTabCount" type="long"/>
+  <property-specification name="userGroupTabRowIndex" type="int"/>
+  <property-specification name="relUserRoleTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="relUserRoleTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="relUserRoleTabCount" type="long"/>
+  <property-specification name="relUserRoleTabRowIndex" type="int"/>
+  <property-specification name="relUserPrivEntityTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="relUserPrivEntityTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="relUserPrivEntityTabCount" type="long"/>
+  <property-specification name="relUserPrivEntityTabRowIndex" type="int"/>
+  <property-specification name="userPrivEntityItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="userPrivEntityItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="userPrivEntityCount" type="long"/>
+  <property-specification name="userPrivEntityRowIndex" type="int"/>
+  <property-specification name="userPrivEntityTreeTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="userPrivEntityTreeTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="userPrivEntityTreeTabCount" type="long"/>
+  <property-specification name="userPrivEntityTreeTabRowIndex" type="int"/>
+  <property-specification name="qryform" type="net.sf.json.JSONObject"/>
+  <property-specification name="userRoleTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="userRoleTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="userRoleTabCount" type="long"/>
+  <property-specification name="userRoleTabRowIndex" type="int"/>
+  <property-specification name="userPrivEntityTabItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="userPrivEntityTabItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="userPrivEntityTabCount" type="long"/>
+  <property-specification name="userPrivEntityTabRowIndex" type="int"/>
+</page-specification>

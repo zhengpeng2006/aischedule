@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.appframe.ext.exeframe.monitorBase.view.SQLStatistics">
+  <property-specification name="queryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="SQLStatisticsListItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="SQLStatisticsListItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="SQLStatisticsListCount" type="long"/>
+  <property-specification name="SQLStatisticsListRowIndex" type="int"/>
+</page-specification>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="PThresholdConfig" desc="" dna-code="c3815dae-4701-0010-b59a-49dc1221d37a" full-name="module.monitor.controlmgr.PThresholdConfig" kind="0" name="PThresholdConfig">
+  <uientity-version branch="" code="" desc="" name="PThresholdConfig" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.PThresholdConfig</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_name"/>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold" type="form" uiid="thresholdInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_thresholdId"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_thresholdName"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_expiryDays"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_remarks"/>
+      <area bo="java.lang.String" type="textarea" uiid="thresholdInput_expr1"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_expr2"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_expr3"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_expr4"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_expr5"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_expr6"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_expr7"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_expr8"/>
+      <area bo="java.lang.String" type="textfield" uiid="thresholdInput_state"/>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold" type="form" uiid="exprDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_expiryDays"/>
+      <area bo="java.lang.String" type="textarea" uiid="exprDetail_expr1"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_expr2"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_expr3"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_expr4"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_expr5"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_expr6"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_expr7"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_expr8"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_remarks"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_thresholdId"/>
+      <area bo="java.lang.String" type="textfield" uiid="exprDetail_thresholdName"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/controlmgr" name="PThresholdConfig.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/controlmgr" name="PThresholdConfig.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/controlmgr" name="PThresholdConfig.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="PThresholdConfig.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="query" type="button"/>
+      <ui-event id="" name="dataSelect" type="button"/>
+      <ui-event id="" name="detail" type="button"/>
+      <ui-event id="" name="add" type="button"/>
+      <ui-event id="" name="save" type="button"/>
+      <ui-event id="" name="delete" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

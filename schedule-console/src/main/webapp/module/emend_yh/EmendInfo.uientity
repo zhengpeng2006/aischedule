@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/emend_yh/Emend_Yh.cmpt" code="EmendInfo" desc="" dna-code="dfc99181-4f01-0010-958a-693088233b2a" full-name="module.emend_yh.EmendInfo" kind="0" name="EmendInfo">
+  <uientity-version branch="" code="" desc="" name="EmendInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.emend_yh.view.EmendInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="datefield" uiid="qryCondition_billDay"/>
+      <area bo="com.asiainfo.emend_yh.bo.BOAmTaskRely" type="form" uiid="form"/>
+      <area bo="java.lang.String" type="textfield" uiid="form_curTaskCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="form_ext1"/>
+      <area bo="java.lang.String" type="textfield" uiid="form_ext2"/>
+      <area bo="java.lang.String" type="textfield" uiid="form_ext3"/>
+      <area bo="java.lang.String" type="textfield" uiid="form_isAllregionRely"/>
+      <area bo="java.lang.String" type="textfield" uiid="form_isHandle"/>
+      <area bo="java.lang.String" type="textfield" uiid="form_preTaskCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="form_taskGroup"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/emend_yh" name="EmendInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/emend_yh" name="EmendInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/emend_yh" name="EmendInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/emend_yh/view" name="EmendInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Up-down Structure"/>
+    <uientity-r-events>
+      <ui-event id="" name="qryStateBtn" type="button"/>
+      <ui-event id="" name="savaBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

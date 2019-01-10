@@ -1,0 +1,71 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "taskInfosItems": [
+      {
+        "taskCode": "task01",
+        "taskName": "任务1",
+        "taskDesc": "",
+        "taskType": "single",
+        "taskGroup": "test01",
+        "startTime": "-1 -1 -1 -1 -1",
+        "endTime": "0 -1 14 9 -1 2016",
+        "scanIntervalTime": 0,
+        "scanNum": 0,
+        "executeNum": 0,
+        "threadNum": 0,
+        "idleSleepTime": 0,
+        "processClass": "com.asiainfo.schedule.test.DemoSingleTask",
+        "splitRegion": "否",
+        "faultProcessMethod": "人工处理",
+        "curVersion": 3,
+        "items": "0",
+        "createTime": "2016-09-02 08:55:00",
+        "state": "U",
+        "flag": 1,
+        "taskState": "start",
+        "nextSchedTime": "2016-09-02 08:56:00",
+        "nextSchedEndTime": "2016-09-14 00:00:00",
+        "jobId": "task01$1472777700061",
+        "curManagerId": "10.1.243.23$aif.server.com$23306@host-10-1-243-23$0000000006"
+      },
+      {
+        "taskCode": "task02",
+        "taskName": "任务2",
+        "taskDesc": "",
+        "taskType": "single",
+        "taskGroup": "test01",
+        "startTime": "-1 -1 -1 -1 -1",
+        "endTime": "0 -1 14 9 -1 2016",
+        "scanIntervalTime": 0,
+        "scanNum": 0,
+        "executeNum": 0,
+        "threadNum": 0,
+        "idleSleepTime": 0,
+        "processClass": "com.asiainfo.schedule.test.DemoSingleTask",
+        "splitRegion": "否",
+        "faultProcessMethod": "人工处理",
+        "curVersion": 3,
+        "items": "0",
+        "createTime": "2016-09-02 08:55:00",
+        "state": "U",
+        "flag": 1,
+        "taskState": "stop",
+        "nextSchedTime": "2016-09-02 08:56:00",
+        "nextSchedEndTime": "2016-09-14 00:00:00",
+        "jobId": "task01$1472777700061",
+        "curManagerId": "10.1.243.23$aif.server.com$23306@host-10-1-243-23$0000000006"
+      }
+    ],
+    "total": 2
+  }
+}

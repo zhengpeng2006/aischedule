@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/monitor/controlmgr/js/PThresholdConfig.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+			<!-- start -->
+			<div class="c_title">
+				<div class="text">监控阀值配置</div>
+				<button onclick="PThresholdJS.dataSelect();" name="dataSelect"
+					class="e_button-form" id="configbuttons" style="display: none;float:right">
+					<span>选择</span>
+				</button>
+			</div>
+			<div class="c_form c_form-col-3 c_form-label-4 c_form-inline"
+				uiid="queryForm" id="queryForm" type="condForm" objName="queryForm"
+				uitype="condform" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">名称:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="name"
+									value="ognl:queryForm.name" desc="名称" uiid="queryForm_name" /></span>
+						</span></span></li>
+
+				</ul>
+
+
+				<button template_type="operate" type="button" name="query"
+					id="queryButton" class="e_button-form" formId="queryForm"
+					onclick="PThresholdJS.queryOnclick($(this));">
+					<span>查询</span>
+				</button>
+				
+
+				<div class="submitPlace"></div>
+			</div>
+			<!-- table start -->
+			<div jwcid="thresholdInfos@Part" uiid="thresholdInfos"
+				id="thresholdInfos" element="div" type="table"
+				objName="thresholdInfosItems,thresholdInfosCount"
+				bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold"
+				uitype="table" editable="true">
+				<div class="c_scroll" style="height: 220px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="thresholdInfosTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="thresholdInfosRowIndex" style="display: none">RowIndex</th>
+									<th col="thresholdId" style="display: none">标识</th>
+									<th col="thresholdName" colcss="e_left" class="wrap">配置名称</th>
+									<th col="expr1" colcss="e_left" class="wrap" colspan="2">表达式1</th>
+									<th col="expiryDays" colcss="e_left" class="wrap">有效期限</th>
+									<th col="remarks" colcss="e_left" class="wrap">备注</th>
+									<th col="expr2" style="display: none">表达式2</th>
+									<th col="expr3" style="display: none">表达式3</th>
+									<th col="expr4" style="display: none">表达式4</th>
+									<th col="expr5" style="display: none">表达式5</th>
+									<th col="expr6" style="display: none">表达式6</th>
+									<th col="expr7" style="display: none">表达式7</th>
+									<th col="expr8" style="display: none">表达式8</th>
+									<th col="state" style="display: none">状态</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:thresholdInfosItems"
+									value="ognl:thresholdInfosItem"
+									index="ognl:thresholdInfosRowIndex">
+									<tr onclick="PThresholdJS.updateInfo($(this));">
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosRowIndex+1"></span></td>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.thresholdId"
+											name="thresholdId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.thresholdName"
+											name="thresholdName"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expr1" name="expr1" >
+											</span>
+											</td>
+											<td>
+											<button	name="detail" class="e_button-form"
+												onclick="PThresholdJS.showDetail($(this));" style="float:right">
+													<span>详情</span>
+												</button>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expiryDays" name="expiryDays"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.remarks" name="remarks"></span>
+										</td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expr2" name="expr2"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expr3" name="expr3"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expr4" name="expr4"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expr5" name="expr5"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expr6" name="expr6"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expr7" name="expr7"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.expr8" name="expr8"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:thresholdInfosItem.state" name="state"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- dataForm start -->
+
+			<div class="c_form c_form-col-3 c_form-label-5"
+				jwcid="thresholdInput@Part" uiid="thresholdInput"
+				id="thresholdInput" type="form" objName="thresholdInput"
+				bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold"
+				uitype="form" editable="true">
+				<ul class="ul">
+					<li class="li" style="display: none"><span class="label">标识:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="thresholdId"
+									value="ognl:thresholdInput.thresholdId" desc="标识"
+									uiid="thresholdInput_thresholdId" /></span>
+						</span></span></li>
+					<li class="li"><span class="label"><span
+							class="e_required">配置名称:</span></span> <span class="e_elements"><span
+							class="e_input"> <span><input jwcid="@TextField"
+									type="text" name="thresholdName"
+									value="ognl:thresholdInput.thresholdName" desc="配置名称"
+									uiid="thresholdInput_thresholdName" id="nameInput" nullable="no"/></span>
+						</span></span></li>
+
+					<li class="li"><span class="label">有效期限:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expiryDays"
+									value="ognl:thresholdInput.expiryDays" desc="有效期限"
+									uiid="thresholdInput_expiryDays" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">备注:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="remarks"
+									value="ognl:thresholdInput.remarks" desc="备注"
+									uiid="thresholdInput_remarks" /></span>
+						</span></span></li>
+					<li class="li col-3"><span class="label"><span
+							class="e_required">表达式:</span></span> <span class="e_textarea"> <span
+							class="e_textareaTop"> <span></span>
+						</span> <span class="e_textareaContent"> <span><textarea
+										type="text" name="expr1" jwcid="@TextArea"
+										value="ognl:thresholdInput.expr1" style="height: 130px;"
+										uiid="thresholdInput_expr1" id="exprInput"></textarea></span>
+						</span> <span class="e_textareaBottom"> <span></span>
+						</span>
+					</span></li>
+					<li class="li" style="display: none"><span class="label">表达式2:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expr2"
+									value="ognl:thresholdInput.expr2" desc="表达式2"
+									uiid="thresholdInput_expr2" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">表达式3:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expr3"
+									value="ognl:thresholdInput.expr3" desc="表达式3"
+									uiid="thresholdInput_expr3" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">表达式4:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expr4"
+									value="ognl:thresholdInput.expr4" desc="表达式4"
+									uiid="thresholdInput_expr4" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">表达式5:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expr5"
+									value="ognl:thresholdInput.expr5" desc="表达式5"
+									uiid="thresholdInput_expr5" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">表达式6:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expr6"
+									value="ognl:thresholdInput.expr6" desc="表达式6"
+									uiid="thresholdInput_expr6" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">表达式7:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expr7"
+									value="ognl:thresholdInput.expr7" desc="表达式7"
+									uiid="thresholdInput_expr7" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">表达式8:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="expr8"
+									value="ognl:thresholdInput.expr8" desc="表达式8"
+									uiid="thresholdInput_expr8" /></span>
+						</span></span></li>
+					<li class="li" style="display: none"><span class="label">状态:</span>
+						<span class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="state"
+									value="ognl:thresholdInput.state" desc="状态"
+									uiid="thresholdInput_state" /></span>
+						</span></span></li>
+				</ul>
+			</div>
+		
+			<div class="c_submit" uitype="btngroup" editable="true" id="editDiv">
+				<button onclick="PThresholdJS.addInfo('add');" name="add"
+					class="e_button-form">
+					<span>新增</span>
+				</button>
+				<button name="save" class="e_button-form"
+					onclick="PThresholdJS.addInfo('update');">
+					<span>修改</span>
+				</button>
+				<button onclick="PThresholdJS.deleteOnclick();" name="delete"
+					class="e_button-form">
+					<span>删除</span>
+				</button>
+			</div>
+			<div class="c_submit" uitype="btngroup" editable="true" id="saveDiv" style="display:none">
+				<button name="save" class="e_button-form"
+					onclick="PThresholdJS.infoSave();">
+					<span>保存</span>
+				</button>
+				<button onclick="PThresholdJS.cancel();" name="cancel"
+					class="e_button-form">
+					<span>取消</span>
+				</button>
+			</div>
+			<!-- 表达式详情 -->
+			<div id="exprDetial" style="display: none">
+
+				<div class="c_form c_form-col-1 c_form-label-5"
+					jwcid="exprDetail@Part" uiid="exprDetail" id="exprDetail"
+					type="form" objName="exprDetail"
+					bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonThreshold"
+					uitype="form" editable="true">
+					<ul class="ul">
+						<li class="li" style="display: none"><span class="label">有效期限:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="expiryDays"
+										value="ognl:exprDetail.expiryDays" desc="有效期限"
+										uiid="exprDetail_expiryDays" /></span>
+							</span></span></li>
+						<li class="li"><span class="label">表达式:</span> <span
+							class="e_textarea"> <span class="e_textareaTop"> <span></span>
+							</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="expr1" jwcid="@TextArea"
+											value="ognl:exprDetail.expr1" style="height:400px"
+											uiid="exprDetail_expr1" readonly="true"></textarea></span>
+							</span> <span class="e_textareaBottom"> <span></span>
+							</span>
+						</span></li>
+						<li class="li" style="display: none"><span class="label">表达式2:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="expr2"
+										value="ognl:exprDetail.expr2" desc="表达式2"
+										uiid="exprDetail_expr2" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">表达式3:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="expr3"
+										value="ognl:exprDetail.expr3" desc="表达式3"
+										uiid="exprDetail_expr3" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">表达式4:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="expr4"
+										value="ognl:exprDetail.expr4" desc="表达式4"
+										uiid="exprDetail_expr4" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">表达式5:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="expr5"
+										value="ognl:exprDetail.expr5" desc="表达式5"
+										uiid="exprDetail_expr5" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">表达式6:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="expr6"
+										value="ognl:exprDetail.expr6" desc="表达式6"
+										uiid="exprDetail_expr6" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">表达式7:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="expr7"
+										value="ognl:exprDetail.expr7" desc="表达式7"
+										uiid="exprDetail_expr7" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">表达式8:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="expr8"
+										value="ognl:exprDetail.expr8" desc="表达式8"
+										uiid="exprDetail_expr8" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">备注:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="remarks"
+										value="ognl:exprDetail.remarks" desc="备注"
+										uiid="exprDetail_remarks" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">状态:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="state"
+										value="ognl:exprDetail.state" desc="状态"
+										uiid="exprDetail_state" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">标识:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="thresholdId"
+										value="ognl:exprDetail.thresholdId" desc="标识"
+										uiid="exprDetail_thresholdId" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">配置名称:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="thresholdName"
+										value="ognl:exprDetail.thresholdName" desc="配置名称"
+										uiid="exprDetail_thresholdName" /></span>
+							</span></span></li>
+					</ul>
+					<div class="submitPlace"></div>
+				</div>
+			</div>
+			<!-- 结束 -->
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="SQLStatistics" desc="" dna-code="175d711c-4601-0010-9d7f-a17509127e93" full-name="monitor.monitorBase.SQLStatistics" kind="0" name="SQLStatistics">
+  <uientity-version branch="" code="" desc="" name="SQLStatistics" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.monitorBase.view.SQLStatistics</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_appId"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_SQL"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/monitorBase" name="SQLStatistics.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="SQLStatistics.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="SQLStatistics.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/monitorBase/view" name="SQLStatistics.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="queryButton" type="button"/>
+      <ui-event id="" name="staticsButton" type="button"/>
+      <ui-event id="" name="copyButton" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

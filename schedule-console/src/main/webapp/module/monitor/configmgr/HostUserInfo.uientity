@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="HostUserInfo" desc="" dna-code="d090afc2-4701-0010-a006-f5602f57081e" full-name="module.monitor.configmgr.HostUserInfo" kind="0" name="HostUserInfo">
+  <uientity-version branch="" code="" desc="" name="HostUserInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.HostUserInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonHostUser" type="form" uiid="userDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_hostUserId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_userName"/>
+      <area bo="java.lang.String" type="password" uiid="userDetail_userPwd"/>
+      <area bo="java.lang.String" type="password" uiid="userDetail_userPwd"/>
+      <area bo="java.lang.String" type="select" uiid="userDetail_userType"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_state"/>
+      <area bo="java.lang.String" type="datefield" uiid="userDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="userDetail_remark"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="HostUserInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="HostUserInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="HostUserInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="HostUserInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="newBtn" type="button"/>
+      <ui-event id="" name="editBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+      <ui-event id="" name="saveBtn" type="button"/>
+      <ui-event id="" name="cancelBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

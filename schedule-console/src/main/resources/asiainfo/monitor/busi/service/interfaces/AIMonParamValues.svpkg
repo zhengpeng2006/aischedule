@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="AIMonParamValues" desc="" dna-code="a8aa5df2-4701-0010-91d2-d5d7a2b381f6" implementation-class="com.asiainfo.monitor.busi.service.impl.AIMonParamValuesSVImpl" interface-class="com.asiainfo.monitor.busi.service.interfaces.IAIMonParamValuesSV" name="AIMonParamValues" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/monitor/busi/service/interfaces" name="IAIMonParamValuesSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/busi/service/impl" name="AIMonParamValuesSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/busi/service/interfaces" name="AIMonParamValues.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonParamValuesSV_getParamValuesById" desc="" dna-code="ead25df2-4701-0010-91d2-d5d7a2b381f6" name="getParamValuesById" opt-flag="Y" serv-func="getParamValuesById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues" param-kind="bo"/>
+      </service>
+      <service code="IAIMonParamValuesSV_getParamValuesByType" desc="" dna-code="eed25df2-4701-0010-91d2-d5d7a2b381f6" name="getParamValuesByType" opt-flag="Y" serv-func="getParamValuesByType" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="type" param-kind="java"/>
+          <param datatype="java.lang.String" name="registeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonParamValuesSV_saveOrUpdate" desc="" dna-code="f4d25df2-4701-0010-91d2-d5d7a2b381f6" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonParamValuesSV_saveOrUpdate" desc="" dna-code="f5d25df2-4701-0010-91d2-d5d7a2b381f6" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonParamValuesSV_deleteParamValues" desc="" dna-code="f6d25df2-4701-0010-91d2-d5d7a2b381f6" name="deleteParamValues" opt-flag="Y" serv-func="deleteParamValues" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="id" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonParamValuesSV_getParamValuesByParamId" desc="" dna-code="f7d25df2-4701-0010-91d2-d5d7a2b381f6" name="getParamValuesByParamId" opt-flag="Y" serv-func="getParamValuesByParamId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="paramId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.exeframe.config.bo.BOAIMonParamValues[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonParamValuesSV_deleteParamValues" desc="" dna-code="f8d25df2-4701-0010-91d2-d5d7a2b381f6" name="deleteParamValues" opt-flag="Y" serv-func="deleteParamValues" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="int" name="registeType" param-kind="java"/>
+          <param datatype="long" name="registeId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

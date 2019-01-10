@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<script type="text/javascript" src="base/jquery1.8.2/jquery.min.js"></script>
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/deploy/js/StrategyCfg.js"
+	type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+			<!-- start -->
+	<div class="c_box">
+		<!-- 查询开始 -->
+		<div class="c_form c_form-label-7 c_form-inline" uiid="queryForm"
+			id="queryForm" type="condForm" objName="queryForm" uitype="condform"
+			editable="true">
+			<ul class="ul">
+				<li class="li"><span class="label">部署策略名称:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="name"
+								value="ognl:queryForm.name" desc="部署策略名称" uiid="queryForm_name" /></span>
+					</span></span></li>
+			</ul>
+			<div class="submitPlace"></div>
+			<div class="submit">
+				<button onclick="StrategyCfgJS.query()" template_type="operate"
+					type="button" name="queryButton" class="e_button-form"
+					formId="queryForm">
+					<span>查询</span>
+				</button>
+			</div>
+		</div>
+		<!-- 查询结束 -->
+
+		<!-- 列表开始 -->
+
+		<div jwcid="stategies@Part" uiid="stategies" id="stategies"
+			element="div" type="table" objName="stategiesItems,stategiesCount"
+			bo="com.asiainfo.deploy.common.bo.BODeployStrategy" uitype="table"
+			editable="true">
+			<div class="c_scroll" style="height: 465px">
+				<div class="c_table c_table-row-10">
+					<table jwcid="@Table" name="stategiesTable" scroll="true">
+						<thead>
+							<tr>
+								<th col="stategiesRowIndex" style="display: none">RowIndex</th>
+								<th col="deployStrategyId" style="display: none">策略标识</th>
+								<th col="deployStrategyName" colcss="e_left" >策略名称</th>
+								<th col="clientHomePath" colcss="e_left">home路径</th>
+								<th col="clientBinPath" colcss="e_left">bin路径</th>
+								<th col="clientSbinPath" colcss="e_left">sbin路径</th>
+								<th col="clientSbinPath" colcss="e_left">log路径</th>
+								<th col="ftpHostIp" colcss="e_left">主机IP</th>
+								<th col="ftpHostPort" colcss="e_left">主机端口</th>
+								<th col="ftpPackagePath" colcss="e_left">FTP包路径</th>
+								<th col="ftpUserName" colcss="e_left">FTP用户名</th>
+								<th col="ftpPassword" colcss="e_left" style="display:none">FTP密码</th>
+								<th col="ftpProtocol" colcss="e_left">文件传输协议</th>
+								<th col="installRule" colcss="e_left">安装规则</th>
+								<th col="serverPackagePath" colcss="e_left">服务器包路径</th>
+								<th col="templateId" colcss="e_left">部署模板</th>
+								<th col="createTime" colcss="e_left">创建时间</th>
+								<th col="modifyTime" colcss="e_left">修改时间</th>
+								<th col="historyPackageNum" colcss="e_left">保留历史版本数</th>
+								<th col="remarks" colcss="e_left">备注</th>
+								<th col="operatorId" colcss="e_left">操作员</th>
+							</tr>
+						</thead>
+						<tbody>
+							<span jwcid="@Foreach" source="ognl:stategiesItems"
+								value="ognl:stategiesItem" index="ognl:stategiesRowIndex">
+								<tr>
+									<td style="display: none"><span jwcid="@Insert"
+										value="ognl:stategiesRowIndex+1"></span></td>
+									<td style="display: none"><span jwcid="@Insert"
+										value="ognl:stategiesItem.deployStrategyId"
+										name="deployStrategyId"></span></td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.deployStrategyName"
+										name="deployStrategyName"></span></td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.clientHomePath"
+										name="clientHomePath"></span></td>
+										
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.clientBinPath" name="clientBinPath"></span>
+									</td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.clientSbinPath"
+										name="clientSbinPath"></span></td>
+										
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.clientLogPath"
+										name="clientLogPath"></span></td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.ftpHostIp" name="ftpHostIp"></span>
+									</td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.ftpHostPort" name="ftpHostPort"></span>
+									</td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.ftpPackagePath"
+										name="ftpPackagePath"></span></td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.ftpUserName" name="ftpUserName"></span>
+									</td>
+
+									<td class="e_left" style="display:none"><span jwcid="@Insert"
+										value="ognl:stategiesItem.ftpPassword" name="ftpPassword"></span>
+									</td>
+									
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:ftpProtocolTrans(stategiesItem.ftpProtocol)" name="ftpProtocol"></span>
+									</td>
+
+									<td style="display:none"><span jwcid="@Insert"
+										value="ognl:stategiesItem.installRule" name="installRule"></span>
+									</td>
+									
+									<td class="e_left"><button onclick="StrategyCfgJS.ruleCfg($(this))" name="ruleCfg"
+											class="e_button-form">
+											<span>安装规则配置</span>
+										</button>
+									</td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.serverPackagePath"
+										name="serverPackagePath"></span></td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:templateTrans(stategiesItem.templateId)" name="templateId"></span>
+									</td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.createTime" name="createTime"></span>
+									</td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.modifyTime" name="modifyTime"></span>
+									</td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.historyPackageNum"
+										name="historyPackageNum"></span></td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.remarks" name="remarks"></span></td>
+
+									<td class="e_left"><span jwcid="@Insert"
+										value="ognl:stategiesItem.operatorId" name="operatorId"></span>
+									</td>
+
+								</tr>
+							</span>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 列表结束 -->
+
+		<!-- 按钮组开始 -->
+		<div class="c_submit" uitype="btngroup" editable="true">
+			<button onclick="StrategyCfgJS.templateCfg()" name="templateCfg"
+				class="e_button-form" style="float: left">
+				<span>启停模板管理</span>
+			</button>
+			
+			<button onclick="StrategyCfgJS.operation('delete')" name="delete"
+				class="e_button-form" style="float: right">
+				<span>删除</span>
+			</button>
+			<button onclick="StrategyCfgJS.operation('update')" name="update"
+				class="e_button-form" style="float: right">
+				<span>修改</span>
+			</button>
+			<button onclick="StrategyCfgJS.add()" name="add"
+				class="e_button-form" style="float: right">
+				<span>新增</span>
+			</button>
+		</div>
+		<!-- 按钮组结束-->
+	</div>
+	<!-- 数据录入开始 -->
+	<div id="strategyInputDiv" style="display: none">
+		<div class="c_form c_form-col-2 c_form-label-7"
+			jwcid="strategyInfo@Part" uiid="strategyInfo" id="strategyInfo"
+			type="form" objName="strategyInfo"
+			bo="com.asiainfo.deploy.common.bo.BODeployStrategy" uitype="form"
+			editable="true">
+			<ul class="ul">
+				<li class="li" style="display: none"><span class="label">策略标识:</span>
+					<span class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="deployStrategyId"
+								value="ognl:strategyInfo.deployStrategyId" desc="策略标识"
+								uiid="strategyInfo_deployStrategyId" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">策略名:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="deployStrategyName"
+								value="ognl:strategyInfo.deployStrategyName" desc="策略名"
+								uiid="strategyInfo_deployStrategyName" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">bin路径:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="clientBinPath"
+								value="ognl:strategyInfo.clientBinPath" desc="bin路径"
+								uiid="strategyInfo_clientBinPath" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">home路径:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="clientHomePath"
+								value="ognl:strategyInfo.clientHomePath" desc="home路径"
+								uiid="strategyInfo_clientHomePath" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">sbin路径:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="clientSbinPath"
+								value="ognl:strategyInfo.clientSbinPath" desc="sbin路径"
+								uiid="strategyInfo_clientSbinPath" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">log路径:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="clientLogPath"
+								value="ognl:strategyInfo.clientLogPath" desc="log路径"
+								uiid="strategyInfo_clientLogPath" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">FTP主机IP:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="ftpHostIp"
+								value="ognl:strategyInfo.ftpHostIp" desc="FTP主机IP"
+								uiid="strategyInfo_ftpHostIp" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">FTP主机端口:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="ftpHostPort"
+								value="ognl:strategyInfo.ftpHostPort" desc="FTP主机端口"
+								uiid="strategyInfo_ftpHostPort" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">FTP包路径:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="ftpPackagePath"
+								value="ognl:strategyInfo.ftpPackagePath" desc="FTP包路径"
+								uiid="strategyInfo_ftpPackagePath" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">FTP用户名:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="ftpUserName"
+								value="ognl:strategyInfo.ftpUserName" desc="FTP用户名"
+								uiid="strategyInfo_ftpUserName" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">FTP密码:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@Password" type="text" name="ftpPassword"
+								value="ognl:strategyInfo.ftpPassword" desc="FTP密码"
+								uiid="strategyInfo_ftpPassword" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">部署模板:</span> <span class="e_elements"><span
+									class="e_select"> <span><span><select
+												id="templateIdInput" jwcid="@Select" name="templateId"
+												value="ognl:strategyInfo.templateId" desc="部署模板"
+												source="ognl:getTemplateList()" disabled="false"
+												changeValue="true" addDefault="false" defaultText="root"
+												uiid="strategyInfo_templateId" nullable="no"></select></span></span>
+							</span></span></li>
+				<li class="li"><span class="label">文件传输协议:</span> <span class="e_elements"><span
+									class="e_select"> <span><span><select
+												id="ftpProtocolInput" jwcid="@Select" name="ftpProtocol"
+												value="ognl:strategyInfo.ftpProtocol" desc="文件传输协议"
+												source="ognl:getftpProtocolList()" disabled="false"
+												changeValue="true" addDefault="false" defaultText="root"
+												uiid="strategyInfo_ftpProtocol" nullable="no"></select></span></span>
+							</span></span></li>
+				<li class="li"><span class="label">服务器包路径:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="serverPackagePath"
+								value="ognl:strategyInfo.serverPackagePath" desc="服务器包路径"
+								uiid="strategyInfo_serverPackagePath" /></span>
+					</span></span></li>
+				<li class="li"><span class="label">保留历史版本数:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="historyPackageNum"
+								value="ognl:strategyInfo.historyPackageNum" desc="保留历史版本数"
+								uiid="strategyInfo_historyPackageNum" /></span>
+					</span></span></li>
+				<li class="li" style="display:none"><span class="label">操作员:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="operatorId"
+								value="ognl:strategyInfo.operatorId" desc="操作员"
+								uiid="strategyInfo_operatorId" /></span>
+					</span></span></li>
+			   <li class="li col-2"><span class="label">备注:</span> <span
+							class="e_textarea"> <span class="e_textareaTop"> <span></span>
+							</span> <span class="e_textareaContent"> <span><textarea
+											type="text" name="remarks" jwcid="@TextArea"
+											value="ognl:strategyInfo.remarks" style="height:40px"
+											uiid="strategyInfo_remarks"></textarea></span>
+							</span> <span class="e_textareaBottom"> <span></span>
+							</span>
+						</span></li>
+				<li class="li" style="display: none"><span class="label">创建时间:</span>
+					<span class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="createTime"
+								value="ognl:strategyInfo.createTime" desc="创建时间"
+								uiid="strategyInfo_createTime" /></span>
+					</span></span></li>
+				<li class="li" style="display: none"><span class="label">修改时间:</span>
+					<span class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="modifyTime"
+								value="ognl:strategyInfo.modifyTime" desc="修改时间"
+								uiid="strategyInfo_modifyTime" /></span>
+					</span></span></li>
+			</ul>
+			<div class="submitPlace"></div>
+		</div>
+		<div class="c_submit" uitype="btngroup" editable="true">
+			<button onclick="StrategyCfgJS.saveStrategy()" name="saveStrategy"
+				class="e_button-form">
+				<span>保存</span>
+			</button>
+			<button onclick="StrategyCfgJS.quitDiv('strategyInputDiv')"
+				name="cancel" class="e_button-form">
+				<span>取消</span>
+			</button>
+		</div>
+	</div>
+	<!-- 数据录入结束-->
+	<!-- 安装规则配置开始 -->
+	<div id="ruleDiv" style="display: none">
+		<input id="idRecord" style="display:none"/>
+		<div jwcid="rules@Part" uiid="rules" id="rules" element="div"
+			type="table" objName="rulesItems,rulesCount"
+			bo="" uitype="table"
+			editable="true">
+			<div class="c_scroll" style="height: 300px">
+				<div class="c_table c_table-row-10">
+					<table jwcid="@Table" name="rulesTable" scroll="true">
+						<thead>
+							<tr>
+								<th col="rulesRowIndex" style="display: none">RowIndex</th>
+								<th col="packageName" colcss="e_left" class="wrap">需获取的包名</th>
+								<th col="installPath" colcss="e_left" class="wrap">安装路径</th>
+								<th col="unzipMethod" colcss="e_left" class="wrap">解压方式</th>
+							</tr>
+						</thead>
+						<tbody id="ruleBody">
+							<span jwcid="@Foreach" source="ognl:rulesItems"
+								value="ognl:rulesItem" index="ognl:rulesRowIndex">
+								<tr>
+									<td style="display: none"><span jwcid="@Insert"
+										value="ognl:rulesRowIndex+1"></span></td>
+									<td class="e_left wrap"><input jwcid="@TextField"
+										type="text" name="packageName"
+										value="ognl:rulesItem.packageName" desc="需获取的包名"
+										uiid="rulesItem_packageName" style="width:100%"/></td>
+
+									<td class="e_left wrap"><input jwcid="@TextField"
+										type="text" name="installPath"
+										value="ognl:rulesItem.installPath" desc="安装路径"
+										uiid="rulesItem_installPath" style="width:100%"/></td>
+
+									<td class="e_left wrap">
+													<select jwcid="@Select" id="unzipMethod" name="unzipMethod"
+													source="ognl:getUnzipMethodList()" value="ognl:rulesItem.unzipMethod" changeValue="true" addDefault="false"
+													defaultText="" uitype="select" uiid="rulesItem_unzipMethod"
+													editable="true"></select>
+											</td>
+
+								</tr>
+							</span>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="c_submit" uitype="btngroup" editable="true">
+			<button onclick="StrategyCfgJS.addRuleRow()" name="addRule" class="e_button-form">
+				<span>新增</span>
+			</button>
+			<button onclick="StrategyCfgJS.deleteRuleRow()" name="deleteRule" class="e_button-form">
+				<span>删除</span>
+			</button>
+			<button onclick="StrategyCfgJS.saveRules()" name="saveRule" class="e_button-form">
+				<span>保存</span>
+			</button>
+		</div>
+	</div>
+	<!-- 安装规则配置结束 -->
+</body>
+</html>

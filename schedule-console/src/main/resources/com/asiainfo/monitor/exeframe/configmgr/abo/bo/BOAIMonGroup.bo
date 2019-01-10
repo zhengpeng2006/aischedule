@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonGroup" mainattr="GROUP_ID" remark="分组abo">
+    <mapingenty type="table">AI_Mon_Group</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="GROUP_ID" maxlength="20" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="256" datatype="String" type="COL" order="2" notNull="N">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_DESC" maxlength="256" datatype="String" type="COL" order="3" notNull="N">
+        <mapingcol datatype="VARCHAR2">GROUP_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="0" datatype="DateTime" type="COL" order="4" notNull="N">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="8" datatype="String" type="COL" order="5" notNull="N">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CODE" maxlength="32" datatype="String" type="COL" order="1" notNull="N">
+        <mapingcol datatype="VARCHAR2">GROUP_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIV" maxlength="4000" datatype="String" type="COL" order="6" notNull="N">
+        <mapingcol>PRIV</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

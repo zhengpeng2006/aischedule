@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOAmSchedPsMon" mainattr="TASK_CODE">
+    <mapingenty type="table">AM_SCHED_PS_MON</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="TASK_CODE" maxlength="255" datatype="String" type="COL" order="11" notNull="N">
+        <mapingcol datatype="VARCHAR2">TASK_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_NAME" maxlength="255" datatype="String" type="COL" order="8" notNull="N">
+        <mapingcol datatype="VARCHAR2">TASK_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" order="12" notNull="N">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MOD" maxlength="12" datatype="Long" type="COL" order="6" notNull="N">
+        <mapingcol datatype="NUMBER">MOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MOD_VALUE" maxlength="12" datatype="Long" type="COL" order="2" notNull="N">
+        <mapingcol datatype="NUMBER">MOD_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BS_BILLING_CYCLE" maxlength="12" datatype="Long" type="COL" order="5" notNull="N">
+        <mapingcol datatype="NUMBER">BS_BILLING_CYCLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="6" datatype="String" type="COL" order="10" notNull="N">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONDITION" maxlength="10" datatype="String" type="COL" order="9" notNull="N">
+        <mapingcol datatype="VARCHAR2">CONDITION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="10" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol datatype="VARCHAR2">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="10" datatype="String" type="COL" order="3" notNull="N">
+        <mapingcol datatype="VARCHAR2">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="10" datatype="String" type="COL" order="1" notNull="N">
+        <mapingcol datatype="VARCHAR2">EXT3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT4" maxlength="10" datatype="String" type="COL" order="0" notNull="N">
+        <mapingcol datatype="VARCHAR2">EXT4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT5" maxlength="10" datatype="String" type="COL" order="7" notNull="N">
+        <mapingcol datatype="VARCHAR2">EXT5</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

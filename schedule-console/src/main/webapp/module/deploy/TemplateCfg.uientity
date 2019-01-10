@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/schedule/Schedule.cmpt" code="TemplateCfg" desc="" dna-code="258ba94f-4901-0010-b99a-957677315aee" full-name="module.deploy.TemplateCfg" kind="0" name="TemplateCfg">
+  <uientity-version branch="" code="" desc="" name="TemplateCfg" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.deploy.view.TemplateCfg</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.deploy.common.bo.BODeployAppTemplate" type="form" uiid="tamplateInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="tamplateInput_templateId"/>
+      <area bo="java.lang.String" type="textfield" uiid="tamplateInput_templateName"/>
+      <area bo="java.lang.String" type="textarea" uiid="tamplateInput_contents"/>
+      <area bo="java.lang.String" type="textfield" uiid="tamplateInput_createTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="tamplateInput_modifyTime"/>
+      <area bo="java.lang.String" type="textfield" uiid="tamplateInput_operatorId"/>
+      <area bo="java.lang.String" type="textarea" uiid="tamplateInput_remarks"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/deploy" name="TemplateCfg.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="TemplateCfg.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/deploy" name="TemplateCfg.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/deploy/view" name="TemplateCfg.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="add" type="button"/>
+      <ui-event id="" name="update" type="button"/>
+      <ui-event id="" name="delete" type="button"/>
+      <ui-event id="" name="saveTemplate" type="button"/>
+      <ui-event id="" name="cancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

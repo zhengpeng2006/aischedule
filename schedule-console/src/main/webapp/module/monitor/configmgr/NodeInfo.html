@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/NodeInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+
+	<div class="c_form c_form-col-2 c_form-label-7" jwcid="nodeDetail@Part" uiid="nodeDetail" id="nodeDetail" type="form" objName="nodeDetail"
+		bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNode" uitype="form" editable="true">
+		<ul class="ul">
+			<li class="li" style="display: none"><span class="label">节点标识:</span> <span class="e_elements">
+					<span class="e_input">
+						<span>
+							<input jwcid="@TextField" type="text" name="nodeId" value="ognl:nodeDetail.nodeId" desc="节点标识" uiid="nodeDetail_nodeId" />
+						</span>
+					</span>
+				</span></li>
+			<li class="li" style="display: none"><span class="label">主机标识:</span> <span class="e_elements">
+					<span class="e_input">
+						<span>
+							<input jwcid="@TextField" type="text" name="hostId" value="ognl:nodeDetail.hostId" desc="主机标识" uiid="nodeDetail_hostId" />
+						</span>
+					</span>
+				</span></li>
+			<li class="li"><span class="label">
+					<span class="e_required">节点编码:</span>
+				</span> <span class="e_elements">
+					<span class="e_input">
+						<span>
+							<input jwcid="@TextField" nullable="no" type="text" name="nodeCode" value="ognl:nodeDetail.nodeCode" desc="节点编码" uiid="nodeDetail_nodeCode" />
+						</span>
+					</span>
+				</span></li>
+			<li class="li"><span class="label">
+					<span class="e_required">节点名称:</span>
+				</span> <span class="e_elements">
+					<span class="e_input">
+						<span>
+							<input jwcid="@TextField" nullable="no" type="text" name="nodeNameNew" value="ognl:nodeDetail.nodeNameNew" desc="节点名称"
+								uiid="nodeDetail_nodeNameNew" />
+						</span>
+					</span>
+				</span></li>
+			<li class="li" style="display: none"><span class="label">状态:</span> <span class="e_elements">
+					<span class="e_input">
+						<span>
+							<input jwcid="@TextField" type="text" name="state" value="ognl:nodeDetail.state" desc="状态" uiid="nodeDetail_state" />
+						</span>
+					</span>
+				</span></li>
+			<li class="li" style="display: none"><span class="label">创建日期:</span> <input type="text" name="createDate" jwcid="@DatePopup"
+				value="ognl:nodeDetail.createDate" desc="创建日期" datatype="date" format="yyyy-MM-dd" afterAction="" uiid="nodeDetail_createDate" /></li>
+
+			<li class="li"><span class="label">
+					<span class="e_required">部署策略:</span>
+				</span> <span class="e_elements">
+					<span class="e_select">
+						<span>
+							<span>
+								<select jwcid="@Select" nullable="no" name="deployStrategyId" value="ognl:nodeDetail.deployStrategyId" onchange="" desc="部署策略"
+									source="ognl:getSelectList()" disabled="false" changeValue="true" addDefault="true" defaultText="请选择部署策略" uiid="nodeDetail_deployStrategyId"></select>
+							</span>
+						</span>
+					</span>
+				</span></li>
+			<li class="li"><span class="label">
+					<span class="e_required">是否监控节点:</span>
+				</span> <span class="e_elements">
+					<span class="e_select">
+						<span>
+							<span>
+								<select jwcid="@Select" nullable="no" name="isMonitorNode" value="ognl:nodeDetail.isMonitorNode" onchange="" desc="是否监控节点"
+									source="ognl:getMonitorSelectList()" disabled="false" changeValue="true" addDefault="true" defaultText="请选择..." uiid="nodeDetail_idMonitorNode"></select>
+							</span>
+						</span>
+					</span>
+				</span></li>
+			<li class="li"><span class="label">备注:</span> <span class="e_elements">
+					<span class="e_input">
+						<span>
+							<input jwcid="@TextField" type="text" name="remark" value="ognl:nodeDetail.remark" desc="备注" uiid="nodeDetail_remark" />
+						</span>
+					</span>
+				</span></li>
+
+		</ul>
+		<div style="width: 800px; height: 100px"></div>
+		<div class="c_submit" uitype="btngroup" editable="true">
+			<button onclick="NodeInfoJs.save();" name="btnSave" class="e_button-form">
+				<span>
+					<i class="e_ico-save"></i>保存
+				</span>
+			</button>
+			<button onclick="NodeInfoJs.close();" name="btnCancel" class="e_button-form">
+				<span>
+					<i class="e_ico-cancel"></i>取消
+				</span>
+			</button>
+	</div>
+	</div>
+</body>
+</html>

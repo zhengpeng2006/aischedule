@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/monitorPortal/MonitorPortal.cmpt" code="MonProcInfoPortal" desc="监控进程信息门户" dna-code="55ae61ed-4701-0010-a640-5be82f071541" full-name="module.monitor.portal.MonProcInfoPortal" kind="0" name="MonProcInfoPortal">
+  <uientity-version branch="" code="" desc="" name="MonProcInfoPortal" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.monitorPortal.view.MonProcInfoPortal</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="datefield" uiid="qryForm_beginDate"/>
+      <area bo="java.lang.String" type="datefield" uiid="qryForm_endDate"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/portal" name="MonProcInfoPortal.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/portal" name="MonProcInfoPortal.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/portal" name="MonProcInfoPortal.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/monitorPortal/view" name="MonProcInfoPortal.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="btn_run_1" type="button"/>
+      <ui-event id="" name="qryHisInfo" type="button"/>
+      <ui-event id="" name="showBtn1" type="button"/>
+      <ui-event id="" name="showBtn" type="button"/>
+      <ui-event id="" name="detailBtn1" type="button"/>
+      <ui-event id="" name="detailBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

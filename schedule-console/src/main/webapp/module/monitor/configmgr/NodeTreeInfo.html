@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/NodeTreeInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div id="layout" class="l_col" uitype="layout" editable="true">
+		<div class="l_left" style="width: 50%;">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">组织结构</div>
+			</div>
+				<div jwcid="treeOutPart@Part" element="div" uiid="treeOutPart" uitype="part" editable="true">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 400px; overflow: auto;" listener="ognl:listeners.loadTreeData" uitype="tree"
+					editable="true" id="sysOrgTree" parentNodeId="parentId" initAfterAction="NodeTreeInfoJs.treeInitAfterAction()" nodeId="id" nodeText="name"
+					textAction="NodeTreeInfoJs.treeTextClick(nodedata)" bo="" showCheckBox="false" expandPath="-1" async="false"></div>
+			</div>
+		</div>
+	</div>
+		<div class="l_auto" id="renameSer" style="display: none">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">命名应用编码</div>
+				</div>
+			</div>
+			<div class="c_box">
+				<div class="c_form c_form-col-2 c_form-label-5" jwcid="serverDetail@Part" uiid="serverDetail" id="serverDetail" type="form" objName="serverDetail"
+				bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonServer" uitype="form" editable="true">
+					<ul class="ul">
+						<li class="li col-2"><span class="label">应用编码:</span> <span class="e_elements">
+								<span class="e_input">
+									<span>
+										<input jwcid="@TextField" type="text" name="serverCode" value="ognl:serverDetail.serverCode" desc="应用编码" uiid="serverDetail_serverCode" />
+									</span>
+								</span>
+							</span></li>
+					</ul>
+					<div class="submitPlace" />
+						<div style="margin-left: 205px;">
+							<button onclick="NodeTreeInfoJs.save();" name="btnSave" class="e_button-form">
+								<span>
+									<i class="e_ico-save"></i>保存
+								</span>
+							</button>
+						</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

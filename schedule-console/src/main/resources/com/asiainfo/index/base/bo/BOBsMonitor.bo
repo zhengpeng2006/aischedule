@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="indexBase" name="BOBsMonitor" mainattr="MONITOR_ID">
+    <mapingenty type="table">BS_MONITOR</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="MONITOR_ID" maxlength="6" datatype="Integer" type="PK" remark="监控编号">
+        <mapingcol datatype="NUMBER">MONITOR_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MONITOR_NAME" maxlength="64" datatype="String" type="COL" remark="监控名称">
+        <mapingcol datatype="VARCHAR2">MONITOR_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MONITOR_DESC" maxlength="256" datatype="String" type="COL" remark="监控说明">
+        <mapingcol datatype="VARCHAR2">MONITOR_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建时间">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="操作时间">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态：U：正常；E：删除">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

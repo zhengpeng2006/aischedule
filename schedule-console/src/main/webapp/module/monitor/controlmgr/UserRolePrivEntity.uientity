@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/controlmgr/ControlMgr.cmpt" code="UserRolePrivEntity" desc="用户权限实体，即菜单管理" dna-code="4d137260-4601-0010-86d9-db928134d243" full-name="monitor.controlmgr.UserRolePrivEntity" kind="0" name="UserRolePrivEntity">
+  <uientity-version branch="" code="" desc="" name="UserRolePrivEntity" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.controlmgr.view.UserRolePrivEntity</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.appframe.ext.exeframe.config.bo.BOAIMonUserPriEntity" type="form" uiid="userPrivEntityDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_entityCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_entityName"/>
+      <area bo="java.lang.String" type="select" uiid="userPrivEntityDetail_entityType"/>
+      <area bo="java.lang.String" type="select" uiid="userPrivEntityDetail_selfType"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_entityStyle"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_entityAttr"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_entitySeq"/>
+      <area bo="java.lang.String" type="select" uiid="userPrivEntityDetail_deployType"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_notes"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_doneDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_entityId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_parentId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_loadType"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_opId"/>
+      <area bo="java.lang.String" type="textfield" uiid="userPrivEntityDetail_state"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/controlmgr" name="UserRolePrivEntity.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/controlmgr" name="UserRolePrivEntity.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/controlmgr" name="UserRolePrivEntity.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/controlmgr/view" name="UserRolePrivEntity.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="btn_new" type="button"/>
+      <ui-event id="" name="btn_edit" type="button"/>
+      <ui-event id="" name="btn_del" type="button"/>
+      <ui-event id="" name="btn_save" type="button"/>
+      <ui-event id="" name="btn_cancel" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="listener" element-id="userPrivEntity">{descRow:'userPrivEntityListener',nameRow:'userPrivEntityListener'}</jsfunction>
+      <jsfunction element-event="listener" element-id="privEntityTree">{descRow:'privEntityTreeListener',nameRow:'privEntityTreeListener'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAIMonUserPriEntitySV_getAllEntityBean" data-uiid="" desc="" dna-code="7f20d0f8-4501-0010-a38f-9f4840270cd8" element-event="listener" element-id="userPrivEntity" is-template="false" method="getAllEntityBean" name="" on-fail="" on-success="" refresh-uiid="" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserPriEntity.svpkg" type="dynamicTree"/>
+      <ui-service bind-operate-name="" code="getPrivEntityPrior" data-uiid="" desc="" dna-code="51abd960-4601-0010-9128-f56b9a8ca379" element-event="listener" element-id="privEntityTree" is-template="false" method="getPrivEntityPrior" name="" on-fail="" on-success="" refresh-uiid="" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/appframe/ext/monitor/service/interfaces/AIMonUserPriEntity.svpkg" type="dynamicTree"/>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

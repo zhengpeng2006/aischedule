@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="main" name="schedule_web" basedir=".">
+
+	<property name="dist" value="dest" />
+	<property name="schedule.lib" value="./lib" />
+
+
+	<path id='project.classpath'>
+		<pathelement location='${dist}' />
+		<fileset dir='${schedule.lib}'>
+			<include name='**/*.jar' />
+		</fileset>
+		<pathelement path="${java.class.path}" />
+	</path>
+
+	<target name="main" depends="compile,dest" />
+
+	<!--将csf工程下的， config、html、lib目录下的内容拷贝到自己创建的要打包的目录下，这样打包不依赖eclipse，直接交给ant文件来处理-->
+	<target name="init" description="初始化">
+		<delete dir="${dist}" />
+		<mkdir dir="${dist}/schedule_war" />
+		<copy todir="${dist}/schedule_war">
+			<fileset dir="${basedir}/html">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<mkdir dir="${dist}/schedule_war/WEB-INF/classes" />
+		<mkdir dir="${dist}/schedule_war/WEB-INF/classes" />
+
+		<copy todir="${dist}/schedule_war/WEB-INF/classes">
+			<fileset dir="./config">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		
+		<mkdir dir="${dist}/schedule_war"/>
+		<!--flatten属性 flatten="true"  这个是忽略路径，只copy 文件-->
+		<copy todir="${dist}/schedule_war/WEB-INF/lib" flatten="true">
+			<fileset dir="lib" defaultexcludes="yes">
+				<include name="**/*.jar" />
+			</fileset>
+		</copy>
+	</target>
+    
+	<!-- 将src包下的类编译成classes到制定的目录下 也就是创建好的要打包的路径下 -->
+	<!--预编译 src路径下的代码-->
+	<target name="compile" depends="init" description="compile begin....">
+		<javac srcdir="${basedir}/src" destdir='${dist}/schedule_war/WEB-INF/classes' encoding="UTF-8" debug='true'>
+			<classpath refid="project.classpath" />
+		</javac>
+	</target>
+     
+	<!--执行打包命令 生成war包-->
+	<!-- 打包目录下的文件 生成jar包 -->
+	<target name="dest" description="打包jar包">
+		<jar basedir="${dist}/schedule_war" jarfile="${dist}/schedule_war.war" />
+	</target>
+     
+	<!--删除生成war包的文件夹-->
+	<!--删除生成jar包的目录 -->
+	<target name="delete" description="删除打包好的文件夹">
+	    <delete dir="${basedir}/dest"></delete>
+	</target>
+	
+	<!--
+	***************************************
+	end
+	***************************************
+	-->
+
+
+
+</project>

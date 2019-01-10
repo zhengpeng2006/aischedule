@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="NodeUserInfo" desc="" dna-code="03776a19-4a01-0010-8cef-79849d0b09e2" full-name="module.monitor.configmgr.NodeUserInfo" kind="0" name="NodeUserInfo">
+  <uientity-version branch="" code="" desc="" name="NodeUserInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.NodeUserInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonNodeUser" type="form" uiid="nodeUserDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeUserDetail_nodeUserId"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeUserDetail_nodeId"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeUserDetail_userId"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeUserDetail_userType"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeUserDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeUserDetail_modifyDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeUserDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="nodeUserDetail_remark"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="NodeUserInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="NodeUserInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="NodeUserInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="NodeUserInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

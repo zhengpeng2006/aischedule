@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+<page-specification class="com.asiainfo.appframe.ext.exeframe.monitorBase.view.FrameCacheInfo">
+  <property-specification name="query" type="net.sf.json.JSONObject"/>
+  <property-specification name="cacheListItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="cacheListItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="cacheListCount" type="long"/>
+  <property-specification name="cacheListRowIndex" type="int"/>
+</page-specification>

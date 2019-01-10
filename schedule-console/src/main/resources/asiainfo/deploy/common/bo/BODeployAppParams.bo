@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BODeployAppParams" mainattr="APPLICATION_PARAM_ID">
+    <mapingenty type="table">AI_DEPLOY_APP_PARAM</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="APPLICATION_PARAM_ID" maxlength="12" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol datatype="NUMBER">APPLICATION_PARAM_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLICATION_ID" maxlength="12" datatype="Long" type="COL" remark="????id" order="2" notNull="N">
+        <mapingcol datatype="NUMBER">APPLICATION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KEY" maxlength="64" datatype="String" type="COL" remark="????????????????????????" order="1" notNull="N">
+        <mapingcol datatype="VARCHAR2">KEY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE" maxlength="64" datatype="String" type="COL" remark="????????" order="3" notNull="N">
+        <mapingcol datatype="VARCHAR2">VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARAM_TYPE" maxlength="1" datatype="String" type="COL" order="4" notNull="N">
+        <mapingcol>PARAM_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

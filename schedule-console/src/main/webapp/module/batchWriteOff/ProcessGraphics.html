@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet"
+		type="text/css" media="screen" />
+</span>
+<script src="module/batchWriteOff/js/ProcessGraphics.js" type="text/javascript"></script>
+<script src="module/batchWriteOff/js/Raphael.js" type="text/javascript"></script>
+<script src="module/batchWriteOff/js/ext/ext-base.js" type="text/javascript"></script>
+<script src="module/batchWriteOff/js/ext/ext-all.js" type="text/javascript"></script>
+</head>
+<body jwcid="@Body">
+			<!-- start -->
+			<!-- 参数设定开始 -->
+			<div class="c_box">
+			<div class="c_title">
+					<div class="text">流程参数</div>
+					
+					<div class="submit" style="float:right">
+					<button onclick="ProcessGraphicsJS.drawPic()" template_type="operate" type="button" name="set"
+						class="e_button-form" formId="paramterSet" id="commitBtn">
+						<span>设定</span>
+					</button>
+					&nbsp;&nbsp;
+					<button onclick="ProcessGraphicsJS.resetPic()" template_type="operate" type="button"
+						name="reset" class="e_button-form" formId="paramterSet">
+						<span>重置</span>
+					</button>
+					&nbsp;&nbsp;
+					<button onclick="ProcessGraphicsJS.showAll()" template_type="operate" type="button"
+						name="showAll" class="e_button-form" formId="paramterSet">
+						<span>全省地市展示</span>
+					</button>
+				</div>
+			</div>
+			<div class="c_form c_form-col-3 c_form-label-4 c_form-inline"
+				uiid="paramterSet" id="paramterSet" type="condForm"
+				objName="paramterSet" uitype="condform" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">地市:</span> <span
+						class="e_elements"><span class="e_select"> <span><span><select
+										jwcid="@Select" name="city" value="ognl:paramterSet.city"
+										desc="地市" source="ognl:getCityList()" changeValue="true" addDefault="false"
+										defaultText="root" uiid="paramterSet_city" id="city"></select></span></span>
+						</span></span></li>
+					<li class="li"><span class="label">出账日:</span> <span
+						class="e_elements"><span class="e_select"> <span><span><select
+										jwcid="@Select" name="billDate"
+										value="ognl:paramterSet.billDate" desc="出账日" source="ognl:getBillDateList()"
+										changeValue="true" addDefault="false" defaultText="root"
+										uiid="paramterSet_billDate" id="billDate"></select></span></span>
+						</span></span></li>
+					<li class="li"><span class="label">运行模式:</span> <span
+						class="e_elements"><span class="e_select"> <span><span><select
+										jwcid="@Select" name="mode" value="ognl:paramterSet.mode"
+										desc="运行模式" source="ognl:getModeList()" changeValue="true" addDefault="false"
+										defaultText="root" uiid="paramterSet_mode" id="mode"></select></span></span>
+						</span></span></li>
+				</ul>
+			</div>
+			</div>
+			<!--参数设定结束  -->
+			<!-- 流程图标题开始 -->
+			<div class="c_box">
+				<div class="c_title" style="display:inline">
+				<div class="text" >流程图</div> <div class="text" style="font-size: 12px">颜色说明(绿色:执行中; 黄色:待确认; 红色:异常或确认失败; 灰色:确认完成; 浅蓝色:完成)</div>
+				</div>
+			</div>
+			<!-- 流程图标题结束 -->
+			<!-- 流程图开始 -->
+			<div class="c_box" style="display:none" id="picDiv">
+			    	<div id="center" style="width:100%;"></div>
+			</div>
+			<!-- 流程图结束 -->
+	<!-- 启动开始 -->
+	<div style="display: none" id="startDiv">
+		<div class="c_form c_form-col-2 c_form-label-5" jwcid="pwdInput@Part"
+			uiid="pwdInput" id="pwdInput" type="form" objName="pwdInput" bo=""
+			uitype="form" editable="true">
+			<ul class="ul">
+				<li class="li"><span class="label">密码:</span> <span
+					class="e_elements"><span class="e_input"> <span><input
+								jwcid="@TextField" type="text" name="pwd" id="pwdInput_pwd"
+								value="ognl:pwdInput.pwd" desc="密码" uiid="pwdInput_pwd" /></span>
+					</span></span></li>
+			</ul>
+			<div class="submitPlace"></div>
+		</div>
+		<input jwcid="@Any" id="updateAfter" name="updateAfter"
+						type="hidden" textName="" value="" afterAction="ProcessGraphicsJS.afterAction();" />
+		<div class="c_submit" uitype="btngroup" editable="true"
+				id="startButton" style="display: none">
+				<button onclick="ProcessGraphicsJS.startNode()" name="startNode" class="e_button-form">
+						<span>启动</span>
+				</button>
+				<button onclick="ProcessGraphicsJS.commit()" name="confirmNode" class="e_button-form">
+					<span>确认</span>
+				</button>
+			</div>
+			<div class="c_submit" uitype="btngroup" editable="true" id="reStartButton" style="display: none">
+				<button onclick="ProcessGraphicsJS.restartNode()" name="restartNode" class="e_button-form">
+					<span>重启</span>
+				</button>
+				<button onclick="ProcessGraphicsJS.commit()" name="confirmNode1" class="e_button-form">
+					<span>确认</span>
+				</button>
+			</div>
+	</div>
+	<!-- 启动结束 -->
+</body>
+</html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="AIMonPInfoGroup" desc="" dna-code="0153e79f-4701-0010-9cc3-4d1c4eed14b3" implementation-class="com.asiainfo.monitor.busi.exe.task.service.impl.AIMonPInfoGroupSVImpl" interface-class="com.asiainfo.monitor.busi.exe.task.service.interfaces.IAIMonPInfoGroupSV" name="AIMonPInfoGroup" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="IAIMonPInfoGroupSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/busi/exe/task/service/impl" name="AIMonPInfoGroupSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/busi/exe/task/service/interfaces" name="AIMonPInfoGroup.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAIMonPInfoGroupSV_getMonPInfoGroupById" desc="" dna-code="bf6be79f-4701-0010-9cc3-4d1c4eed14b3" name="getMonPInfoGroupById" opt-flag="Y" serv-func="getMonPInfoGroupById" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="itemId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_getMonPInfoGroupByParentId" desc="" dna-code="c06be79f-4701-0010-9cc3-4d1c4eed14b3" name="getMonPInfoGroupByParentId" opt-flag="Y" serv-func="getMonPInfoGroupByParentId" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="parentId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_getAllMonPInfoGroupBean" desc="" dna-code="c16be79f-4701-0010-9cc3-4d1c4eed14b3" name="getAllMonPInfoGroupBean" opt-flag="Y" serv-func="getAllMonPInfoGroupBean" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup[]" param-kind="bo"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_getMonPInfoGroupByCode" desc="" dna-code="c26be79f-4701-0010-9cc3-4d1c4eed14b3" name="getMonPInfoGroupByCode" opt-flag="Y" serv-func="getMonPInfoGroupByCode" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="code" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_getMonPInfoGroupByCodeFromDb" desc="" dna-code="c36be79f-4701-0010-9cc3-4d1c4eed14b3" name="getMonPInfoGroupByCodeFromDb" opt-flag="Y" serv-func="getMonPInfoGroupByCodeFromDb" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="code" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.cache.impl.MonPInfoGroup" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_wrapperMonPInfoGroupByBean" desc="" dna-code="c46be79f-4701-0010-9cc3-4d1c4eed14b3" name="wrapperMonPInfoGroupByBean" opt-flag="Y" serv-func="wrapperMonPInfoGroupByBean" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.cache.impl.MonPInfoGroup" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_saveOrUpdate" desc="" dna-code="c56be79f-4701-0010-9cc3-4d1c4eed14b3" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup" name="value" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_saveOrUpdate" desc="" dna-code="c66be79f-4701-0010-9cc3-4d1c4eed14b3" name="saveOrUpdate" opt-flag="Y" serv-func="saveOrUpdate" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup[]" name="values" param-kind="bo"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_delete" desc="" dna-code="c76be79f-4701-0010-9cc3-4d1c4eed14b3" name="delete" opt-flag="Y" serv-func="delete" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="long" name="areaId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="void" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_getAllMonPInfoGroup" desc="" dna-code="c86be79f-4701-0010-9cc3-4d1c4eed14b3" name="getAllMonPInfoGroup" opt-flag="Y" serv-func="getAllMonPInfoGroup" serv-type="1">
+        <file-path/>
+        <param-list/>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_getPInfoGroupCount" desc="" dna-code="c96be79f-4701-0010-9cc3-4d1c4eed14b3" name="getPInfoGroupCount" opt-flag="Y" serv-func="getPInfoGroupCount" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupCode" param-kind="java"/>
+          <param datatype="java.lang.String" name="groupName" param-kind="java"/>
+          <param datatype="java.lang.String" name="layer" param-kind="java"/>
+        </param-list>
+        <return-param datatype="int" param-kind="java"/>
+      </service>
+      <service code="IAIMonPInfoGroupSV_getPInfoGroupByCodeAndName" desc="" dna-code="ca6be79f-4701-0010-9cc3-4d1c4eed14b3" name="getPInfoGroupByCodeAndName" opt-flag="Y" serv-func="getPInfoGroupByCodeAndName" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="groupCode" param-kind="java"/>
+          <param datatype="java.lang.String" name="groupName" param-kind="java"/>
+          <param datatype="java.lang.String" name="layer" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="startNum" param-kind="java"/>
+          <param datatype="java.lang.Integer" name="endNum" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup[]" param-kind="bo"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

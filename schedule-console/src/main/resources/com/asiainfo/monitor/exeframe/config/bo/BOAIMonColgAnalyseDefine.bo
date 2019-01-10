@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="Local_monitor" name="BOAIMonColgAnalyseDefine" mainattr="DEFINE_ID">
+    <mapingenty type="table">AI_MON_COLG_ANALYSE_DEFINE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DEFINE_ID" maxlength="12" datatype="Long" type="PK" remark="标识">
+        <mapingcol datatype="NUMBER">DEFINE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEFINE_CODE" maxlength="40" datatype="String" type="COL" remark="标识码">
+        <mapingcol datatype="VARCHAR2">DEFINE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEFINE_NAME" maxlength="100" datatype="String" type="COL" remark="名称">
+        <mapingcol datatype="VARCHAR2">DEFINE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEFINE_DESC" maxlength="255" datatype="String" type="COL" remark="描述">
+        <mapingcol datatype="VARCHAR2">DEFINE_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ANALYSE_CODE" maxlength="40" datatype="String" type="COL" remark="分析规则码">
+        <mapingcol datatype="VARCHAR2">ANALYSE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ANALYSE_TYPE" maxlength="3" datatype="Integer" type="COL" remark="分析任务类型">
+        <mapingcol datatype="NUMBER">ANALYSE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ANALYSE_ID" maxlength="12" datatype="Long" type="COL" remark="分析任务标识">
+        <mapingcol datatype="NUMBER">ANALYSE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ANALYSE_CLASS" maxlength="100" datatype="String" type="COL" remark="分析类">
+        <mapingcol datatype="VARCHAR2">ANALYSE_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ANALYSE_METHOD" maxlength="50" datatype="String" type="COL" remark="分析方法">
+        <mapingcol datatype="VARCHAR2">ANALYSE_METHOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

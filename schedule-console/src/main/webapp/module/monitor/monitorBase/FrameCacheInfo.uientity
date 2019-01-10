@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="FrameCacheInfo" desc="" dna-code="97e67f17-4601-0010-9ed3-5d4ae9dce1c4" full-name="monitor.monitorBase.FrameCacheInfo" kind="0" name="FrameCacheInfo">
+  <uientity-version branch="" code="" desc="" name="FrameCacheInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.monitorBase.view.FrameCacheInfo</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="query_appId"/>
+      <area bo="java.lang.String" type="select" uiid="query_cacheType"/>
+      <area bo="java.lang.String" type="textfield" uiid="query_primaryKey"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/monitorBase" name="FrameCacheInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="FrameCacheInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/monitorBase" name="FrameCacheInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/monitorBase/view" name="FrameCacheInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="queryButton" type="button"/>
+      <ui-event id="" name="copyButton" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction>
+      <jsfunction element-event="onclick" element-id="queryButton">{descRow:'queryButtonOnclick',nameRow:'queryButtonOnclick'}</jsfunction>
+    </uientity-r-jsfunction>
+    <uientity-r-services>
+      <ui-service bind-operate-name="" code="IAPIShowCacheSV_getFrameCache" data-uiid="query" desc="" dna-code="fd0457f9-4501-0010-9646-9bbd8b625d8b" element-event="onclick" element-id="queryButton" is-template="false" method="getFrameCache" name="" on-fail="show result" on-success="no operation" refresh-uiid="cacheList" return-param="" select-key="" select-value="" svpkg-name="" svpkg-path="/config/com/asiainfo/appframe/ext/monitor/service/interfaces/APIShowCache.svpkg" type="condform">
+        <ui-parameter code="appIds" param-kind="java" scope="query" type="java.lang.Object[]" uiparam-type="FormEle" uiparam-value="appId"/>
+        <ui-parameter code="type" param-kind="java" scope="query" type="java.lang.String" uiparam-type="FormEle" uiparam-value="cacheType"/>
+        <ui-parameter code="key" param-kind="java" scope="query" type="java.lang.String" uiparam-type="FormEle" uiparam-value="primaryKey"/>
+        <ui-parameter code="start" param-kind="java" scope="" type="java.lang.Integer" uiparam-type="Constant" uiparam-value=""/>
+        <ui-parameter code="end" param-kind="java" scope="" type="java.lang.Integer" uiparam-type="Constant" uiparam-value=""/>
+      </ui-service>
+    </uientity-r-services>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

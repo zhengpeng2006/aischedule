@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="Index" desc="" dna-code="7e20396a-4d01-0010-8229-8b0f6a727ee6" name="Index">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="Index" label="Index">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/index/abod/Index.abod</url>
+      </abod>
+      <ui-entity dna-code="f6e9396a-4d01-0010-8229-8b0f6a727ee6" label="MonIndexInfo">
+        <uiinfo>36,51,160,40</uiinfo>
+        <url>/html/module/index/MonIndexInfo.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/index" name="Index.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/index/abod" name="Index.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

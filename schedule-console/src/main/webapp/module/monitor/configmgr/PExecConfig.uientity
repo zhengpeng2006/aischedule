@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="PExecConfig" desc="" dna-code="e28a45b4-4701-0010-a186-83ee90379a18" full-name="module.monitor.configmgr.PExecConfig" kind="0" name="PExecConfig">
+  <uientity-version branch="" code="" desc="" name="PExecConfig" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.PExecConfig</action-class>
+    <data-areas>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_name"/>
+      <area bo="java.lang.String" type="textfield" uiid="queryForm_expr"/>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec" type="form" uiid="dataInput"/>
+      <area bo="java.lang.String" type="textfield" uiid="dataInput_execId"/>
+      <area bo="java.lang.String" type="textfield" uiid="dataInput_name"/>
+      <area bo="java.lang.String" type="textfield" uiid="dataInput_expr"/>
+      <area bo="java.lang.String" type="select" uiid="dataInput_EType"/>
+      <area bo="java.lang.String" type="textfield" uiid="dataInput_remarks"/>
+      <area bo="java.lang.String" type="textfield" uiid="dataInput_state"/>
+      <area bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPExec" type="form" uiid="erprDetail"/>
+      <area bo="java.lang.String" type="textarea" uiid="erprDetail_expr"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="PExecConfig.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="PExecConfig.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="PExecConfig.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="PExecConfig.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="query" type="button"/>
+      <ui-event id="" name="dataSave" type="button"/>
+      <ui-event id="" name="detail" type="button"/>
+      <ui-event id="" name="add" type="button"/>
+      <ui-event id="" name="save" type="button"/>
+      <ui-event id="" name="delete" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

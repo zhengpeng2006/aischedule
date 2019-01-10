@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aboroot>
+  <itemabo boname="BOAIMonHostUser" catalog="" cmpt-url="config/com/asiainfo/monitor/exeframe/configmgr/AIMonHostUser.cmpt" code="AIMonHostUser" desc="" dna-code="96092fa4-4701-0010-9051-bf1364199d98" fullname="com.asiainfo.monitor.exeframe.configmgr.abo.AIMonHostUser" name="AIMonHostUser">
+    <abo-version branch="" code="trunk" name="trunk" owner-prod-logo-id="0">
+      <attrlist>
+        <attr code="623a2fa4-4701-0010-9051-bf1364199d98" datatype="long" isPrivate="N" name="host_user_id" order="0" type="Y" vdatatype="ID(long)">
+          <mapingcol length="20">HOST_USER_ID</mapingcol>
+        </attr>
+        <attr code="72be2fa4-4701-0010-9051-bf1364199d98" datatype="String" name="user_name" order="2" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">USER_NAME</mapingcol>
+        </attr>
+        <attr code="bac02fa4-4701-0010-9051-bf1364199d98" datatype="String" name="user_pwd" order="3" type="N" vdatatype="VALUE_CHAR">
+          <mapingcol length="256">USER_PWD</mapingcol>
+        </attr>
+        <attr code="f2c22fa4-4701-0010-9051-bf1364199d98" datatype="String" name="state" order="5" type="N" vdatatype="STATE">
+          <mapingcol length="8">STATE</mapingcol>
+        </attr>
+        <attr code="fac42fa4-4701-0010-9051-bf1364199d98" datatype="DateTime" name="create_date" order="6" type="N" vdatatype="DATE">
+          <mapingcol length="8">CREATE_DATE</mapingcol>
+        </attr>
+        <attr code="319831a4-4701-0010-9051-bf1364199d98" datatype="String" name="remark" order="7" type="N" vdatatype="DESCRIPTION">
+          <mapingcol length="512">REMARK</mapingcol>
+        </attr>
+        <attr code="d8153ba4-4701-0010-9051-bf1364199d98" datatype="long" name="host_id" order="1" type="N" vdatatype="ID(long)">
+          <mapingcol length="20">HOST_ID</mapingcol>
+        </attr>
+        <attr code="af743ba4-4701-0010-9051-bf1364199d98" datatype="String" name="user_type" order="4" type="N" vdatatype="CODE">
+          <mapingcol length="32">USER_TYPE</mapingcol>
+        </attr>
+      </attrlist>
+      <file-list>
+        <file dir="/config/com/asiainfo/monitor/exeframe/configmgr/abo" name="AIMonHostUser.abo">
+          <attach-tag>+</attach-tag>
+        </file>
+      </file-list>
+      <relationlist/>
+      <status/>
+    </abo-version>
+  </itemabo>
+</aboroot>

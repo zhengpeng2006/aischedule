@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/monitor/configmgr/js/HostAllInfo.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<!-- start -->
+			<div class="c_title">
+				<div class="text" id="allInfo">主机基本信息</div>
+		</div>
+			<div class="c_form c_form-col-2 c_form-label-5" jwcid="hostAllDetail@Part" uiid="hostAllDetail" id="hostAllDetail" type="form"
+			objName="hostAllDetail" bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost" uitype="form" editable="true" disabled="true">
+				<ul class="ul">
+					<li class="li" style="display: none"><span class="label">创建日期:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="createDate" value="ognl:hostAllDetail.createDate" desc="创建日期" uiid="hostAllDetail_createDate" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">主机编码:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" disabled="disabled" type="text" name="hostCode" value="ognl:hostAllDetail.hostCode" desc="主机编码" uiid="hostAllDetail_hostCode" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">主机描述:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="hostDesc" value="ognl:hostAllDetail.hostDesc" desc="主机描述" uiid="hostAllDetail_hostDesc" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">主机标识:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="hostId" value="ognl:hostAllDetail.hostId" desc="主机标识" uiid="hostAllDetail_hostId" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">主机IP:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" disabled="disabled" type="text" name="hostIp" value="ognl:hostAllDetail.hostIp" desc="主机IP" uiid="hostAllDetail_hostIp" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li"><span class="label">主机名称:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" disabled="disabled" type="text" name="hostName" value="ognl:hostAllDetail.hostName" desc="主机名称" uiid="hostAllDetail_hostName" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">备注:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="remarks" value="ognl:hostAllDetail.remarks" desc="备注" uiid="hostAllDetail_remarks" />
+								</span>
+							</span>
+						</span></li>
+					<li class="li" style="display: none"><span class="label">状态:</span> <span class="e_elements">
+							<span class="e_input">
+								<span>
+									<input jwcid="@TextField" type="text" name="state" value="ognl:hostAllDetail.state" desc="状态" uiid="hostAllDetail_state" />
+								</span>
+							</span>
+						</span></li>
+				</ul>
+				<div class="submitPlace"></div>
+		</div>
+			<div class="c_title">
+				<div class="text" id="allInfo">主机连接方式信息</div>
+		</div>
+			<div jwcid="hostConTab@Part" uiid="hostConTab" id="hostConTab" element="div" type="table" objName="hostConTabItems,hostConTabCount"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonConMode" uitype="table" editable="true">
+				<div class="c_scroll" style="height: 100px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="hostConTabTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="hostConTabRowIndex"></th>
+									<th col="conId" colcss="e_left" class="wrap" style="display: none">连接标识</th>
+									<th col="conPort" colcss="e_left" class="wrap">连接端口</th>
+									<th col="conType" colcss="e_left" class="wrap">连接类型</th>
+									<th col="state" colcss="e_left" class="wrap" style="display: none">状态</th>
+									<th col="createDate" colcss="e_left" class="wrap" style="display: none">创建日期</th>
+									<th col="remark" colcss="e_left" class="wrap">备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:hostConTabItems" value="ognl:hostConTabItem" index="ognl:hostConTabRowIndex">
+									<tr jwcid="@Conditional" condition="ognl:hostConTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+										<td><span jwcid="@Insert" value="ognl:hostConTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostConTabItem.conId" name="conId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostConTabItem.conPort" name="conPort"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostConTabItem.conType" name="conType"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostConTabItem.state" name="state"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostConTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostConTabItem.remark" name="remark"></span></td>
+
+									</tr>
+									<tr jwcid="@Conditional" condition="ognl:hostConTabRowIndex % 2 == 1" element="tr">
+										<td><span jwcid="@Insert" value="ognl:hostConTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostConTabItem.conId" name="conId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostConTabItem.conPort" name="conPort"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostConTabItem.conType" name="conType"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostConTabItem.state" name="state"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostConTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostConTabItem.remark" name="remark"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+			<div class="c_title">
+				<div class="text" id="allInfo">备机信息</div>
+		</div>
+			<div jwcid="hostSlaveTab@Part" uiid="hostSlaveTab" id="hostSlaveTab" element="div" type="table" objName="hostSlaveTabItems,hostSlaveTabCount"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost" uitype="table" editable="true">
+				<div class="c_scroll" style="height: 100px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="hostSlaveTabTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="hostSlaveTabRowIndex"></th>
+									<th col="hostId" colcss="e_left" class="wrap" style="display: none">备机标识</th>
+									<th col="hostCode" colcss="e_left" class="wrap">备机编码</th>
+									<th col="hostName" colcss="e_left" class="wrap">备机名称</th>
+									<th col="hostIp" colcss="e_left" class="wrap">备机IP</th>
+									<th col="hostDesc" colcss="e_left" class="wrap" style="display: none">备机描述</th>
+									<th col="state" colcss="e_left" class="wrap" style="display: none">状态</th>
+									<th col="createDate" colcss="e_left" class="wrap" style="display: none">创建日期</th>
+									<th col="remarks" colcss="e_left" class="wrap">备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:hostSlaveTabItems" value="ognl:hostSlaveTabItem" index="ognl:hostSlaveTabRowIndex">
+									<tr jwcid="@Conditional" condition="ognl:hostSlaveTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+										<td><span jwcid="@Insert" value="ognl:hostSlaveTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostId" name="hostId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostCode" name="hostCode"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostName" name="hostName"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostIp" name="hostIp"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostDesc" name="hostDesc"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.state" name="state"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.remarks" name="remarks"></span></td>
+
+									</tr>
+									<tr jwcid="@Conditional" condition="ognl:hostSlaveTabRowIndex % 2 == 1" element="tr">
+										<td><span jwcid="@Insert" value="ognl:hostSlaveTabRowIndex+1"></span></td>
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostId" name="hostId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostCode" name="hostCode"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostName" name="hostName"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostIp" name="hostIp"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.hostDesc" name="hostDesc"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.state" name="state"></span></td>
+
+										<td class="e_left wrap" style="display: none"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.createDate" name="createDate"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert" value="ognl:hostSlaveTabItem.remarks" name="remarks"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

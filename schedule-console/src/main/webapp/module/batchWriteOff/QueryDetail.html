@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script type="text/javascript" src="module/batchWriteOff/js/QueryDetail.js"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="c_box">
+			<div class="c_title">
+				<div class="text" id="showTitle">进程列表</div>
+				<div class="text" id="promote" style="color: red;"></div>
+		</div>
+	</div>
+		<div class="c_box">
+			<div class="m_wrapper2"><div jwcid="processListTab@Part" uiid="processListTab" id="processListTab" element="div" type="table"
+				objName="processListTabItems,processListTabCount" bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup" uitype="table" editable="true">
+					<div class="c_scroll" style="height: 210px">
+						<div class="c_table c_table-row-10">
+							<table jwcid="@Table" name="processListTabTable" scroll="true">
+								<thead>
+									<tr>
+										<th col="processListTabRowIndex"></th>
+										<th col="WF_FLOW_ID" colcss="e_left"  style="display: none"></th>
+										<th col="REGION_ID" colcss="e_left" >地市</th>
+										<th col="WF_PROCESS_ID" colcss="e_left" >进程编号</th>
+										<th col="BILLING_CYCLE_ID" colcss="e_left" >账期</th>
+										<th col="BILL_DAY" colcss="e_left" >出账日</th>
+										<th col="START_DATE" colcss="e_left" >开始时间</th>
+										<th col="TOTAL_COUNT" colcss="e_left" >总记录数</th>
+										<th col="DEAL_COUNT" colcss="e_left" >已处理记录数</th>
+										<th col="PERCENT" colcss="e_left" >完成百分比</th>
+										<th col="FINISH_DATE" colcss="e_left" >完成时间</th>
+										<th col="STATE" colcss="e_left" >完成状态</th>
+										<th col="STATE_DATE" colcss="e_left" >状态修改时间</th>
+									</tr>
+								</thead>
+								<tbody id="tt1">
+									<span jwcid="@Foreach" source="ognl:processListTabItems" value="ognl:processListTabItem" index="ognl:processListTabRowIndex">
+										<tr>
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabRowIndex+1"></span></td>
+											<td class="e_left" style="display: none"><span jwcid="@Insert" value="ognl:processListTabItem.WF_FLOW_ID" name="WF_FLOW_ID"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.REGION_ID" name="REGION_ID"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.WF_PROCESS_ID" name="WF_PROCESS_ID"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.BILLING_CYCLE_ID" name="BILLING_CYCLE_ID"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.BILL_DAY" name="BILL_DAY"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.START_DATE" name="START_DATE"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.TOTAL_COUNT" name="TOTAL_COUNT"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.DEAL_COUNT" name="DEAL_COUNT"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.PERCENT" name="PERCENT"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.FINISH_DATE" name="FINISH_DATE"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.STATE" name="STATE"></span></td>
+
+											<td class="e_left"><span jwcid="@Insert" value="ognl:processListTabItem.STATE_DATE" name="STATE_DATE"></span></td>
+
+										</tr>
+									</span>
+								</tbody>
+							</table>
+					</div>
+				</div>
+			</div></div>
+	</div>
+		<div class="c_box">
+			<div class="c_title">
+				<div class="text" id="showTitle">线程列表</div>
+		</div>
+	</div>
+		<div class="c_box">
+			<div jwcid="threadList@Part" uiid="threadList" id="threadList" element="div" type="table" objName="threadListItems,threadListCount"
+			bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonGroup" uitype="table" editable="true">
+				<div class="c_scroll" style="height: 210px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="threadListTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="threadListRowIndex"></th>
+									<th col="WF_FLOW_ID" colcss="e_left"  style="display: none"></th>
+									<th col="WF_THREAD_ID" colcss="e_left">线程编号</th>
+									<th col="REGION_ID" colcss="e_left"  style="display: none"></th>
+									<th col="ACCT_MODE" colcss="e_left" style="display: none"></th>
+									<th col="MODE_VALUE" colcss="e_left"  style="display: none"></th>
+									<th col="WF_PROCESS_ID" colcss="e_left">进程编号</th>
+									<th col="BILLING_CYCLE_ID" colcss="e_left" style="display: none"></th>
+									<th col="BILL_DAY" colcss="e_left"style="display: none"></th>
+									<th col="START_DATE" colcss="e_left">开始时间</th>
+									<th col="TOTAL_COUNT" colcss="e_left">总记录数</th>
+									<th col="DEAL_COUNT" colcss="e_left">已处理记录数</th>
+									<th col="PERCENT" colcss="e_left">完成百分比</th>
+									<th col="FINISH_DATE" colcss="e_left">完成时间</th>
+									<th col="STATE" colcss="e_left">完成状态</th>
+									<th col="STATE_DATE" colcss="e_left" >状态修改时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:threadListItems" value="ognl:threadListItem" index="ognl:threadListRowIndex">
+									<tr>
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListRowIndex+1"></span></td>
+										<td class="e_left" style="display: none"><span jwcid="@Insert" value="ognl:threadListItem.WF_FLOW_ID" name="WF_FLOW_ID"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.WF_THREAD_ID" name="WF_THREAD_ID"></span></td>
+
+										<td class="e_left" style="display: none"><span jwcid="@Insert" value="ognl:threadListItem.REGION_ID" name="REGION_ID"></span></td>
+
+										<td class="e_left" style="display: none"><span jwcid="@Insert" value="ognl:threadListItem.ACCT_MODE" name="ACCT_MODE"></span></td>
+
+										<td class="e_left" style="display: none"><span jwcid="@Insert" value="ognl:threadListItem.MODE_VALUE" name="MODE_VALUE"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.WF_PROCESS_ID" name="WF_PROCESS_ID"></span></td>
+
+										<td class="e_left" style="display: none"><span jwcid="@Insert" value="ognl:threadListItem.BILLING_CYCLE_ID"
+												name="BILLING_CYCLE_ID"></span></td>
+
+										<td class="e_left" style="display: none"><span jwcid="@Insert" value="ognl:threadListItem.BILL_DAY" name="BILL_DAY"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.START_DATE" name="START_DATE"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.TOTAL_COUNT" name="TOTAL_COUNT"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.DEAL_COUNT" name="DEAL_COUNT"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.PERCENT" name="PERCENT"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.FINISH_DATE" name="FINISH_DATE"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.STATE" name="STATE"></span></td>
+
+										<td class="e_left"><span jwcid="@Insert" value="ognl:threadListItem.STATE_DATE" name="STATE_DATE"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div> <!-- start -->
+	</div>
+	</div>
+</body>
+</html>

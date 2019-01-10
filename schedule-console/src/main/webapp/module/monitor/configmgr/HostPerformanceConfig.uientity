@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/configmgr/ConfigMgr.cmpt" code="HostPerformanceConfig" desc="" dna-code="7cbda43b-4601-0010-a968-1bf5c2ec4aac" full-name="monitor.configmgr.HostPerformanceConfig" kind="0" name="HostPerformanceConfig">
+  <uientity-version branch="" code="" desc="" name="HostPerformanceConfig" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.appframe.ext.exeframe.configmgr.view.HostPerformanceConfig</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/monitor/configmgr" name="HostPerformanceConfig.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/configmgr" name="HostPerformanceConfig.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/monitor/configmgr" name="HostPerformanceConfig.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/exeframe/configmgr/view" name="HostPerformanceConfig.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events/>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

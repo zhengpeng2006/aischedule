@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonI18nResource" mainattr="RES_KEY">
+    <mapingenty type="table">AI_MON_I18N_RESOURCE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RES_KEY" maxlength="15" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">RES_KEY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ZH_CN" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ZH_CN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EN_US" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EN_US</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

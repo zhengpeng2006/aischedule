@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="MonitorPortal" desc="监控门户" dna-code="dcfc51ed-4701-0010-a640-5be82f071541" name="MonitorPortal">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="MonitorPortal" label="MonitorPortal">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/monitor/exeframe/monitorPortal/abod/MonitorPortal.abod</url>
+      </abod>
+      <ui-entity dna-code="55ae61ed-4701-0010-a640-5be82f071541" label="MonProcInfoPortal">
+        <uiinfo>19,22,160,40</uiinfo>
+        <url>/html/module/monitor/portal/MonProcInfoPortal.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="d6f0b7fb-4701-0010-afa6-9f76c8fc2bbc" label="MonBusiInfoPortal">
+        <uiinfo>20,77,160,40</uiinfo>
+        <url>/html/module/monitor/portal/MonBusiInfoPortal.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="3b96382b-4801-0010-be3d-c5a7c433e54c" label="EchartTest">
+        <uiinfo>200,20,160,40</uiinfo>
+        <url>/html/module/monitor/portal/EchartTest.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="873ac22f-4801-0010-8fb7-c99dd1ee127e" label="FunsionChartTest">
+        <uiinfo>199,74,160,40</uiinfo>
+        <url>/html/module/monitor/portal/FunsionChartTest.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/monitor/exeframe/monitorPortal" name="MonitorPortal.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/monitor/exeframe/monitorPortal/abod" name="MonitorPortal.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

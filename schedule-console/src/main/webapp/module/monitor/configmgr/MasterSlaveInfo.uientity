@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="MasterSlaveInfo" desc="" dna-code="a0b4d5c7-4701-0010-a497-a78f818222e3" full-name="module.monitor.configmgr.MasterSlaveInfo" kind="0" name="MasterSlaveInfo">
+  <uientity-version branch="" code="" desc="" name="MasterSlaveInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.MasterSlaveInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonPhysicHost" type="form" uiid="slaveDetail"/>
+      <area bo="java.lang.String" type="select" uiid="slaveDetail_hostId"/>
+      <area bo="java.lang.String" type="textfield" uiid="slaveDetail_hostCode"/>
+      <area bo="java.lang.String" type="textfield" uiid="slaveDetail_hostName"/>
+      <area bo="java.lang.String" type="textfield" uiid="slaveDetail_hostIp"/>
+      <area bo="java.lang.String" type="textfield" uiid="slaveDetail_hostDesc"/>
+      <area bo="java.lang.String" type="textfield" uiid="slaveDetail_state"/>
+      <area bo="java.lang.String" type="textfield" uiid="slaveDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="slaveDetail_remarks"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="MasterSlaveInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="MasterSlaveInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="MasterSlaveInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="MasterSlaveInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="newBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

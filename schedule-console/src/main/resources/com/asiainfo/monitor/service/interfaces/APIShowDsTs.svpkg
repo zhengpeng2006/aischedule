@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/appframe/ext/exeframe/monitorBase/MonitorBaseManage.cmpt" code="APIShowDsTs" desc="" dna-code="04e957f9-4501-0010-9646-9bbd8b625d8b" implementation-class="com.asiainfo.appframe.ext.monitor.service.impl.APIShowDsTsSVImpl" interface-class="com.asiainfo.appframe.ext.monitor.service.interfaces.IAPIShowDsTsSV" name="APIShowDsTs" type="1">
+  <servpkg-version branch="" code="" name="" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/interfaces" name="IAPIShowDsTsSV.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/appframe/ext/monitor/service/impl" name="APIShowDsTsSVImpl.java">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/appframe/ext/monitor/service/interfaces" name="APIShowDsTs.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services>
+      <service code="IAPIShowDsTsSV_getTmStatInfo" desc="" dna-code="980758f9-4501-0010-9646-9bbd8b625d8b" name="getTmStatInfo" opt-flag="Y" serv-func="getTmStatInfo" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowDsTsSV_getDataSourceConfig" desc="" dna-code="a10758f9-4501-0010-9646-9bbd8b625d8b" name="getDataSourceConfig" opt-flag="Y" serv-func="getDataSourceConfig" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowDsTsSV_getDataSourceConfigForAppFrame" desc="" dna-code="a90758f9-4501-0010-9646-9bbd8b625d8b" name="getDataSourceConfigForAppFrame" opt-flag="Y" serv-func="getDataSourceConfigForAppFrame" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.ai.appframe2.common.DataContainerInterface[]" param-kind="java"/>
+      </service>
+      <service code="IAPIShowDsTsSV_getDataSourceRuntime" desc="" dna-code="b00758f9-4501-0010-9646-9bbd8b625d8b" name="getDataSourceRuntime" opt-flag="Y" serv-func="getDataSourceRuntime" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowDsTsSV_getDataSourceRuntimes" desc="" dna-code="b70758f9-4501-0010-9646-9bbd8b625d8b" name="getDataSourceRuntimes" opt-flag="Y" serv-func="getDataSourceRuntimes" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.Object[]" name="appIds" param-kind="java"/>
+        </param-list>
+        <return-param datatype="java.util.List" param-kind="java"/>
+      </service>
+      <service code="IAPIShowDsTsSV_getTransaction" desc="" dna-code="be0758f9-4501-0010-9646-9bbd8b625d8b" name="getTransaction" opt-flag="Y" serv-func="getTransaction" serv-type="1">
+        <file-path/>
+        <param-list>
+          <param datatype="java.lang.String" name="appId" param-kind="java"/>
+        </param-list>
+        <return-param datatype="com.asiainfo.appframe.ext.monitor.config.AITmSummary" param-kind="java"/>
+      </service>
+    </services>
+    <status/>
+  </servpkg-version>
+</servpkg>

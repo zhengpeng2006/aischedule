@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script src="module/deploy/js/TaskStatus.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<!--area start -->
+	<div class="c_box">
+		<div class="c_title">
+			<div class="text">任务信息</div>
+	</div>
+		<div class="c_form c_form-label-4 c_form-inline" uiid="qryCondition" id="qryCondition" type="condForm" objName="qryCondition" uitype="condform"
+		editable="true">
+			<ul class="ul">
+				<li class="li"><span class="label">任务类型: </span> <span class="e_select">
+						<span>
+							<span>
+								<select jwcid="@Select" id="taskType" name="taskType" source="ognl:getTaskInfo()" value="ognl:qryCondition.taskType" changeValue="true"
+									addDefault="true" defaultText="请选择任务类型" uitype="select" uiid="taskType" editable="true"></select>
+							</span>
+						</span>
+					</span></li>
+				<li class="li"><span class="label">任务编码: </span> <span class="e_select">
+						<span>
+							<span>
+								<select jwcid="@Select" id="taskCode" name="taskCode" source="ognl:getTaskCode()" value="ognl:qryCondition.taskCode" changeValue="true"
+									addDefault="true" defaultText="请选择任务编码" uitype="select" uiid="taskCode" editable="true"></select>
+							</span>
+						</span>
+					</span></li>
+				<li class="li"><span class="label">任务编码:</span> <span class="e_input">
+						<span>
+							<input type="text" jwcid="@TextField" name="taskCode1" value="" uitype="input" editable="true" uiid="taskCode1" />
+						</span>
+					</span></li>
+			</ul>
+			<div class="submitPlace"></div>
+			<div class="submit">
+				<button onclick="TaskStatusJS.qryTaskInfos()" template_type="operate" type="button" name="qryTaskInfoBtn" class="e_button-form"
+					formId="qryCondition">
+					<span>查询</span>
+				</button>
+		</div>
+	</div>
+		<div class="c_table" jwcid="taskInfosTab@Part" uiid="taskInfosTab" id="taskInfosTab" element="div" type="table"
+		objName="taskInfosTabItems,taskInfosTabCount" bo="" uitype="table" editable="true">
+			<div class="c_scroll" style="height: 464px">
+				<div class="c_table c_table-row-10">
+					<table jwcid="@Table" name="taskInfosTabTable" scroll="true">
+						<thead>
+							<tr>
+								<th col="taskInfosTabRowIndex"></th>
+								<th col="taskType" colcss="e_left" class="desc" onclick="TaskStatusJS.sort(2,this)"><span>任务类型</span></th>
+								<th col="taskCode" colcss="e_left" class="desc" onclick="TaskStatusJS.sort(3,this)"><span>任务编码</span></th>
+								<th col="taskName" colcss="e_left" class="desc" onclick="TaskStatusJS.sort(4,this)"><span>任务名称</span></th>
+								<th col="startTime" colcss="e_left" class="desc" onclick="TaskStatusJS.sort(5,this)"><span>开始时间</span></th>
+								<th col="endTime" colcss="e_left" class="desc" onclick="TaskStatusJS.sort(6,this)"><span>结束时间</span></th>
+								<th col="realityStartTime" colcss="e_left" class="desc" onclick="TaskStatusJS.sort(7,this)"><span>当天实际开始时间</span></th>
+								<th col="realityEndTime" colcss="e_left" class="desc" onclick="TaskStatusJS.sort(8,this)"><span>当天实际结束时间</span></th>
+								<th col="status" colcss="e_left" class="desc" onclick="TaskStatusJS.sort(9,this)"><span>状态</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<span jwcid="@Foreach" source="ognl:taskInfosTabItems" value="ognl:taskInfosTabItem" index="ognl:taskInfosTabRowIndex">
+								<tr>
+									<td><span jwcid="@Insert" value="ognl:taskInfosTabRowIndex+1"></span></td>
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskInfosTabItem.taskType" name="taskType"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskInfosTabItem.taskCode" name="taskCode"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskInfosTabItem.taskName" name="taskName"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskInfosTabItem.startTime" name="startTime"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskInfosTabItem.endTime" name="endTime"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskInfosTabItem.realityStartTime" name="realityStartTime"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:taskInfosTabItem.realityEndTime" name="realityEndTime"></span></td>
+
+									<td class="e_left wrap"><span jwcid="@Insert" value="ognl:doTranslate('TASK_STATE',taskInfosTabItem.status)" name="status"></span></td>
+
+								</tr>
+							</span>
+						</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.deploy.view.StrategyCfg">
+  <property-specification name="queryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="stategiesItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="stategiesItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="stategiesCount" type="long"/>
+  <property-specification name="stategiesRowIndex" type="int"/>
+  <property-specification name="strategyInfo" type="net.sf.json.JSONObject"/>
+  <property-specification name="rulesItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="rulesItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="rulesCount" type="long"/>
+  <property-specification name="rulesRowIndex" type="int"/>
+</page-specification>

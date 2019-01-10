@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.schedule.view.QryTaskLog">
+  <property-specification name="queryForm" type="net.sf.json.JSONObject"/>
+  <property-specification name="logsItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="logsItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="logsCount" type="long"/>
+  <property-specification name="logsRowIndex" type="int"/>
+  <property-specification name="detailsItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="detailsItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="detailsCount" type="long"/>
+  <property-specification name="detailsRowIndex" type="int"/>
+</page-specification>

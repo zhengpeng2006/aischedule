@@ -1,0 +1,20 @@
+default=undefined error
+
+#page CustDemo.html
+page.custdemo.custname=custname:
+page.custdemo.custname.title=custname
+
+#page CustFlow.html
+page.custflow.title=VIP User Information
+page.custflow.title.back=Back
+page.custflow.title.next=Next
+page.custflow.title.begin=Begin
+page.custflow.title.start=Start
+page.custflow.title.querycustlist=Search List
+page.custflow.title.switchupdateordelete=Do you want to add new ?
+page.custflow.title.create=New
+page.custflow.title.update=Modify
+page.custflow.title.createcust=New
+page.custflow.title.updatecust=Modify
+page.custflow.title.logcust=Log
+page.custflow.title.end=End

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen"/>
+</span>
+<script src="module/monitor/configmgr/js/PInfoGroupConfig.js" type="text/javascript"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="m_wrapper">
+		<div class="m_wrapper2">
+			<div class="c_title">
+				<div class="text">任务分组管理</div>
+			</div>
+			<div class="c_form c_form-col-2 c_form-label-4 c_form-inline"
+				uiid="queryForm" id="queryForm" type="condForm" objName="queryForm"
+				uitype="condform" editable="true">
+				<ul class="ul">
+					<li class="li"><span class="label">分组名称:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="name"
+									value="ognl:queryForm.name" desc="分组名称" uiid="queryForm_name" /></span>
+						</span></span></li>
+					<li class="li"><span class="label">分组编码:</span> <span
+						class="e_elements"><span class="e_input"> <span><input
+									jwcid="@TextField" type="text" name="code"
+									value="ognl:queryForm.code" desc="分组编码" uiid="queryForm_code" /></span>
+						</span></span></li>
+				</ul>
+				<div class="submitPlace"></div>
+				<div class="submit">
+					<button onclick="PInfoGroupJS.queryOnclick($(this));"
+						template_type="operate" type="button" name="query"
+						class="e_button-form" formId="queryForm" id="formQuery">
+						<span>查询</span>
+					</button>
+					<button onclick="PInfoGroupJS.reset()" template_type="operate"
+						type="button" name="cancle" class="e_button-form"
+						formId="queryForm">
+						<span>重置</span>
+					</button>
+				</div>
+			</div>
+
+			<div jwcid="goupInfos@Part" uiid="goupInfos" id="goupInfos"
+				element="div" type="table" objName="goupInfosItems,goupInfosCount"
+				bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup"
+				uitype="table" editable="true">
+				<div class="c_scroll" style="height: 242px">
+					<div class="c_table c_table-row-10">
+						<table jwcid="@Table" name="goupInfosTable" scroll="true">
+							<thead>
+								<tr>
+									<th col="goupInfosRowIndex" style="display: none">RowIndex</th>
+									<th col="groupId" style="display: none">标识</th>
+									<th col="groupCode" colcss="e_left" class="wrap">编码</th>
+									<th col="groupDesc" colcss="e_left" class="wrap">描述</th>
+
+									<th col="groupName" colcss="e_left" class="wrap">名称</th>
+									<th col="groupStyle" style="display: none">style</th>
+									<th col="layer" colcss="e_left" class="wrap">层</th>
+									<th col="parentId" style="display: none">上级实体</th>
+									<th col="remark" colcss="e_left" class="wrap">备注</th>
+									<th col="sortId" style="display: none">位次</th>
+									<th col="state" style="display: none">状态</th>
+								</tr>
+							</thead>
+							<tbody>
+								<span jwcid="@Foreach" source="ognl:goupInfosItems"
+									value="ognl:goupInfosItem" index="ognl:goupInfosRowIndex">
+									<tr>
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:goupInfosRowIndex+1"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.groupId" name="groupId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.groupCode" name="groupCode"></span>
+										</td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.groupDesc" name="groupDesc"></span>
+										</td>
+
+
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.groupName" name="groupName"></span>
+										</td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.groupStyle" name="groupStyle"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.layer" name="layer"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.parentId" name="parentId"></span></td>
+
+										<td class="e_left wrap"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.remark" name="remark"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.sortId" name="sortId"></span></td>
+
+										<td style="display: none"><span jwcid="@Insert"
+											value="ognl:goupInfosItem.state" name="state"></span></td>
+
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="c_submit" uitype="btngroup" editable="true">
+				<button onclick="PInfoGroupJS.add();" name="add" class="e_button-form">
+					<span>新增</span>
+				</button>
+				<button onclick="PInfoGroupJS.updateOnclick($(this));" name="update" class="e_button-form">
+					<span>修改</span>
+				</button>
+				<button onclick="PInfoGroupJS.deleteOnclick($(this));" name="delete" class="e_button-form">
+					<span>删除</span>
+				</button>
+			</div>
+			
+			<div id="infoFormDiv" style="display: none">
+				<div class="c_form c_form-col-2 c_form-label-5"
+					jwcid="pGroupInfo@Part" uiid="pGroupInfo" id="pGroupInfo"
+					type="form" objName="pGroupInfo"
+					bo="com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfoGroup"
+					uitype="form" editable="true">
+					<ul class="ul">
+						<li class="li"><span class="label"><span
+								class="e_required">编码:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="groupCode" value="ognl:pGroupInfo.groupCode"
+										desc="编码" uiid="pGroupInfo_groupCode" id="codeInput" /></span>
+							</span></span></li>
+						<li class="li"><span class="label">描述:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="groupDesc"
+										value="ognl:pGroupInfo.groupDesc" desc="描述"
+										uiid="pGroupInfo_groupDesc" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">标识:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="groupId"
+										value="ognl:pGroupInfo.groupId" desc="标识"
+										uiid="pGroupInfo_groupId" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">名称:</span></span> <span class="e_elements"><span
+								class="e_input"> <span><input jwcid="@TextField"
+										type="text" name="groupName" value="ognl:pGroupInfo.groupName"
+										desc="名称" uiid="pGroupInfo_groupName" id="nameInput" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">style:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="groupStyle"
+										value="ognl:pGroupInfo.groupStyle" desc="style"
+										uiid="pGroupInfo_groupStyle" /></span>
+							</span></span></li>
+						<li class="li"><span class="label"><span
+								class="e_required">层:</span></span> <span class="e_elements"><span
+								class="e_select"> <span><span><select
+											jwcid="@Select" name="layer" value="ognl:pGroupInfo.layer"
+											desc="层" source="ognl:getSelectList('LAYER')"
+											disabled="false" changeValue="true" addDefault="false"
+											defaultText="root" uiid="pGroupInfo_layer" id="selectInput" /></span></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">上级实体:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="parentId"
+										value="ognl:pGroupInfo.parentId" desc="上级实体"
+										uiid="pGroupInfo_parentId" /></span>
+							</span></span></li>
+						<li class="li"><span class="label">备注:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="remark"
+										value="ognl:pGroupInfo.remark" desc="备注"
+										uiid="pGroupInfo_remark" /></span>
+							</span></span></li>
+						<li class="li"><span class="label">位次:</span> <span
+							class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="sortId"
+										value="ognl:pGroupInfo.sortId" desc="位次"
+										uiid="pGroupInfo_sortId" /></span>
+							</span></span></li>
+						<li class="li" style="display: none"><span class="label">状态:</span>
+							<span class="e_elements"><span class="e_input"> <span><input
+										jwcid="@TextField" type="text" name="state"
+										value="ognl:pGroupInfo.state" desc="状态"
+										uiid="pGroupInfo_state" /></span>
+							</span></span></li>
+					</ul>
+
+					<div class="submitPlace" />
+					<div class="c_submit" uitype="btngroup" editable="true">
+						<button onclick="PInfoGroupJS.infoSave();" name="save"
+							class="e_button-form">
+							<span>保存</span>
+						</button>
+						<button onclick="PInfoGroupJS.quitDiv();" name="cancel"
+							class="e_button-form">
+							<span>取消</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

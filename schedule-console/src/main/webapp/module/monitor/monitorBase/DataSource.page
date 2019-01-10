@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN" "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd" [
+  
+]>
+
+<page-specification class="com.asiainfo.appframe.ext.exeframe.monitorBase.view.DataSource">
+  <property-specification name="query" type="net.sf.json.JSONObject"/>
+  <property-specification name="DataSourceListItem" type="net.sf.json.JSONObject"/>
+  <property-specification name="DataSourceListItems" type="net.sf.json.JSONArray"/>
+  <property-specification name="DataSourceListCount" type="long"/>
+  <property-specification name="DataSourceListRowIndex" type="int"/>
+</page-specification>

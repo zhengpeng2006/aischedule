@@ -1,0 +1,23 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "taskParamsItems": [
+            {
+                "taskCode": "task01",
+                "paramKey": "1",
+                "paramValue": "2",
+                "paramDesc": ""
+            }
+        ],
+        "total": 1
+    }
+}

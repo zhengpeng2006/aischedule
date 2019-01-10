@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="BaseConfigPortal" desc="基础信息配置portal，组，主机，节点，应用配置入口" dna-code="63f24847-4701-0010-949d-49fc2cedb28a" full-name="module.monitor.configmgr.BaseConfigPortal" kind="0" name="BaseConfigPortal">
+  <uientity-version branch="" code="" desc="" name="BaseConfigPortal" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.BaseConfigPortal</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="BaseConfigPortal.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="BaseConfigPortal.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="BaseConfigPortal.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="BaseConfigPortal.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name="Default"/>
+    <uientity-r-events>
+      <ui-event id="" name="user_manager" type="button"/>
+      <ui-event id="" name="con_manager" type="button"/>
+      <ui-event id="" name="gh_rel_manager" type="button"/>
+      <ui-event id="" name="newBtn" type="button"/>
+      <ui-event id="" name="editBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

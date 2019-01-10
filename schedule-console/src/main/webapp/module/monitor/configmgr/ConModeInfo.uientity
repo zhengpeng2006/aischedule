@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/configmgr/ConfigMgr.cmpt" code="ConModeInfo" desc="" dna-code="8f1a3aaf-4701-0010-b793-fd158f3593e4" full-name="module.monitor.configmgr.ConModeInfo" kind="0" name="ConModeInfo">
+  <uientity-version branch="" code="" desc="" name="ConModeInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.configmgr.view.ConModeInfo</action-class>
+    <data-areas>
+      <area bo="com.asiainfo.monitor.exeframe.configmgr.abo.bo.BOAIMonConMode" type="form" uiid="conDetail"/>
+      <area bo="java.lang.String" type="textfield" uiid="conDetail_conId"/>
+      <area bo="java.lang.String" type="select" uiid="conDetail_conType"/>
+      <area bo="java.lang.String" type="textfield" uiid="conDetail_conPort"/>
+      <area bo="java.lang.String" type="textfield" uiid="conDetail_state"/>
+      <area bo="java.lang.String" type="datefield" uiid="conDetail_createDate"/>
+      <area bo="java.lang.String" type="textfield" uiid="conDetail_remark"/>
+    </data-areas>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/configmgr" name="ConModeInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="ConModeInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/configmgr" name="ConModeInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/configmgr/view" name="ConModeInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="newBtn" type="button"/>
+      <ui-event id="" name="editBtn" type="button"/>
+      <ui-event id="" name="delBtn" type="button"/>
+      <ui-event id="" name="saveBtn" type="button"/>
+      <ui-event id="" name="cancelBtn" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

@@ -1,0 +1,59 @@
+{
+  "context": {
+    "provinceId": "",
+    "contextRoot": "",
+    "productMode": "false",
+    "x_resultinfo": "ok",
+    "subSysCode": "",
+    "x_resultcode": "0",
+    "contextName": "",
+    "version": "0"
+  },
+  "data": {
+    "infosItems": [
+      {
+        "MType": "EXEC",
+        "filterId": null,
+        "groupId": 600,
+        "hostId": 693,
+        "infoCode": "task01",
+        "infoId": 640,
+        "layer": "BASE",
+        "name": "任务01",
+        "remarks": "",
+        "resolveId": null,
+        "setName": "",
+        "splitRuleId": 1,
+        "state": "U",
+        "taskMethod": "F",
+        "thresholdId": 900,
+        "timeId": 2,
+        "type": null,
+        "typeId": 900,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo"
+      },
+      {
+        "MType": "EXEC",
+        "filterId": null,
+        "groupId": 601,
+        "hostId": 693,
+        "infoCode": "task02",
+        "infoId": 640,
+        "layer": "BUSI",
+        "name": "任务02",
+        "remarks": "",
+        "resolveId": null,
+        "setName": "",
+        "splitRuleId": 1,
+        "state": "U",
+        "taskMethod": "F",
+        "thresholdId": null,
+        "timeId": 1,
+        "type": null,
+        "typeId": 901,
+        "typeName": "com.asiainfo.monitor.busi.exe.task.bo.BOAIMonPInfo"
+      }
+    ],
+    "total": 2
+  }
+}

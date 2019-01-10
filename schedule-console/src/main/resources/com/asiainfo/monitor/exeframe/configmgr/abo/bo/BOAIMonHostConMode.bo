@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sysbolist>
+  <sysbo datasource="base" name="BOAIMonHostConMode" mainattr="CON_ID">
+    <mapingenty type="table">AI_Mon_Host_Con_Mode</mapingenty>
+    <datafilter/>
+    <attrlist>
+      <attr floatlength="0" name="CON_ID" maxlength="20" datatype="Long" type="COL" order="1" notNull="N">
+        <mapingcol datatype="NUMBER">CON_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST_ID" maxlength="20" datatype="Long" type="COL" order="2" notNull="N">
+        <mapingcol datatype="NUMBER">HOST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RELATION_ID" maxlength="20" datatype="Long" type="PK" order="0" notNull="N">
+        <mapingcol datatype="NUMBER">RELATION_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist/>
+    <oplist/>
+    <reflist/>
+    <indexes/>
+  </sysbo>
+</sysbolist>

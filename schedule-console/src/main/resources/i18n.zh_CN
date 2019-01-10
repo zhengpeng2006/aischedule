@@ -1,0 +1,20 @@
+default=未定义的异常
+
+#page CustDemo.html
+page.custdemo.custname=客户姓名：
+page.custdemo.custname.title=客户姓名
+
+#page CustFlow.html
+page.custflow.title=VIP客户资料编辑
+page.custflow.title.back=上一步
+page.custflow.title.next=下一步
+page.custflow.title.begin=开始
+page.custflow.title.start=开始
+page.custflow.title.querycustlist=查询客户列表
+page.custflow.title.switchupdateordelete=是否新增
+page.custflow.title.create=新增
+page.custflow.title.update=修改
+page.custflow.title.createcust=新增资料
+page.custflow.title.updatecust=修改资料
+page.custflow.title.logcust=登记日志
+page.custflow.title.end=结束

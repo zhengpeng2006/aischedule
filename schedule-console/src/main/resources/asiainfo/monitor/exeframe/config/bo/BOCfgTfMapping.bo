@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCfgTfMapping" mainattr="MAPPING_ID">
+    <mapingenty type="table">CFG_TF_MAPPING</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="MAPPING_ID" maxlength="12" datatype="Long" type="PK" remark="转移映射ID">
+        <mapingcol datatype="NUMBER">MAPPING_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CFG_TF_DTL_ID" maxlength="12" datatype="Long" type="COL" remark="转移明细ID">
+        <mapingcol datatype="NUMBER">CFG_TF_DTL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SRC_COLUMN_NAME" maxlength="255" datatype="String" type="COL" remark="源字段">
+        <mapingcol datatype="VARCHAR2">SRC_COLUMN_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TF_COLUMN_NAME" maxlength="255" datatype="String" type="COL" remark="转移字段">
+        <mapingcol datatype="VARCHAR2">TF_COLUMN_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="1000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servpkg cmpt-url="/config/com/asiainfo/bizflow/Bizflow.cmpt" code="Bizflow" desc="" dna-code="f21676bf-4401-0010-b399-1708e264f4e5" implementation-class="com.ailk.bizflow.service.impl.BizflowSVImpl" interface-class="com.ailk.bizflow.service.interfaces.IBizflowSV" name="Bizflow" type="1">
+  <servpkg-version branch="+srv/Bizflow--trunk" code="trunk" name="trunk" owner-prod-logo-id="0">
+    <file-list>
+      <file dir="/config/com/asiainfo/bizflow/servpkg" name="Bizflow.svpkg">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <services/>
+    <status>1</status>
+  </servpkg-version>
+</servpkg>

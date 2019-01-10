@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uientity cmpt-url="/config/com/asiainfo/monitor/exeframe/monitorItem/MonitorItem.cmpt" code="WarningInfo" desc="" dna-code="5b4f1fea-4901-0010-9704-b7094b7c3685" full-name="module.monitor.monitorItem.WarningInfo" kind="0" name="WarningInfo">
+  <uientity-version branch="" code="" desc="" name="WarningInfo" owner-prod-logo-id="0">
+    <action-class>com.asiainfo.monitor.exeframe.monitorItem.view.WarningInfo</action-class>
+    <data-areas/>
+    <embed-uientities/>
+    <file-list>
+      <file dir="/html/module/monitor/monitorItem" name="WarningInfo.uientity">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/monitorItem" name="WarningInfo.html">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/html/module/monitor/monitorItem" name="WarningInfo.page">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/src/com/asiainfo/monitor/exeframe/monitorItem/view" name="WarningInfo.java">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <pageflow-url/>
+    <status>0</status>
+    <template name=""/>
+    <uientity-r-events>
+      <ui-event id="" name="btn_run" type="button"/>
+    </uientity-r-events>
+    <uientity-r-jsfunction/>
+    <uientity-r-services/>
+    <uientity-r-unit/>
+  </uientity-version>
+</uientity>

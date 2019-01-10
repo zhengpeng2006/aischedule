@@ -1,0 +1,41 @@
+{
+    "context": {
+        "provinceId": "",
+        "contextRoot": "",
+        "productMode": "false",
+        "x_resultinfo": "ok",
+        "subSysCode": "",
+        "x_resultcode": "0",
+        "contextName": "",
+        "version": "0"
+    },
+    "data": {
+        "taskTableItems": [
+            {
+                "taskCode": "SCHE_ERR_SMS_TASK_5",
+                "taskName": "SCHE_ERR_SMS_TASK_5",
+                "taskDesc": "",
+                "taskType": "single",
+                "taskGroup": "Test",
+                "taskGroupName": "Test",
+                "startTime": "run$now",
+                "endTime": "",
+                "scanIntervalTime": 1000,
+                "scanNum": 100,
+                "executeNum": 1,
+                "threadNum": 1,
+                "idleSleepTime": 1000,
+                "processClass": "com.asiainfo.bj.aischedule.errtask.ScheErrSmsTask",
+                "splitRegion": "false",
+                "faultProcessMethod": "A",
+                "items": "0",
+                "createTime": "2017-03-04 04:56:28",
+                "state": "U",
+                "isLog": true,
+                "priority": 0,
+                "version": 21
+            }
+        ],
+        "taskTableItemsTotal": 1
+    }
+}

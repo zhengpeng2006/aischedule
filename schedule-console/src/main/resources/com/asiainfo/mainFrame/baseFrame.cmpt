@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmpt code="baseFrame" desc="" dna-code="d60b3e15-4801-0010-ac9c-d3bb9824e2fc" name="baseFrame">
+  <cmpt-version branch="" code="trunk" desc="" name="trunk" owner-prod-logo-id="0">
+    <cmpt-r-components>
+      <abod dna-code="baseFrame" label="baseFrame">
+        <uiinfo>0,0,0,0</uiinfo>
+        <url>/config/com/asiainfo/mainFrame/abod/baseFrame.abod</url>
+      </abod>
+      <ui-entity dna-code="822d3f15-4801-0010-ac9c-d3bb9824e2fc" label="Login">
+        <uiinfo>175,8,160,40</uiinfo>
+        <url>/html/module/baseFrame/login/Login.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="1cff8715-4801-0010-ac9c-d3bb9824e2fc" label="Mainframe">
+        <uiinfo>182,80,160,40</uiinfo>
+        <url>/html/module/baseFrame/mainFrame/Mainframe.uientity</url>
+      </ui-entity>
+      <ui-entity dna-code="a9662016-4801-0010-926a-e18ad9af6b55" label="BaseFrame">
+        <uiinfo>187,145,160,40</uiinfo>
+        <url>/html/module/baseFrame/mainFrame/BaseFrame.uientity</url>
+      </ui-entity>
+    </cmpt-r-components>
+    <file-list>
+      <file dir="/config/com/asiainfo/mainFrame" name="baseFrame.cmpt">
+        <attach-tag>+</attach-tag>
+      </file>
+      <file dir="/config/com/asiainfo/mainFrame/abod" name="baseFrame.abod">
+        <attach-tag>+</attach-tag>
+      </file>
+    </file-list>
+    <functions/>
+    <joins/>
+    <parametermaps/>
+    <ref-cmpts/>
+    <status/>
+  </cmpt-version>
+</cmpt>

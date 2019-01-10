@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:="appengine">
+<head jwcid="@Head">
+<span jwcid="$Remove$">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/ecl/webframe-ecl-base.css" rel="stylesheet" type="text/css" media="screen" />
+</span>
+<script type="text/javascript" src="monitor/monitorItem/js/SvInvokeStatic.js"></script>
+</head>
+
+<body jwcid="@Body">
+	<div class="l_fixed ">
+		<div class="l_fixedBox" style="width:20%">
+			<div class="c_box">
+				<div class="c_title">
+					<div class="text">系统组织结构</div>
+				</div>
+				<div class="l_left" style="width: 100%">
+					<div jwcid="sysOrgTree@Tree" name="sysOrgTree" style="height: 405px" listener="ognl:listeners.loadTreeData" uitype="tree" editable="true"
+						id="sysOrgTree" parentNodeId="parentId" nodeId="id" nodeText="name" textAction="SvInvokeStaticJs.treeClick(nodedata)" bo="" showCheckBox="false"
+						expandPath="-1" async="false"></div>
+				</div>
+			</div>
+		</div>
+		<div class="l_fixedContent" style="padding:12px 12px 0 20%">
+			<div class="l_fixedWrapper">
+				<div class="c_box">
+					<div class="c_title">
+						<div class="text">Service服务统计</div>
+					</div>
+
+					<div class="c_form c_form-col-4 c_form-label-4 c_form-inline" id="refreshCycleform">
+						<div><ul class="ul">
+							<li class="li">
+								<font color='red'>监控状态：<span id="monitorStateTxt"><font color='red'>请选择应用服务节点</font></span></font>
+							</li>
+						</ul>
+						</div>
+						<ul class="ul">
+
+							<li class="li" style="width: 110px">
+								<span>请选择监控周期:</span>
+							</li>
+							<li class="li" style="width: 500px">
+								<span class="e_elements">
+									<span class="e_radio">
+										<span>
+											<input type="radio" name="refreshCycle" checked value='10' />10秒&nbsp;&nbsp; <input type="radio" name="refreshCycle" value='30' />30秒&nbsp;&nbsp;
+											<input type="radio" name="refreshCycle" value='60' />60秒&nbsp;&nbsp; <input type="radio" name="refreshCycle" value='120' />120秒&nbsp;&nbsp;
+											<input type="radio" name="refreshCycle" value='240' />240秒&nbsp;&nbsp; <input type="radio" name="refreshCycle" value='0' />自定义（秒）<input
+												type="text" name="customerCycle"></input>
+										</span>
+									</span>
+								</span>
+							</li>
+						</ul>
+						<div class="submit">
+							<span id="startBtnSpan">
+								<button onclick="SvInvokeStaticJs.startMonitor()" template_type="operate" type="button" name="okBtn" class="e_button-form">
+									<span>开始监控</span>
+								</button>
+							</span>
+							<span id="stopBtnSpan">
+								<button onclick="SvInvokeStaticJs.stopMonitor()" template_type="operate" type="button" name="关闭" class="e_button-form" formId="qryCondform">
+									<span>关闭监控</span>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="c_box">
+					<div class="c_title">
+						<div class="text">Service监控数据查询</div>
+					</div>
+
+					<div class="c_form c_form-label-4 c_form-inline" uiid="qrySvForm" id="qrySvForm" type="condForm" objName="qrySvForm" uitype="condform"
+						editable="true">
+						<ul class="ul">
+							<li class="li">
+								<span class="label">类名：</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="className" value="ognl:qrySvForm.className" desc="类名：" uiid="qrySvForm_className" />
+										</span>
+									</span>
+								</span>
+							</li>
+							<li class="li">
+								<span class="label">方法名：</span>
+								<span class="e_elements">
+									<span class="e_input">
+										<span>
+											<input jwcid="@TextField" type="text" name="methodName" value="ognl:qrySvForm.methodName" desc="方法名：" uiid="qrySvForm_methodName" />
+										</span>
+									</span>
+								</span>
+							</li>
+						</ul>
+						<div class="submitPlace"></div>
+						<div class="submit">
+							<button onclick="SvInvokeStaticJs.qryServiceInfo()" template_type="operate" type="button" name="qry_btn" class="e_button-form" formId="qrySvForm">
+								<span>查询</span>
+							</button>
+						</div>
+					</div>
+					<div jwcid="serviceInfoTab@Part" uiid="serviceInfoTab" id="serviceInfoTab" element="div" type="table"
+						objName="serviceInfoTabItems,serviceInfoTabCount" uitype="table" editable="true">
+						<div class="c_scroll" style="height: 252px">
+							<div class="c_table c_table-row-10">
+								<table jwcid="@Table" name="serviceInfoTabTable" scroll="true">
+									<thead>
+										<tr>
+											<th col="serviceInfoTabRowIndex" style="display: none">RowIndex</th>
+											<th col="className" colcss="e_left" class="wrap">类名</th>
+											<th col="methodName" colcss="e_left" class="wrap">方法名</th>
+											<th col="min" colcss="e_left" class="wrap">最小耗时（ms）</th>
+											<th col="max" colcss="e_left" class="wrap">最大耗时（ms）</th>
+											<th col="avg" colcss="e_left" class="wrap">平均耗时 （ms）</th>
+											<th col="totalCount" colcss="e_left" class="wrap">全部次数</th>
+											<th col="successCount" colcss="e_left" class="wrap">成功次数</th>
+											<th col="failCount" colcss="e_left" class="wrap">失败次数</th>
+											<th col="lastUseTime" colcss="e_left" class="wrap">最后一次耗时（ms）</th>
+											<th col="last" colcss="e_left" class="wrap">最后一次调用时间()</th>
+										</tr>
+									</thead>
+									<tbody>
+										<span jwcid="@Foreach" source="ognl:serviceInfoTabItems" value="ognl:serviceInfoTabItem" index="ognl:serviceInfoTabRowIndex">
+											<tr jwcid="@Conditional" condition="ognl:serviceInfoTabRowIndex % 2 == 0" class="even" raw_class="even" element="tr">
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serviceInfoTabRowIndex+1"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.CLASSNAME" name="CLASSNAME"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.METHODNAME" name="METHODNAME"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.MIN" name="MIN"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.MAX" name="MAX"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.AVG" name="AVG"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.TOTALCOUNT" name="TOTALCOUNT"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.SUCCESSCOUNT" name="SUCCESSCOUNT"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.FAILCOUNT" name="FAILCOUNT"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.LASTUSETIME" name="LASTUSETIME"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.LAST" name=""></span></td>
+
+											</tr>
+											<tr jwcid="@Conditional" condition="ognl:serviceInfoTabRowIndex % 2 == 1" element="tr">
+												<td style="display: none"><span jwcid="@Insert" value="ognl:serviceInfoTabRowIndex+1"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.CLASSNAME" name="CLASSNAME"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.METHODNAME" name="METHODNAME"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.MIN" name="MIN"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.MAX" name="MAX"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.AVG" name="AVG"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.TOTALCOUNT" name="TOTALCOUNT"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.SUCCESSCOUNT" name="SUCCESSCOUNT"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.FAILCOUNT" name="FAILCOUNT"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.LASTUSETIME" name="LASTUSETIME"></span></td>
+												<td class="e_left wrap"><span jwcid="@Insert" value="ognl:serviceInfoTabItem.LAST" name="LAST"></span></td>
+											</tr>
+										</span>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div jwcid="@NavBar" name="serviceInfoTabNavBar" cond="qrySvForm" part="serviceInfoTab" listener="" count="ognl:serviceInfoTabCount"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
