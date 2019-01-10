@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="package-ai-scheduler-core" default="1st_makejar" basedir=".">
+
+    <property name="build_path" value="${basedir}/out" />
+    <!--<property name="code_scanner" value="H:/AsiaInfoProjects/asf/code-scanner/CsfCodeScanner/lib/appframe" />-->
+
+    <path id="depLib">
+        <fileset dir="/src/lib">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+    <target name="build_clean">
+        <delete dir="${basedir}/dest"/>
+        <delete dir="${build_path}/config" />
+        <delete dir="${build_path}/lib" />
+        
+        <mkdir dir="${basedir}/dest" />
+        <mkdir dir="${build_path}/config" />
+        <mkdir dir="${build_path}/lib" />
+        <!--<mkdir dir="${build_path}/sql" />
+        <delete dir="${build_path}/sql" />-->
+    </target>
+
+    <!--利用ant 的javac命令来编译Java程序-->
+    <target name="copy" depends="build_clean">
+        <copy todir="${build_path}/config">
+            <fileset dir="${basedir}/config">
+            </fileset>
+        </copy>
+    	<!--<copy todir="${build_path}/sql">
+            <fileset dir="${basedir}/sql">
+            </fileset>
+        </copy>-->
+        <copy todir="${build_path}/lib" flatten="true">
+            <fileset dir="/src/lib">
+                <include name="**/*.jar" />
+                <exclude name="log4j-1.2.8.jar" />
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile" depends="copy">
+        <javac srcdir="${basedir}/src" destdir="${basedir}/dest" includeantruntime="on" includeJavaRuntime="yes" target="1.6" source="1.6" classpathref="depLib" optimize="on" nowarn="yes" debug="true" encoding="utf8">
+            <!--<exclude name="com/ai/pce/create/**" />-->
+            <!--<compilerarg value="-Xlint:unchecked"/>-->
+        </javac>
+    </target>
+
+    <!--使用jar命令生成jar文件 -->
+    <target name="1st_makejar" depends="compile">
+        <jar destfile="${build_path}/ai-scheduler-core.jar" basedir="${basedir}/dest" compress="true" />
+    </target >
+
+    <!--<target name="2st_makejar2codescanner" depends="1st_makejar">-->
+        <!--<jar destfile="${code_scanner}/ai-csf.jar" basedir="${basedir}/dest" compress="true" />-->
+    <!--</target >-->
+</project>
